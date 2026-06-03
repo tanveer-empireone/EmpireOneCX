@@ -1,0 +1,11 @@
+# Enable mod_rewrite
+RewriteEngine On
+RewriteBase /
+
+# Serve home.php when root URL is visited
+DirectoryIndex home.php index.php
+
+# Remove .php from URLs (Updated to allow subdirectories)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L]
