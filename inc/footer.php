@@ -7,13 +7,11 @@
             <div class="flex flex-col lg:flex-row justify-between items-center items-start gap-8 lg:gap-12 mb-12 md:mb-16">
                 <div class="perfectwork w-full">
                     <p class="perfectfonts font-reckless font-normal text-[24px] leading-[32px] tracking-[-0.03em] mb-4">
-                        <span class="text-[#7A76FF]">The Perfect</span>
-                        <span class="bg-gradient-to-r from-[#CB46FA] to-[#FE881C] bg-clip-text text-transparent"> Partnership</span>
+                        <span class="text-[#7A76FF]"><?php echo !empty($isSpanishSite) ? 'La alianza' : 'The Perfect'; ?></span>
+                        <span class="bg-gradient-to-r from-[#CB46FA] to-[#FE881C] bg-clip-text text-transparent"> <?php echo !empty($isSpanishSite) ? 'perfecta' : 'Partnership'; ?></span>
                     </p>
                     <h2 class="text-[40px] leading-[48px] tracking-[-0.01em] max-w-[630px]">
-                        Advanced AI + Real Human<br class="hidden sm:block">
-                        Intelligence = Customer Satisfaction
-                        Guaranteed
+                        <?php echo !empty($isSpanishSite) ? 'IA avanzada + inteligencia humana<br class="hidden sm:block"> real = satisfacción del cliente garantizada' : 'Advanced AI + Real Human<br class="hidden sm:block"> Intelligence = Customer Satisfaction Guaranteed'; ?>
                     </h2>
                 </div>
                 <div class="flex flex-col lg:items-end gap-6 w-full lg:w-auto">
@@ -25,7 +23,7 @@
 
                             <!-- Text with subtle scale on hover -->
                             <span class="myfootbtnfont text-[16px] leading-[24px] tracking-[-0.02em] relative z-10 group-hover:scale-105 transition-transform duration-300 ease-in-out">
-                                Upgrade Your Customer Experience Today!
+                                <?php echo !empty($isSpanishSite) ? 'Mejore su experiencia del cliente hoy' : 'Upgrade Your Customer Experience Today!'; ?>
                             </span>
 
                             <!-- Overlay effect -->
@@ -50,20 +48,20 @@
                     <div>
                         <ul class="text-[24px] leading-[35px] tracking-[-0.02em]
                                 space-y-3 sm:space-y-4 text-gray-300">
-                            <li><a href="/" class="hover:text-white transition">Home</a></li>
-                            <li><a href="/about-us" class="hover:text-white transition">About Us</a></li>
-                            <li><a href="/solutions" class="hover:text-white transition">Solutions</a></li>
-                            <li><a href="/industries" class="hover:text-white transition">Industries</a></li>
+                            <li><a href="<?php echo !empty($isSpanishSite) ? '/es/' : '/'; ?>" class="hover:text-white transition"><?php echo !empty($isSpanishSite) ? 'Inicio' : 'Home'; ?></a></li>
+                            <li><a href="/about-us" class="hover:text-white transition"><?php echo !empty($isSpanishSite) ? 'Sobre nosotros' : 'About Us'; ?></a></li>
+                            <li><a href="/solutions" class="hover:text-white transition"><?php echo !empty($isSpanishSite) ? 'Soluciones' : 'Solutions'; ?></a></li>
+                            <li><a href="/industries" class="hover:text-white transition"><?php echo !empty($isSpanishSite) ? 'Industrias' : 'Industries'; ?></a></li>
                         </ul>
                     </div>
 
                     <div>
                         <ul class="text-[24px] leading-[35px] tracking-[-0.02em]
                                 space-y-3 sm:space-y-4 text-gray-300">
-                            <li><a href="/case-study" class="hover:text-white transition">Case Studies</a></li>
-                            <li><a href="/insights" class="hover:text-white transition">Insights</a></li>
-                            <li><a href="/career" class="hover:text-white transition">Careers</a></li>
-                            <li><a href="/contact" class="hover:text-white transition">Contact</a></li>
+                            <li><a href="/case-study" class="hover:text-white transition"><?php echo !empty($isSpanishSite) ? 'Casos de éxito' : 'Case Studies'; ?></a></li>
+                            <li><a href="/insights" class="hover:text-white transition"><?php echo !empty($isSpanishSite) ? 'Recursos' : 'Insights'; ?></a></li>
+                            <li><a href="/career" class="hover:text-white transition"><?php echo !empty($isSpanishSite) ? 'Carreras' : 'Careers'; ?></a></li>
+                            <li><a href="/contact" class="hover:text-white transition"><?php echo !empty($isSpanishSite) ? 'Contacto' : 'Contact'; ?></a></li>
                         </ul>
                     </div>
                 </div>
@@ -90,16 +88,22 @@
 
                         <div class="footerterms flex flex-wrap justify-start md:justify-end gap-3 sm:gap-4 md:gap-6">
                             <a href="/termsandconditions" class="text-white text-[16px] hover:text-white/70 transition whitespace-nowrap">
-                                Terms and Conditions
+                                <?php echo !empty($isSpanishSite) ? 'Términos y condiciones' : 'Terms and Conditions'; ?>
                             </a>
                             <span class="text-gray-600 hidden sm:inline">|</span>
                             <a href="/privacy-policy" class="text-white text-[16px] hover:text-white/70 transition whitespace-nowrap nopadright">
-                                Privacy policy
+                                <?php echo !empty($isSpanishSite) ? 'Política de privacidad' : 'Privacy policy'; ?>
                             </a>
+                            <?php if (!empty($enableCookieConsent)): ?>
+                                <span class="text-gray-600 hidden sm:inline">|</span>
+                                <button type="button" class="eocx-cookie-preferences-link whitespace-nowrap" data-cookie-preferences>
+                                    <?php echo !empty($isSpanishSite) ? 'Preferencias de cookies' : 'Cookie Preferences'; ?>
+                                </button>
+                            <?php endif; ?>
                         </div>
 
                         <p class="mycenter myfooterline text-white/70 text-left md:text-right w-full" style="font-size: 14px;">
-                            © <?= date('Y'); ?> EmpireOneCX All Rights Reserved.
+                            © <?= date('Y'); ?> EmpireOneCX <?php echo !empty($isSpanishSite) ? 'Todos los derechos reservados.' : 'All Rights Reserved.'; ?>
                         </p>
                     </div>
                 </div>
@@ -121,25 +125,8 @@
     ]
     }
     </script>
-    <script defer src="/assets/js/main.js"></script>
+    <script defer src="/assets/js/main.js?v=20260612-2"></script>
     <script defer src="/assets/js/sweetalert.js"></script>
-    <script defer src="/assets/js/lense.js"></script>
-    <!-- Load Lenis library first -->
-    <script defer src="/assets/js/lenis.js"></script>
-<script>
-    (function () {
-        const bar = document.getElementById("top-scroll-progress");
-
-        window.addEventListener("scroll", () => {
-        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        const scrollHeight =
-            document.documentElement.scrollHeight - document.documentElement.clientHeight;
-
-        const progress = (scrollTop / scrollHeight) * 100;
-        bar.style.width = progress + "%";
-        }, { passive: true });
-    })();
-</script>
 <script>
 (function () {
     const links = document.querySelectorAll('.nav-link');
@@ -154,111 +141,58 @@
     link.classList.remove('active');
 
     // current page se match ho to active lagao
-    if (linkPath === currentPath || linkPage === currentPage || (linkPath === '/solutions' && currentPath.startsWith('/solutions/'))) {
+    if (
+        linkPath === currentPath ||
+        linkPage === currentPage ||
+        (linkPath === '/solutions' && currentPath.startsWith('/solutions/')) ||
+        (linkPath === '/industries' && currentPath.startsWith('/industries/')) ||
+        (linkPath === '/global-footprint' && currentPath.startsWith('/global-footprint/')) ||
+        (link.classList.contains('nav-resources-link') && (
+            currentPath.startsWith('/insights') ||
+            currentPath.startsWith('/case-study') ||
+            currentPath.startsWith('/compliance-security') ||
+            currentPath.startsWith('/faq')
+        ))
+    ) {
         link.classList.add('active');
     }
     });
 
-    document.querySelectorAll('.nav-dropdown-menu a, .mobile-solutions-submenu a').forEach(link => {
+    document.querySelectorAll('.nav-dropdown-menu a, .mobile-solutions-submenu a, .mobile-industries-submenu a, .mobile-resources-submenu a, .mobile-locations-submenu a').forEach(link => {
         const linkPath = (link.getAttribute('href') || '').replace(/\/$/, '') || '/';
         link.classList.toggle('active', linkPath === currentPath);
+    });
+
+    document.querySelectorAll('.mobile-resources-link').forEach(link => {
+        link.classList.toggle('active',
+            currentPath.startsWith('/insights') ||
+            currentPath.startsWith('/case-study') ||
+            currentPath.startsWith('/compliance-security') ||
+            currentPath.startsWith('/faq')
+        );
     });
 })();
 </script>
 
 <script>
-    if (typeof Lenis !== 'undefined') {
-        // Initialize Lenis
-        const lenis = new Lenis({
-            duration: 1.2, // Scroll duration
-            easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Smooth easing
-            direction: 'vertical',
-            gestureDirection: 'vertical',
-            smooth: true,
-            mouseMultiplier: 1,
-            touchMultiplier: 2,
-            infinite: false,
-        });
+document.addEventListener("DOMContentLoaded", () => {
+    const selectors = ".fade-zoom-reveal, .solution-card-reveal, .reveal-left, .reveal-right, .empire-slide-left, .empire-slide-right, .about-side-image";
+    const elements = document.querySelectorAll(selectors);
 
-        // Animation Loop
-        function raf(time) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
-
-        requestAnimationFrame(raf);
-    } else {
-        console.warn('Lenis library not loaded.');
+    if (!elements.length) {
+        return;
     }
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    // Classes ko target kiya
-    const leftEl = document.querySelector(".empire-slide-left");
-    const rightEl = document.querySelector(".empire-slide-right");
-    const sideImg = document.querySelector(".about-side-image");
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Jab screen par aaye
-                entry.target.classList.add("is-active");
-            } else {
-                // Jab wapas upar jayein (Reset for repeat animation)
-                entry.target.classList.remove("is-active");
-            }
-        });
-    }, {
-        threshold: 0.15 // Jab 15% section dikhe tab trigger ho
-    });
-
-    if(leftEl) observer.observe(leftEl);
-    if(rightEl) observer.observe(rightEl);
-    if(sideImg) observer.observe(sideImg);
-});
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    // Sari classes ko aik hi observer mein list kiya
-    const selectors = ".reveal-left, .reveal-right, .empire-slide-left, .empire-slide-right, .animate-reveal";
-    const elements = document.querySelectorAll(selectors);
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Jab scroll karke neechay aayein
-                entry.target.classList.add("is-active");
-            } else {
-                // Jab wapas upar jayein toh reset (Aapki requirement)
-                entry.target.classList.remove("is-active");
-            }
-        });
-    }, {
-        threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px"
-    });
-
-    elements.forEach(el => observer.observe(el));
-});
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    // Sari reveal classes ki global list
-    const selectors = ".fade-zoom-reveal, .animate-reveal, .solution-card-reveal, .reveal-left, .reveal-right, .empire-slide-left, .empire-slide-right";
-    const elements = document.querySelectorAll(selectors);
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("is-active");
             } else {
-                // Scroll up par reset (taake dobara animate ho)
                 entry.target.classList.remove("is-active");
             }
         });
     }, {
-        threshold: 0.1, // Jab image ka 10% hissa nazar aaye tab trigger ho
+        threshold: 0.1,
         rootMargin: "0px 0px -50px 0px"
     });
 
@@ -292,19 +226,34 @@ function closePopup() {
   }, 200);
 }
 </script>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/699c8d7529aadc1c349e99f6/1ji5oh5ak';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
+<script>
+(function () {
+    const originalTitle = document.title;
+    const titleElement = document.querySelector("title");
+    const chatTitlePattern = /^\(?\d+\)?\s+new messages?/i;
+
+    function restorePageTitle() {
+        if (chatTitlePattern.test(document.title)) {
+            document.title = originalTitle;
+        }
+    }
+
+    if (titleElement && "MutationObserver" in window) {
+        new MutationObserver(restorePageTitle).observe(titleElement, {
+            childList: true,
+            subtree: true
+        });
+    }
+
+    window.addEventListener("focus", restorePageTitle);
+    window.addEventListener("visibilitychange", restorePageTitle);
+    setInterval(restorePageTitle, 1000);
 })();
 </script>
-<!--End of Tawk.to Script-->
+<script src="/assets/js/ai-chatbot.js?v=20260613-5"></script>
+<?php if (!empty($enableCookieConsent)): ?>
+<script src="/assets/js/cookie-consent.js?v=20260619-1"></script>
+<?php endif; ?>
 <script>
     function toggleFaq(button) {
         const currentItem = button.closest('.faq-item');

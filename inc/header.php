@@ -1,8 +1,28 @@
+<?php
+$siteLanguage = $siteLanguage ?? ((str_starts_with(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) ?: '/', '/es')) ? 'es' : 'en');
+$isSpanishSite = $siteLanguage === 'es';
+$homeHref = $isSpanishSite ? '/es/' : '/';
+$languageAlternates = $languageAlternates ?? [];
+
+if (empty($languageAlternates)) {
+    $currentPath = rtrim(strtok($_SERVER['REQUEST_URI'], '?'), '/') ?: '/';
+    if ($currentPath === '/' || $currentPath === '/es') {
+        $languageAlternates = [
+            'en' => 'https://empireonecx.com/',
+            'es' => 'https://empireonecx.com/es/',
+            'x-default' => 'https://empireonecx.com/',
+        ];
+    }
+}
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo $isSpanishSite ? 'es' : 'en'; ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php if (!empty($baseHref)): ?>
+    <base href="<?php echo htmlspecialchars($baseHref, ENT_QUOTES, 'UTF-8'); ?>">
+    <?php endif; ?>
     
     <?php
         // Default Values
@@ -23,6 +43,8 @@
         // Dynamic Description
         if(isset($page_description)) {
             $description = $page_description;
+        } elseif(isset($meta_description)) {
+            $description = $meta_description;
         } elseif(isset($metaDescription)) {
             $description = $metaDescription;
         } else {
@@ -37,27 +59,49 @@
         $canonical = "https://" . $_SERVER['HTTP_HOST'] . $clean_uri;
     ?>
 
-    <title><?php echo $title; ?></title>
+    <title><?php echo htmlspecialchars($title ?? 'EmpireOneCX', ENT_QUOTES, 'UTF-8'); ?></title>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "EmpireOneCX",
+      "url": "https://empireonecx.com",
+      "logo": "https://empireonecx.com/assets/images/logo.webp"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "EmpireOneCX",
+      "url": "https://empireonecx.com"
+    }
+    </script>
 
     <link rel="icon" type="image/png" href="/assets/images/favicon.webp">
     <link rel="apple-touch-icon" href="/assets/images/favicon.webp">
 
-    <meta name="description" content="<?php echo $description; ?>">
-    <meta name="keywords" content="<?php echo $keywords; ?>">
+    <meta name="description" content="<?php echo htmlspecialchars($description ?? 'EmpireOneCX delivers scalable BPO and CX solutions.', ENT_QUOTES, 'UTF-8'); ?>">
+    <meta name="keywords" content="<?php echo htmlspecialchars($keywords, ENT_QUOTES, 'UTF-8'); ?>">
     <meta name="author" content="EmpireOneCX">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="<?php echo htmlspecialchars($metaRobots ?? 'index, follow', ENT_QUOTES, 'UTF-8'); ?>">
 
-    <link rel="canonical" href="<?php echo $canonical; ?>">
+    <link rel="canonical" href="<?php echo htmlspecialchars($canonical, ENT_QUOTES, 'UTF-8'); ?>">
+    <?php foreach ($languageAlternates as $alternateLang => $alternateUrl): ?>
+    <link rel="alternate" hreflang="<?php echo htmlspecialchars($alternateLang, ENT_QUOTES, 'UTF-8'); ?>" href="<?php echo htmlspecialchars($alternateUrl, ENT_QUOTES, 'UTF-8'); ?>">
+    <?php endforeach; ?>
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="<?php echo $title; ?>">
-    <meta property="og:description" content="<?php echo $description; ?>">
-    <meta property="og:url" content="<?php echo $canonical; ?>">
+    <meta property="og:title" content="<?php echo htmlspecialchars($title, ENT_QUOTES, 'UTF-8'); ?>">
+    <meta property="og:description" content="<?php echo htmlspecialchars($description, ENT_QUOTES, 'UTF-8'); ?>">
+    <meta property="og:url" content="<?php echo htmlspecialchars($canonical, ENT_QUOTES, 'UTF-8'); ?>">
     <meta property="og:image" content="https://<?php echo $_SERVER['HTTP_HOST']; ?>/assets/images/Empireone-logo.webp">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="<?php echo $title; ?>">
-    <meta name="twitter:description" content="<?php echo $description; ?>">
+    <meta name="twitter:title" content="<?php echo htmlspecialchars($title, ENT_QUOTES, 'UTF-8'); ?>">
+    <meta name="twitter:description" content="<?php echo htmlspecialchars($description, ENT_QUOTES, 'UTF-8'); ?>">
     <meta name="twitter:image" content="https://<?php echo $_SERVER['HTTP_HOST']; ?>/assets/images/Empireone-logo.webp">
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -66,56 +110,169 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css?v=20260708-1">
+    <link rel="stylesheet" href="/assets/css/ai-chatbot.css?v=20260613-6">
+    <?php if (!empty($enableCookieConsent)): ?>
+    <link rel="stylesheet" href="/assets/css/cookie-consent.css?v=20260619-1">
+    <?php endif; ?>
     
 </head>
 <body>
     <div id="top-scroll-progress"></div>
     <div class="wrapper">
             <header>
+                <div class="eocx-top-header" aria-label="Contact and language selector">
+                    <div class="container mx-auto w-full eocx-top-header__inner">
+                        <a class="eocx-top-header__email" href="mailto:info@empireonecx.com">
+                            <i class="far fa-envelope" aria-hidden="true"></i>
+                            <span>info@empireonecx.com</span>
+                        </a>
+                        <div class="eocx-top-header__right">
+                            <a class="eocx-top-header__career" href="https://careers.empireonecx.com/" target="_blank" rel="noopener noreferrer"><?php echo $isSpanishSite ? 'Carreras' : 'Careers'; ?></a>
+                            <div class="eocx-language-dropdown" aria-label="Language selector">
+                            <button type="button" class="eocx-language-dropdown__trigger" aria-haspopup="true">
+                                <img src="<?php echo $isSpanishSite ? '/assets/images/flags/spain.svg' : '/assets/images/flags/united-states.svg'; ?>" alt="" aria-hidden="true">
+                                <span><?php echo $isSpanishSite ? 'ES' : 'EN'; ?></span>
+                                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <div class="eocx-language-dropdown__menu">
+                                <a href="<?php echo $isSpanishSite ? '/' : '/es/'; ?>" hreflang="<?php echo $isSpanishSite ? 'en' : 'es'; ?>">
+                                    <img src="<?php echo $isSpanishSite ? '/assets/images/flags/united-states.svg' : '/assets/images/flags/spain.svg'; ?>" alt="" aria-hidden="true">
+                                    <span><?php echo $isSpanishSite ? 'EN' : 'ES'; ?></span>
+                                </a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="container mx-auto w-full">
                     <div class="flex items-center justify-between">
                         <div class="headermain flex items-center gap-8">
                             <div class="mainlogooo flex items-center gap-3 cursor-pointer">
-                                <img src="/assets/images/white-logo.webp" alt="EmpireOne Logo" class="logo-img w-[147px] rounded-[5px]" onclick="window.location.href='/'" />
+                                <img src="/assets/images/white-logo.webp" alt="EmpireOne Logo" class="logo-img w-[147px] rounded-[5px]" onclick="window.location.href='<?php echo $homeHref; ?>'" />
                             </div>
                             <nav class="menuss hidden lg:flex items-center 
                                 space-x-5 xl:space-x-4 
                                 text-[16px] xl:text-[16px]">
-                                <a href="/" class="nav-link active">Home</a>
-                                <a href="/about-us" class="nav-link">About Us</a>
-                                <div class="nav-dropdown">
+                                <a href="<?php echo $homeHref; ?>" class="nav-link active"><?php echo $isSpanishSite ? 'Inicio' : 'Home'; ?></a>
+                                <a href="/about-us" class="nav-link"><?php echo $isSpanishSite ? 'Sobre nosotros' : 'About Us'; ?></a>
+                                <div class="nav-dropdown nav-dropdown--solutions">
                                     <a href="/solutions" class="nav-link nav-dropdown-toggle">
-                                        Solutions
+                                        <?php echo $isSpanishSite ? 'Soluciones' : 'Solutions'; ?>
                                         <i class="fas fa-chevron-down nav-dropdown-icon"></i>
                                     </a>
-                                    <div class="nav-dropdown-menu" aria-label="Solutions submenu">
-                                        <a href="/solutions/customer-experience-solutions">Customer Experience Solutions</a>
-                                        <a href="/solutions/back-office-support">Back Office Support</a>
-                                        <a href="/solutions/bpo-solutions">BPO Solutions</a>
-                                        <a href="/solutions/finance-accounting-bpo">Finance & Accounting BPO</a>
-                                        <a href="/solutions/quality-assurance-outsourcing">Quality Assurance Outsourcing</a>
-                                        <a href="/solutions/recruitment-workforce-support">Recruitment & Workforce Support</a>
+                                    <div class="nav-dropdown-menu nav-mega-menu nav-mega-menu--solutions" aria-label="Solutions submenu">
+                                        <div class="nav-mega-menu__header">
+                                            <div>
+                                                <span><?php echo $isSpanishSite ? 'Soluciones' : 'Solutions'; ?></span>
+                                                <strong><?php echo $isSpanishSite ? 'Servicios BPO asistidos por IA para operaciones escalables' : 'AI-assisted BPO services for scalable operations'; ?></strong>
+                                            </div>
+                                            <a href="/solutions" class="nav-mega-menu__all"><?php echo $isSpanishSite ? 'Ver todas las soluciones' : 'View All Solutions'; ?> <i class="fas fa-arrow-right"></i></a>
+                                        </div>
+                                        <div class="nav-mega-menu__grid nav-mega-menu__grid--solutions">
+                                            <a href="/solutions/customer-experience-solutions"><i class="fas fa-headset"></i><span>Customer Experience Solutions</span></a>
+                                            <a href="/solutions/multilingual-customer-support"><i class="fas fa-language"></i><span>Multilingual Customer Support</span></a>
+                                            <a href="/solutions/omnichannel-contact-center-services"><i class="fas fa-comments"></i><span>Omnichannel Contact Center Services</span></a>
+                                            <a href="/solutions/help-desk-technical-support"><i class="fas fa-screwdriver-wrench"></i><span>Help Desk &amp; Technical Support</span></a>
+                                            <a href="/solutions/back-office-support"><i class="fas fa-inbox"></i><span>Back Office Support</span></a>
+                                            <a href="/solutions/bpo-solutions"><i class="fas fa-gears"></i><span>BPO Solutions</span></a>
+                                            <a href="/solutions/finance-accounting-bpo"><i class="fas fa-file-invoice-dollar"></i><span>Finance & Accounting BPO</span></a>
+                                            <a href="/solutions/quality-assurance-outsourcing"><i class="fas fa-clipboard-check"></i><span>Quality Assurance Outsourcing</span></a>
+                                            <a href="/solutions/recruitment-workforce-support"><i class="fas fa-user-group"></i><span>Recruitment & Workforce Support</span></a>
+                                        </div>
                                     </div>
                                 </div>
-                                <a href="/industries" class="nav-link">Industries</a>
-                                <a href="/case-study" class="nav-link">Case Studies</a>
-                                <a href="/insights" class="nav-link">Insights</a>
-                                <a href="/career" class="nav-link">Careers</a>
-                                <a href="/contact" class="nav-link">Contact Us</a>
+                                <div class="nav-dropdown nav-dropdown--industries">
+                                    <a href="/industries" class="nav-link nav-dropdown-toggle">
+                                        <?php echo $isSpanishSite ? 'Industrias' : 'Industries'; ?>
+                                        <i class="fas fa-chevron-down nav-dropdown-icon"></i>
+                                    </a>
+                                    <div class="nav-dropdown-menu nav-mega-menu" aria-label="Industries submenu">
+                                        <div class="nav-mega-menu__header">
+                                            <div>
+                                                <span><?php echo $isSpanishSite ? 'Experiencia por industria' : 'Industry Expertise'; ?></span>
+                                                <strong><?php echo $isSpanishSite ? 'Equipos BPO especializados para operaciones complejas' : 'Specialized BPO teams for complex operations'; ?></strong>
+                                            </div>
+                                            <a href="/industries" class="nav-mega-menu__all"><?php echo $isSpanishSite ? 'Ver todas las industrias' : 'View All Industries'; ?> <i class="fas fa-arrow-right"></i></a>
+                                        </div>
+                                        <div class="nav-mega-menu__grid">
+                                            <a href="/industries/retail-bpo"><i class="fas fa-store"></i><span>Retail</span></a>
+                                            <a href="/industries/automotive-bpo"><i class="fas fa-car"></i><span>Automotive</span></a>
+                                            <a href="/industries/travel-hospitality-bpo"><i class="fas fa-plane-departure"></i><span>Travel & Hospitality</span></a>
+                                            <a href="/industries/telecommunications-bpo"><i class="fas fa-tower-cell"></i><span>Telecommunications</span></a>
+                                            <a href="/industries/insurance-bpo"><i class="fas fa-shield-halved"></i><span>Insurance</span></a>
+                                            <a href="/industries/healthcare-bpo"><i class="fas fa-hospital"></i><span>Healthcare</span></a>
+                                            <a href="/industries/energy-bpo"><i class="fas fa-bolt"></i><span>Energy</span></a>
+                                            <a href="/industries/utility-bpo"><i class="fas fa-toolbox"></i><span>Utility</span></a>
+                                            <a href="/industries/technology-bpo"><i class="fas fa-server"></i><span>Technology & SaaS</span></a>
+                                            <a href="/industries/government-bpo"><i class="fas fa-landmark"></i><span>Government</span></a>
+                                            <a href="/industries/legal-process-outsourcing"><i class="fas fa-gavel"></i><span>Legal</span></a>
+                                            <a href="/industries/financial-services-bpo"><i class="fas fa-file-invoice-dollar"></i><span>Financial Services</span></a>
+                                            <a href="/industries/ecommerce-bpo"><i class="fas fa-cart-shopping"></i><span>eCommerce</span></a>
+                                            <a href="/industries/real-estate-bpo"><i class="fas fa-building"></i><span>Real Estate</span></a>
+                                            <a href="/industries/gaming-bpo"><i class="fas fa-gamepad"></i><span>Gaming</span></a>
+                                            <a href="/industries/home-services-bpo"><i class="fas fa-screwdriver-wrench"></i><span>Home Services</span></a>
+                                            <a href="/industries/home-warranty-bpo"><i class="fas fa-house-circle-check"></i><span>Home Warranty</span></a>
+                                            <a href="/industries/transportation-logistics-bpo"><i class="fas fa-truck"></i><span>Transportation & Logistics</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-dropdown">
+                                    <a href="/insights" class="nav-link nav-dropdown-toggle nav-resources-link">
+                                        <?php echo $isSpanishSite ? 'Recursos' : 'Resources'; ?>
+                                        <i class="fas fa-chevron-down nav-dropdown-icon"></i>
+                                    </a>
+                                    <div class="nav-dropdown-menu nav-dropdown-menu--resources" aria-label="Resources submenu">
+                                        <a href="/insights">
+                                            <i class="fas fa-newspaper"></i>
+                                            <span><strong>Insights</strong><small>Articles, guides, and BPO knowledge</small></span>
+                                        </a>
+                                        <a href="/case-study">
+                                            <i class="fas fa-chart-line"></i>
+                                            <span><strong>Case Studies</strong><small>Customer results and success stories</small></span>
+                                        </a>
+                                        <a href="/compliance-security">
+                                            <i class="fas fa-shield-halved"></i>
+                                            <span><strong>Compliance & Security</strong><small>Certifications, controls, and data protection</small></span>
+                                        </a>
+                                        <a href="/faq">
+                                            <i class="fas fa-circle-question"></i>
+                                            <span><strong>FAQ Hub</strong><small>BPO, CX, call center, and AI support answers</small></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="nav-dropdown">
+                                    <a href="/global-footprint" class="nav-link nav-dropdown-toggle">
+                                        <?php echo $isSpanishSite ? 'Presencia global' : 'Global Footprint'; ?>
+                                        <i class="fas fa-chevron-down nav-dropdown-icon"></i>
+                                    </a>
+                                    <div class="nav-dropdown-menu nav-dropdown-menu--locations" aria-label="Global Footprint submenu">
+                                        <a href="/global-footprint/canada"><img class="nav-location-flag" src="/assets/images/flags/canada.svg" alt="" loading="lazy">Canada</a>
+                                        <a href="/global-footprint/united-states"><img class="nav-location-flag" src="/assets/images/flags/united-states.svg" alt="" loading="lazy">United States</a>
+                                        <a href="/global-footprint/united-kingdom"><img class="nav-location-flag" src="/assets/images/flags/united-kingdom.svg" alt="" loading="lazy">United Kingdom</a>
+                                        <a href="/global-footprint/australia"><img class="nav-location-flag" src="/assets/images/flags/australia.svg" alt="" loading="lazy">Australia</a>
+                                        <a href="/global-footprint/uae"><img class="nav-location-flag" src="/assets/images/flags/uae.svg" alt="" loading="lazy">UAE</a>
+                                        <a href="/global-footprint/morocco"><img class="nav-location-flag" src="/assets/images/flags/morocco.svg" alt="" loading="lazy">Morocco</a>
+                                        <a href="/global-footprint/nicaragua"><img class="nav-location-flag" src="/assets/images/flags/nicaragua.svg" alt="" loading="lazy">Nicaragua</a>
+                                        <a href="/global-footprint/colombia"><img class="nav-location-flag" src="/assets/images/flags/colombia.svg" alt="" loading="lazy">Colombia</a>
+                                        <a href="/global-footprint/venezuela"><img class="nav-location-flag" src="/assets/images/flags/venezuela.svg" alt="" loading="lazy">Venezuela</a>
+                                        <a href="/global-footprint/bolivia"><img class="nav-location-flag" src="/assets/images/flags/bolivia.svg" alt="" loading="lazy">Bolivia</a>
+                                        <a href="/global-footprint/paraguay"><img class="nav-location-flag" src="/assets/images/flags/paraguay.svg" alt="" loading="lazy">Paraguay</a>
+                                        <a href="/global-footprint/south-africa"><img class="nav-location-flag" src="/assets/images/flags/south-africa.svg" alt="" loading="lazy">South Africa</a>
+                                        <a href="/global-footprint/pakistan"><img class="nav-location-flag" src="/assets/images/flags/pakistan.svg" alt="" loading="lazy">Pakistan</a>
+                                        <a href="/global-footprint/philippines"><img class="nav-location-flag" src="/assets/images/flags/philippines.svg" alt="" loading="lazy">Philippines</a>
+                                    </div>
+                                </div>
+                                <a href="/contact" class="nav-link"><?php echo $isSpanishSite ? 'Contacto' : 'Contact Us'; ?></a>
                             </nav>
                         </div>
 
                         <div class="buttontopss hidden lg:flex items-center">
-                            <button onclick="window.location.href='/contact'" class="header-btn btnchangescroll rounded-[7px] 
-                                            px-[18px] py-[7px]
-                                            text-[14px] text-white"  style="border:1px solid #fff; border-radius:8px;">
-                                            Get a Quote
-                            </button>
+
                             <button onclick="window.open('https://calendly.com/empireonegroup-marketing/30min', '_blank')" 
                                     class="header-btn rounded-[7px] 
                                         px-[18px] py-[7px]
-                                        text-[14px] bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] text-white ml-[12px]">
+                                        text-[14px] bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] text-white">
                                         Book a 30 Minute Call
                             </button>
                         </div>
@@ -136,45 +293,111 @@
         <div id="mobile-menu-container" class="mobile-menu-container">
             <div class="p-5">
                 <div class="space-y-4 mb-6">
-                    <a href="/" class="mobile-nav-link active block text-gray-800 text-base font-medium hover:text-purple-600 transition-colors py-2">
-                        <i class="fas fa-home mr-3 w-5 text-center"></i>Home
+                    <a href="<?php echo $homeHref; ?>" class="mobile-nav-link active block text-gray-800 text-base font-medium hover:text-purple-600 transition-colors py-2">
+                        <i class="fas fa-home mr-3 w-5 text-center"></i><?php echo $isSpanishSite ? 'Inicio' : 'Home'; ?>
                     </a>
                     <a href="/about-us" class="mobile-nav-link block text-gray-800 text-base font-medium hover:text-purple-600 transition-colors">
-                        <i class="fas fa-info-circle mr-3 w-5 text-center"></i>About Us
+                        <i class="fas fa-info-circle mr-3 w-5 text-center"></i><?php echo $isSpanishSite ? 'Sobre nosotros' : 'About Us'; ?>
                     </a>
                     <div class="mobile-solutions-group">
-                        <a href="/solutions" class="mobile-nav-link block text-gray-800 text-base font-medium hover:text-purple-600 transition-colors">
-                            <i class="fas fa-lightbulb mr-3 w-5 text-center"></i>Solutions
-                        </a>
-                        <div class="mobile-solutions-submenu">
-                            <a href="/solutions/customer-experience-solutions">Customer Experience Solutions</a>
-                            <a href="/solutions/back-office-support">Back Office Support</a>
-                            <a href="/solutions/bpo-solutions">BPO Solutions</a>
-                            <a href="/solutions/finance-accounting-bpo">Finance & Accounting BPO</a>
-                            <a href="/solutions/quality-assurance-outsourcing">Quality Assurance Outsourcing</a>
-                            <a href="/solutions/recruitment-workforce-support">Recruitment & Workforce Support</a>
+                        <div class="mobile-nav-parent">
+                            <a href="/solutions" class="mobile-nav-link text-gray-800 text-base font-medium hover:text-purple-600 transition-colors">
+                                <i class="fas fa-lightbulb mr-3 w-5 text-center"></i><?php echo $isSpanishSite ? 'Soluciones' : 'Solutions'; ?>
+                            </a>
+                            <button class="mobile-submenu-toggle" type="button" aria-expanded="false" aria-controls="mobile-solutions-submenu" aria-label="Toggle Solutions submenu">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div id="mobile-solutions-submenu" class="mobile-solutions-submenu">
+                            <a href="/solutions/customer-experience-solutions"><i class="fas fa-headset"></i>Customer Experience Solutions</a>
+                            <a href="/solutions/multilingual-customer-support"><i class="fas fa-language"></i>Multilingual Customer Support</a>
+                            <a href="/solutions/omnichannel-contact-center-services"><i class="fas fa-comments"></i>Omnichannel Contact Center Services</a>
+                            <a href="/solutions/help-desk-technical-support"><i class="fas fa-screwdriver-wrench"></i>Help Desk &amp; Technical Support</a>
+                            <a href="/solutions/back-office-support"><i class="fas fa-inbox"></i>Back Office Support</a>
+                            <a href="/solutions/bpo-solutions"><i class="fas fa-gears"></i>BPO Solutions</a>
+                            <a href="/solutions/finance-accounting-bpo"><i class="fas fa-file-invoice-dollar"></i>Finance & Accounting BPO</a>
+                            <a href="/solutions/quality-assurance-outsourcing"><i class="fas fa-clipboard-check"></i>Quality Assurance Outsourcing</a>
+                            <a href="/solutions/recruitment-workforce-support"><i class="fas fa-user-group"></i>Recruitment & Workforce Support</a>
                         </div>
                     </div>
-                    <a href="/industries" class="mobile-nav-link block text-gray-800 text-base font-medium hover:text-purple-600 transition-colors">
-                        <i class="fas fa-industry mr-3 w-5 text-center"></i>Industries
-                    </a>
-                    <a href="/case-study" class="mobile-nav-link block text-gray-800 text-base font-medium hover:text-purple-600 transition-colors">
-                        <i class="fas fa-industry mr-3 w-5 text-center"></i>Case Studies
-                    </a>
-                    <a href="/insights" class="mobile-nav-link block text-gray-800 text-base font-medium hover:text-purple-600 transition-colors">
-                        <i class="fas fa-newspaper mr-3 w-5 text-center"></i>Insights
-                    </a>
-                    <a href="/career" class="mobile-nav-link block text-gray-800 text-base font-medium hover:text-purple-600 transition-colors">
-                        <i class="fas fa-briefcase mr-3 w-5 text-center"></i>Careers
-                    </a>
+                    <div class="mobile-industries-group">
+                        <div class="mobile-nav-parent">
+                            <a href="/industries" class="mobile-nav-link text-gray-800 text-base font-medium hover:text-purple-600 transition-colors">
+                                <i class="fas fa-industry mr-3 w-5 text-center"></i><?php echo $isSpanishSite ? 'Industrias' : 'Industries'; ?>
+                            </a>
+                            <button class="mobile-submenu-toggle" type="button" aria-expanded="false" aria-controls="mobile-industries-submenu" aria-label="Toggle Industries submenu">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div id="mobile-industries-submenu" class="mobile-industries-submenu">
+                            <a href="/industries/retail-bpo">Retail</a>
+                            <a href="/industries/automotive-bpo">Automotive</a>
+                            <a href="/industries/travel-hospitality-bpo">Travel & Hospitality</a>
+                            <a href="/industries/telecommunications-bpo">Telecommunications</a>
+                            <a href="/industries/insurance-bpo">Insurance</a>
+                            <a href="/industries/healthcare-bpo">Healthcare</a>
+                            <a href="/industries/energy-bpo">Energy</a>
+                            <a href="/industries/utility-bpo">Utility</a>
+                            <a href="/industries/technology-bpo">Technology & SaaS</a>
+                            <a href="/industries/government-bpo">Government</a>
+                            <a href="/industries/legal-process-outsourcing">Legal</a>
+                            <a href="/industries/financial-services-bpo">Financial Services</a>
+                            <a href="/industries/ecommerce-bpo">eCommerce</a>
+                            <a href="/industries/real-estate-bpo">Real Estate</a>
+                            <a href="/industries/gaming-bpo">Gaming</a>
+                            <a href="/industries/home-services-bpo">Home Services</a>
+                            <a href="/industries/home-warranty-bpo">Home Warranty</a>
+                            <a href="/industries/transportation-logistics-bpo">Transportation & Logistics</a>
+                        </div>
+                    </div>
+                    <div class="mobile-resources-group">
+                        <div class="mobile-nav-parent">
+                            <a href="/insights" class="mobile-nav-link mobile-resources-link text-gray-800 text-base font-medium hover:text-purple-600 transition-colors">
+                                <i class="fas fa-folder-open mr-3 w-5 text-center"></i><?php echo $isSpanishSite ? 'Recursos' : 'Resources'; ?>
+                            </a>
+                            <button class="mobile-submenu-toggle" type="button" aria-expanded="false" aria-controls="mobile-resources-submenu" aria-label="Toggle Resources submenu">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div id="mobile-resources-submenu" class="mobile-resources-submenu">
+                            <a href="/insights"><i class="fas fa-newspaper"></i>Insights</a>
+                            <a href="/case-study"><i class="fas fa-chart-line"></i>Case Studies</a>
+                            <a href="/compliance-security"><i class="fas fa-shield-halved"></i>Compliance & Security</a>
+                            <a href="/faq"><i class="fas fa-circle-question"></i>FAQ Hub</a>
+                        </div>
+                    </div>
+                    <div class="mobile-locations-group">
+                        <div class="mobile-nav-parent">
+                            <a href="/global-footprint" class="mobile-nav-link text-gray-800 text-base font-medium hover:text-purple-600 transition-colors">
+                                <i class="fas fa-location-dot mr-3 w-5 text-center"></i><?php echo $isSpanishSite ? 'Presencia global' : 'Global Footprint'; ?>
+                            </a>
+                            <button class="mobile-submenu-toggle" type="button" aria-expanded="false" aria-controls="mobile-locations-submenu" aria-label="Toggle Global Footprint submenu">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div id="mobile-locations-submenu" class="mobile-locations-submenu">
+                            <a href="/global-footprint/canada"><img class="nav-location-flag" src="/assets/images/flags/canada.svg" alt="" loading="lazy">Canada</a>
+                            <a href="/global-footprint/united-states"><img class="nav-location-flag" src="/assets/images/flags/united-states.svg" alt="" loading="lazy">United States</a>
+                            <a href="/global-footprint/united-kingdom"><img class="nav-location-flag" src="/assets/images/flags/united-kingdom.svg" alt="" loading="lazy">United Kingdom</a>
+                            <a href="/global-footprint/australia"><img class="nav-location-flag" src="/assets/images/flags/australia.svg" alt="" loading="lazy">Australia</a>
+                            <a href="/global-footprint/uae"><img class="nav-location-flag" src="/assets/images/flags/uae.svg" alt="" loading="lazy">UAE</a>
+                            <a href="/global-footprint/morocco"><img class="nav-location-flag" src="/assets/images/flags/morocco.svg" alt="" loading="lazy">Morocco</a>
+                            <a href="/global-footprint/nicaragua"><img class="nav-location-flag" src="/assets/images/flags/nicaragua.svg" alt="" loading="lazy">Nicaragua</a>
+                            <a href="/global-footprint/colombia"><img class="nav-location-flag" src="/assets/images/flags/colombia.svg" alt="" loading="lazy">Colombia</a>
+                            <a href="/global-footprint/venezuela"><img class="nav-location-flag" src="/assets/images/flags/venezuela.svg" alt="" loading="lazy">Venezuela</a>
+                            <a href="/global-footprint/bolivia"><img class="nav-location-flag" src="/assets/images/flags/bolivia.svg" alt="" loading="lazy">Bolivia</a>
+                            <a href="/global-footprint/paraguay"><img class="nav-location-flag" src="/assets/images/flags/paraguay.svg" alt="" loading="lazy">Paraguay</a>
+                            <a href="/global-footprint/south-africa"><img class="nav-location-flag" src="/assets/images/flags/south-africa.svg" alt="" loading="lazy">South Africa</a>
+                            <a href="/global-footprint/pakistan"><img class="nav-location-flag" src="/assets/images/flags/pakistan.svg" alt="" loading="lazy">Pakistan</a>
+                            <a href="/global-footprint/philippines"><img class="nav-location-flag" src="/assets/images/flags/philippines.svg" alt="" loading="lazy">Philippines</a>
+                        </div>
+                    </div>
                     <a href="/contact" class="mobile-nav-link block text-gray-800 text-base font-medium hover:text-purple-600 transition-colors">
-                        <i class="fas fa-envelope mr-3 w-5 text-center"></i>Contact Us
+                        <i class="fas fa-envelope mr-3 w-5 text-center"></i><?php echo $isSpanishSite ? 'Contacto' : 'Contact Us'; ?>
                     </a>
                 </div>
 
-                <button onclick="window.location.href='/contact'" class="mb-[12px] cta-gradient text-white font-bold py-3 px-5 rounded-[8px] text-sm w-full hover:scale-[1.02] active:scale-95 transition" style="font-size: 12px;padding: 10px 20px;">
-                    <i class="fas fa-users mr-2"></i>Get a Quote
-                </button>
+
                 <button onclick="window.open('https://calendly.com/empireonegroup-marketing/30min', '_blank')" class="cta-gradient text-white font-bold py-3 px-5 rounded-[8px] text-sm w-full hover:scale-[1.02] active:scale-95 transition" style="font-size: 12px;padding: 10px 20px;">
                     <i class="fas fa-users mr-2"></i>Book a 15 Minute Call
                 </button>

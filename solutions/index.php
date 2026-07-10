@@ -1,6 +1,6 @@
 <?php
-$pageTitle = "AI-Assisted CX, BPO Solutions & Outsourcing Services";
-$metaDescription = "Scale your business with EmpireOneCX's AI-Assisted CX & BPO solutions. We offer scalable customer support, back-office, finance, QA, and recruitment outsourcing.";
+$page_title = "Services & Solutions | EmpireOneCX";
+$meta_description = "Explore EmpireOneCX services and solutions, including CX outsourcing, BPO, back-office support, finance operations, QA, and workforce support.";
 $metaKeywords = "Customer Experience, BPO solutions, AI automation services, finance outsourcing, QA services, customer support outsourcing, recruitment outsourcing";
 include(__DIR__ . "/../inc/header.php");
 ?>

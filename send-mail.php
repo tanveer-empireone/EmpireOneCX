@@ -14,6 +14,47 @@ use PHPMailer\PHPMailer\Exception;
 
 
 require 'vendor/autoload.php';
+function splitLeadName($fullName)
+{
+    $fullName = trim(preg_replace('/\s+/', ' ', $fullName));
+    if ($fullName === '') {
+        return ['', 'Website Lead'];
+    }
+
+    $parts = explode(' ', $fullName, 2);
+    if (count($parts) === 1) {
+        return ['', $parts[0]];
+    }
+
+    return [$parts[0], $parts[1]];
+}
+
+function submitSalesforceLead(array $leadData)
+{
+    $endpoint = 'https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8';
+    $body = http_build_query($leadData, '', '&');
+
+    $context = stream_context_create([
+        'http' => [
+            'method' => 'POST',
+            'header' => "Content-Type: application/x-www-form-urlencoded\r\n" .
+                        "Content-Length: " . strlen($body) . "\r\n",
+            'content' => $body,
+            'timeout' => 10,
+            'ignore_errors' => true,
+        ],
+    ]);
+
+    $response = @file_get_contents($endpoint, false, $context);
+    $statusCode = 0;
+    if (isset($http_response_header[0]) && preg_match('/\s(\d{3})\s/', $http_response_header[0], $matches)) {
+        $statusCode = (int) $matches[1];
+    }
+
+    if ($response === false || $statusCode < 200 || $statusCode >= 400) {
+        throw new Exception('Salesforce Web-to-Lead submission failed.');
+    }
+}
 
 
 
@@ -65,23 +106,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $mail->isSMTP();
 
-        $mail->Host       = 'smtp.gmail.com';
+        $smtpConfig = [];
+        $smtpConfigPath = dirname(__DIR__) . '/empireonecx-mail-config.php';
+        if (is_readable($smtpConfigPath)) {
+            $smtpConfig = require $smtpConfigPath;
+            if (!is_array($smtpConfig)) {
+                $smtpConfig = [];
+            }
+        }
+
+        $smtpHost = $smtpConfig['host'] ?? getenv('ECX_SMTP_HOST') ?: 'smtp.hostinger.com';
+        $smtpPort = $smtpConfig['port'] ?? getenv('ECX_SMTP_PORT') ?: 465;
+        $smtpUsername = $smtpConfig['username'] ?? getenv('ECX_SMTP_USERNAME') ?: 'info@empireonecx.com';
+        $smtpPassword = $smtpConfig['password'] ?? getenv('ECX_SMTP_PASSWORD') ?: '';
+
+        if ($smtpPassword === '') {
+            throw new Exception('SMTP password is not configured.');
+        }
+
+        $mail->Host       = $smtpHost;
 
         $mail->SMTPAuth   = true;
 
-        $mail->Username   = 'techadmin@empireonegroup.com'; // YOUR GMAIL
+        $mail->Username   = $smtpUsername;
 
-        $mail->Password   = 'dvzv ohwz bxfu bhtb'; // APP PASSWORD
+        $mail->Password   = $smtpPassword;
 
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
 
-        $mail->Port       = 587;
-
-
-
-        // $mail->setFrom('marketing@empireonegroup.com', 'EmpireOne BPO Solutions');
-
-        // $mail->addAddress('marketing@empireonegroup.com');
+        $mail->Port       = (int) $smtpPort;
 
 
 
@@ -259,17 +312,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-        $mail->setFrom('techadmin@empireonegroup.com', 'EmpireOne BPO Solution');
+        $mail->setFrom('info@empireonecx.com', 'EmpireOneCX');
 
-        $mail->addAddress('techadmin@empireonegroup.com');
+        $mail->addReplyTo($email, $fullName);
+
+        $mail->addAddress('info@empireonecx.com');
 
         $mail->Body = $adminBody;
 
         $mail->send();
 
+        [$firstName, $lastName] = splitLeadName($fullName);
+        $sourceUrl = $_SERVER['HTTP_REFERER'] ?? 'https://empireonecx.com/contact';
+        $description = "Inquiry Type: {$inquiry}\nPhone Country Code: {$countryCode}\nPhone Number: {$phoneNumber}\nSource Page: {$sourceUrl}";
 
-
-
+        submitSalesforceLead([
+            'oid' => '00Dau00000BgNWX',
+            'retURL' => 'https://empireonecx.com/contact',
+            'first_name' => $firstName,
+            'last_name' => $lastName,
+            'email' => $email,
+            'company' => $company !== '' ? $company : 'Not Provided',
+            'phone' => $phone,
+            'lead_source' => 'Web',
+            'description' => $description,
+        ]);
 
         /* ===========================
 
@@ -280,6 +347,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
         $mail->clearAddresses();
+
+        $mail->clearReplyTos();
+
+        $mail->addReplyTo('info@empireonecx.com', 'EmpireOneCX');
 
         $mail->addAddress($email);
 
@@ -345,8 +416,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-        <p>If your inquiry is urgent, please feel free to contact us directly.</p>
-
+<p>If your inquiry is urgent, please feel free to contact us directly at <a href="tel:+18002330843">+1 800 233 0843</a> or </p>
 
 
         <br>
@@ -355,7 +425,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <p>Best Regards,<br>
 
-        <strong>EmpireOne Global Solutions Team</strong></p>
+        <strong>EmpireOneCX</strong></p>
 
 
 
@@ -369,7 +439,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <td style="padding:15px;text-align:center;font-size:12px;color:#777;">
 
-        © '.date("Y").' EmpireOne Global Solutions. All rights reserved.
+        © '.date("Y").' EmpireOneCX. All rights reserved.
 
         </td>
 
@@ -421,7 +491,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             "status" => "error",
 
-            "message" => "Mail Error: " . $mail->ErrorInfo
+            "message" => "Mail Error: " . ($mail->ErrorInfo ?: $e->getMessage())
 
         ]);
 

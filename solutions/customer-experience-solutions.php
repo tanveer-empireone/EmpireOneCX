@@ -328,11 +328,8 @@ include(__DIR__ . "/../inc/header.php");
 
                     <!-- ADDED lg:justify-start TO LEFT-ALIGN BUTTONS ON DESKTOP -->
                     <div class="animate-reveal delay-4 flex flex-wrap items-center justify-center lg:justify-start gap-4">
-                        <button onclick="window.location.href='/contact'" class="herobtns bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] text-white py-4 px-8 text-sm sm:text-base hover:transition-all duration-300 shadow-lg hover:shadow-purple-400/20" style="border-radius: 8px !important;">
-                            Get a Free CX Consultation
-                        </button>
                         <button onclick="window.location.href='/solutions'" class="text-white py-4 px-8 text-sm sm:text-base border border-white/30 hover:border-white/60 transition-all duration-300" style="border-radius: 8px !important; background: rgba(255,255,255,0.08);">
-                            View All BPO Solutions
+                            Explore All BPO Solutions
                         </button>
                     </div>
                 </div>
@@ -340,7 +337,7 @@ include(__DIR__ . "/../inc/header.php");
                 <!-- RIGHT: Compact Form -->
                 <div class="cx-hero-form animate-reveal delay-3" style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.14); border-radius:16px; padding:24px;">
                     <p style="color:#fff; font-size:15px; font-weight:600; text-align:center; margin:0 0 16px;">
-                        Get a Free CX Consultation
+                        Get a Free Consultation
                     </p>
                     <div class="ecx-compact">
                         <?php include(__DIR__ . "/../inc/contact-form.php"); ?>
@@ -888,7 +885,9 @@ include(__DIR__ . "/../inc/header.php");
                                 Tell us your channels, your volume, and your biggest CX challenge. We'll design a solution built around your exact requirements.
                             </p>
                             <div class="future-btn w-full max-w-2xl mx-auto mt-6">
-                                <?php include(__DIR__ . "/../inc/contact-form.php"); ?>
+                                <a href="/contact" class="inline-flex items-center justify-center bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] text-white font-bold py-4 px-8 rounded-[8px] text-sm sm:text-base hover:scale-[1.02] active:scale-95 transition shadow-lg hover:shadow-purple-400/20">
+                                    Get a Free CX Consultation
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -970,7 +969,7 @@ function toggleFaq(index) {
 }
 </script>
 <script>
-// Re-init hero form country picker since the page includes contact-form.php twice
+// Re-init hero form country picker after the contact form include
 document.addEventListener('DOMContentLoaded', function () {
     var heroWrap = document.querySelector('.ecx-compact');
     if (!heroWrap) return;

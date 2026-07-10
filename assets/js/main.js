@@ -93,23 +93,28 @@ document.addEventListener("DOMContentLoaded", () => {
   // 1. General reveal animation
   const revealElements = document.querySelectorAll(".animate-reveal");
   if (revealElements.length) {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (reduceMotion) {
+      revealElements.forEach(element => element.classList.add("is-visible"));
+    } else {
     const observer = new IntersectionObserver(
       (entries, obs) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            const elements = [...revealElements];
-            elements.forEach((el, index) => {
-              setTimeout(() => {
-                el.classList.add("is-visible");
-              }, index * 180);
-            });
-            obs.disconnect();
+            entry.target.classList.add("is-visible");
+            obs.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.3 }
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -8% 0px",
+      }
     );
-    observer.observe(revealElements[0]);
+
+      revealElements.forEach(element => observer.observe(element));
+    }
   }
 
   // 2. Buildwith section animation
@@ -494,21 +499,51 @@ if (typeof module !== "undefined") {
 }
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector("header");
-  const scrollThreshold = 50; // scroll distance to trigger effect
+  const progressBar = document.getElementById("top-scroll-progress");
+  const scrollThreshold = 50;
+  let scrollFrame = 0;
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > scrollThreshold) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
+  const updateScrollUi = () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const progress = scrollHeight > 0 ? Math.min(1, scrollTop / scrollHeight) : 0;
+
+    if (header) {
+      header.classList.toggle("scrolled", scrollTop > scrollThreshold);
     }
-  });
+
+    if (progressBar) {
+      progressBar.style.transform = `scaleX(${progress})`;
+    }
+
+    scrollFrame = 0;
+  };
+
+  const requestScrollUiUpdate = () => {
+    if (!scrollFrame) {
+      scrollFrame = requestAnimationFrame(updateScrollUi);
+    }
+  };
+
+  updateScrollUi();
+  window.addEventListener("scroll", requestScrollUiUpdate, { passive: true });
+  window.addEventListener("resize", requestScrollUiUpdate, { passive: true });
 });
 
 const toggle = document.getElementById("countryToggle");
 const dropdown = document.getElementById("countryDropdown");
 const flag = document.getElementById("selectedFlag");
 const code = document.getElementById("selectedCode");
+
+document.querySelectorAll(".mobile-submenu-toggle").forEach(button => {
+  button.addEventListener("click", () => {
+    const group = button.closest(".mobile-solutions-group, .mobile-industries-group, .mobile-resources-group, .mobile-locations-group");
+    if (!group) return;
+
+    const isOpen = group.classList.toggle("is-open");
+    button.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+});
 
 if (toggle && dropdown && flag && code) {
   toggle.addEventListener("click", () => {
@@ -531,35 +566,46 @@ if (toggle && dropdown && flag && code) {
 }
 
 
-//////////////new animations /////////////////
-
-(function () {
-  const bar = document.getElementById("top-scroll-progress");
-
-  window.addEventListener("scroll", () => {
-    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    const scrollHeight =
-      document.documentElement.scrollHeight - document.documentElement.clientHeight;
-
-    const progress = (scrollTop / scrollHeight) * 100;
-    bar.style.width = progress + "%";
-  }, { passive: true });
-})();
-
 document.addEventListener("DOMContentLoaded", () => {
-    const buttons = document.querySelectorAll(".line-btn");
+    const buttons = document.querySelectorAll('.line-btn[href*="#"]');
 
     buttons.forEach(btn => {
         btn.addEventListener("click", function(e) {
-            e.preventDefault(); // Page reload rokne ke liye
+            const targetId = new URL(this.href, window.location.href).hash;
+            const target = targetId ? document.querySelector(targetId) : null;
 
-            // Step 1: Sabse active class hatao
+            if (!target) {
+                return;
+            }
+
+            e.preventDefault();
+
             buttons.forEach(item => {
                 item.classList.remove("active");
             });
-            
-            // Step 2: Sirf clicked button par active class lagao
+
             this.classList.add("active");
+
+            if (window.lenis) {
+                window.lenis.scrollTo(target, {
+                    offset: -110,
+                    immediate: true,
+                });
+            } else {
+                const targetTop = target.getBoundingClientRect().top + window.scrollY - 110;
+                window.scrollTo({
+                    top: targetTop,
+                    behavior: "auto",
+                });
+            }
+
+            if (window.history && window.history.replaceState) {
+                window.history.replaceState(
+                    null,
+                    "",
+                    window.location.pathname + window.location.search + targetId
+                );
+            }
         });
     });
 });

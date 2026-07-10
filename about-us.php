@@ -1,6 +1,6 @@
 <?php
-	$pageTitle = "About Us | Customer Experience & BPO Solutions";
-	$metaDescription = "Discover EmpireOneCX, a trusted global CX partner redefining customer experience with AI-enabled outsourcing, dedicated offshore teams, and scalable BPO solutions.";
+	$page_title = "About Us | EmpireOneCX";
+	$meta_description = "Learn about EmpireOneCX, a next-generation BPO and CX outsourcing partner helping businesses scale customer experience operations.";
 	include("inc/header.php");
 ?>
 <main class="relative">
@@ -24,248 +24,54 @@
 			</div>
 		</div>
 	</section>
-	<section class="about-empireone py-24 relative overflow-hidden">
-		<div class="absolute w-[1012px] h-[1069px] left-[310px] rotate-[157] opacity-100 bg-cover bg-center bg-no-repeat" style="background-image: url('./assets/images/homechooseus.webp');top: -540px;width: 1013px;left: 795px;rotate: 158deg;opacity: 0.25;"></div>
-		<div class="container mx-auto w-full px-4">
-			<div class="grid lg:grid-cols-12 place-items-center">
-				<div class="lg:col-span-8 lg:col-start-3
-							space-y-6
-							text-center" id="about-left">
-					<p class="about-subtext relative flex items-center justify-center gap-2 text-sm pl-2 pr-4 py-3 overflow-hidden"> <span class="relative z-10 flex items-center gap-2">
-							<span class="block w-[24px] h-[4px] rounded"
-								style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);"></span> <span class="font-reckless font-normal text-[20px] leading-[28px] tracking-[-0.03em]" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;font-family: rackless !important;">
+	<section class="about-empireone about-story-section relative overflow-hidden">
+		<div class="about-story-bg" aria-hidden="true"></div>
+		<div class="container mx-auto w-full px-4 relative z-10">
+			<div class="about-story-grid">
+				<div class="about-story-copy reveal-left" id="about-left">
+					<p class="about-subtext relative flex items-center gap-2 text-sm py-3 overflow-hidden">
+						<span class="relative z-10 flex items-center gap-2">
+							<span class="block w-[24px] h-[4px] rounded" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);"></span>
+							<span class="font-reckless font-normal text-[20px] leading-[28px] tracking-[-0.03em]" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;font-family: rackless !important;">
 								About EmpireOneCX
-							</span> </span>
+							</span>
+						</span>
 					</p>
-					<h2 class="about-heading text-[32px] leading-[40px] tracking-[-0.03em] mb-8 text-black" style="margin-top: 4px;">
-						AI-Assisted CX & BPO Solutions
+					<h2 class="about-heading about-story-title text-black">
+						AI-assisted CX and BPO teams built around real human service
 					</h2>
-					<p class="about-para text-[#3C3B47] text-[16px] leading-relaxed max-w-xl mx-auto" style="max-width: 814px;"> EmpireOneCX is a next-generation outsourcing partner built to elevate customer experience. We combine advanced digital systems with skilled professionals who understand that every interaction matters. </p>
-					<p class="about-para text-[#3C3B47] text-[16px] leading-relaxed max-w-xl mx-auto" style="max-width: 814px;margin-top: 10px;"> We don't just answer calls, we build trust, strengthen relationships, and help brands lead with service excellence. </p>
+					<p class="about-para about-story-lead">EmpireOneCX is a next-generation outsourcing partner built to elevate customer experience. We combine advanced digital systems with skilled professionals who understand that every interaction matters.</p>
+					<p class="about-para about-story-text">We do not just answer calls. We build trust, strengthen relationships, and help brands lead with secure, scalable service excellence.</p>
+					<div class="about-story-actions">
+						<a href="contact" class="about-story-btn">Build Your Offshore Team <i class="fas fa-arrow-right"></i></a>
+						<a href="solutions" class="about-story-link">Explore solutions</a>
+					</div>
+				</div>
+				<div class="about-story-visual reveal-right">
+					<div class="about-story-image-wrap">
+						<img src="assets/images/empireoneteam.webp" alt="EmpireOneCX team outside the San Carlos site" loading="lazy" decoding="async">
+					</div>
+					<div class="about-story-proof" aria-label="EmpireOneCX strengths">
+						<div>
+							<i class="fas fa-headset"></i>
+							<strong>Customer-first teams</strong>
+							<span>Dedicated CX support aligned to your workflows.</span>
+						</div>
+						<div>
+							<i class="fas fa-shield-halved"></i>
+							<strong>Secure operations</strong>
+							<span>Compliance-focused delivery for sensitive processes.</span>
+						</div>
+						<div>
+							<i class="fas fa-microchip"></i>
+							<strong>AI-assisted delivery</strong>
+							<span>Smarter workflows with human oversight built in.</span>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section class="careersecondsection pb-[100px] relative overflow-hidden bg-cover bg-center">
-        <div class="container mx-auto px-4">
-            <div class="whatwearesection">
-                <div class="headwhatweare text-[32px] leading-[40px] text-center pb-[50px] scroll-animate">
-                    <h2 style="font-size: inherit; font-weight: bold; margin: 0;">Our People, Our Pride</h2>
-                </div>
-                <div class="animatedsection">
-                    <div class="max-w-7xl w-full">
-                        <div class="accmain">
-                            <div class="accordion-container flex flex-col md:flex-row h-[450px] w-full gap-4">
-                                
-                                <div class="accordion-item active gradient-border relative overflow-hidden cursor-pointer group shadow-sm">
-                                    <div class="bg-blur"></div>
-                                    <div class="collapsed-content absolute inset-0 flex flex-col items-center justify-between py-10 z-10">
-                                        <div class=""><img src="assets/images/series1.webp"></div>
-                                        <div class="plus-btn"><img src="assets/images/plussign.webp"></div>
-                                    </div>
-                                    <div class="expanded-content relative z-10 h-full w-full flex flex-col md:flex-row items-center p-12 gap-12">
-                                        <div class="flex-1">
-                                            <div class="leftworksaccordian mobileftssss">
-                                                <img src="assets/images/quotes.webp">
-                                                <p class="pt-[12px] pb-[30px] text-[22px] leading-[34px]">
-                                                    The leadership team genuinely listens to ideas and feedback, creating an environment where every voice matters. I've had the freedom to experiment, build new solutions, and grow beyond my role. Innovation here isn't just encouraged - it's expected.
-                                                </p>
-                                                <h3 class="text-[20px] leading-[28px] font-semibold">Senior Team Lead, Toronto</h3>
-                                            </div>
-                                        </div>
-                                        <div class="flex-shrink-0">
-                                            <img src="assets/images/accordgirl.webp" alt="Profile" class="w-[170px] h-[200px] object-cover rounded-[16px]">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="accordion-item gradient-border relative overflow-hidden cursor-pointer group shadow-sm">
-                                    <div class="bg-blur"></div>
-                                    <div class="collapsed-content absolute inset-0 flex flex-col items-center justify-between py-10 z-10">
-                                        <div class=""><img src="assets/images/series2.webp"></div>
-                                        <div class="plus-btn"><img src="assets/images/plussign.webp"></div>
-                                    </div>
-                                    <div class="expanded-content relative z-10 h-full w-full flex flex-col md:flex-row items-center p-12 gap-12">
-                                        <div class="flex-1">
-                                            <div class="leftworksaccordian mobileftssss">
-                                                <img src="assets/images/quotes.webp">
-                                                <p class="pt-[12px] pb-[30px] text-[22px] leading-[34px]">
-                                                    Collaboration here happens naturally. Teams communicate openly, support each other, and celebrate wins together. You never feel isolated - you always feel part of a driven and ambitious community.
-                                                </p>
-                                                <h3 class="text-[20px] leading-[28px] font-semibold">Claire - Business Analyst, Philippines</h3>
-                                            </div>
-                                        </div>
-                                        <div class="flex-shrink-0">
-                                            <img src="assets/images/claire.webp" alt="Profile" class="w-[170px] h-[200px] object-cover rounded-[16px]">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="accordion-item gradient-border relative overflow-hidden cursor-pointer group shadow-sm">
-                                    <div class="bg-blur"></div>
-                                    <div class="collapsed-content absolute inset-0 flex flex-col items-center justify-between py-10 z-10">
-                                        <div class=""><img src="assets/images/series3.webp"></div>
-                                        <div class="plus-btn"><img src="assets/images/plussign.webp"></div>
-                                    </div>
-                                    <div class="expanded-content relative z-10 h-full w-full flex flex-col md:flex-row items-center p-12 gap-12">
-                                        <div class="flex-1">
-                                            <div class="leftworksaccordian mobileftssss">
-                                                <img src="assets/images/quotes.webp">
-                                                <p class="pt-[12px] pb-[30px] text-[22px] leading-[34px]">
-                                                    Knowing that my work directly impacts clients and communities gives me a strong sense of purpose. We don't just complete projects - we deliver measurable value that truly makes a difference.
-                                                </p>
-                                                <h3 class="text-[20px] leading-[28px] font-semibold">Ameet - AI Engineer, Pakistan</h3>
-                                            </div>
-                                        </div>
-                                        <div class="flex-shrink-0">
-                                            <img src="assets/images/ameet.webp" alt="Profile" class="w-[170px] h-[200px] object-cover rounded-[16px]">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="accordion-item gradient-border relative overflow-hidden cursor-pointer group shadow-sm">
-                                    <div class="bg-blur"></div>
-                                    <div class="collapsed-content absolute inset-0 flex flex-col items-center justify-between py-10 z-10">
-                                        <div class=""><img src="assets/images/series4.webp"></div>
-                                        <div class="plus-btn"><img src="assets/images/plussign.webp"></div>
-                                    </div>
-                                    <div class="expanded-content relative z-10 h-full w-full flex flex-col md:flex-row items-center p-12 gap-12">
-                                        <div class="flex-1">
-                                            <div class="leftworksaccordian mobileftssss">
-                                                <img src="assets/images/quotes.webp">
-                                                <p class="pt-[12px] pb-[30px] text-[22px] leading-[34px]">
-                                                    The flexibility and trust within the organization allow me to perform at my best. Whether working remotely or onsite, the culture promotes transparency, accountability, and balance.
-                                                </p>
-                                                <h3 class="text-[20px] leading-[28px] font-semibold">Marc - Site Manager, Philippines</h3>
-                                            </div>
-                                        </div>
-                                        <div class="flex-shrink-0">
-                                            <img src="assets/images/mark.webp" alt="Profile" class="w-[170px] h-[200px] object-cover rounded-[16px]">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="accordion-item gradient-border relative overflow-hidden cursor-pointer group shadow-sm">
-                                    <div class="bg-blur"></div>
-                                    <div class="collapsed-content absolute inset-0 flex flex-col items-center justify-between py-10 z-10">
-                                        <div class=""><img src="assets/images/series5.webp"></div>
-                                        <div class="plus-btn"><img src="assets/images/plussign.webp"></div>
-                                    </div>
-                                    <div class="expanded-content relative z-10 h-full w-full flex flex-col md:flex-row items-center p-12 gap-12">
-                                        <div class="flex-1">
-                                            <div class="leftworksaccordian mobileftssss">
-                                                <img src="assets/images/quotes.webp">
-                                                <p class="pt-[12px] pb-[30px] text-[22px] leading-[34px]">
-                                                    From day one, I was trusted with meaningful responsibilities. The mentorship and structured growth path helped me strengthen both my technical expertise and leadership abilities. Every challenge feels like a new opportunity to grow.
-                                                </p>
-                                                <h3 class="text-[20px] leading-[28px] font-semibold">Rabsha - Software Engineer, Pakistan</h3>
-                                            </div>
-                                        </div>
-                                        <div class="flex-shrink-0">
-                                            <img src="assets/images/rabsha.webp" alt="Profile" class="w-[170px] h-[200px] object-cover rounded-[16px]">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="slider-container" class="mobileDisplayss relative group touch-pan-y cursor-grab active:cursor-grabbing">
-                            <div id="slider-wrapper" class="w-full min-h-[400px]">
-                                <div class="slider-item active gradient-bordermobi" data-index="0">
-                                    <div class="inner-content p-8 md:p-14">
-                                        <div class="mainslideracc">
-                                            <div class="leftworksaccordian">
-                                                <img src="assets/images/quotes.webp">
-                                                <p class="pb-[30px] mt-6 text-[24px] md:text-[32px] leading-[1.3] text-gray-800">
-                                                    The leadership team genuinely listens to ideas and feedback, creating an environment where every voice matters. I've had the freedom to experiment, build new solutions, and grow beyond my role. Innovation here isn't just encouraged - it's expected.
-                                                </p>
-                                            </div>
-                                            <div class="mainbottomsection flex flex-row-reverse items-center justify-end w-full">
-                                                <h3 class="pl-[30px] text-[24px] leading-[28px] font-semibold m-0">Senior Team Lead, <br>Toronto</h3>
-                                                <img src="assets/images/accordgirl.webp" alt="Profile" class="w-[140px] h-[140px] shadow-xl">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slider-item gradient-bordermobi" data-index="1">
-                                    <div class="inner-content p-8 md:p-14">
-                                        <div class="mainslideracc">
-                                            <div class="leftworksaccordian">
-                                                <img src="assets/images/quotes.webp">
-                                                <p class="pb-[30px] mt-6 text-[24px] md:text-[32px] leading-[1.3] text-gray-800">
-                                                    Collaboration here happens naturally. Teams communicate openly, support each other, and celebrate wins together. You never feel isolated - you always feel part of a driven and ambitious community.
-                                                </p>
-                                            </div>
-                                            <div class="mainbottomsection flex flex-row-reverse items-center justify-end w-full">
-                                                <h3 class="pl-[30px] text-[24px] leading-[28px] font-semibold m-0">Claire - Business Analyst, <br>Philippines</h3>
-                                                <img src="assets/images/claire.webp" alt="Profile" class="w-[140px] h-[140px] shadow-xl">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slider-item gradient-bordermobi" data-index="2">
-                                    <div class="inner-content p-8 md:p-14">
-                                        <div class="mainslideracc">
-                                            <div class="leftworksaccordian">
-                                                <img src="assets/images/quotes.webp">
-                                                <p class="pb-[30px] mt-6 text-[24px] md:text-[32px] leading-[1.3] text-gray-800">
-                                                    Knowing that my work directly impacts clients and communities gives me a strong sense of purpose. We don't just complete projects - we deliver measurable value that truly makes a difference.                                                
-                                                </p>
-                                            </div>
-                                            <div class="mainbottomsection flex flex-row-reverse items-center justify-end w-full">
-                                                <h3 class="pl-[30px] text-[24px] leading-[28px] font-semibold m-0">Ameet - AI Engineer, <br>Pakistan</h3>
-                                                <img src="assets/images/ameet.webp" alt="Profile" class="w-[140px] h-[140px] shadow-xl">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slider-item gradient-bordermobi" data-index="3">
-                                    <div class="inner-content p-8 md:p-14">
-                                        <div class="mainslideracc">
-                                            <div class="leftworksaccordian">
-                                                <img src="assets/images/quotes.webp">
-                                                <p class="pb-[30px] mt-6 text-[24px] md:text-[32px] leading-[1.3] text-gray-800">
-                                                    The flexibility and trust within the organization allow me to perform at my best. Whether working remotely or onsite, the culture promotes transparency, accountability, and balance.                                                
-                                                </p>
-                                            </div>
-                                            <div class="mainbottomsection flex flex-row-reverse items-center justify-end w-full">
-                                                <h3 class="pl-[30px] text-[24px] leading-[28px] font-semibold m-0">Marc - Site Manager, <br>Philippines</h3>
-                                                <img src="assets/images/mark.webp" alt="Profile" class="w-[140px] h-[140px] shadow-xl">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slider-item gradient-bordermobi" data-index="4">
-                                    <div class="inner-content p-8 md:p-14">
-                                        <div class="mainslideracc">
-                                            <div class="leftworksaccordian">
-                                                <img src="assets/images/quotes.webp">
-                                                <p class="pb-[30px] mt-6 text-[24px] md:text-[32px] leading-[1.3] text-gray-800">
-                                                    From day one, I was trusted with meaningful responsibilities. The mentorship and structured growth path helped me strengthen both my technical expertise and leadership abilities. Every challenge feels like a new opportunity to grow.                                                
-                                                </p>
-                                            </div>
-                                            <div class="mainbottomsection flex flex-row-reverse items-center justify-end w-full">
-                                                <h3 class="pl-[30px] text-[24px] leading-[28px] font-semibold m-0">Rabsha - Software Engineer, <br>Pakistan</h3>
-                                                <img src="assets/images/rabsha.webp" alt="Profile" class="w-[140px] h-[140px] shadow-xl">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="flex justify-center items-center gap-3 mt-10 tempss mobileDisplayss">
-                            <span class="dot active" data-index="0"></span>
-                            <span class="dot" data-index="1"></span>
-                            <span class="dot" data-index="2"></span>
-                            <span class="dot" data-index="3"></span>
-                            <span class="dot" data-index="4"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 	<section class="business-thrive bg-[rgba(0,0,0,1)] py-24 relative">
         <h2 class="sr-only">Our Mission & Vision</h2>
 		<div class="container mx-auto px-4 relative z-10">
@@ -616,7 +422,7 @@
   "name": "<?php echo $pageTitle; ?>",
   "description": "<?php echo $metaDescription; ?>",
   "url": "https://empireonecx.com/<?php echo basename($_SERVER['PHP_SELF'], '.php'); ?>",
-  "foundingDate": "2004",
+  "foundingDate": "2016",
   "publisher": {
     "@type": "Organization",
     "name": "EmpireOneCX",

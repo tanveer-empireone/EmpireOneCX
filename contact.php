@@ -1,7 +1,6 @@
 <?php
-    // SEO Fix: Optimized Title & Meta
-    $pageTitle = "Contact EmpireOneCX | AI-Assisted CX, BPO & Outsourcing Solutions";
-    $metaDescription = "Contact EmpireOneCX to build your high-performance offshore team. Launch your custom CX, BPO, call center, or back-office automation solution in just 2-4 weeks.";
+    $page_title = "Contact Us | EmpireOneCX";
+    $meta_description = "Contact EmpireOneCX to discuss CX outsourcing, BPO services, customer support, back-office support, and offshore team solutions.";
     include("inc/header.php");
 ?>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -26,7 +25,7 @@
       "@type": "ContactPoint",
       "telephone": "+1-800-233-0843",
       "contactType": "customer service",
-      "email": "marketing@empireonegroup.com",
+      "email": "info@empireonecx.com",
       "availableLanguage": ["English"]
     }
   ],
@@ -870,6 +869,15 @@
                     <p class="global-presence-subtitle scroll-animate text-[16px] leading-[24px] text-white mt-2">
                         Wherever you are, EmpireOneCX is just one call or message away.
                     </p>
+                    <br></br>
+                    <div class="global-presence-phone flex items-center gap-2">
+                                    <img src="./assets/images/contact-phone-logo.webp" class="w-[20px] h-[20px]" alt="Phone Contact">
+                                    <span class="text-[14px] leading-[24px] text-white"><a href="tel:+18002330843" class="text-[14px] leading-[24px] text-white hover:underline transition-all">800-233-0843</a></span>
+                                </div>
+                                <div class="global-presence-email flex items-center gap-2">
+                                    <img src="./assets/images/contact-mail-logo.webp" class="w-[20px] h-[20px]" alt="Email Contact">
+                                    <span class="text-[14px] leading-[24px] text-white"><a href="mailto:info@empireonecx.com" class="text-[14px] leading-[24px] text-white hover:underline transition-all">info@empireonecx.com</a></span>
+                                </div>
                 </div>
                 <div class="slider-arrows flex gap-2">
                     <button id="prevSlide" class="swiper-button-prev w-[50px] h-[50px] flex items-center justify-center text-white text-[22px] rounded-full 
@@ -908,16 +916,6 @@
                                 250 Consumers Rd suite 810,<br>Toronto, ON M2J 4V6
                             </p>
                             <div class="border-t border-gray-500 mb-5"></div>
-                            <div class="global-presence-contact space-y-2">
-                                <div class="global-presence-phone flex items-center gap-2">
-                                    <img src="./assets/images/contact-phone-logo.webp" class="w-[20px] h-[20px]" alt="Phone Contact">
-                                    <span class="text-[14px] leading-[24px] text-white"><a href="tel:+18002330843" class="text-[14px] leading-[24px] text-white hover:underline transition-all">800-233-0843</a></span>
-                                </div>
-                                <div class="global-presence-email flex items-center gap-2">
-                                    <img src="./assets/images/contact-mail-logo.webp" class="w-[20px] h-[20px]" alt="Email Contact">
-                                    <span class="text-[14px] leading-[24px] text-white"><a href="mailto:marketing@empireonegroup.com" class="text-[14px] leading-[24px] text-white hover:underline transition-all">marketing@empireonegroup.com</a></span>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
@@ -934,16 +932,6 @@
                                 EmpireOne Bldg Gen. Luna St Poblacion II Carcar City, Cebu 6014
                             </p>
                             <div class="border-t border-gray-500 mb-5"></div>
-                            <div class="global-presence-contact space-y-2">
-                                <div class="flex items-center gap-2">
-                                    <img src="./assets/images/contact-phone-logo.webp" class="w-[20px] h-[20px]" alt="Phone">
-                                    <span class="text-[14px] leading-[24px] text-white"><a href="tel:+18002330843" class="text-[14px] leading-[24px] text-white hover:underline transition-all">800-233-0843</a></span>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <img src="./assets/images/contact-mail-logo.webp" class="w-[20px] h-[20px]" alt="Email">
-                                    <span class="text-[14px] leading-[24px] text-white"><a href="mailto:marketing@empireonegroup.com" class="text-[14px] leading-[24px] text-white hover:underline transition-all">marketing@empireonegroup.com</a></span>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
@@ -960,16 +948,6 @@
                                 EmpireOne Bldg., S. Carmona St., Barangay 6, SanCarlos City,<br>Negros Occidental, 6127
                             </p>
                             <div class="border-t border-gray-500 mb-5"></div>
-                            <div class="global-presence-contact space-y-2">
-                                <div class="flex items-center gap-2">
-                                    <img src="./assets/images/contact-phone-logo.webp" class="w-[20px] h-[20px]" alt="Phone">
-                                    <span class="text-[14px] leading-[24px] text-white"><a href="tel:+18002330843" class="text-[14px] leading-[24px] text-white hover:underline transition-all">800-233-0843</a></span>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <img src="./assets/images/contact-mail-logo.webp" class="w-[20px] h-[20px]" alt="Email">
-                                    <span class="text-[14px] leading-[24px] text-white"><a href="mailto:marketing@empireonegroup.com" class="text-[14px] leading-[24px] text-white hover:underline transition-all">marketing@empireonegroup.com</a></span>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
@@ -986,16 +964,6 @@
                                 Unit 806 FLB Corporate Center Bohol Avenue Cebu Business <br> Park Cebu City, Cebu 6000
                             </p>
                             <div class="border-t border-gray-500 mb-5"></div>
-                            <div class="global-presence-contact space-y-2">
-                                <div class="flex items-center gap-2">
-                                    <img src="./assets/images/contact-phone-logo.webp" class="w-[20px] h-[20px]" alt="Phone">
-                                    <span class="text-[14px] leading-[24px] text-white"><a href="tel:+18002330843" class="text-[14px] leading-[24px] text-white hover:underline transition-all">800-233-0843</a></span>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <img src="./assets/images/contact-mail-logo.webp" class="w-[20px] h-[20px]" alt="Email">
-                                    <span class="text-[14px] leading-[24px] text-white"><a href="mailto:marketing@empireonegroup.com" class="text-[14px] leading-[24px] text-white hover:underline transition-all">marketing@empireonegroup.com</a></span>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
@@ -1009,19 +977,9 @@
                                 <div class="bg-white text-black text-[14px] px-3 py-1 rounded-[5px] font-medium whitespace-nowrap mb-2">Site 1</div>
                             </div>
                             <p class="global-presence-address text-[14px] leading-[24px] text-white mb-4">
-                                Calle 15 No. 4 - 81 Piso 10, Edificio del Caf�, Santa Marta, Magdalena.
+                                Calle 15 No. 4 - 81 Piso 10, Edificio del Cafe, Santa Marta, Magdalena.
                             </p>
                             <div class="border-t border-gray-500 mb-5"></div>
-                            <div class="global-presence-contact space-y-2">
-                                <div class="flex items-center gap-2">
-                                    <img src="./assets/images/contact-phone-logo.webp" class="w-[20px] h-[20px]" alt="Phone">
-                                    <span class="text-[14px] leading-[24px] text-white"><a href="tel:+18002330843" class="text-[14px] leading-[24px] text-white hover:underline transition-all">800-233-0843</a></span>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <img src="./assets/images/contact-mail-logo.webp" class="w-[20px] h-[20px]" alt="Email">
-                                    <span class="text-[14px] leading-[24px] text-white"><a href="mailto:marketing@empireonegroup.com" class="text-[14px] leading-[24px] text-white hover:underline transition-all">marketing@empireonegroup.com</a></span>
-                                </div>
-                            </div>
                         </div>
                     </div>
 

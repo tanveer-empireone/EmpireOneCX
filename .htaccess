@@ -2,6 +2,15 @@
 RewriteEngine On
 RewriteBase /
 
+# Redirect old location URLs to Global Footprint
+RewriteRule ^locations/?$ /global-footprint [R=301,L]
+RewriteRule ^locations/(.*)$ /global-footprint/$1 [R=301,L]
+RewriteRule ^global-markets/?$ /global-footprint [R=301,L]
+RewriteRule ^global-markets/(.*)$ /global-footprint/$1 [R=301,L]
+RewriteRule ^global-footprints/?$ /global-footprint [R=301,L]
+RewriteRule ^global-footprints/(.*)$ /global-footprint/$1 [R=301,L]
+ErrorDocument 404 /404.php
+
 # Serve home.php when root URL is visited
 DirectoryIndex home.php index.php
 

@@ -1,7 +1,6 @@
 <?php
-    $pageTitle = "CX, BPO Careers & Customer Support Jobs ";
-    $metaDescription = "Explore BPO careers and customer support jobs at EmpireOneCX. Join our global team across the US, Canada, and the Philippines for AI-powered roles.";
-    // Removed deprecated metaKeywords variable
+    $page_title = "Careers | EmpireOneCX";
+    $meta_description = "Explore CX, BPO, and customer support careers at EmpireOneCX and join a global team built around service, growth, and technology.";
     include("inc/header.php");
 ?>
 <script src="https://cdn.tailwindcss.com"></script>

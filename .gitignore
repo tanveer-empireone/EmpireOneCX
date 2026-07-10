@@ -1,0 +1,7 @@
+data/ai-chat-config.php
+data/ai-chat-logs/
+data/ai-chat-leads/
+data/ai-unanswered-questions/
+data/ai-feedback/
+empireone-healthcare/
+*.swp

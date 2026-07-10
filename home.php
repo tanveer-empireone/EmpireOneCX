@@ -1,6 +1,6 @@
 <?php
-$page_title = "Customer Experience & Global Outsourcing Services | EmpireOneCX";
-$page_description = "AI-assisted customer experience and global outsourcing. Customer support, back-office, and business process outsourcing (BPO). Build your CX team and go live in 72 hours.";
+$page_title = "EmpireOneCX | Customer Experience & Global Outsourcing Services";
+$meta_description = "EmpireOneCX delivers AI-assisted customer experience, BPO, back-office, and customer support outsourcing solutions that help teams scale faster.";
 include("inc/header.php");
 ?>
 <link rel="preload" href="assets/images/herobgdownimage.webp" as="image" fetchpriority="high">
@@ -187,7 +187,7 @@ include("inc/header.php");
                     </h3>
 
                     <p class="about-para text-[#3C3B47] text-[16px] leading-relaxed max-w-xl">EmpireOneCX delivers secure, scalable, AI-assisted CX & BPO services that help organizations reduce costs, improve efficiency, and deliver customer experiences.</p>
-                    <p class="about-para text-[#3C3B47] text-[16px] leading-relaxed max-w-xl mb-8" style="max-width: 630px;">A full-service business process outsourcing company delivering automations, people-powered solutions to clients across North America, Asia, and global markets.</p>
+                    <p class="about-para text-[#3C3B47] text-[16px] leading-relaxed max-w-xl mb-8" style="max-width: 630px;">A full-service business process outsourcing company delivering automations, people-powered solutions to clients across North America, Asia, and global footprint.</p>
                     <p class="about-para text-[#3C3B47] text-[16px] leading-relaxed max-w-xl" style="max-width: 630px;margin-top:12px;">We combine proven operational frameworks, advanced automation, and highly trained offshore professionals to create predictable, measurable, and scalable results.</p>
 
                     <div class="keyrespons pb-[25px]">
@@ -249,7 +249,7 @@ include("inc/header.php");
                     </h2>
                     <div class="mytexx grid grid-cols-1 md:grid-cols-5 gap-x-6 gap-y-10 md:gap-x-8 md:gap-y-6 text-center mt-8">
                         <div class="flex flex-col items-center space-y-3">
-                            <div class="counter text-[40px] leading-[48px] tracking-[-0.03em] text-center font-medium bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)] bg-clip-text text-transparent" data-target="20">
+                            <div class="counter text-[40px] leading-[48px] tracking-[-0.03em] text-center font-medium bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)] bg-clip-text text-transparent" data-target="10">
                                 0
                             </div>
                             <p class="counterpara text-[16px] leading-[24px] tracking-[-0.02em] text-gray-700 text-center whitespace-nowrap">

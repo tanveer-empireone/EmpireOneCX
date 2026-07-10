@@ -280,12 +280,9 @@ include(__DIR__ . "/../inc/header.php");
                         EmpireOneCX's AI-enabled BPO solutions are built differently. We combine experienced human operators with robotic process automation, AI-powered workflow tools, and intelligent monitoring systems.
                     </p>
 
-                    <div class="animate-reveal delay-4 flex flex-wrap items-center gap-4">
-                        <button onclick="window.location.href='/solutions'" class="herobtns bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] text-white py-4 px-8 text-sm sm:text-base hover:transition-all duration-300 shadow-lg hover:shadow-purple-400/20" style="border-radius: 8px !important;">
-                            Explore AI-Enabled BPO
-                        </button>
-                        <button onclick="window.location.href='/contact'" class="text-white py-4 px-8 text-sm sm:text-base border border-white/30 hover:border-white/60 transition-all duration-300" style="border-radius: 8px !important; background: rgba(255,255,255,0.08);">
-                            Talk to a Solutions Architect
+                    <div class="animate-reveal delay-4 flex flex-wrap items-center justify-center lg:justify-start gap-4">
+                        <button onclick="window.location.href='/solutions'" class="text-white py-4 px-8 text-sm sm:text-base border border-white/30 hover:border-white/60 transition-all duration-300" style="border-radius: 8px !important; background: rgba(255,255,255,0.08);">
+                            Explore All BPO Solutions
                         </button>
                     </div>
                 </div>
@@ -748,7 +745,9 @@ include(__DIR__ . "/../inc/header.php");
                                 Tell us your current processes, your transaction volumes, and your biggest operational friction points. We will design an AI-enabled BPO engagement that delivers measurable improvement from the first month of operation.
                             </p>
                             <div class="future-btn w-full max-w-2xl mx-auto mt-6">
-                                <?php include(__DIR__ . "/../inc/contact-form.php"); ?>
+                                <a href="/contact" class="inline-flex items-center justify-center bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] text-white font-bold py-4 px-8 rounded-[8px] text-sm sm:text-base hover:scale-[1.02] active:scale-95 transition shadow-lg hover:shadow-purple-400/20">
+                                    Get a Free CX Consultation
+                                </a>
                             </div>
                         </div>
                     </div>

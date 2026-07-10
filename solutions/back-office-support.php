@@ -280,10 +280,7 @@ include(__DIR__ . "/../inc/header.php");
                         EmpireOneCX’s back office support services handle the full behind-the-scenes workload - accurately, at scale, and embedded with AI-assisted workflows - so your core team stays focused on clients, growth, and revenue.
                     </p>
 
-                    <div class="animate-reveal delay-4 flex flex-wrap items-center gap-4">
-                        <button onclick="window.location.href='/contact'" class="herobtns bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] text-white py-4 px-8 text-sm sm:text-base hover:transition-all duration-300 shadow-lg hover:shadow-purple-400/20" style="border-radius: 8px !important;">
-                            Get a Free Consultation
-                        </button>
+                    <div class="animate-reveal delay-4 flex flex-wrap items-center justify-center lg:justify-start gap-4">
                         <button onclick="window.location.href='/solutions'" class="text-white py-4 px-8 text-sm sm:text-base border border-white/30 hover:border-white/60 transition-all duration-300" style="border-radius: 8px !important; background: rgba(255,255,255,0.08);">
                             Explore All BPO Solutions
                         </button>
@@ -749,7 +746,9 @@ include(__DIR__ . "/../inc/header.php");
                                 If your core team is losing hours to data backlogs, document processing queues, or administrative overhead that doesn't require their seniority - EmpireOneCX can take it off their plate. Tell us your systems, your volume, and your biggest back office bottleneck. We will design a support model built around your exact workflows, compliance requirements, and output standards.
                             </p>
                             <div class="future-btn w-full max-w-2xl mx-auto mt-6">
-                                <?php include(__DIR__ . "/../inc/contact-form.php"); ?>
+                                <a href="/contact" class="inline-flex items-center justify-center bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] text-white font-bold py-4 px-8 rounded-[8px] text-sm sm:text-base hover:scale-[1.02] active:scale-95 transition shadow-lg hover:shadow-purple-400/20">
+                                    Get a Free CX Consultation
+                                </a>
                             </div>
                         </div>
                     </div>

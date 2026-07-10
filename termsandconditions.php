@@ -162,7 +162,7 @@ include("inc/header.php");
                     For questions regarding these Terms:
                 </p>
                 <p class="company-culture-abformate-solutions text-[#3C3B47] text-[16px] leading-[24px] mt-2">
-                    <a href="mailto:marketing@empireonegroup.com" class="text-[#7A76FF] underline">marketing@empireonegroup.com</a>
+                    <a href="mailto:info@empireonecx.com" class="text-[#7A76FF] underline">info@empireonecx.com</a>
                 </p>
             </div>
 

@@ -273,9 +273,6 @@ include(__DIR__ . "/../inc/header.php");
                     </p>
 
                     <div class="animate-reveal delay-4 flex flex-wrap items-center justify-center lg:justify-start gap-4">
-                        <button onclick="window.location.href='/contact'" class="herobtns bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] text-white py-4 px-8 text-sm sm:text-base hover:transition-all duration-300 shadow-lg hover:shadow-purple-400/20" style="border-radius: 8px !important;">
-                            Build Your Workforce Support Team
-                        </button>
                         <button onclick="window.location.href='/solutions'" class="text-white py-4 px-8 text-sm sm:text-base border border-white/30 hover:border-white/60 transition-all duration-300" style="border-radius: 8px !important; background: rgba(255,255,255,0.08);">
                             Explore All BPO Solutions
                         </button>
@@ -702,7 +699,9 @@ include(__DIR__ . "/../inc/header.php");
                                 If your recruiting is slow, your HR team is buried in administration, or your contingent workforce is outgrowing your ability to manage it cleanly, EmpireOneCX can help. Tell us your workforce structure, your hiring volume, and your current operational gaps — we will design a recruitment and workforce support engagement that fits your operation from day one.
                             </p>
                             <div class="future-btn w-full max-w-2xl mx-auto mt-6">
-                                <?php include(__DIR__ . "/../inc/contact-form.php"); ?>
+                                <a href="/contact" class="inline-flex items-center justify-center bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] text-white font-bold py-4 px-8 rounded-[8px] text-sm sm:text-base hover:scale-[1.02] active:scale-95 transition shadow-lg hover:shadow-purple-400/20">
+                                    Get a Free CX Consultation
+                                </a>
                             </div>
                         </div>
                     </div>
