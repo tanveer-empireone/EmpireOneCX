@@ -52,9 +52,20 @@ function submitSalesforceLead(array $leadData)
     }
 
     if ($response === false || $statusCode < 200 || $statusCode >= 400) {
-        throw new Exception('Salesforce Web-to-Lead submission failed.');
+        $statusLabel = $statusCode > 0 ? $statusCode : 'no HTTP response';
+        throw new Exception('Salesforce Web-to-Lead submission failed with ' . $statusLabel . '.');
     }
 }
+
+
+function logSalesforceLeadError(Exception $exception, array $leadData)
+{
+    $safeLeadData = $leadData;
+    unset($safeLeadData['oid']);
+
+    error_log('EmpireOneCX Salesforce lead submission failed: ' . $exception->getMessage() . ' Lead: ' . json_encode($safeLeadData));
+}
+
 
 
 
@@ -326,7 +337,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sourceUrl = $_SERVER['HTTP_REFERER'] ?? 'https://empireonecx.com/contact';
         $description = "Inquiry Type: {$inquiry}\nPhone Country Code: {$countryCode}\nPhone Number: {$phoneNumber}\nSource Page: {$sourceUrl}";
 
-        submitSalesforceLead([
+        $salesforceLeadData = [
             'oid' => '00Dau00000BgNWX',
             'retURL' => 'https://empireonecx.com/contact',
             'first_name' => $firstName,
@@ -336,7 +347,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             'phone' => $phone,
             'lead_source' => 'Web',
             'description' => $description,
-        ]);
+        ];
+
+        try {
+            submitSalesforceLead($salesforceLeadData);
+        } catch (Exception $salesforceException) {
+            logSalesforceLeadError($salesforceException, $salesforceLeadData);
+        }
 
         /* ===========================
 
