@@ -1,13 +1,18 @@
 <?php
-    $page_title = "Contact Us | EmpireOneCX";
-    $meta_description = "Contact EmpireOneCX to discuss CX outsourcing, BPO services, customer support, back-office support, and offshore team solutions.";
-    $languageSwitchHrefEs = "/es/contacto/";
+    $siteLanguage = "es";
+    $baseHref = "/";
+    $page_title = "Contacto | EmpireOneCX";
+    $pageTitle = "Contacto | EmpireOneCX";
+    $meta_description = "Contacte a EmpireOneCX para conversar sobre outsourcing CX, servicios BPO, atención al cliente, soporte back office y equipos offshore dedicados.";
+    $metaDescription = $meta_description;
+    $metaKeywords = "contacto EmpireOneCX, outsourcing CX, servicios BPO, atención al cliente, soporte back office, equipos offshore";
+    $languageSwitchHrefEn = "/contact";
     $languageAlternates = [
         "en" => "https://empireonecx.com/contact",
         "es" => "https://empireonecx.com/es/contacto/",
         "x-default" => "https://empireonecx.com/contact",
     ];
-    include("inc/header.php");
+    include(__DIR__ . "/../../inc/header.php");
 ?>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 <style>
@@ -32,13 +37,13 @@
       "telephone": "+1-800-233-0843",
       "contactType": "customer service",
       "email": "info@empireonecx.com",
-      "availableLanguage": ["English"]
+      "availableLanguage": ["English", "Spanish"]
     }
   ],
   "location": [
     {
       "@type": "Place",
-      "name": "Headquarters - Canada",
+      "name": "Sede principals - Canada",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "250 Consumers Rd suite 810",
@@ -50,7 +55,7 @@
     },
     {
       "@type": "Place",
-      "name": "Philippines Site 1",
+      "name": "Philippines Sede 1",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "EmpireOne Bldg Gen. Luna St Poblacion II Carcar City",
@@ -61,7 +66,7 @@
     },
     {
       "@type": "Place",
-      "name": "Colombia Site 1",
+      "name": "Colombia Sede 1",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Calle 15 No. 4 - 81 Piso 10, Edificio del Caf�",
@@ -77,20 +82,20 @@
 <main class="relative bg-black">
     <section class="hero-section careerhero mainherowork relative flex flex-col items-center justify-center px-4 sm:px-6 text-center overflow-hidden">
         <video class="solutions-bg-videowork absolute w-[100%]" autoplay muted loop playsinline  preload="none">
-            <source src="./assets/images/contactpagebg.mp4" type="video/mp4" />
+            <source src="/assets/images/contactpagebg.mp4" type="video/mp4" />
         </video>
         <div class="absolute bg-black/50 -z-10" style="width:1920px; height:611px;"></div>
         <div class="container mx-auto w-full relative z-10">
             <p class="herosubtitle text-[20px] leading-[28px] mb-4 animate-reveal delay-1 bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] bg-clip-text text-transparent">
                 <span class="spanfont bg-gradient-to-r from-[#CB46FA] to-[#FE881C] bg-clip-text text-transparent">
-                    Contact Us
+                    Contacto
                 </span>
             </p>
             <h1 class="solutions-hero-heading herocheck animate-reveal delay-2 text-[48px] font-medium leading-[54px] sm:leading-[1.1] mb-4 text-white mx-auto">
-                Let's Talk  
+                Hablemos  
             </h1>
             <p class="subpara shortspace font-normal animate-reveal delay-3 text-gray-300 text-sm sm:text-base lg:text-lg sm:max-w-3xl mx-auto sm:mb-3" style="max-width: 848px !important;padding-bottom: 20px;"> 
-                Request a custom growth plan or book a free strategy call. Our team responds within 24 hours.
+                Solicite un plan de crecimiento personalizado o agende una llamada estratégica gratuita. Nuestro equipo responde en un plazo de 24 horas.
             </p>
         </div>
     </section>
@@ -99,14 +104,14 @@
             <div class="contact-form-card relative overflow-hidden bg-white rounded-[24px] py-[65px] px-[40px] grid grid-cols-1 md:grid-cols-12">
                 <div class="contact-form-left md:col-span-5">
                     <h2 class="contact-form-heading animate-reveal delay-1 text-[32px] leading-[40px] font-medium text-black">
-                        Let's Build <br class="nobreak">
+                        Construyamos <br class="nobreak">
                         <span class="solutionsitalic-font font-normal">
-                            Your High-Performance
+                            su equipo de alto rendimiento
                         </span>
-                        Team Today!
+                        hoy
                     </h2>
-                    <p class="text-[18px] w-[455px] pt-[22px]">Tell us where you want to go. We'll design a high-performance, AI-Assisted offshore solution built specifically for your business.</p>
-                    <p class="text-[18px] w-[455px] pt-[22px]"><b>Most clients launch in 2-4 Weeks.</b></p>
+                    <p class="text-[18px] w-[455px] pt-[22px]">Cuéntenos hacia donde quiere avanzar. Diseñaremos una solución offshore de alto rendimiento, asistida por IA y creada específicamente para su negocio.</p>
+                    <p class="text-[18px] w-[455px] pt-[22px]"><b>La mayoría de los clientes inicia en 2 a 4 semanas.</b></p>
                     <div class="contact-side-img1 absolute w-[732px] h-[774px] opacity-[40%] bg-cover bg-center bg-no-repeat"></div>
                     
                 </div>
@@ -116,18 +121,18 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-[16px]">
                         <div class="contact-form-field ">
                             <label class="contact-form-label animate-reveal text-[18px] leading-[24px] text-[rgba(0, 0, 0, 1)]">
-                                Full Name
+                                Nombre completo
                             </label>
-                            <input type="text" name="full_name" placeholder="Your Name" class="contact-form-input w-full mt-[6px] px-[16px] py-[12px]
+                            <input type="text" name="full_name" placeholder="Su nombre" class="contact-form-input w-full mt-[6px] px-[16px] py-[12px]
                                     rounded-[6px] bg-[rgba(229,229,229,1)] border border-[#E5E5E5] text-[16px] leading-[24px]
                                     focus:outline-none focus:ring-2 focus:ring-purple-400 transition">
                         </div>
 
                         <div class="contact-form-field">
                             <label class="contact-form-label animate-reveal text-[18px] leading-[24px] text-[rgba(0, 0, 0, 1)]">
-                                Company Name
+                                Nombre de la empresa
                             </label>
-                            <input type="text" name="company_name" placeholder="Enter company name"
+                            <input type="text" name="company_name" placeholder="Ingrese el nombre de la empresa"
                                 class="contact-form-input w-full mt-[6px] px-[16px] py-[12px]
                                     rounded-[6px] bg-[rgba(229,229,229,1)] border border-[#E5E5E5] text-[16px] leading-[24px]
                                     focus:outline-none focus:ring-2 focus:ring-purple-400 transition">
@@ -139,7 +144,7 @@
 
                         <div class="contact-form-field">
                             <label class="contact-form-label animate-reveal text-[18px] leading-[24px] text-[rgba(0, 0, 0, 1)]">
-                                Email Address
+                                Correo electrónico
                             </label>
                             <input type="email"  name="email" placeholder="name@company.com"
                                 class="contact-form-input w-full mt-[6px] px-[16px] py-[12px]
@@ -149,7 +154,7 @@
 
                         <div class="contact-form-field">
                             <label class="contact-form-label animate-reveal text-[18px] leading-[24px] text-black">
-                                Contact Number
+                                Número de contacto
                             </label>
 
                             <div class="relative mt-[6px]">
@@ -824,27 +829,27 @@
 
                     <div class="contact-form-field mt-[20px]">
                         <label class="contact-form-label animate-reveal text-[18px] leading-[24px] text-[rgba(0, 0, 0, 1)]">
-                            What are you looking to build?
+                            ¿Qué desea construir?
                         </label>
                         <select  name="inquiry_type"
                             class="contact-form-input w-full mt-[6px] px-[16px] py-[12px]
                                     rounded-[6px] bg-[rgba(229,229,229,1)] border border-[#E5E5E5] text-[16px] leading-[24px]
                                     focus:outline-none focus:ring-2 focus:ring-purple-400 transition">
-                            <option value="Dedicated Support Team">Dedicated Support Team</option>
-                            <option value="AI + Automation">AI + Automation</option>
-                            <option value="Recruitment & Workforce">Recruitment & Workforce</option>
-                            <option value="Customer Experience Optimization">Customer Experience Optimization</option>
-                            <option value="Custom Solution">Custom Solution</option>
-                            <option value="Partnership">Partnership</option>
+                            <option value="Dedicated Support Team">Equipo de soporte dedicado</option>
+                            <option value="AI + Automation">IA + automatización</option>
+                            <option value="Recruitment & Workforce">Reclutamiento y fuerza laboral</option>
+                            <option value="Customer Experience Optimization">Optimización de experiencia del cliente</option>
+                            <option value="Custom Solution">Solución personalizada</option>
+                            <option value="Partnership">Alianza estratégica</option>
                         </select>
                     </div>
 
                     <div class="contact-form-privacy flex items-center gap-[8px] mt-[20px]">
                         <input type="checkbox"  name="privacy" class="contact-form-checkbox accent-purple-500" required>
                         <p class="contact-form-privacy-text text-[18px] leading-[24px] text-[rgba(0, 0, 0, 1)]">
-                            By ticking this box I agree that I have read the
+                            Al marcar esta casilla, confirmo que he leido la
                             <span class="contact-form-privacy-link bg-gradient-to-r underline from-[#CB46FA] to-[#FE881C] bg-clip-text text-transparent cursor-pointer">
-                                privacy policy
+                                política de privacidad
                             </span>
                         </p>
                     </div>
@@ -853,7 +858,7 @@
                         class="contact-form-submit mt-[10px] px-[32px] py-[14px]
                             rounded-[10px] text-white text-[16px] font-medium
                             bg-gradient-to-r from-[#CB46FA] to-[#FE881C] mt-[40px]">
-                        Get My Custom Growth Plan
+                        Solicitar mi plan de crecimiento
                     </button>
 
                 </form>
@@ -862,7 +867,7 @@
     </section>
     <section class="global-presence-section relative overflow-hidden pt-[100px] pb-[100px]">
          <video class="global-presence-video absolute inset-0 w-full h-[735px] object-cover" autoplay muted loop playsinline  preload="none">
-            <source src="./assets/images/contact-pagenewvideo.mp4" type="video/mp4">
+            <source src="/assets/images/contact-pagenewvideo.mp4" type="video/mp4">
         </video>
         <div class="global-presence-overlay absolute inset-0 bg-black/60" style="height:735px;"></div>
         
@@ -870,18 +875,18 @@
             <div class="global-presence-header flex justify-between items-start mb-16">
                 <div>
                     <h2 class="global-presence-title scroll-animate text-[32px] leading-[40px] text-white font-medium">
-                        Our Global Presence
+                        Nuestra presencia global
                     </h2>
                     <p class="global-presence-subtitle scroll-animate text-[16px] leading-[24px] text-white mt-2">
-                        Wherever you are, EmpireOneCX is just one call or message away.
+                        Dondequiera que se encuentre, EmpireOneCX está a una llamada o mensaje de distancia.
                     </p>
                     <br></br>
                     <div class="global-presence-phone flex items-center gap-2">
-                                    <img src="./assets/images/contact-phone-logo.webp" class="w-[20px] h-[20px]" alt="Phone Contact">
+                                    <img src="/assets/images/contact-phone-logo.webp" class="w-[20px] h-[20px]" alt="Phone Contact">
                                     <span class="text-[14px] leading-[24px] text-white"><a href="tel:+18002330843" class="text-[14px] leading-[24px] text-white hover:underline transition-all">800-233-0843</a></span>
                                 </div>
                                 <div class="global-presence-email flex items-center gap-2">
-                                    <img src="./assets/images/contact-mail-logo.webp" class="w-[20px] h-[20px]" alt="Email Contact">
+                                    <img src="/assets/images/contact-mail-logo.webp" class="w-[20px] h-[20px]" alt="Email Contact">
                                     <span class="text-[14px] leading-[24px] text-white"><a href="mailto:info@empireonecx.com" class="text-[14px] leading-[24px] text-white hover:underline transition-all">info@empireonecx.com</a></span>
                                 </div>
                 </div>
@@ -912,11 +917,11 @@
                             p-[20px] backdrop-blur-2xl bg-gradient-to-br from-white/15 via-white/5 to-white/10 text-white scroll-animate
                             transition-all duration-[800ms] ease-[cubic-bezier(.16,1,.3,1)] hover:-translate-y-3 hover:shadow-[0_40px_100px_rgba(0,0,0,0.35)]">
                             <div class="imageworkcontact pb-[24px]">
-                                <img src="assets/images/canada.webp" class="w-[65px]" alt="EmpireOne Canada Headquarters">
+                                <img src="/assets/images/canada.webp" class="w-[65px]" alt="EmpireOne Canada Sede principals">
                             </div>
                             <div class="flex items-center justify-between relative w-full">
                                 <h3 class="global-presence-country text-[24px] leading-[32px] font-medium mb-2">Canada</h3>
-                                <div class="global-presence-country bg-white text-black text-[14px] px-3 py-1 rounded-[5px] font-medium whitespace-nowrap mb-2">Headquarter</div>
+                                <div class="global-presence-country bg-white text-black text-[14px] px-3 py-1 rounded-[5px] font-medium whitespace-nowrap mb-2">Sede principal</div>
                             </div>
                             <p class="global-presence-address text-[14px] leading-[24px] text-white mb-4">
                                 250 Consumers Rd suite 810,<br>Toronto, ON M2J 4V6
@@ -929,10 +934,10 @@
                         <div class="empire-slide-right global-presence-card gradient-borderbox group relative overflow-hidden rounded-[18px]
                             p-[26px] backdrop-blur-2xl bg-gradient-to-br from-white/15 via-white/5 to-white/10 text-white scroll-animate
                             transition-all duration-[800ms] ease-[cubic-bezier(.16,1,.3,1)] hover:-translate-y-3 hover:shadow-[0_40px_100px_rgba(0,0,0,0.35)]">
-                            <div class="imageworkcontact pb-[20px]"><img src="assets/images/phill.webp" alt="EmpireOne Philippines Call Center Site 1"></div>
+                            <div class="imageworkcontact pb-[20px]"><img src="/assets/images/phill.webp" alt="EmpireOne Philippines Call Center Sede 1"></div>
                             <div class="flex items-center justify-between relative w-full">
                                 <h3 class="global-presence-country text-[24px] leading-[32px] font-medium mb-2">Philippines</h3>
-                                <div class="bg-white text-black text-[14px] px-3 py-1 rounded-[5px] font-medium whitespace-nowrap mb-2">Site 1</div>
+                                <div class="bg-white text-black text-[14px] px-3 py-1 rounded-[5px] font-medium whitespace-nowrap mb-2">Sede 1</div>
                             </div>
                             <p class="global-presence-address text-[14px] leading-[24px] text-white mb-4">
                                 EmpireOne Bldg Gen. Luna St Poblacion II Carcar City, Cebu 6014
@@ -945,10 +950,10 @@
                         <div class="empire-slide-right global-presence-card gradient-borderbox group relative overflow-hidden rounded-[18px]
                             p-[26px] backdrop-blur-2xl bg-gradient-to-br from-white/15 via-white/5 to-white/10 text-white scroll-animate
                             transition-all duration-[800ms] ease-[cubic-bezier(.16,1,.3,1)] hover:-translate-y-3 hover:shadow-[0_40px_100px_rgba(0,0,0,0.35)]">
-                            <div class="imageworkcontact pb-[20px]"><img src="assets/images/phill.webp" alt="EmpireOne Philippines Call Center Site 2"></div>
+                            <div class="imageworkcontact pb-[20px]"><img src="/assets/images/phill.webp" alt="EmpireOne Philippines Call Center Sede 2"></div>
                             <div class="flex items-center justify-between relative w-full">
                                 <h3 class="global-presence-country text-[24px] leading-[32px] font-medium mb-2">Philippines</h3>
-                                <div class="bg-white text-black text-[14px] px-3 py-1 rounded-[5px] font-medium whitespace-nowrap mb-2">Site 2</div>
+                                <div class="bg-white text-black text-[14px] px-3 py-1 rounded-[5px] font-medium whitespace-nowrap mb-2">Sede 2</div>
                             </div>
                             <p class="global-presence-address text-[14px] leading-[24px] text-white mb-4">
                                 EmpireOne Bldg., S. Carmona St., Barangay 6, SanCarlos City,<br>Negros Occidental, 6127
@@ -961,10 +966,10 @@
                         <div class="empire-slide-left global-presence-card gradient-borderbox group relative overflow-hidden rounded-[18px]
                             p-[26px] backdrop-blur-2xl bg-gradient-to-br from-white/15 via-white/5 to-white/10 text-white scroll-animate
                             transition-all duration-[800ms] ease-[cubic-bezier(.16,1,.3,1)] hover:-translate-y-3 hover:shadow-[0_40px_100px_rgba(0,0,0,0.35)]">
-                            <div class="imageworkcontact pb-[20px]"><img src="assets/images/phill.webp" alt="EmpireOne Philippines Call Center Site 3"></div>
+                            <div class="imageworkcontact pb-[20px]"><img src="/assets/images/phill.webp" alt="EmpireOne Philippines Call Center Sede 3"></div>
                             <div class="flex items-center justify-between relative w-full">
                                 <h3 class="global-presence-country text-[24px] leading-[32px] font-medium mb-2">Philippines</h3>
-                                <div class="bg-white text-black text-[14px] px-3 py-1 rounded-[5px] font-medium whitespace-nowrap mb-2">Site 3</div>
+                                <div class="bg-white text-black text-[14px] px-3 py-1 rounded-[5px] font-medium whitespace-nowrap mb-2">Sede 3</div>
                             </div>
                             <p class="global-presence-address text-[14px] leading-[24px] text-white mb-4">
                                 Unit 806 FLB Corporate Center Bohol Avenue Cebu Business <br> Park Cebu City, Cebu 6000
@@ -977,10 +982,10 @@
                         <div class="empire-slide-left global-presence-card gradient-borderbox group relative overflow-hidden rounded-[18px]
                             p-[26px] backdrop-blur-2xl bg-gradient-to-br from-white/15 via-white/5 to-white/10 text-white scroll-animate
                             transition-all duration-[800ms] ease-[cubic-bezier(.16,1,.3,1)] hover:-translate-y-3 hover:shadow-[0_40px_100px_rgba(0,0,0,0.35)]">
-                            <div class="imageworkcontact pb-[20px]"><img src="assets/images/colombia.webp" alt="EmpireOne Colombia BPO Site"></div>
+                            <div class="imageworkcontact pb-[20px]"><img src="/assets/images/colombia.webp" alt="EmpireOne Colombia BPO Site"></div>
                             <div class="flex items-center justify-between relative w-full">
                                 <h3 class="global-presence-country text-[24px] leading-[32px] font-medium mb-2">Colombia</h3>
-                                <div class="bg-white text-black text-[14px] px-3 py-1 rounded-[5px] font-medium whitespace-nowrap mb-2">Site 1</div>
+                                <div class="bg-white text-black text-[14px] px-3 py-1 rounded-[5px] font-medium whitespace-nowrap mb-2">Sede 1</div>
                             </div>
                             <p class="global-presence-address text-[14px] leading-[24px] text-white mb-4">
                                 Calle 15 No. 4 - 81 Piso 10, Edificio del Cafe, Santa Marta, Magdalena.
@@ -994,7 +999,7 @@
         </div>
     </section>
 </main>
-<?php include("inc/footer.php"); ?>
+<?php include(__DIR__ . "/../../inc/footer.php"); ?>
 <script>
 document.getElementById("contactForm").addEventListener("submit", function(e) {
     e.preventDefault();
@@ -1005,12 +1010,12 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
 
     // Disable button
     submitBtn.disabled = true;
-    submitBtn.innerText = "Sending...";
+    submitBtn.innerText = "Enviando...";
 
     // Show Loading SweetAlert
     Swal.fire({
-        title: "Sending Message...",
-        text: "Please wait while we submit your request.",
+        title: "Enviando mensaje...",
+        text: "Espere mientras enviamos su solicitud.",
         allowOutsideClick: false,
         showConfirmButton: false,
         background: "linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%)",
@@ -1020,7 +1025,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
         }
     });
 
-    fetch("send-mail.php", {
+    fetch("/send-mail.php", {
         method: "POST",
         body: formData
     })
@@ -1033,7 +1038,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
 
             Swal.fire({
                 icon: "success",
-                title: "Message Sent Successfully!",
+                title: "Mensaje enviado correctamente",
                 text: data.message,
                 background: "linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%)",
                 color: "#ffffff",
@@ -1050,18 +1055,18 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
 
             Swal.fire({
                 icon: "error",
-                title: "Something Went Wrong",
+                title: "Algo salió mal",
                 text: data.message,
                 background: "linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%)",
                 color: "#ffffff",
                 confirmButtonColor: "#ffffff",
-                confirmButtonText: "Try Again"
+                confirmButtonText: "Intentar de nuevo"
             });
         }
 
         // Enable button again
         submitBtn.disabled = false;
-        submitBtn.innerText = "Send Message";
+        submitBtn.innerText = "Enviar mensaje";
 
     })
     .catch(error => {
@@ -1070,19 +1075,19 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
 
         Swal.fire({
             icon: "error",
-            title: "Server Error",
-            text: "Please try again later.",
+            title: "Error del servidor",
+            text: "Inténtelo nuevamente mas tarde.",
             background: "linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%)",
             color: "#ffffff",
             confirmButtonColor: "#ffffff"
         });
 
         submitBtn.disabled = false;
-        submitBtn.innerText = "Send Message";
+        submitBtn.innerText = "Enviar mensaje";
     });
 });
 </script>
-<script src="assets/js/jquery.js"></script>
+<script src="/assets/js/jquery.js"></script>
 <script>
 $(document).ready(function () {
     

@@ -263,7 +263,7 @@ if (empty($languageAlternates)) {
                                         <a href="/global-footprint/philippines"><img class="nav-location-flag" src="/assets/images/flags/philippines.svg" alt="" loading="lazy">Philippines</a>
                                     </div>
                                 </div>
-                                <a href="/contact" class="nav-link"><?php echo $isSpanishSite ? 'Contacto' : 'Contact Us'; ?></a>
+                                <a href="<?php echo $isSpanishSite ? '/es/contacto/' : '/contact'; ?>" class="nav-link"><?php echo $isSpanishSite ? 'Contacto' : 'Contact Us'; ?></a>
                             </nav>
                         </div>
 
@@ -273,7 +273,7 @@ if (empty($languageAlternates)) {
                                     class="header-btn rounded-[7px] 
                                         px-[18px] py-[7px]
                                         text-[14px] bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] text-white">
-                                        Book a 30 Minute Call
+                                        <?php echo $isSpanishSite ? 'Agende una llamada de 30 minutos.' : 'Book a 30 Minute Call'; ?>
                             </button>
                         </div>
 
@@ -392,7 +392,7 @@ if (empty($languageAlternates)) {
                             <a href="/global-footprint/philippines"><img class="nav-location-flag" src="/assets/images/flags/philippines.svg" alt="" loading="lazy">Philippines</a>
                         </div>
                     </div>
-                    <a href="/contact" class="mobile-nav-link block text-gray-800 text-base font-medium hover:text-purple-600 transition-colors">
+                    <a href="<?php echo $isSpanishSite ? '/es/contacto/' : '/contact'; ?>" class="mobile-nav-link block text-gray-800 text-base font-medium hover:text-purple-600 transition-colors">
                         <i class="fas fa-envelope mr-3 w-5 text-center"></i><?php echo $isSpanishSite ? 'Contacto' : 'Contact Us'; ?>
                     </a>
                 </div>
