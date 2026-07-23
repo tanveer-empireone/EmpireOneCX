@@ -3,6 +3,7 @@ $siteLanguage = $siteLanguage ?? ((str_starts_with(parse_url($_SERVER['REQUEST_U
 $isSpanishSite = $siteLanguage === 'es';
 $homeHref = $isSpanishSite ? '/es/' : '/';
 $languageAlternates = $languageAlternates ?? [];
+$showLanguageSwitcher = $showLanguageSwitcher ?? false;
 
 if (empty($languageAlternates)) {
     $currentPath = rtrim(strtok($_SERVER['REQUEST_URI'], '?'), '/') ?: '/';
@@ -129,19 +130,21 @@ if (empty($languageAlternates)) {
                         </a>
                         <div class="eocx-top-header__right">
                             <a class="eocx-top-header__career" href="https://careers.empireonecx.com/" target="_blank" rel="noopener noreferrer"><?php echo $isSpanishSite ? 'Carreras' : 'Careers'; ?></a>
+                            <?php if ($showLanguageSwitcher): ?>
                             <div class="eocx-language-dropdown" aria-label="Language selector">
-                            <button type="button" class="eocx-language-dropdown__trigger" aria-haspopup="true">
-                                <img src="<?php echo $isSpanishSite ? '/assets/images/flags/spain.svg' : '/assets/images/flags/united-states.svg'; ?>" alt="" aria-hidden="true">
-                                <span><?php echo $isSpanishSite ? 'ES' : 'EN'; ?></span>
-                                <i class="fas fa-chevron-down" aria-hidden="true"></i>
-                            </button>
-                            <div class="eocx-language-dropdown__menu">
-                                <a href="<?php echo $isSpanishSite ? '/' : '/es/'; ?>" hreflang="<?php echo $isSpanishSite ? 'en' : 'es'; ?>">
-                                    <img src="<?php echo $isSpanishSite ? '/assets/images/flags/united-states.svg' : '/assets/images/flags/spain.svg'; ?>" alt="" aria-hidden="true">
-                                    <span><?php echo $isSpanishSite ? 'EN' : 'ES'; ?></span>
-                                </a>
+                                <button type="button" class="eocx-language-dropdown__trigger" aria-haspopup="true">
+                                    <img src="<?php echo $isSpanishSite ? '/assets/images/flags/spain.svg' : '/assets/images/flags/united-states.svg'; ?>" alt="" aria-hidden="true">
+                                    <span><?php echo $isSpanishSite ? 'ES' : 'EN'; ?></span>
+                                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                </button>
+                                <div class="eocx-language-dropdown__menu">
+                                    <a href="<?php echo $isSpanishSite ? '/' : '/es/'; ?>" hreflang="<?php echo $isSpanishSite ? 'en' : 'es'; ?>">
+                                        <img src="<?php echo $isSpanishSite ? '/assets/images/flags/united-states.svg' : '/assets/images/flags/spain.svg'; ?>" alt="" aria-hidden="true">
+                                        <span><?php echo $isSpanishSite ? 'EN' : 'ES'; ?></span>
+                                    </a>
+                                </div>
                             </div>
-                            </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
