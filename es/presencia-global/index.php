@@ -1,8 +1,12 @@
 <?php
-$page_title = "Global Footprint | EmpireOneCX";
-$metaDescription = "Explore EmpireOneCX global footprint pages across North America, Europe, the Middle East, Africa, Asia, and Latin America. Learn how our global CX and BPO delivery model supports growing brands.";
-$metaKeywords = "EmpireOneCX global footprint, BPO global delivery, CX outsourcing Canada, United States, United Kingdom, Australia, UAE, Morocco, Nicaragua, Colombia, Venezuela, Bolivia, Paraguay, South Africa, Pakistan, Philippines";
-$languageSwitchHrefEs = "/es/presencia-global/";
+$siteLanguage = "es";
+$baseHref = "/";
+$page_title = "Presencia global | EmpireOneCX";
+$pageTitle = "Presencia global | EmpireOneCX";
+$meta_description = "Explore la presencia global de EmpireOneCX en Norteamérica, Europa, Medio Oriente, África, Asia y América Latina. Conozca cómo nuestro modelo global de entrega CX y BPO ayuda a las marcas a crecer.";
+$metaDescription = $meta_description;
+$metaKeywords = "presencia global EmpireOneCX, entrega global BPO, outsourcing CX Canadá, Estados Unidos, Reino Unido, Australia, EAU, Marruecos, Nicaragua, Colombia, Venezuela, Bolivia, Paraguay, Sudáfrica, Pakistán, Filipinas";
+$languageSwitchHrefEn = "/global-footprint";
 $languageAlternates = [
     "en" => "https://empireonecx.com/global-footprint",
     "es" => "https://empireonecx.com/es/presencia-global/",
@@ -11,106 +15,106 @@ $languageAlternates = [
 
 $locations = [
     [
-        "name" => "Canada",
+        "name" => "Canadá",
         "slug" => "canada",
-        "summary" => "North American CX and BPO support for brands that need scalable teams, responsive service, and trusted operational delivery.",
+        "summary" => "Soporte de CX y BPO en Norteamérica para marcas que necesitan equipos flexibles, servicio ágil y una entrega operativa confiable.",
         "image" => "/assets/images/canada-skyscraper.webp",
-        "highlights" => ["Customer experience teams", "Back-office support", "Nearshore-friendly coverage", "Secure operational workflows"],
+        "highlights" => ["Equipos de experiencia del cliente", "Soporte back office", "Cobertura compatible con nearshore", "Flujos operativos seguros"],
     ],
     [
-        "name" => "United States",
+        "name" => "Estados Unidos",
         "slug" => "united-states",
-        "summary" => "CX outsourcing and BPO support for U.S. businesses looking to scale support capacity, reduce operational pressure, and improve customer responsiveness.",
+        "summary" => "Outsourcing de CX y soporte BPO para empresas estadounidenses que buscan aumentar su capacidad de atención, reducir presión operativa y responder mejor a sus clientes.",
         "image" => "/assets/images/USA.webp",
-        "highlights" => ["Customer support outsourcing", "AI-assisted operations", "Sales and service support", "Scalable support capacity"],
+        "highlights" => ["Outsourcing de atención al cliente", "Operaciones asistidas por IA", "Soporte de ventas y servicio", "Capacidad de soporte adaptable"],
     ],
     [
-        "name" => "United Kingdom",
+        "name" => "Reino Unido",
         "slug" => "united-kingdom",
-        "summary" => "Customer experience and business process outsourcing support for UK brands serving local, regional, and global customers.",
+        "summary" => "Soporte de experiencia del cliente y outsourcing de procesos de negocio para marcas del Reino Unido que atienden clientes locales, regionales y globales.",
         "image" => "/assets/images/UK.webp",
-        "highlights" => ["Omnichannel support", "GDPR-aware workflows", "Flexible team scaling", "Quality assurance support"],
+        "highlights" => ["Soporte omnicanal", "Flujos de trabajo alineados con GDPR", "Capacidad flexible de equipos", "Soporte de control de calidad"],
     ],
     [
         "name" => "Australia",
         "slug" => "australia",
-        "summary" => "BPO and customer support solutions for Australian businesses that need reliable coverage, operational resilience, and scalable service teams.",
+        "summary" => "Soluciones BPO y de atención al cliente para empresas australianas que necesitan cobertura confiable, resiliencia operativa y equipos de servicio adaptables.",
         "image" => "/assets/images/Australia.webp",
-        "highlights" => ["After-hours support", "Customer care teams", "Back-office operations", "Overflow support"],
+        "highlights" => ["Soporte fuera de horario", "Equipos de atención al cliente", "Operaciones back office", "Soporte para picos de volumen"],
     ],
     [
-        "name" => "UAE",
+        "name" => "Emiratos Árabes Unidos",
         "slug" => "uae",
-        "summary" => "CX and BPO support for UAE businesses and regional teams that require high-quality customer engagement and secure operational workflows.",
+        "summary" => "Soporte CX y BPO para empresas de los EAU y equipos regionales que requieren interacciones de alta calidad y flujos operativos seguros.",
         "image" => "/assets/images/UAE.webp",
-        "highlights" => ["Regional customer support", "Finance and admin workflows", "Multichannel service", "Global delivery alignment"],
+        "highlights" => ["Soporte regional al cliente", "Flujos financieros y administrativos", "Servicio multicanal", "Alineación con entrega global"],
     ],
     [
-        "name" => "Morocco",
+        "name" => "Marruecos",
         "slug" => "morocco",
-        "summary" => "Multilingual CX and BPO delivery support for brands that need flexible coverage across Europe, the Middle East, and North Africa.",
+        "summary" => "Entrega multilingüe de CX y BPO para marcas que necesitan cobertura flexible en Europa, Medio Oriente y el norte de África.",
         "image" => "/assets/images/morocco-skyline.webp",
-        "highlights" => ["Multilingual support", "Nearshore coverage", "Customer care teams", "Back-office workflows"],
+        "highlights" => ["Soporte multilingüe", "Cobertura nearshore", "Equipos de atención al cliente", "Flujos back office"],
     ],
     [
         "name" => "Nicaragua",
         "slug" => "nicaragua",
-        "summary" => "Nearshore CX and operational support for businesses serving North American customers with responsive and cost-efficient teams.",
+        "summary" => "Soporte nearshore de CX y operaciones para empresas que atienden clientes de Norteamérica con equipos eficientes y de respuesta rápida.",
         "image" => "/assets/images/nicaragua-skyline.webp",
-        "highlights" => ["Nearshore service teams", "Customer support", "Administrative workflows", "Scalable coverage"],
+        "highlights" => ["Equipos de servicio nearshore", "Atención al cliente", "Flujos administrativos", "Cobertura adaptable"],
     ],
     [
         "name" => "Colombia",
         "slug" => "colombia",
-        "summary" => "Latin America CX and BPO support for companies that need bilingual service, operational consistency, and regional flexibility.",
+        "summary" => "Soporte CX y BPO en América Latina para empresas que necesitan servicio bilingüe, consistencia operativa y flexibilidad regional.",
         "image" => "/assets/images/colombia-skyline.webp",
-        "highlights" => ["Bilingual support", "Customer experience teams", "Sales support", "Back-office operations"],
+        "highlights" => ["Soporte bilingüe", "Equipos de experiencia del cliente", "Soporte de ventas", "Operaciones back office"],
     ],
     [
         "name" => "Venezuela",
         "slug" => "venezuela",
-        "summary" => "CX and BPO delivery support for teams looking to expand Spanish-language service capacity and operational coverage.",
+        "summary" => "Soporte de entrega CX y BPO para equipos que buscan ampliar su capacidad de servicio en español y su cobertura operativa.",
         "image" => "/assets/images/venezuela-skyline.webp",
-        "highlights" => ["Spanish-language support", "Customer care coverage", "Back-office assistance", "Flexible staffing"],
+        "highlights" => ["Soporte en español", "Cobertura de atención al cliente", "Asistencia back office", "Dotación flexible"],
     ],
     [
         "name" => "Bolivia",
         "slug" => "bolivia",
-        "summary" => "Customer support and business process teams for brands seeking reliable Latin America delivery capacity.",
+        "summary" => "Equipos de atención al cliente y procesos de negocio para marcas que buscan capacidad de entrega confiable en América Latina.",
         "image" => "/assets/images/bolivia-skyline.webp",
-        "highlights" => ["Customer service", "Administrative support", "Regional coverage", "Quality workflows"],
+        "highlights" => ["Servicio al cliente", "Soporte administrativo", "Cobertura regional", "Flujos de calidad"],
     ],
     [
         "name" => "Paraguay",
         "slug" => "paraguay",
-        "summary" => "Flexible CX and back-office support for organizations building efficient, scalable service operations in Latin America.",
+        "summary" => "Soporte flexible de CX y back office para organizaciones que construyen operaciones de servicio eficientes y adaptables en América Latina.",
         "image" => "/assets/images/paraguay-skyline.webp",
-        "highlights" => ["Customer support", "Back-office teams", "Operational scaling", "Service quality"],
+        "highlights" => ["Atención al cliente", "Equipos back office", "Capacidad operativa adaptable", "Calidad de servicio"],
     ],
     [
-        "name" => "South Africa",
+        "name" => "Sudáfrica",
         "slug" => "south-africa",
-        "summary" => "English-language CX and BPO support with strong global service alignment and flexible operating coverage.",
+        "summary" => "Soporte CX y BPO en inglés con fuerte alineación de servicio global y cobertura operativa flexible.",
         "image" => "/assets/images/south-africa-skyline.webp",
-        "highlights" => ["English-language support", "Global service coverage", "Quality assurance", "Customer care teams"],
+        "highlights" => ["Soporte en inglés", "Cobertura de servicio global", "Control de calidad", "Equipos de atención al cliente"],
     ],
     [
-        "name" => "Pakistan",
+        "name" => "Pakistán",
         "slug" => "pakistan",
-        "summary" => "Skilled CX, back-office, technical, and AI-assisted operations support for businesses scaling global delivery teams.",
+        "summary" => "Soporte especializado en CX, back office, tecnología y operaciones asistidas por IA para empresas que expanden equipos de entrega global.",
         "image" => "/assets/images/pakistan-skyline.webp",
-        "highlights" => ["Technical support", "Back-office operations", "AI-assisted workflows", "Scalable staffing"],
+        "highlights" => ["Soporte técnico", "Operaciones back office", "Flujos asistidos por IA", "Dotación adaptable"],
     ],
     [
-        "name" => "Philippines",
+        "name" => "Filipinas",
         "slug" => "philippines",
-        "summary" => "Established customer experience and BPO delivery support for brands needing high-quality English-language service teams.",
+        "summary" => "Entrega consolidada de experiencia del cliente y BPO para marcas que necesitan equipos de servicio en inglés de alta calidad.",
         "image" => "/assets/images/philippines-skyline.webp",
-        "highlights" => ["Customer care teams", "Voice and digital support", "Back-office operations", "Quality monitoring"],
+        "highlights" => ["Equipos de atención al cliente", "Soporte por voz y canales digitales", "Operaciones back office", "Monitoreo de calidad"],
     ],
 ];
 
-include(__DIR__ . "/../inc/header.php");
+include(__DIR__ . "/../../inc/header.php");
 ?>
 
 <main style="background-color: #ffffff;">
@@ -118,8 +122,8 @@ include(__DIR__ . "/../inc/header.php");
     <?= json_encode([
         "@context" => "https://schema.org",
         "@type" => "ItemList",
-        "name" => "EmpireOneCX Global Footprint",
-        "description" => "EmpireOneCX global footprint pages for CX and BPO outsourcing services.",
+        "name" => "Presencia global de EmpireOneCX",
+        "description" => "Páginas de presencia global de EmpireOneCX para servicios de outsourcing CX y BPO.",
         "itemListElement" => array_map(function ($location, $index) {
             return [
                 "@type" => "ListItem",
@@ -140,21 +144,21 @@ include(__DIR__ . "/../inc/header.php");
         <div class="container mx-auto w-full relative z-10">
             <p class="herosubtitle text-[20px] leading-[28px] mb-4 animate-reveal delay-1 bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] bg-clip-text text-transparent">
                 <span class="spanfont bg-gradient-to-r from-[#CB46FA] to-[#FE881C] bg-clip-text text-transparent">
-                    Global Footprint
+                    Presencia global
                 </span>
             </p>
             <h1 class="solutions-hero-heading herocheck animate-reveal delay-2 text-[48px] font-medium leading-[54px] sm:leading-[1.1] mb-4 text-white mx-auto">
-                CX & BPO Support Across Our Global Footprint
+                Soporte CX y BPO a través de nuestra presencia global
             </h1>
             <p class="subpara shortspace font-normal animate-reveal delay-3 text-gray-300 text-sm sm:text-base lg:text-lg sm:max-w-3xl mx-auto sm:mb-2" style="max-width: 848px !important;padding-bottom: 10px;">
-                Explore priority markets where EmpireOneCX helps brands scale customer experience, back-office, compliance-ready, and AI-assisted outsourcing support.
+                Explore los mercados prioritarios donde EmpireOneCX ayuda a las marcas a fortalecer experiencia del cliente, back office, operaciones preparadas para cumplimiento y outsourcing asistido por IA.
             </p>
             <div class="animate-reveal delay-3 mb-8 text-gray-300 text-sm font-medium tracking-wide">
-                <span>Global Delivery</span> &nbsp;|&nbsp; <span>AI-Assisted CX</span> &nbsp;|&nbsp; <span>Secure BPO Operations</span>
+                <span>Entrega global</span> &nbsp;|&nbsp; <span>CX asistida por IA</span> &nbsp;|&nbsp; <span>Operaciones BPO seguras</span>
             </div>
             <div class="animate-reveal delay-4">
                 <button type="button" onclick="window.scrollToLocationTarget('location-markets')" data-location-target="location-markets" class="location-scroll-trigger herobtns bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] text-white py-4 px-8 text-sm sm:text-base hover:transition-all duration-300 shadow-lg hover:shadow-purple-400/20" style="border-radius: 8px !important;">
-                    Explore Priority Markets
+                    Explorar mercados prioritarios
                 </button>
             </div>
         </div>
@@ -194,9 +198,9 @@ include(__DIR__ . "/../inc/header.php");
                                     </span>
                                 </div>
                                 <h2 class="solution-heading headingspace text-[32px] leading-[40px] tracking-[-0.03em] text-black mb-[10px]">
-                                    <?= htmlspecialchars($location["name"], ENT_QUOTES, "UTF-8") ?> CX & BPO
+                                    CX y BPO en <?= htmlspecialchars($location["name"], ENT_QUOTES, "UTF-8") ?>
                                     <span class="solutionsitalic-font text-[32px] leading-[40px] tracking-[-0.03em] text-black">
-                                        Market Support
+                                        para soporte de mercado
                                     </span>
                                 </h2>
                                 <p class="text-[#3C3B47] text-[16px] leading-[24px] max-w-[970px]">
@@ -205,7 +209,7 @@ include(__DIR__ . "/../inc/header.php");
                             </div>
                             <div class="imagetop mt-[30px] relative z-10">
                                 <div class="heightimg rounded-[16px] w-full overflow-hidden">
-                                    <img src="<?= htmlspecialchars($location["image"], ENT_QUOTES, "UTF-8") ?>" alt="<?= htmlspecialchars($location["name"], ENT_QUOTES, "UTF-8") ?> CX and BPO outsourcing support" class="w-full h-[467px] object-cover object-center" />
+                                    <img src="<?= htmlspecialchars($location["image"], ENT_QUOTES, "UTF-8") ?>" alt="Soporte de outsourcing CX y BPO en <?= htmlspecialchars($location["name"], ENT_QUOTES, "UTF-8") ?>" class="w-full h-[467px] object-cover object-center" />
                                 </div>
                             </div>
                             <div class="indusweoffer relative w-[1094px] mx-auto -mt-[109px] z-[99]">
@@ -217,12 +221,12 @@ include(__DIR__ . "/../inc/header.php");
                                     <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
                                         <div>
                                             <h3 class="inline-block text-[24px] leading-[32px] tracking-[-0.03em] font-medium mb-5 bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)] bg-clip-text text-transparent">
-                                                Market Focus
+                                                Enfoque del mercado
                                             </h3>
                                             <div class="managespacesolution grid grid-cols-1 md:grid-cols-2 gap-2">
                                                 <?php foreach ($location["highlights"] as $highlight): ?>
                                                     <div class="industext flex items-center gap-3">
-                                                        <img src="/assets/images/check.webp" alt="check icon" class="w-[20px] h-[20px]" />
+                                                        <img src="/assets/images/check.webp" alt="" class="w-[20px] h-[20px]" />
                                                         <p class="text-[16px] leading-[24px] text-black">
                                                             <?= htmlspecialchars($highlight, ENT_QUOTES, "UTF-8") ?>
                                                         </p>
@@ -231,7 +235,7 @@ include(__DIR__ . "/../inc/header.php");
                                             </div>
                                         </div>
                                         <a href="/global-footprint/<?= htmlspecialchars($location["slug"], ENT_QUOTES, "UTF-8") ?>" class="inline-flex items-center justify-center shrink-0 px-6 py-3 rounded-[8px] text-white text-[14px] leading-[20px] font-medium bg-[#7A76FF]">
-                                            View <?= htmlspecialchars($location["name"], ENT_QUOTES, "UTF-8") ?> Page
+                                            Ver página de <?= htmlspecialchars($location["name"], ENT_QUOTES, "UTF-8") ?>
                                         </a>
                                     </div>
                                 </div>
@@ -263,15 +267,15 @@ include(__DIR__ . "/../inc/header.php");
                     <div class="ctamain text-center">
                         <div class="cta-left-sidework pt-[60px] pb-[60px]">
                             <h2 class="solution-heading cta-solution-section future-heading text-[32px] md:text-[48px] leading-[38px] md:leading-[56px] tracking-[-0.03em] text-black mb-[15px] md:mb-[20px]">
-                                Scale customer operations
-                                <span class="solutionsitalic-font text-[32px] md:text-[48px] leading-[56px] md:leading-[56px] tracking-[-0.03em]"> Across Priority Markets</span>
+                                Fortalezca sus operaciones de cliente
+                                <span class="solutionsitalic-font text-[32px] md:text-[48px] leading-[56px] md:leading-[56px] tracking-[-0.03em]"> en mercados prioritarios</span>
                             </h2>
                             <p class="future-customer-para text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] text-[#2A2A2A] mb-8 md:mb-10">
-                                Build dedicated CX and BPO teams with the structure, security, and flexibility your market requires.
+                                Construya equipos dedicados de CX y BPO con la estructura, seguridad y flexibilidad que su mercado requiere.
                             </p>
                             <div class="future-btn">
                                 <a href="/contact" class="inline-block px-8 md:px-10 py-3 md:py-4 rounded-[8px] text-white text-[14px] md:text-[16px] leading-[20px] md:leading-[24px] font-medium bg-[#7A76FF]">
-                                    Discuss Your Market <i class="fa fa-arrow-right" style="padding-left:10px;"></i>
+                                    Hablemos de su mercado <i class="fa fa-arrow-right" style="padding-left:10px;"></i>
                                 </a>
                             </div>
                         </div>
@@ -338,4 +342,4 @@ function initLocationArchive() {
 initLocationArchive();
 </script>
 
-<?php include(__DIR__ . "/../inc/footer.php"); ?>
+<?php include(__DIR__ . "/../../inc/footer.php"); ?>

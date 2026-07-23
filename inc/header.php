@@ -242,7 +242,7 @@ if (empty($languageAlternates)) {
                                     </div>
                                 </div>
                                 <div class="nav-dropdown">
-                                    <a href="/global-footprint" class="nav-link nav-dropdown-toggle">
+                                    <a href="<?php echo $isSpanishSite ? '/es/presencia-global/' : '/global-footprint'; ?>" class="nav-link nav-dropdown-toggle">
                                         <?php echo $isSpanishSite ? 'Presencia global' : 'Global Footprint'; ?>
                                         <i class="fas fa-chevron-down nav-dropdown-icon"></i>
                                     </a>
@@ -368,7 +368,7 @@ if (empty($languageAlternates)) {
                     </div>
                     <div class="mobile-locations-group">
                         <div class="mobile-nav-parent">
-                            <a href="/global-footprint" class="mobile-nav-link text-gray-800 text-base font-medium hover:text-purple-600 transition-colors">
+                            <a href="<?php echo $isSpanishSite ? '/es/presencia-global/' : '/global-footprint'; ?>" class="mobile-nav-link text-gray-800 text-base font-medium hover:text-purple-600 transition-colors">
                                 <i class="fas fa-location-dot mr-3 w-5 text-center"></i><?php echo $isSpanishSite ? 'Presencia global' : 'Global Footprint'; ?>
                             </a>
                             <button class="mobile-submenu-toggle" type="button" aria-expanded="false" aria-controls="mobile-locations-submenu" aria-label="Toggle Global Footprint submenu">
