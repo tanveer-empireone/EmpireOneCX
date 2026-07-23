@@ -1,15 +1,18 @@
 <?php
-	$page_title = "About Us | EmpireOneCX";
-	$pageTitle = "About Us | EmpireOneCX";
-	$meta_description = "Learn about EmpireOneCX, a next-generation BPO and CX outsourcing partner helping businesses scale customer experience operations.";
+	$siteLanguage = "es";
+	$baseHref = "/";
+	$page_title = "Sobre nosotros | EmpireOneCX";
+	$pageTitle = "Sobre nosotros | EmpireOneCX";
+	$meta_description = "Conozca a EmpireOneCX, un socio de outsourcing BPO y experiencia del cliente que ayuda a las empresas a escalar operaciones con equipos humanos apoyados por IA.";
 	$metaDescription = $meta_description;
-	$languageSwitchHrefEs = "/es/sobre-nosotros/";
+	$metaKeywords = "sobre EmpireOneCX, outsourcing BPO, experiencia del cliente, equipos offshore, CX, atención al cliente";
+	$languageSwitchHrefEn = "/about-us";
 	$languageAlternates = [
 		"en" => "https://empireonecx.com/about-us",
 		"es" => "https://empireonecx.com/es/sobre-nosotros/",
 		"x-default" => "https://empireonecx.com/about-us",
 	];
-	include("inc/header.php");
+	include("../../inc/header.php");
 ?>
 <main class="relative">
 	<section class="hero-section aboutpage-section relative flex flex-col items-center justify-center px-4 sm:px-6 text-center overflow-hidden" style="padding-top: 17rem; padding-bottom: 180px;">
@@ -18,17 +21,17 @@
 		</video>
 		<div class="absolute bg-black/50 -z-10" style="width:1920px; height:611px;"></div>
 		<div class="container mx-auto w-full relative z-10">
-			<p class="herosubtitle mb-4 animate-reveal delay-1 bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] bg-clip-text text-transparent"> About
+			<p class="herosubtitle mb-4 animate-reveal delay-1 bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] bg-clip-text text-transparent"> Sobre
 				<span class="font-reckless bg-gradient-to-r from-[#CB46FA] to-[#FE881C] bg-clip-text text-transparent">
-					us
+					nosotros
 				</span>
 			</p>
 			<h1 class="heromaintitle animate-reveal delay-2 text-[40px] font-medium leading-tight sm:leading-[1.1] mb-4 text-white">
-                Our Story. Our People. Our Purpose.
+                Nuestra historia. Nuestra gente. Nuestro propósito.
             </h1>
-			<p class="about-subpara font-normal animate-reveal delay-3 text-gray-300 text-sm sm:text-base lg:text-lg sm:max-w-3xl mx-auto px-4 mb-8 sm:mb-10"> Transforming customer experience through innovation, empathy, and future-ready outsourcing. </p>
+			<p class="about-subpara font-normal animate-reveal delay-3 text-gray-300 text-sm sm:text-base lg:text-lg sm:max-w-3xl mx-auto px-4 mb-8 sm:mb-10"> Transformamos la experiencia del cliente mediante innovación, empatía y outsourcing preparado para el futuro. </p>
 			<div class="animate-reveal delay-4">
-				<button onclick="window.location.href='contact'" class="herobtns bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] text-white py-4 px-8 text-sm sm:text-base hover:transition-all duration-300 shadow-lg hover:shadow-purple-400/20" style="border-radius: 8px !important;"> Let's Build Your Offshore Team - Now </button>
+				<button onclick="window.location.href='/contact'" class="herobtns bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] text-white py-4 px-8 text-sm sm:text-base hover:transition-all duration-300 shadow-lg hover:shadow-purple-400/20" style="border-radius: 8px !important;"> Construyamos su equipo offshore ahora </button>
 			</div>
 		</div>
 	</section>
@@ -41,18 +44,18 @@
 						<span class="relative z-10 flex items-center gap-2">
 							<span class="block w-[24px] h-[4px] rounded" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);"></span>
 							<span class="font-reckless font-normal text-[20px] leading-[28px] tracking-[-0.03em]" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;font-family: rackless !important;">
-								About EmpireOneCX
+								Acerca de EmpireOneCX
 							</span>
 						</span>
 					</p>
 					<h2 class="about-heading about-story-title text-black">
-						AI-assisted CX and BPO teams built around real human service
+						Equipos de CX y BPO asistidos por IA, construidos alrededor de un servicio realmente humano
 					</h2>
-					<p class="about-para about-story-lead">EmpireOneCX is a next-generation outsourcing partner built to elevate customer experience. We combine advanced digital systems with skilled professionals who understand that every interaction matters.</p>
-					<p class="about-para about-story-text">We do not just answer calls. We build trust, strengthen relationships, and help brands lead with secure, scalable service excellence.</p>
+					<p class="about-para about-story-lead">EmpireOneCX es un socio de outsourcing de nueva generación creado para elevar la experiencia del cliente. Combinamos sistemas digitales avanzados con profesionales capacitados que entienden que cada interacción importa.</p>
+					<p class="about-para about-story-text">No solo respondemos llamadas. Construimos confianza, fortalecemos relaciones y ayudamos a las marcas a liderar con excelencia de servicio segura y escalable.</p>
 					<div class="about-story-actions">
-						<a href="contact" class="about-story-btn">Build Your Offshore Team <i class="fas fa-arrow-right"></i></a>
-						<a href="solutions" class="about-story-link">Explore solutions</a>
+						<a href="/contact" class="about-story-btn">Construya su equipo offshore <i class="fas fa-arrow-right"></i></a>
+						<a href="/solutions" class="about-story-link">Explorar soluciones</a>
 					</div>
 				</div>
 				<div class="about-story-visual reveal-right">
@@ -62,18 +65,18 @@
 					<div class="about-story-proof" aria-label="EmpireOneCX strengths">
 						<div>
 							<i class="fas fa-headset"></i>
-							<strong>Customer-first teams</strong>
-							<span>Dedicated CX support aligned to your workflows.</span>
+							<strong>Equipos centrados en el cliente</strong>
+							<span>Soporte CX dedicado y alineado con sus flujos de trabajo.</span>
 						</div>
 						<div>
 							<i class="fas fa-shield-halved"></i>
-							<strong>Secure operations</strong>
-							<span>Compliance-focused delivery for sensitive processes.</span>
+							<strong>Operaciones seguras</strong>
+							<span>Entrega enfocada en cumplimiento para procesos sensibles.</span>
 						</div>
 						<div>
 							<i class="fas fa-microchip"></i>
-							<strong>AI-assisted delivery</strong>
-							<span>Smarter workflows with human oversight built in.</span>
+							<strong>Entrega asistida por IA</strong>
+							<span>Flujos de trabajo más inteligentes con supervisión humana integrada.</span>
 						</div>
 					</div>
 				</div>
@@ -81,7 +84,7 @@
 		</div>
 	</section>
 	<section class="business-thrive bg-[rgba(0,0,0,1)] py-24 relative">
-        <h2 class="sr-only">Our Mission & Vision</h2>
+        <h2 class="sr-only">Nuestra misión y visión</h2>
 		<div class="container mx-auto px-4 relative z-10">
 			<div class="mygapbusiness grid grid-cols-1 lg:grid-cols-2 gap-y-24 items-center">
 				<div class="empire-slide-left-newww">
@@ -89,18 +92,18 @@
 						<span class="relative z-10 flex items-center gap-2">
 							<span class="block w-[24px] h-[4px] rounded"
 								style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);"></span> <span class="font-reckless font-normal text-[20px] leading-[28px] tracking-[-0.03em]" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;font-family: rackless !important;">
-								Our Mission
+								Nuestra misión
 							</span>
 						</span>
 					</p>
 					<h3 class="solution-heading text-[32px] leading-[40px] tracking-[-0.03em] text-white mb-[20px] font-reckless" style="max-width: 630px; font-family: 'rackless', serif !important;">
-						Empower
+						Impulsar
 						<span class="bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)] bg-clip-text text-transparent">
-							businesses to thrive
+							a las empresas a crecer
 						</span>
-						through every interaction
+						a través de cada interacción
 					</h3>
-					<p class="about-page-para text-white text-[16px] leading-relaxed" style="max-width: 630px;"> To revolutionize customer experiences by seamlessly blending human empathy with cutting-edge AI technology. We are committed to delivering exceptional service and setting the gold standard for customer engagement and service excellence. </p>
+					<p class="about-page-para text-white text-[16px] leading-relaxed" style="max-width: 630px;"> Revolucionar la experiencia del cliente combinando de forma fluida la empatía humana con tecnología de IA de vanguardia. Estamos comprometidos con entregar un servicio excepcional y establecer el estándar de excelencia en engagement y atención al cliente. </p>
 				</div>
 				<div class="aboutpage-video1 empire-slide-right-newww relative w-full overflow-hidden justify-self-center
 							aspect-[16/9] md:aspect-[16/9] lg:h-[462px] lg:aspect-auto">
@@ -119,17 +122,17 @@
 					<span class="relative z-10 flex items-center gap-2">
 						<span class="block w-[24px] h-[4px] rounded"
 							style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);"></span> <span class="font-reckless font-normal text-[20px] leading-[28px] tracking-[-0.03em]" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;font-family: rackless !important;">
-							Our Vision
+							Nuestra visión
 						</span> 
 					</span>
 					</p>
 					<h3 class="solution-heading text-[32px] leading-[40px] tracking-[-0.03em] text-white mb-[20px] font-reckless" style="max-width: 719px; font-family: 'rackless', serif !important;">
-						To be the global leader in
+						Ser el líder global en
 						<span class="bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)] bg-clip-text text-transparent">
-							AI-Driven customer solutions
+							soluciones al cliente impulsadas por IA
 						</span>
 					</h3>
-					<p class="about-page-para text-white text-[16px] leading-relaxed" style="max-width: 719px;"> To be the global leader in AI-driven customer solutions, redefining the future of business process outsourcing by creating a domain where technology and humanity coexist to deliver unparalleled service and efficient solutions. </p>
+					<p class="about-page-para text-white text-[16px] leading-relaxed" style="max-width: 719px;"> Ser el líder global en soluciones al cliente impulsadas por IA, redefiniendo el futuro del outsourcing de procesos de negocio al crear un espacio donde la tecnología y la humanidad coexisten para entregar un servicio excepcional y soluciones eficientes. </p>
 				</div>
 			</div>
 		</div>
@@ -152,20 +155,20 @@
 				<div class="reveal-left">
 					<p class="relative flex items-center gap-2 text-sm py-3 overflow-hidden"> <span class="relative z-10 flex items-center gap-2">
 							<span class="block w-[24px] h-[4px] rounded" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);"></span> <span class="font-reckless font-normal text-[20px] leading-[28px] tracking-[-0.03em]" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;font-family: rackless !important;">
-								Company Culture
+								Cultura empresarial
 							</span> </span>
 						</span>
 					</p>
 					<h2 class="solution-heading text-[32px] leading-[40px] tracking-[-0.03em] text-black mb-[20px] font-reckless" style="max-width: 521px; font-family: 'rackless', serif !important;">
-						Treat others the way
+						Trate a los demás como
 						<span class="bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)] bg-clip-text text-transparent">
-							you want to be treated
+							quiere ser tratado
 						</span>
 					</h2> 
 				</div>
 				<div class="reveal-right">
-					<p class="company-culture-abformate text-[#3C3B47] text-[16px] leading-[24px] max-w-xl">"Treat Others the Way You Want to Be Treated," we make every decision and approach every strategy with genuine care, fearlessly embracing AI to continuously enhance human connection and allowing technology to serve humanity. </p> 
-					<a href="career" class="about-btn-work 
+					<p class="company-culture-abformate text-[#3C3B47] text-[16px] leading-[24px] max-w-xl">“Trate a los demás como quiere ser tratado”. Tomamos cada decisión y abordamos cada estrategia con cuidado genuino, adoptando la IA con confianza para mejorar continuamente la conexión humana y permitir que la tecnología sirva a las personas. </p> 
+					<a href="https://careers.empireonecx.com/" target="_blank" rel="noopener noreferrer" class="about-btn-work 
 						text-[18px] 
 						leading-[24px] 
 						font-medium 
@@ -176,7 +179,7 @@
 						transition-all
 						text-[rgba(0, 0, 0, 1)]
 						mt-5">
-					Join the EmpireOneCX Team
+					Únase al equipo de EmpireOneCX
 					<img 
 						src="assets/images/aboutbtnlearmore.webp" 
 						class="w-[40px] h-[40px]" 
@@ -187,8 +190,8 @@
 						decoding="async"
 						role="button"
 						tabindex="0"
-						onclick="window.location.href='career'"
-						onkeypress="if(event.key === 'Enter'){ window.location.href='career'; }"
+						onclick="window.location.href='https://careers.empireonecx.com/'"
+						onkeypress="if(event.key === 'Enter'){ window.location.href='https://careers.empireonecx.com/'; }"
 						/>
 					</a> 
 				</div>
@@ -244,26 +247,26 @@
 						<span class="relative z-10 flex items-center gap-2">
 							<span class="block w-[24px] h-[4px] rounded"
 								style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);"></span> <span class="font-reckless font-normal text-[20px] leading-[28px] tracking-[-0.03em]" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;font-family: rackless !important;">
-								Why Us
+								Por qué nosotros
 							</span> 
 						</span>
 					</p>
 					<h2 class="solution-heading mainsizefonescale text-[32px] leading-[40px] tracking-[-0.03em] text-white mb-[20px] font-reckless" style="max-width: 630px; font-family: 'rackless', serif !important;">
-						10+ Years 
+						Más de 10 años 
 						<span class="deliverfonts text-[#fff]">
-						Delivering Scalable <br>
+						entregando soluciones <br>
 						</span>
-						Outsourcing Solutions
+						de outsourcing escalables
 					</h2>
-					<p class="mytopset about-page-para text-white text-[18px] leading-relaxed" style="max-width: 521px;"> Trusted by global businesses across North America, Asia, and emerging markets. </p>
+					<p class="mytopset about-page-para text-white text-[18px] leading-relaxed" style="max-width: 521px;"> Con la confianza de empresas globales en Norteamérica, Asia y mercados emergentes. </p>
 					<ul class="stand-out-font space-y-2 mt-6 text-[18px]">
-						<li class="flex items-start gap-3"> <span class="mt-2 h-2 w-2 rounded-full bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)]"></span> <a href="solutions" class="text-gray-200 hover:text-white transition-colors">Proven operational frameworks</a> </li>
-						<li class="flex items-start gap-3"> <span class="mt-2 h-2 w-2 rounded-full bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)]"></span> <a href="solutions" class="text-gray-200 hover:text-white transition-colors">Secure, compliant delivery</a> </li>
-						<li class="flex items-start gap-3"> <span class="mt-2 h-2 w-2 rounded-full bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)]"></span> <a href="solutions" class="text-gray-200 hover:text-white transition-colors">Dedicated offshore teams</a> </li>
-						<li class="flex items-start gap-3"> <span class="mt-2 h-2 w-2 rounded-full bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)]"></span> <a href="solutions" class="text-gray-200 hover:text-white transition-colors">Transparent performance reporting</a> </li>
-						<li class="flex items-start gap-3"> <span class="mt-2 h-2 w-2 rounded-full bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)]"></span> <a href="solutions" class="text-gray-200 hover:text-white transition-colors">AI-accelerated efficiency</a> </li>
+						<li class="flex items-start gap-3"> <span class="mt-2 h-2 w-2 rounded-full bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)]"></span> <a href="/solutions" class="text-gray-200 hover:text-white transition-colors">Marcos operativos probados</a> </li>
+						<li class="flex items-start gap-3"> <span class="mt-2 h-2 w-2 rounded-full bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)]"></span> <a href="/solutions" class="text-gray-200 hover:text-white transition-colors">Entrega segura y conforme</a> </li>
+						<li class="flex items-start gap-3"> <span class="mt-2 h-2 w-2 rounded-full bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)]"></span> <a href="/solutions" class="text-gray-200 hover:text-white transition-colors">Equipos offshore dedicados</a> </li>
+						<li class="flex items-start gap-3"> <span class="mt-2 h-2 w-2 rounded-full bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)]"></span> <a href="/solutions" class="text-gray-200 hover:text-white transition-colors">Reportes de desempeño transparentes</a> </li>
+						<li class="flex items-start gap-3"> <span class="mt-2 h-2 w-2 rounded-full bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)]"></span> <a href="/solutions" class="text-gray-200 hover:text-white transition-colors">Eficiencia acelerada por IA</a> </li>
 					</ul>
-					<p class="mytopset pt-[20px] about-page-para text-white text-[18px] leading-relaxed" style="max-width: 521px;"> We don't just provide staff. We build high-performing offshore teams aligned to your goals. </p>
+					<p class="mytopset pt-[20px] about-page-para text-white text-[18px] leading-relaxed" style="max-width: 521px;"> No solo proporcionamos personal. Creamos equipos offshore de alto rendimiento alineados con sus objetivos. </p>
 				</div>
 			</div>
 		</div>
@@ -278,11 +281,11 @@
 							-webkit-background-clip: text;
 							-webkit-text-fill-color: transparent;
 							font-family: rackless !important;">
-						Our Journey
+						Nuestro recorrido
 					</span> </span>
 					</p>
 					<h2 class="about-heading text-[32px] leading-[40px] tracking-[-0.03em] mb-10 text-black" style="margin-top: 4px; max-width: 968px;">
-					Redefining what growth and transformation mean
+					Redefiniendo lo que significan el crecimiento y la transformación
 				</h2> 
 			</div>
 			<div class="redefing-gridcard grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4
@@ -294,9 +297,9 @@
 							<div class="w-[64px] h-[64px] flex items-center justify-center"> <img src="assets/images/redefinglogo1.webp" class="w-full h-full object-contain" alt="Redefining brand identity logo" loading="lazy" decoding="async" /> </div>
 							<div class="boxesfont">
 								<h3 class="text-[20px] leading-[28px] text-[#000000] mb-3 font-semibold">
-									Purpose-Driven Foundation
+									Base impulsada por propósito
 								</h3>
-								<p class="text-[18px] leading-[26px] leading-relaxed"> Built on a clear mission to solve real problems with meaningful, lasting impact. </p>
+								<p class="text-[18px] leading-[26px] leading-relaxed"> Construida sobre una misión clara: resolver problemas reales con impacto significativo y duradero. </p>
 							</div>
 						</div>
 					</div>
@@ -309,9 +312,9 @@
 							<div class="w-[64px] h-[64px] flex items-center justify-center"> <img src="assets/images/redefinglogo2.webp" class="w-full h-full object-contain" alt="Redefining business solutions logo" loading="lazy" decoding="async" /> </div>
 							<div class="boxesfont">
 								<h3 class="text-[20px] leading-[28px] text-[#000000] mb-3 font-semibold">
-									Built for Scale
+									Diseñado para escalar
 								</h3>
-								<p class="text-[18px] leading-[26px] leading-relaxed"> Built to adapt and support changing needs while maintaining quality and performance. </p>
+								<p class="text-[18px] leading-[26px] leading-relaxed"> Diseñado para adaptarse y apoyar necesidades cambiantes sin perder calidad ni rendimiento. </p>
 							</div>
 						</div>
 					</div>
@@ -324,9 +327,9 @@
 							<div class="w-[64px] h-[64px] flex items-center justify-center"> <img src="assets/images/redefinglogo3.webp" class="w-full h-full object-contain" alt="Redefining digital transformation logo" loading="lazy" decoding="async" /> </div>
 							<div class="boxesfont">
 								<h3 class="text-[20px] leading-[28px] text-[#000000] mb-3 font-semibold">
-									Powered by People
+									Impulsado por personas
 								</h3>
-								<p class="text-[18px] leading-[26px] leading-relaxed"> Driven by passionate minds who collaborate, create, and care about every outcome. </p>
+								<p class="text-[18px] leading-[26px] leading-relaxed"> Impulsado por mentes apasionadas que colaboran, crean y se preocupan por cada resultado. </p>
 							</div>
 						</div>
 					</div>
@@ -339,9 +342,9 @@
 							<div class="w-[64px] h-[64px] flex items-center justify-center"> <img src="assets/images/redefinglogo4.webp" class="w-full h-full object-contain" alt="Redefining digital transformation logo" loading="lazy" decoding="async" /> </div>
 							<div class="boxesfont">
 								<h3 class="text-[20px] leading-[28px] text-[#000000] mb-3 font-semibold">
-									Future-Focused Innovation
+									Innovación enfocada en el futuro
 								</h3>
-								<p class="text-[18px] leading-[26px] leading-relaxed"> Constantly evolving through thoughtful innovation to stay relevant, agile, and ahead. </p>
+								<p class="text-[18px] leading-[26px] leading-relaxed"> Evolucionamos constantemente mediante innovación intencional para mantenernos relevantes, ágiles y un paso adelante. </p>
 							</div>
 						</div>
 					</div>
@@ -362,17 +365,17 @@
 								<span class="font-reckless font-normal text-[20px] leading-[28px] tracking-[-0.03em]" 
 									style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);
 										-webkit-background-clip: text; -webkit-text-fill-color: transparent;font-family: rackless !important;">
-									Leadership
+									Liderazgo
 								</span>
 							</span>
 						</p>
 
 						<h2 class="aboutheadtags text-[32px] leading-[40px] tracking-[-0.03em] text-black mb-[20px]" style="max-width: 630px;">
-							Behind EmpireOneCX is a team of 
+							Detrás de EmpireOneCX hay un equipo de 
 							<span class="bg-[linear-gradient(90deg,#FF5C8A_0%,#5B7CFF_45%,#A855F7_100%)] bg-clip-text text-transparent">
-								leaders, innovators, and customer experience professionals
+								líderes, innovadores y profesionales de experiencia del cliente
 							</span>
-							committed to excellence.
+							comprometidos con la excelencia.
 						</h2> 
 					</div>
 
@@ -404,15 +407,15 @@
 					<div class="ctamain text-center">
 						<div class="cta-left-sidework pt-[60px] pb-[60px]">
 							<h2 class="solution-heading future-heading text-[32px] md:text-[48px] leading-[38px] md:leading-[56px] tracking-[-0.03em] text-black mb-[15px] md:mb-[20px]">
-								Lead the future of customer experience <br class="nobreak"> with
+								Lidere el futuro de la experiencia del cliente <br class="nobreak"> con
 								<span class="solutionsitalic-font text-[32px] md:text-[48px] leading-[38px] md:leading-[56px] tracking-[-0.03em]">EmpireOneCX</span>
 							</h2>
 							<p class="future-customer-para text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] text-[#2A2A2A] mb-8 md:mb-10">
-								Because your customers deserve nothing less.
+								Porque sus clientes no merecen menos.
 							</p>
 							<div class="future-btn">
-								<a href="solutions" class="inline-block px-8 md:px-10 py-3 md:py-4 rounded-[8px] text-white text-[14px] md:text-[16px] leading-[20px] md:leading-[24px] font-medium bg-[#7A76FF]">
-									Explore Our Solutions <i class="fa fa-arrow-right" style="padding-left:10px;"></i>
+								<a href="/solutions" class="inline-block px-8 md:px-10 py-3 md:py-4 rounded-[8px] text-white text-[14px] md:text-[16px] leading-[20px] md:leading-[24px] font-medium bg-[#7A76FF]">
+									Explorar nuestras soluciones <i class="fa fa-arrow-right" style="padding-left:10px;"></i>
 								</a>
 							</div>
 						</div>
@@ -429,7 +432,7 @@
   "@type": "AboutPage",
   "name": "<?php echo $pageTitle; ?>",
   "description": "<?php echo $metaDescription; ?>",
-  "url": "https://empireonecx.com/<?php echo basename($_SERVER['PHP_SELF'], '.php'); ?>",
+  "url": "https://empireonecx.com/es/sobre-nosotros/",
   "foundingDate": "2016",
   "publisher": {
     "@type": "Organization",
@@ -447,12 +450,12 @@
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://empireonecx.com/<?php echo basename($_SERVER['PHP_SELF'], '.php'); ?>"
+    "@id": "https://empireonecx.com/es/sobre-nosotros/"
   }
 }
 </script>
 
-<?php include("inc/footer.php"); ?>
+<?php include("../../inc/footer.php"); ?>
 <script>
 const track = document.getElementById("sliderTrack");
 let slides = document.querySelectorAll(".slide");

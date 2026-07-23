@@ -3,6 +3,12 @@
     $metaDescription = "Explore tailored BPO services and AI automation solutions for 18+ industries. Scale your operations with our healthcare, finance, and tech outsourcing experts.";
     // $metaKeywords removed to prevent competitor scraping and because it is deprecated
     $baseHref = "/";
+    $languageSwitchHrefEs = "/es/industrias/";
+    $languageAlternates = [
+        "en" => "https://empireonecx.com/industries",
+        "es" => "https://empireonecx.com/es/industrias/",
+        "x-default" => "https://empireonecx.com/industries",
+    ];
     include(__DIR__ . "/../inc/header.php");
 ?>
 <main style="background-color: #000;">

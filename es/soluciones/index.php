@@ -1,14 +1,16 @@
 <?php
-$page_title = "Services & Solutions | EmpireOneCX";
-$meta_description = "Explore EmpireOneCX services and solutions, including CX outsourcing, BPO, back-office support, finance operations, QA, and workforce support.";
-$metaKeywords = "Customer Experience, BPO solutions, AI automation services, finance outsourcing, QA services, customer support outsourcing, recruitment outsourcing";
-$languageSwitchHrefEs = "/es/soluciones/";
+$siteLanguage = "es";
+$baseHref = "/";
+$page_title = "Soluciones de CX y BPO | EmpireOneCX";
+$meta_description = "Explore las soluciones de EmpireOneCX para outsourcing de experiencia del cliente, BPO, back office, finanzas, QA, reclutamiento y automatización con IA.";
+$metaKeywords = "soluciones BPO, outsourcing de experiencia del cliente, automatización con IA, soporte back office, finanzas y contabilidad, QA, reclutamiento offshore";
+$languageSwitchHrefEn = "/solutions";
 $languageAlternates = [
     "en" => "https://empireonecx.com/solutions",
     "es" => "https://empireonecx.com/es/soluciones/",
     "x-default" => "https://empireonecx.com/solutions",
 ];
-include(__DIR__ . "/../inc/header.php");
+include(__DIR__ . "/../../inc/header.php");
 ?>
 <main class="relative">
     <section class="hero-section mainherowork relative flex flex-col items-center justify-center px-4 sm:px-6 text-center overflow-hidden" style="padding-top: 18rem; padding-bottom: 180px;">
@@ -19,20 +21,20 @@ include(__DIR__ . "/../inc/header.php");
         <div class="container mx-auto w-full relative z-10">
             <p class="herosubtitle text-[20px] leading-[28px] mb-4 animate-reveal delay-1 bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] bg-clip-text text-transparent">
                 <span class="spanfont bg-gradient-to-r from-[#CB46FA] to-[#FE881C] bg-clip-text text-transparent">
-                    Solutions
+                    Soluciones
                 </span>
             </p>
             <h1 class="solutions-hero-heading herocheck animate-reveal delay-2 text-[48px] font-medium leading-[54px] sm:leading-[1.1] mb-4 text-white mx-auto">
-                AI-Assisted CX & BPO Solutions for Smarter, Scalable Business
+                Soluciones de CX y BPO asistidas por IA para empresas más inteligentes y escalables
             </h1>
-            <p class="subpara font-normal animate-reveal delay-3 text-gray-300 text-sm sm:text-base lg:text-lg sm:max-w-3xl mx-auto mb-8 sm:mb-8" style="max-width: 848px !important;">Reliable, people powered outsourcing and AI-driven solutions that help organizations operate efficiently, serve customers better, and grow with confidence.</p>
+            <p class="subpara font-normal animate-reveal delay-3 text-gray-300 text-sm sm:text-base lg:text-lg sm:max-w-3xl mx-auto mb-8 sm:mb-8" style="max-width: 848px !important;">Outsourcing confiable impulsado por personas y soluciones con IA que ayudan a las organizaciones a operar con eficiencia, atender mejor a sus clientes y crecer con confianza.</p>
             <div class="animate-reveal delay-4">
-                <button onclick="window.location.href='../contact'" class="herobtns bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] text-white py-4 px-8 text-sm sm:text-base hover:transition-all duration-300 shadow-lg hover:shadow-purple-400/20" style="border-radius: 8px !important;"> Unlock Solutions Today </button>
+                <button onclick="window.location.href='/contact'" class="herobtns bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] text-white py-4 px-8 text-sm sm:text-base hover:transition-all duration-300 shadow-lg hover:shadow-purple-400/20" style="border-radius: 8px !important;"> Descubra soluciones hoy </button>
             </div>
         </div>
     </section>
     
-    <section id="customersupport" class="solutions-lastingimpression-section samesectionpadding py-24 pt-[80px] relative overflow-hidden bg-cover bg-center" aria-label="Customer Support Outsourcing">
+    <section id="customersupport" class="solutions-lastingimpression-section samesectionpadding py-24 pt-[80px] relative overflow-hidden bg-cover bg-center" aria-label="Outsourcing de atención al cliente">
         <div class="container mx-auto px-4">
             <div class="solution-side-img1 absolute w-[846px] h-[893px] opacity-[40%] bg-cover bg-center bg-no-repeat"></div>
             <div class="solgap grid gap-5 lg:grid-cols-2 gap-16 mb-5" style="align-items: center;">
@@ -41,20 +43,20 @@ include(__DIR__ . "/../inc/header.php");
                         <span class="relative z-10 flex items-center gap-2">
                             <span class="spanfont block w-[24px] h-[4px] rounded" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);"></span> 
                             <span class="spanfont text-[20px] leading-[28px] tracking-[-0.03em]" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                                Customer Experience Solutions 
+                                Soluciones de experiencia del cliente 
                             </span> 
                         </span>
                     </h2>
                     <h3 class="solution-heading headingspace text-[32px] leading-[40px] tracking-[-0.03em] text-black mb-[20px]" style="max-width: 521px;">
-                        Delivering Conversations  
+                        Conversaciones que 
                         <span class="solutionsitalic-font text-[32px] leading-[40px] tracking-[-0.03em] text-black">
-                            That Drive Loyalty & Revenue
+                            impulsan lealtad e ingresos
                         </span>
                     </h3> 
                 </div>
                 <div class="reveal-right">
                     <p class="company-culture-abformate-solutions-neww nomargin text-[#3C3B47] text-[16px] leading-[24px]">
-                        Outsource your customer support to a team that protects your brand, resolves issues faster, and turns every interaction into a positive buying experience.
+                        Externalice su atención al cliente con un equipo que protege su marca, resuelve problemas con mayor rapidez y convierte cada interacción en una experiencia positiva.
                     </p>
                 </div>
             </div>
@@ -68,33 +70,33 @@ include(__DIR__ . "/../inc/header.php");
                 <div class="mainsolthings flex items-left justify-between">
                     <div class="leftsidesoldes w-[800px] pt-[35px] pr-[110px]">
                         <h3 class="text-[24px] leading-[32px] tracking-[-0.03em] font-medium text-black mb-5">
-                            What You Get
+                            Qué obtiene
                         </h3>
                         <div class="managespacesolution grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-y-5 mb-10">
                             
                             <div class="flex items-center gap-3">
                                 <img src="../assets/images/check.webp" alt="check" class="w-[20px] h-[20px]" />
-                                <p class="text-[16px] leading-[24px] text-black">Inbound and outbound call handling</p>
+                                <p class="text-[16px] leading-[24px] text-black">Gestión de llamadas entrantes y salientes</p>
                             </div>
                             
                             <div class="flex items-center gap-3">
                                 <img src="../assets/images/check.webp" alt="check" class="w-[20px] h-[20px] "/>
-                                <p class="text-[16px] leading-[24px] text-black">24/7 answering and helpdesk support</p>
+                                <p class="text-[16px] leading-[24px] text-black">Atención 24/7 y soporte helpdesk</p>
                             </div>
                             
                             <div class="flex items-center gap-3">
                                 <img src="../assets/images/check.webp" alt="check" class="w-[20px] h-[20px]" />
-                                <p class="text-[16px] leading-[24px] text-black">Order, billing, and inquiry assistance</p>
+                                <p class="text-[16px] leading-[24px] text-black">Soporte para pedidos, facturación y consultas</p>
                             </div>
                             
                             <div class="flex items-center gap-3">
                                 <img src="../assets/images/check.webp" alt="check" class="w-[20px] h-[20px]" />
-                                <p class="text-[16px] leading-[24px] text-black">Live chat, email, and social media</p>
+                                <p class="text-[16px] leading-[24px] text-black">Chat en vivo, email y redes sociales</p>
                             </div>
                             
                             <div class="flex items-center gap-3">
                                 <img src="../assets/images/check.webp" alt="check" class="w-[20px] h-[20px]" />
-                                <p class="text-[16px] leading-[24px] text-black">After-hours and overflow support</p>
+                                <p class="text-[16px] leading-[24px] text-black">Soporte fuera de horario y por exceso de volumen</p>
                             </div>
                         </div>
                     </div>
@@ -107,14 +109,14 @@ include(__DIR__ . "/../inc/header.php");
                                             gap-4 md:gap-[20px]">
                                 <div class="boxesfont sm:ml-4 md:ml-0">
                                     <h3 class="text-[24px] leading-[28px] text-[#000000] mb-1 md:mb-9" style="font-weight: 600">
-                                        Business Impact
+                                        Impacto en el negocio
                                     </h3>
                                     <img src="../assets/images/linebot.webp" class="mb-[15px]" alt="">
                                     <div class="linesli">
                                         <ul>
-                                            <li><img src="../assets/images/trianglebox.webp" alt="">Higher CSAT & NPS</li>
-                                            <li><img src="../assets/images/trianglebox.webp" alt="">Faster response & resolution times</li>
-                                            <li><img src="../assets/images/trianglebox.webp" alt="">Lower churn & higher lifetime value</li>
+                                            <li><img src="../assets/images/trianglebox.webp" alt="">Mayor CSAT y NPS</li>
+                                            <li><img src="../assets/images/trianglebox.webp" alt="">Tiempos de respuesta y resolución más rápidos</li>
+                                            <li><img src="../assets/images/trianglebox.webp" alt="">Menor abandono y mayor valor de vida del cliente</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -125,21 +127,21 @@ include(__DIR__ . "/../inc/header.php");
                 <div class="rounded-[8px] mb-[12px] px-6 py-6 flex flex-col md:flex-row md:items-center bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C]">
                     <div class="empgaps flex flex-col md:flex-row md:items-center gap-6 w-full">
                         <h3 class="mytextemp w-[146px] text-white text-[20px] leading-[28px] font-medium min-w-[120px]">
-                         Why It Works 
+                         Por qué funciona 
                         </h3>
 
                         <div class="hidden md:block h-[42px] w-px bg-white flex-shrink-0"></div>
                        <div class="empsolbtn flex items-center justify-between" style="width: 100%;">
                             <p class="text-white text-[16px] leading-[24px] w-[665px] mr-[50px]">
-                            We build dedicated customer service teams trained on your products, tone, and workflows—backed by AI-assisted routing, knowledge bases, and real-time QA.
+                            Creamos equipos dedicados de atención al cliente, capacitados en sus productos, tono y flujos de trabajo, respaldados por enrutamiento asistido por IA, bases de conocimiento y QA en tiempo real.
                             </p>
-                            <a href="../solutions/customer-experience-solutions"
+                            <a href="/solutions/customer-experience-solutions"
                                 class="py-[10px] px-[24px] bg-white inline-block rounded-[8px]">
                                 <span
                                     style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);
                                         -webkit-background-clip: text;
                                         -webkit-text-fill-color: transparent;">
-                                    Build Your Customer Support Team
+                                    Construya su equipo de atención al cliente
                                 </span>
                             </a>
                         </div>
@@ -149,7 +151,7 @@ include(__DIR__ . "/../inc/header.php");
         </div>
     </section>
     
-    <section id="bookofficesupport" class="reliable-experties-section samesectionpadding bg-[rgba(0,0,0,1)] py-24" aria-label="Back Office Support Services">
+    <section id="bookofficesupport" class="reliable-experties-section samesectionpadding bg-[rgba(0,0,0,1)] py-24" aria-label="Servicios de soporte back office">
         <div class="container mx-auto px-4">
             <div class="solgap grid gap-5 lg:grid-cols-2 gap-16 mb-5" style="align-items: center;">
                 <div class="reveal-left">
@@ -157,7 +159,7 @@ include(__DIR__ . "/../inc/header.php");
                         <span class="relative z-10 flex items-center gap-2">
                             <span class="spanfont block w-[24px] h-[4px] rounded" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);"></span> 
                             <span class="spanfont text-[20px] leading-[28px] tracking-[-0.03em]" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                                Back Office Support Services 
+                                Servicios de soporte back office 
                             </span> 
                         </span>
                     </h2>
@@ -183,33 +185,33 @@ include(__DIR__ . "/../inc/header.php");
                 <div class="mainsolthings flex items-left justify-between">
                     <div class="leftsidesoldes w-[800px] pt-[35px] pr-[110px]">
                         <h3 class="text-[24px] leading-[32px] tracking-[-0.03em] font-medium text-white mb-5">
-                            What You Get
+                            Qué obtiene
                         </h3>
                         <div class="managespacesolution grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-y-5 mb-10">
                             
                             <div class="flex items-center gap-3">
                                 <img src="../assets/images/check.webp" alt="check" class="w-[20px] h-[20px]" />
-                                <p class="text-[16px] leading-[24px] text-white">Data entry & management</p>
+                                <p class="text-[16px] leading-[24px] text-white">Entrada y gestión de datos</p>
                             </div>
                             
                             <div class="flex items-center gap-3">
                                 <img src="../assets/images/check.webp" alt="check" class="w-[20px] h-[20px] "/>
-                                <p class="text-[16px] leading-[24px] text-white">Document processing & OCR</p>
+                                <p class="text-[16px] leading-[24px] text-white">Procesamiento documental y OCR</p>
                             </div>
                             
                             <div class="flex items-center gap-3">
                                 <img src="../assets/images/check.webp" alt="check" class="w-[20px] h-[20px]" />
-                                <p class="text-[16px] leading-[24px] text-white">Order & invoice processing</p>
+                                <p class="text-[16px] leading-[24px] text-white">Procesamiento de pedidos y facturas</p>
                             </div>
                             
                             <div class="flex items-center gap-3">
                                 <img src="../assets/images/check.webp" alt="check" class="w-[20px] h-[20px]" />
-                                <p class="text-[16px] leading-[24px] text-white">CRM & ERP updates</p>
+                                <p class="text-[16px] leading-[24px] text-white">Actualizaciones de CRM y ERP</p>
                             </div>
                             
                             <div class="flex items-center gap-3">
                                 <img src="../assets/images/check.webp" alt="check" class="w-[20px] h-[20px]" />
-                                <p class="text-[16px] leading-[24px] text-white">Email & ticket management</p>
+                                <p class="text-[16px] leading-[24px] text-white">Gestión de emails y tickets</p>
                             </div>
                         </div>
                     </div>
@@ -222,12 +224,12 @@ include(__DIR__ . "/../inc/header.php");
                                             gap-4 md:gap-[20px]">
                                 <div class="boxesfont sm:ml-4 md:ml-0">
                                     <h3 class="text-[24px] leading-[28px] text-[#000000] mb-1 md:mb-9" style="font-weight: 600">
-                                        Business Impact
+                                        Impacto en el negocio
                                     </h3>
                                     <img src="../assets/images/linebot.webp" class="mb-[15px]" alt="">
                                     <div class="linesli">
                                         <ul>
-                                            <li><img src="../assets/images/trianglebox.webp" alt="">Faster turnaround times</li>
+                                            <li><img src="../assets/images/trianglebox.webp" alt="">Tiempos de entrega más rápidos</li>
                                             <li><img src="../assets/images/trianglebox.webp" alt="">Higher accuracy rates</li>
                                             <li><img src="../assets/images/trianglebox.webp" alt="">Reduced operating costs</li>
                                         </ul>
@@ -240,7 +242,7 @@ include(__DIR__ . "/../inc/header.php");
                 <div class="rounded-[8px] mb-[12px] px-6 py-6 flex flex-col md:flex-row md:items-center bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C]">
                     <div class="empgaps flex flex-col md:flex-row md:items-center gap-6 w-full">
                         <h3 class="mytextemp w-[146px] text-white text-[20px] leading-[28px] font-medium min-w-[120px]">
-                         Why It Works 
+                         Por qué funciona 
                         </h3>
 
                         <div class="hidden md:block h-[42px] w-px bg-white flex-shrink-0"></div>
@@ -248,13 +250,13 @@ include(__DIR__ . "/../inc/header.php");
                             <p class="text-white text-[16px] leading-[24px] w-[665px] mr-[50px]">
                                 Standardized workflows + automation + dedicated teams deliver consistent output at scale.
                             </p>
-                            <a href="../solutions/back-office-support"
+                            <a href="/solutions/back-office-support"
                                 class="py-[10px] px-[24px] bg-white inline-block rounded-[8px]">
                                 <span
                                     style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);
                                         -webkit-background-clip: text;
                                         -webkit-text-fill-color: transparent;">
-                                    Build Your Back Office Team
+                                    Construya su equipo back office
                                 </span>
                             </a>
                         </div>
@@ -273,7 +275,7 @@ include(__DIR__ . "/../inc/header.php");
                         <span class="relative z-10 flex items-center gap-2">
                             <span class="spanfont block w-[24px] h-[4px] rounded" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);"></span> 
                             <span class="spanfont text-[20px] leading-[28px] tracking-[-0.03em]" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                                Finance & Accounting BPO 
+                                BPO de finanzas y contabilidad 
                             </span> 
                         </span>
                     </h2>
@@ -299,33 +301,33 @@ include(__DIR__ . "/../inc/header.php");
                 <div class="mainsolthings flex items-left justify-between">
                     <div class="leftsidesoldes w-[800px] pt-[35px] pr-[110px]">
                         <h3 class="text-[24px] leading-[32px] tracking-[-0.03em] font-medium text-black mb-5">
-                            What You Get
+                            Qué obtiene
                         </h3>
                         <div class="managespacesolution grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-y-5 mb-10">
                             
                             <div class="flex items-center gap-3">
                                 <img src="../assets/images/check.webp" alt="check" class="w-[20px] h-[20px]" />
-                                <p class="text-[16px] leading-[24px] text-black">Bookkeeping & general ledger</p>
+                                <p class="text-[16px] leading-[24px] text-black">Contabilidad y libro mayor</p>
                             </div>
                             
                             <div class="flex items-center gap-3">
                                 <img src="../assets/images/check.webp" alt="check" class="w-[20px] h-[20px] "/>
-                                <p class="text-[16px] leading-[24px] text-black">Accounts payable & receivable</p>
+                                <p class="text-[16px] leading-[24px] text-black">Cuentas por pagar y por cobrar</p>
                             </div>
                             
                             <div class="flex items-center gap-3">
                                 <img src="../assets/images/check.webp" alt="check" class="w-[20px] h-[20px]" />
-                                <p class="text-[16px] leading-[24px] text-black">Bank reconciliation</p>
+                                <p class="text-[16px] leading-[24px] text-black">Conciliación bancaria</p>
                             </div>
                             
                             <div class="flex items-center gap-3">
                                 <img src="../assets/images/check.webp" alt="check" class="w-[20px] h-[20px]" />
-                                <p class="text-[16px] leading-[24px] text-black">Payroll processing</p>
+                                <p class="text-[16px] leading-[24px] text-black">Procesamiento de nómina</p>
                             </div>
                             
                             <div class="flex items-center gap-3">
                                 <img src="../assets/images/check.webp" alt="check" class="w-[20px] h-[20px]" />
-                                <p class="text-[16px] leading-[24px] text-black">Financial reporting & tax support</p>
+                                <p class="text-[16px] leading-[24px] text-black">Reportes financieros y soporte fiscal</p>
                             </div>
                         </div>
                     </div>
@@ -338,7 +340,7 @@ include(__DIR__ . "/../inc/header.php");
                                             gap-4 md:gap-[20px]">
                                 <div class="boxesfont sm:ml-4 md:ml-0">
                                     <h3 class="text-[24px] leading-[28px] text-[#000000] mb-1 md:mb-9" style="font-weight: 600">
-                                        Business Impact
+                                        Impacto en el negocio
                                     </h3>
                                     <img src="../assets/images/linebot.webp" class="mb-[15px]" alt="">
                                     <div class="linesli">
@@ -356,19 +358,19 @@ include(__DIR__ . "/../inc/header.php");
                 <div class="rounded-[8px] mb-[12px] px-6 py-6 flex flex-col md:flex-row md:items-center bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C]">
                     <div class="empgaps flex flex-col md:flex-row md:items-center gap-6 w-full">
                         <h3 class="mytextemp w-[146px] text-white text-[20px] leading-[28px] font-medium min-w-[120px]">
-                         Why It Works 
+                         Por qué funciona 
                         </h3>
 
                         <div class="hidden md:block h-[42px] w-px bg-white flex-shrink-0"></div>
                        <div class="empsolbtn flex items-center justify-between" style="width: 100%;">
-                            <p class="text-white text-[16px] leading-[24px] w-[665px] mr-[50px]"> AI-powered invoice OCR, automated reconciliations, and experienced accountants working as your extended team.</p>
-                            <a href="../solutions/finance-accounting-bpo"
+                            <p class="text-white text-[16px] leading-[24px] w-[665px] mr-[50px]"> OCR de facturas con IA, conciliaciones automatizadas y contadores experimentados trabajando como extensión de su equipo.</p>
+                            <a href="/solutions/finance-accounting-bpo"
                                 class="py-[10px] px-[24px] bg-white inline-block rounded-[8px]">
                                 <span
                                     style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);
                                         -webkit-background-clip: text;
                                         -webkit-text-fill-color: transparent;">
-                                    Build Your Finance Team
+                                    Construya su equipo financiero
                                 </span>
                             </a>
                         </div>
@@ -378,7 +380,7 @@ include(__DIR__ . "/../inc/header.php");
         </div>
     </section>
 
-    <section id="qualityassurance" class="Precision-solutions-section samesectionpadding bg-[rgba(0,0,0,1)] py-24" aria-label="Quality Assurance Services">
+    <section id="qualityassurance" class="Precision-solutions-section samesectionpadding bg-[rgba(0,0,0,1)] py-24" aria-label="Servicios de aseguramiento de calidad">
         <div class="container mx-auto px-4">
             <div class="solgap grid gap-5 lg:grid-cols-2 gap-16 mb-5" style="align-items: center;">
                 <div class="reveal-left">
@@ -386,7 +388,7 @@ include(__DIR__ . "/../inc/header.php");
                         <span class="relative z-10 flex items-center gap-2">
                             <span class="spanfont block w-[24px] h-[4px] rounded" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);"></span> 
                             <span class="spanfont text-[20px] leading-[28px] tracking-[-0.03em]" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                                Quality Assurance (QA) Services 
+                                Servicios de aseguramiento de calidad (QA) 
                             </span> 
                         </span>
                     </h2>
@@ -399,7 +401,7 @@ include(__DIR__ . "/../inc/header.php");
                 </div>
                 <div class="reveal-right">
                     <p class="company-culture-abformate-solutions-neww nomargin text-[#3C3B47] text-[16px] leading-[24px] text-white" style="color: #fff;">
-                        Improve consistency, compliance, and customer experience with structured QA monitoring and coaching.
+                        Mejore la consistencia, el cumplimiento y la experiencia del cliente con monitoreo QA estructurado y coaching.
                     </p>
                 </div>
             </div>
@@ -413,28 +415,28 @@ include(__DIR__ . "/../inc/header.php");
                 <div class="mainsolthings flex items-left justify-between">
                     <div class="leftsidesoldes w-[800px] pt-[35px] pr-[110px]">
                         <h3 class="text-[24px] leading-[32px] tracking-[-0.03em] font-medium text-white mb-5">
-                            What You Get
+                            Qué obtiene
                         </h3>
                         <div class="managespacesolution grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-y-5 mb-10">
                             
                             <div class="flex items-center gap-3">
                                 <img src="../assets/images/check.webp" alt="check" class="w-[20px] h-[20px]" />
-                                <p class="text-[16px] leading-[24px] text-white">Call & ticket audits</p>
+                                <p class="text-[16px] leading-[24px] text-white">Auditorías de llamadas y tickets</p>
                             </div>
                             
                             <div class="flex items-center gap-3">
                                 <img src="../assets/images/check.webp" alt="check" class="w-[20px] h-[20px] "/>
-                                <p class="text-[16px] leading-[24px] text-white">Root cause analysis</p>
+                                <p class="text-[16px] leading-[24px] text-white">Análisis de causa raíz</p>
                             </div>
                             
                             <div class="flex items-center gap-3">
                                 <img src="../assets/images/check.webp" alt="check" class="w-[20px] h-[20px]" />
-                                <p class="text-[16px] leading-[24px] text-white">QA scorecards & calibration</p>
+                                <p class="text-[16px] leading-[24px] text-white">Scorecards de QA y calibración</p>
                             </div>
                             
                             <div class="flex items-center gap-3">
                                 <img src="../assets/images/check.webp" alt="check" class="w-[20px] h-[20px]" />
-                                <p class="text-[16px] leading-[24px] text-white">Coaching recommendations</p>
+                                <p class="text-[16px] leading-[24px] text-white">Recomendaciones de coaching</p>
                             </div>
                         </div>
                     </div>
@@ -447,14 +449,14 @@ include(__DIR__ . "/../inc/header.php");
                                             gap-4 md:gap-[20px]">
                                 <div class="boxesfont sm:ml-4 md:ml-0">
                                     <h3 class="text-[24px] leading-[28px] text-[#000000] mb-1 md:mb-9" style="font-weight: 600">
-                                        Business Impact
+                                        Impacto en el negocio
                                     </h3>
                                     <img src="../assets/images/linebot.webp" class="mb-[15px]" alt="">
                                     <div class="linesli">
                                         <ul>
                                             <li><img src="../assets/images/trianglebox.webp" alt="">Higher CSAT & QA scores</li>
                                             <li><img src="../assets/images/trianglebox.webp" alt="">Fewer escalations</li>
-                                            <li><img src="../assets/images/trianglebox.webp" alt="">Better agent performance</li>
+                                            <li><img src="../assets/images/trianglebox.webp" alt="">Mejor desempeño de agentes</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -465,7 +467,7 @@ include(__DIR__ . "/../inc/header.php");
                 <div class="rounded-[8px] mb-[12px] px-6 py-6 flex flex-col md:flex-row md:items-center bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C]">
                     <div class="empgaps flex flex-col md:flex-row md:items-center gap-6 w-full">
                         <h3 class="mytextemp w-[146px] text-white text-[20px] leading-[28px] font-medium min-w-[120px]">
-                         Why It Works 
+                         Por qué funciona 
                         </h3>
 
                         <div class="hidden md:block h-[42px] w-px bg-white flex-shrink-0"></div>
@@ -473,13 +475,13 @@ include(__DIR__ . "/../inc/header.php");
                             <p class="text-white text-[16px] leading-[24px] w-[665px] mr-[50px]">
                                 Speech analytics, automated scoring, and trend dashboards uncover what's working—and what's not.                            
                             </p>
-                            <a href="../solutions/quality-assurance-outsourcing"
+                            <a href="/solutions/quality-assurance-outsourcing"
                                 class="py-[10px] px-[24px] bg-white inline-block rounded-[8px]">
                                 <span
                                     style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);
                                         -webkit-background-clip: text;
                                         -webkit-text-fill-color: transparent;">
-                                    Build Your QA Team
+                                    Construya su equipo de QA
                                 </span>
                             </a>
                         </div>
@@ -489,7 +491,7 @@ include(__DIR__ . "/../inc/header.php");
         </div>
     </section>
 
-    <section id="recruitment" class="communication-solutions-section samesectionpadding py-24 pt-[80px] relative overflow-hidden bg-cover bg-center" aria-label="Recruitment Outsourcing Solutions">
+    <section id="recruitment" class="communication-solutions-section samesectionpadding py-24 pt-[80px] relative overflow-hidden bg-cover bg-center" aria-label="Recruitment Outsourcing Soluciones">
         <div class="container mx-auto px-4">
             <div class="solution-side-img2 absolute w-[846px] h-[893px] opacity-[40%] bg-cover bg-center bg-no-repeat"></div>
             <div class="solgap grid gap-5 lg:grid-cols-2 gap-16 mb-5" style="align-items: center;">
@@ -498,7 +500,7 @@ include(__DIR__ . "/../inc/header.php");
                         <span class="relative z-10 flex items-center gap-2">
                             <span class="spanfont block w-[24px] h-[4px] rounded" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);"></span> 
                             <span class="spanfont text-[20px] leading-[28px] tracking-[-0.03em]" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                                Recruitment & Workforce Support 
+                                Reclutamiento y soporte de fuerza laboral 
                             </span> 
                         </span>
                     </h2>
@@ -525,33 +527,33 @@ include(__DIR__ . "/../inc/header.php");
                 <div class="mainsolthings flex items-left justify-between">
                     <div class="leftsidesoldes w-[800px] pt-[35px] pr-[110px]">
                         <h3 class="text-[24px] leading-[32px] tracking-[-0.03em] font-medium text-black mb-5">
-                            What You Get
+                            Qué obtiene
                         </h3>
                         <div class="managespacesolution grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-y-5 mb-10">
                             
                             <div class="flex items-center gap-3">
                                 <img src="../assets/images/check.webp" alt="check" class="w-[20px] h-[20px]" />
-                                <p class="text-[16px] leading-[24px] text-black">Talent sourcing & screening</p>
+                                <p class="text-[16px] leading-[24px] text-black">Búsqueda y evaluación de talento</p>
                             </div>
                             
                             <div class="flex items-center gap-3">
                                 <img src="../assets/images/check.webp" alt="check" class="w-[20px] h-[20px] "/>
-                                <p class="text-[16px] leading-[24px] text-black">Interviews & background checks</p>
+                                <p class="text-[16px] leading-[24px] text-black">Entrevistas y verificaciones de antecedentes</p>
                             </div>
                             
                             <div class="flex items-center gap-3">
                                 <img src="../assets/images/check.webp" alt="check" class="w-[20px] h-[20px]" />
-                                <p class="text-[16px] leading-[24px] text-black">Onboarding support</p>
+                                <p class="text-[16px] leading-[24px] text-black">Soporte de onboarding</p>
                             </div>
                             
                             <div class="flex items-center gap-3">
                                 <img src="../assets/images/check.webp" alt="check" class="w-[20px] h-[20px]" />
-                                <p class="text-[16px] leading-[24px] text-black">Workforce management & HR admin</p>
+                                <p class="text-[16px] leading-[24px] text-black">Gestión de fuerza laboral y administración de RR. HH.</p>
                             </div>
                             
                             <div class="flex items-center gap-3">
                                 <img src="../assets/images/check.webp" alt="check" class="w-[20px] h-[20px]" />
-                                <p class="text-[16px] leading-[24px] text-black">After-hours and overflow support</p>
+                                <p class="text-[16px] leading-[24px] text-black">Soporte fuera de horario y por exceso de volumen</p>
                             </div>
                         </div>
                     </div>
@@ -564,7 +566,7 @@ include(__DIR__ . "/../inc/header.php");
                                             gap-4 md:gap-[20px]">
                                 <div class="boxesfont sm:ml-4 md:ml-0">
                                     <h3 class="text-[24px] leading-[28px] text-[#000000] mb-1 md:mb-9" style="font-weight: 600">
-                                        Business Impact
+                                        Impacto en el negocio
                                     </h3>
                                     <img src="../assets/images/linebot.webp" class="mb-[15px]" alt="">
                                     <div class="linesli">
@@ -582,21 +584,21 @@ include(__DIR__ . "/../inc/header.php");
                 <div class="rounded-[8px] mb-[12px] px-6 py-6 flex flex-col md:flex-row md:items-center bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C]">
                     <div class="empgaps flex flex-col md:flex-row md:items-center gap-6 w-full">
                         <h3 class="mytextemp w-[146px] text-white text-[20px] leading-[28px] font-medium min-w-[120px]">
-                         Why It Works 
+                         Por qué funciona 
                         </h3>
 
                         <div class="hidden md:block h-[42px] w-px bg-white flex-shrink-0"></div>
                        <div class="empsolbtn flex items-center justify-between" style="width: 100%;">
                             <p class="text-white text-[16px] leading-[24px] w-[665px] mr-[50px]">
-                                AI-assisted resume screening and structured hiring frameworks deliver stronger talent, faster.
+                                La evaluación de currículums asistida por IA y los marcos de contratación estructurados permiten encontrar mejor talento con mayor rapidez.
                             </p>
-                            <a href="../solutions/recruitment-workforce-support"
+                            <a href="/solutions/recruitment-workforce-support"
                                 class="py-[10px] px-[24px] bg-white inline-block rounded-[8px]">
                                 <span
                                     style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);
                                         -webkit-background-clip: text;
                                         -webkit-text-fill-color: transparent;">
-                                    Build Your Offshore Team
+                                    Construya su equipo offshore
                                 </span>
                             </a>
                         </div>
@@ -614,7 +616,7 @@ include(__DIR__ . "/../inc/header.php");
                         <span class="relative z-10 flex items-center gap-2">
                             <span class="spanfont block w-[24px] h-[4px] rounded" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);"></span> 
                             <span class="spanfont text-[20px] leading-[28px] tracking-[-0.03em]" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                                AI-Enabled BPO Solutions 
+                                Soluciones BPO habilitadas con IA 
                             </span> 
                         </span>
                     </h2>
@@ -627,7 +629,7 @@ include(__DIR__ . "/../inc/header.php");
                 </div>
                 <div class="reveal-right">
                     <p class="company-culture-abformate-solutions-neww nomargin text-[#3C3B47] text-[16px] leading-[24px] text-white" style="color: #fff;">
-                        Embed AI directly into your operations to eliminate manual work and increase productivity.
+                        Integre IA directamente en sus operaciones para eliminar trabajo manual y aumentar productividad.
                     </p>
                 </div>
             </div>
@@ -641,33 +643,33 @@ include(__DIR__ . "/../inc/header.php");
                 <div class="mainsolthings flex items-left justify-between">
                     <div class="leftsidesoldes w-[800px] pt-[35px] pr-[110px]">
                         <h3 class="text-[24px] leading-[32px] tracking-[-0.03em] font-medium text-white mb-5">
-                            What You Get
+                            Qué obtiene
                         </h3>
                         <div class="managespacesolution grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-y-5 mb-10">
                             
                             <div class="flex items-center gap-3">
                                 <img src="../assets/images/check.webp" alt="check" class="w-[20px] h-[20px]" />
-                                <p class="text-[16px] leading-[24px] text-white">Intelligent document processing</p>
+                                <p class="text-[16px] leading-[24px] text-white">Procesamiento inteligente de documentos</p>
                             </div>
                             
                             <div class="flex items-center gap-3">
                                 <img src="../assets/images/check.webp" alt="check" class="w-[20px] h-[20px] "/>
-                                <p class="text-[16px] leading-[24px] text-white">AI chatbots & virtual assistants</p>
+                                <p class="text-[16px] leading-[24px] text-white">Chatbots con IA y asistentes virtuales</p>
                             </div>
                             
                             <div class="flex items-center gap-3">
                                 <img src="../assets/images/check.webp" alt="check" class="w-[20px] h-[20px]" />
-                                <p class="text-[16px] leading-[24px] text-white">Analytics dashboards</p>
+                                <p class="text-[16px] leading-[24px] text-white">Dashboards analíticos</p>
                             </div>
                             
                             <div class="flex items-center gap-3">
                                 <img src="../assets/images/check.webp" alt="check" class="w-[20px] h-[20px]" />
-                                <p class="text-[16px] leading-[24px] text-white">Automated QA system</p>
+                                <p class="text-[16px] leading-[24px] text-white">Sistema de QA automatizado</p>
                             </div>
                             
                             <div class="flex items-center gap-3">
                                 <img src="../assets/images/check.webp" alt="check" class="w-[20px] h-[20px]" />
-                                <p class="text-[16px] leading-[24px] text-white">Workflow automation</p>
+                                <p class="text-[16px] leading-[24px] text-white">Automatización de flujos de trabajo</p>
                             </div>
                         </div>
                     </div>
@@ -680,7 +682,7 @@ include(__DIR__ . "/../inc/header.php");
                                             gap-4 md:gap-[20px]">
                                 <div class="boxesfont sm:ml-4 md:ml-0">
                                     <h3 class="text-[24px] leading-[28px] text-[#000000] mb-1 md:mb-9" style="font-weight: 600">
-                                        Business Impact
+                                        Impacto en el negocio
                                     </h3>
                                     <img src="../assets/images/linebot.webp" class="mb-[15px]" alt="">
                                     <div class="linesli">
@@ -698,7 +700,7 @@ include(__DIR__ . "/../inc/header.php");
                 <div class="rounded-[8px] mb-[12px] px-6 py-6 flex flex-col md:flex-row md:items-center bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C]">
                     <div class="empgaps flex flex-col md:flex-row md:items-center gap-6 w-full">
                         <h3 class="mytextemp w-[146px] text-white text-[20px] leading-[28px] font-medium min-w-[120px]">
-                         Why It Works 
+                         Por qué funciona 
                         </h3>
 
                         <div class="hidden md:block h-[42px] w-px bg-white flex-shrink-0"></div>
@@ -706,7 +708,7 @@ include(__DIR__ . "/../inc/header.php");
                             <p class="text-white text-[16px] leading-[24px] w-[665px] mr-[50px]">
                                 We combine AI + human expertise to create practical automation that actually delivers ROI.
                             </p>
-                            <a href="../solutions/bpo-solutions"
+                            <a href="/solutions/bpo-solutions"
                                 class="py-[10px] px-[24px] bg-white inline-block rounded-[8px]">
                                 <span
                                     style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);
@@ -746,15 +748,15 @@ include(__DIR__ . "/../inc/header.php");
                     <div class="ctamain text-center">
                         <div class="cta-left-sidework pt-[60px] pb-[60px]">
                             <h2 class="solution-heading cta-solution-section future-heading text-[32px] md:text-[48px] leading-[38px] md:leading-[56px] tracking-[-0.03em] text-black mb-[15px] md:mb-[20px]">
-                                Ready to Transform Your
-                                <span class="solutionsitalic-font text-[32px] md:text-[48px] leading-[56px] md:leading-[56px] tracking-[-0.03em]"> Business Operations</span>?
+                                ¿Listo para transformar sus
+                                <span class="solutionsitalic-font text-[32px] md:text-[48px] leading-[56px] md:leading-[56px] tracking-[-0.03em]"> operaciones de negocio</span>?
                             </h2>
                             <p class="future-customer-para text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] text-[#2A2A2A] mb-8 md:mb-10">
-                                Because your customers deserve nothing less.
+                                Porque sus clientes no merecen menos.
                             </p>
                             <div class="future-btn">
-                                <a href="../industries" class="inline-block px-8 md:px-10 py-3 md:py-4 rounded-[8px] text-white text-[14px] md:text-[16px] leading-[20px] md:leading-[24px] font-medium bg-[#7A76FF]">
-                                    Discover Our Industry Solutions <i class="fa fa-arrow-right" style="padding-left:10px;"></i>
+                                <a href="/industries" class="inline-block px-8 md:px-10 py-3 md:py-4 rounded-[8px] text-white text-[14px] md:text-[16px] leading-[20px] md:leading-[24px] font-medium bg-[#7A76FF]">
+                                    Descubra nuestras soluciones por industria <i class="fa fa-arrow-right" style="padding-left:10px;"></i>
                                 </a>
                             </div>
                         </div>
@@ -775,9 +777,9 @@ include(__DIR__ . "/../inc/header.php");
       "position": 1,
       "item": {
         "@type": "Service",
-        "name": "Customer Support Outsourcing",
-        "description": "Outsource your customer support to a team that protects your brand and resolves issues faster.",
-        "url": "https://empireonecx.com/solution/#customersupport"
+        "name": "Outsourcing de atención al cliente",
+        "description": "Externalice la atención al cliente con un equipo que protege su marca y resuelve problemas más rápido.",
+        "url": "https://empireonecx.com/es/soluciones/#customersupport"
       }
     },
     {
@@ -785,9 +787,9 @@ include(__DIR__ . "/../inc/header.php");
       "position": 2,
       "item": {
         "@type": "Service",
-        "name": "Back Office Support Services",
+        "name": "Servicios de soporte back office",
         "description": "Offload repetitive operational work so your internal teams can focus on growth.",
-        "url": "https://empireonecx.com/solution/#bookofficesupport"
+        "url": "https://empireonecx.com/es/soluciones/#bookofficesupport"
       }
     },
     {
@@ -795,9 +797,9 @@ include(__DIR__ . "/../inc/header.php");
       "position": 3,
       "item": {
         "@type": "Service",
-        "name": "Finance & Accounting BPO",
-        "description": "Outsource your finance operations to improve accuracy and ensure compliance.",
-        "url": "https://empireonecx.com/solution/#finance"
+        "name": "BPO de finanzas y contabilidad",
+        "description": "Externalice sus operaciones financieras para mejorar precisión y cumplimiento.",
+        "url": "https://empireonecx.com/es/soluciones/#finance"
       }
     },
     {
@@ -805,9 +807,9 @@ include(__DIR__ . "/../inc/header.php");
       "position": 4,
       "item": {
         "@type": "Service",
-        "name": "Quality Assurance (QA) Services",
-        "description": "Improve consistency and compliance with structured QA monitoring and coaching.",
-        "url": "https://empireonecx.com/solution/#qualityassurance"
+        "name": "Servicios de aseguramiento de calidad (QA)",
+        "description": "Mejore consistencia y cumplimiento con monitoreo QA estructurado y coaching.",
+        "url": "https://empireonecx.com/es/soluciones/#qualityassurance"
       }
     },
     {
@@ -815,9 +817,9 @@ include(__DIR__ . "/../inc/header.php");
       "position": 5,
       "item": {
         "@type": "Service",
-        "name": "Recruitment & Workforce Support",
-        "description": "Build high-performing offshore teams without the complexity of in-house recruiting.",
-        "url": "https://empireonecx.com/solution/#recruitment"
+        "name": "Reclutamiento y soporte de fuerza laboral",
+        "description": "Construya equipos offshore de alto rendimiento sin la complejidad del reclutamiento interno.",
+        "url": "https://empireonecx.com/es/soluciones/#recruitment"
       }
     },
     {
@@ -825,13 +827,13 @@ include(__DIR__ . "/../inc/header.php");
       "position": 6,
       "item": {
         "@type": "Service",
-        "name": "AI-Enabled BPO Solutions",
-        "description": "Embed AI directly into your operations to eliminate manual work and increase productivity.",
-        "url": "https://empireonecx.com/solution/#aienablebpo"
+        "name": "Soluciones BPO habilitadas con IA",
+        "description": "Integre IA directamente en sus operaciones para eliminar trabajo manual y aumentar productividad.",
+        "url": "https://empireonecx.com/es/soluciones/#aienablebpo"
       }
     }
   ]
 }
 </script>
 
-<?php include(__DIR__ . "/../inc/footer.php"); ?>
+<?php include(__DIR__ . "/../../inc/footer.php"); ?>

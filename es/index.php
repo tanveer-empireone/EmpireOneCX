@@ -195,8 +195,10 @@ include("../inc/header.php");
                     </h3>
 
                     <p class="about-para text-[#3C3B47] text-[16px] leading-relaxed max-w-xl">EmpireOneCX ofrece servicios seguros, escalables y asistidos por IA de CX y BPO que ayudan a las organizaciones a reducir costos, mejorar la eficiencia y elevar la experiencia del cliente.</p>
-                    <p class="about-para text-[#3C3B47] text-[16px] leading-relaxed max-w-xl mb-8" style="max-width: 630px;">Somos una empresa integral de outsourcing de procesos de negocio que combina automatización y soluciones impulsadas por personas para clientes en Norteamérica, Asia y mercados globales.</p>
-                    <p class="about-para text-[#3C3B47] text-[16px] leading-relaxed max-w-xl" style="max-width: 630px;margin-top:12px;">Combinamos marcos operativos probados, automatización avanzada y profesionales offshore altamente capacitados para crear resultados predecibles, medibles y escalables.</p>
+                    <p class="about-para text-[#3C3B47] text-[16px] leading-relaxed max-w-xl mb-8" style="max-width: 630px;">Somos un BPO integral que combina automatización y soluciones impulsadas por un equipo de expertos para clientes en
+Norteamérica, Asia y mercados globales.</p>
+                    <p class="about-para text-[#3C3B47] text-[16px] leading-relaxed max-w-xl" style="max-width: 630px;margin-top:12px;">Combinamos marcos operativos probados, profesionales offshore altamente capacitados y automatización avanzada para crear
+resultados predecibles, medibles y escalables.</p>
 
                     <div class="keyrespons pb-[25px]">
                         <div class="topheadkeys pb-[22px]">
@@ -496,7 +498,7 @@ include("../inc/header.php");
                         </h3>
                         <div class="hover-reveal-content">
                             <p class="pt-[12px] text-[16px] leading-[24px] text-white/90 max-w-[340px] mb-6">
-                                Contrate más rápido con reclutamiento offshore y soporte de fuerza laboral. Contratación, onboarding y gestión de personal de punta a punta.
+                                Contrate más rápido con reclutamiento offshore y soporte de fuerza laboral. Contratación, onboarding y gestión de personal 360°.
                             </p>
                             <a href="solutions#recruitment" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
                                 Ver el impacto
@@ -808,7 +810,9 @@ include("../inc/header.php");
                                 </h3>
                                 <img src="assets/images/linebot.webp" loading="lazy" alt="Equipos dedicados y escalables" decoding="async" class="mb-[15px]">
                                 <p class="text-[16px] text-slate-700 leading-[24px] leading-relaxed">
-                                    Obtenga equipos totalmente dedicados, no compartidos, creados alrededor de sus objetivos de negocio. Escale hacia arriba o hacia abajo con modelos flexibles diseñados para acompañar su crecimiento.
+                                    Obtenga equipos de trabajo exclusivos, creados alrededor de los
+objetivos de su negocio. Escale a otro nivel sus proyectos con modelos
+flexibles diseñados para acompañar su crecimiento.
                                 </p>
                             </div>
                         </div>
@@ -827,7 +831,10 @@ include("../inc/header.php");
                                 </h3>
                                 <img src="assets/images/linebot.webp" loading="lazy" alt="Excelencia operativa impulsada por IA" decoding="async" class="mb-[15px]">
                                 <p class="text-[16px] text-slate-700 leading-[24px] leading-relaxed">
-                                    We leverage AI-driven efficiency and smart automation to streamline workflows, improve accuracy, and accelerate service delivery—without sacrificing quality.
+                                    Aprovechamos la eficiencia impulsada por la inteligencia artificial y la
+automatización inteligente para optimizar los flujos de trabajo, mejorar
+la precisión y acelerar la prestación de nuestros servicios, sin sacrificar
+la calidad.
                                 </p>
                             </div>
                         </div>
@@ -865,7 +872,9 @@ include("../inc/header.php");
                                 </h3>
                                 <img src="assets/images/linebot.webp" loading="lazy" alt="Entrega comprobada y resultados de desempeño" decoding="async" class="mb-[15px]">
                                 <p class="text-[16px] text-slate-700 leading-[24px] leading-relaxed">
-                                    Entregamos resultados medibles mediante procesos probados, ejecución consistente y una mentalidad orientada a resultados que genera impacto real en el negocio.
+                                    Entregamos resultados medibles mediante procesos probados,
+ejecución consistente y una mentalidad orientada a resultados que
+generan impacto real en el negocio.
                                 </p>
                             </div>
                         </div>
@@ -1015,7 +1024,7 @@ include("../inc/header.php");
 
                 <div class="faq-item group bg-white border-top border-slate-200 shadow-sm transition-all duration-300 hover:shadow-md [&.active]:bg-gradient-to-r [&.active]:from-[#7A76FF] [&.active]:via-[#CB46FA] [&.active]:to-[#FE881C]">
                     <button onclick="toggleFaq(this)" class="flex items-center justify-between w-full p-5 sm:p-6 text-left focus:outline-none">
-    <h3 class="text-[18px] md:text-[22px] font-semibold text-slate-800 group-[.active]:text-white pr-8">¿Ofrecen equipos offshore dedicados?</h3>
+    <h3 class="text-[18px] md:text-[22px] font-semibold text-slate-800 group-[.active]:text-white pr-8">¿Ofrecen equipos offshore exclusivos?</h3>
     <span class="faq-icon flex-shrink-0 ">
         <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -1074,7 +1083,9 @@ include("../inc/header.php");
                     </button>
                     <div class="faq-content">
                         <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-slate-600 group-[.active]:text-white/90 leading-relaxed border-t border-slate-50 group-[.active]:border-white/20 pt-4">
-                            Our agile onboarding process allows us to launch a team typically within <span class="group-[.active]:text-white font-bold">2–4 weeks</span>. This timeline may vary slightly depending on the technical complexity and specific skill sets required for your roles.
+                            Nuestro proceso de incorporación es ágil. Nos permite conformar y poner en marcha un equipo, por lo general, en un
+plazo de 2 a 4 semanas. Este tiempo puede variar ligeramente según la complejidad técnica del proyecto y las
+habilidades específicas requeridas para los cargos.
                         </div>
                     </div>
                 </div>
