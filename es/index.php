@@ -811,7 +811,7 @@ resultados predecibles, medibles y escalables.</p>
                                 <img src="assets/images/linebot.webp" loading="lazy" alt="Equipos dedicados y escalables" decoding="async" class="mb-[15px]">
                                 <p class="text-[16px] text-slate-700 leading-[24px] leading-relaxed">
                                     Obtenga equipos de trabajo exclusivos, creados alrededor de los
-objetivos de su negocio. Escale a otro nivel sus proyectos con modelos
+objetivos de su negocio. Ajuste la capacidad de su equipo según la demanda con modelos
 flexibles diseñados para acompañar su crecimiento.
                                 </p>
                             </div>
@@ -1092,7 +1092,7 @@ habilidades específicas requeridas para los cargos.
 
                 <div class="faq-item group bg-white border-top border-slate-200 shadow-sm transition-all duration-300 hover:shadow-md [&.active]:bg-gradient-to-r [&.active]:from-[#7A76FF] [&.active]:via-[#CB46FA] [&.active]:to-[#FE881C]">
                     <button onclick="toggleFaq(this)" class="flex items-center justify-between w-full p-5 sm:p-6 text-left focus:outline-none">
-                        <h3 class="text-[18px] md:text-[22px] font-semibold text-slate-800 group-[.active]:text-white pr-8">¿Pueden escalar equipos hacia arriba o hacia abajo?</h3>
+                        <h3 class="text-[18px] md:text-[22px] font-semibold text-slate-800 group-[.active]:text-white pr-8">¿Pueden ajustar la capacidad del equipo según la demanda?</h3>
                         <span class="faq-icon flex-shrink-0 ">
                             <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -1101,7 +1101,7 @@ habilidades específicas requeridas para los cargos.
                     </button>
                     <div class="faq-content">
                         <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-slate-600 group-[.active]:text-white leading-relaxed border-t border-slate-50 group-[.active]:border-black/20 pt-4">
-                            Sí. Nuestros modelos de colaboración están diseñados para ofrecer <span class="font-medium group-[.active]:text-white">máxima flexibilidad</span>. Ya sea por picos estacionales o crecimiento acelerado, podemos ajustar el tamaño de su equipo a sus necesidades operativas.
+                            Sí. Nuestros modelos de colaboración están diseñados para ofrecer <span class="font-medium group-[.active]:text-white">máxima flexibilidad</span>. Ya sea por picos estacionales o crecimiento acelerado, podemos ampliar la capacidad del equipo y adaptar los recursos a sus necesidades operativas.
                         </div>
                     </div>
                 </div>
