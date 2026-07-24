@@ -2435,10 +2435,9 @@ p.myfooterline {
 /* //////////About Page Work ///////////// */
 
 .aboutpage-bg-videowork{
-	width:1246px;
-	height:674px;
+	width: 1950px;
+	height:774px;
 	object-fit: cover;
-	left: 455px;
 }
 
 .standout-section {
