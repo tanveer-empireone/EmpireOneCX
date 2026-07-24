@@ -59,6 +59,30 @@ if (isGreeting($message)) {
     exit;
 }
 
+$guardrailAnswer = getLocalGuardrailAnswer($message);
+if ($guardrailAnswer !== null) {
+    $responsePayload = [
+        "responseId" => createResponseId(),
+        "answer" => $guardrailAnswer,
+        "handoff" => false,
+        "leadCapture" => false,
+        "sources" => [],
+        "usedAi" => false,
+        "lowConfidence" => false,
+        "guardrail" => true,
+    ];
+    logChatEvent($message, $page, $responsePayload);
+    echo json_encode([
+        "responseId" => $responsePayload["responseId"],
+        "answer" => $responsePayload["answer"],
+        "handoff" => $responsePayload["handoff"],
+        "leadCapture" => $responsePayload["leadCapture"],
+        "sources" => $responsePayload["sources"],
+        "usedAi" => $responsePayload["usedAi"],
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+    exit;
+}
+
 $knowledgeBase = require __DIR__ . "/data/ai-knowledge-base.php";
 $matches = findKnowledgeMatches($message, $knowledgeBase, 5);
 $handoffIntent = hasHandoffIntent($message);
@@ -78,11 +102,17 @@ $usedAi = false;
 
 $config = loadAiChatConfig();
 $apiKey = getAiApiKey($config);
+$aiRateLimited = false;
 if ($apiKey && !($handoffIntent && $lowConfidence)) {
-    $aiAnswer = askGroq($apiKey, $message, $history, $matches, $page, $config["model"] ?? null);
-    if ($aiAnswer !== null) {
-        $answer = $aiAnswer;
-        $usedAi = true;
+    if (canUseAiQuota()) {
+        $aiAnswer = askGroq($apiKey, $message, $history, $matches, $page, $config["model"] ?? null);
+        if ($aiAnswer !== null) {
+            $answer = $aiAnswer;
+            $usedAi = true;
+        }
+    } else {
+        $aiRateLimited = true;
+        $answer = "To keep Ask Ava available for everyone, this chat session has reached its AI usage limit for now. I can still help with approved EmpireOneCX information, or you can contact info@empireonecx.com for direct support.";
     }
 }
 
@@ -94,6 +124,7 @@ $responsePayload = [
     "sources" => $sources,
     "usedAi" => $usedAi,
     "lowConfidence" => $lowConfidence,
+    "aiRateLimited" => $aiRateLimited,
 ];
 
 logChatEvent($message, $page, $responsePayload);
@@ -425,6 +456,87 @@ function isGreeting(string $message): bool
     return (bool)preg_match('/^(hi|hello|hey)\b/i', $message);
 }
 
+function getLocalGuardrailAnswer(string $message): ?string
+{
+    $normalized = strtolower(trim($message));
+    $normalized = preg_replace('/\s+/', ' ', $normalized);
+    $plain = trim(preg_replace('/[^a-z0-9\s+*\/=().-]/', ' ', $normalized));
+    $wordTokens = preg_split('/\s+/', preg_replace('/[^a-z0-9\s]/', ' ', $normalized), -1, PREG_SPLIT_NO_EMPTY);
+    $wordCount = is_array($wordTokens) ? count($wordTokens) : 0;
+
+    $businessTerms = [
+        'empireone', 'empireonecx', 'bpo', 'cx', 'outsourcing', 'customer support', 'customer service',
+        'call center', 'contact center', 'back office', 'offshore', 'nearshore', 'agents', 'team', 'teams',
+        'pricing', 'price', 'cost', 'quote', 'proposal', 'sales', 'contact', 'book', 'demo', 'consultation',
+        'careers', 'career', 'jobs', 'hiring', 'locations', 'global footprint', 'compliance', 'security',
+        'soc 2', 'iso', 'hipaa', 'pci', 'gdpr', 'quality assurance', 'finance', 'accounting', 'recruitment',
+        'multilingual', 'omnichannel', 'help desk', 'technical support', 'industries', 'case study', 'case studies',
+        'ai automation', 'ai-enabled bpo', 'ai assisted', 'ai-assisted', 'workflow automation'
+    ];
+
+    $hasBusinessTerm = false;
+    foreach ($businessTerms as $term) {
+        if (strpos($normalized, $term) !== false) {
+            $hasBusinessTerm = true;
+            break;
+        }
+    }
+
+    $acknowledgements = ['ok', 'okay', 'k', 'yes', 'no', 'yeah', 'yep', 'nope', 'cool', 'great', 'thanks', 'thank you', 'thx', 'fine'];
+    if (in_array(trim($normalized, " .!?"), $acknowledgements, true)) {
+        return 'You are welcome. I can help with EmpireOneCX services, BPO solutions, industries, locations, pricing, compliance, careers, or connecting you with our team.';
+    }
+
+    if (preg_match('/^[0-9\s+*\/=().-]+$/', $plain) && preg_match('/[0-9]\s*[+*\/=\-]\s*[0-9]/', $plain)) {
+        return getOffTopicGuardrailAnswer();
+    }
+
+    $internalTechPatterns = [
+        '/\bwhat\s+(ai|api|model|integration|platform)\b.*\b(chatbot|chat bot|ava)\b/i',
+        '/\b(chatbot|chat bot|ava)\b.*\b(ai|api|model|integration|platform|groq|openai|gpt)\b/i',
+    ];
+    foreach ($internalTechPatterns as $pattern) {
+        if (preg_match($pattern, $message)) {
+            return 'I can help explain EmpireOneCX AI-enabled BPO and automation services, but I cannot provide internal implementation details for this website chatbot. For technical partnership questions, I can help connect you with our team.';
+        }
+    }
+
+    $codePatterns = [
+        '/\b(html|css|javascript|js|typescript|react|vue|angular|php|python|java|sql|code|coding|program|script|component)\b/i',
+        '/\b(login form|write .*form|build .*form|code example|snippet|sample code)\b/i',
+    ];
+    foreach ($codePatterns as $pattern) {
+        if (!$hasBusinessTerm && preg_match($pattern, $message)) {
+            return getOffTopicGuardrailAnswer();
+        }
+    }
+
+    $triviaPatterns = [
+        '/\bnational animal\b/i',
+        '/\bweather\b/i',
+        '/\bsports?\b/i',
+        '/\bcapital of\b/i',
+        '/\bwho is\b/i',
+        '/\bnews\b/i',
+    ];
+    foreach ($triviaPatterns as $pattern) {
+        if (!$hasBusinessTerm && preg_match($pattern, $message)) {
+            return getOffTopicGuardrailAnswer();
+        }
+    }
+
+    if (!$hasBusinessTerm && $wordCount <= 2) {
+        return getOffTopicGuardrailAnswer();
+    }
+
+    return null;
+}
+
+function getOffTopicGuardrailAnswer(): string
+{
+    return 'I can only help with EmpireOneCX-related questions here, such as CX outsourcing, BPO services, industries, locations, pricing, compliance, careers, or contacting our team.';
+}
+
 function buildFallbackAnswer(string $message, array $matches, bool $handoff, bool $greetingIntent = false): array
 {
     if ($greetingIntent) {
@@ -453,6 +565,58 @@ function buildFallbackAnswer(string $message, array $matches, bool $handoff, boo
     }
 
     return ["answer" => $answer];
+}
+
+function canUseAiQuota(): bool
+{
+    $limits = [
+        'hour' => 12,
+        'day' => 40,
+    ];
+
+    $dir = __DIR__ . "/data/ai-chat-logs";
+    if (!is_dir($dir)) {
+        @mkdir($dir, 0755, true);
+    }
+
+    if (!is_dir($dir) || !is_writable($dir)) {
+        return true;
+    }
+
+    $ip = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
+    $visitorKey = hash('sha256', $ip . '|' . ($_SERVER['HTTP_USER_AGENT'] ?? ''));
+    $day = gmdate('Y-m-d');
+    $hour = gmdate('Y-m-d-H');
+    $path = $dir . '/ai-quota-' . $day . '.json';
+
+    $quota = [];
+    if (is_file($path)) {
+        $decoded = json_decode((string)@file_get_contents($path), true);
+        if (is_array($decoded)) {
+            $quota = $decoded;
+        }
+    }
+
+    $visitorQuota = $quota[$visitorKey] ?? ['day' => 0, 'hours' => []];
+    $dayCount = (int)($visitorQuota['day'] ?? 0);
+    $hourCount = (int)($visitorQuota['hours'][$hour] ?? 0);
+
+    if ($dayCount >= $limits['day'] || $hourCount >= $limits['hour']) {
+        return false;
+    }
+
+    $visitorQuota['day'] = $dayCount + 1;
+    $visitorQuota['hours'][$hour] = $hourCount + 1;
+    foreach (($visitorQuota['hours'] ?? []) as $hourKey => $count) {
+        if (strpos((string)$hourKey, $day) !== 0) {
+            unset($visitorQuota['hours'][$hourKey]);
+        }
+    }
+    $quota[$visitorKey] = $visitorQuota;
+
+    @file_put_contents($path, json_encode($quota, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE), LOCK_EX);
+
+    return true;
 }
 
 function askGroq(string $apiKey, string $message, array $history, array $matches, string $page, ?string $configuredModel = null): ?string

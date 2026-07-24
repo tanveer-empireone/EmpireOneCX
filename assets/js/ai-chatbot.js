@@ -501,6 +501,12 @@
             root.classList.remove("is-open");
         });
 
+        document.addEventListener("click", function (event) {
+            if (root.classList.contains("is-open") && !root.contains(event.target)) {
+                root.classList.remove("is-open");
+            }
+        });
+
         root.querySelector(".eocx-ai-chat__welcome-send").addEventListener("click", function () {
             sendWelcomeQuestion(root);
         });
