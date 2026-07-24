@@ -17,7 +17,7 @@
 <main class="relative">
 	<section class="hero-section aboutpage-section relative flex flex-col items-center justify-center px-4 sm:px-6 text-center overflow-hidden" style="padding-top: 17rem; padding-bottom: 180px;">
 		<video class="aboutpage-bg-videowork absolute opacity-[0.45]" autoplay muted loop playsinline preload="metadata" aria-hidden="true" poster="assets/images/aboutherobg-poster.webp">
-			<source src="./assets/images/aboutherobg.mp4" type="video/mp4" />
+			<source src="./assets/images/aboutpgbg.mp4" type="video/mp4" />
 		</video>
 		<div class="absolute bg-black/50 -z-10" style="width:1920px; height:611px;"></div>
 		<div class="container mx-auto w-full relative z-10">
