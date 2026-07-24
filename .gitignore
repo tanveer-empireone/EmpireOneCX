@@ -1,7 +1,11 @@
 data/ai-chat-config.php
-data/ai-chat-logs/
-data/ai-chat-leads/
-data/ai-unanswered-questions/
-data/ai-feedback/
+data/ai-chat-logs/*
+!data/ai-chat-logs/.gitkeep
+data/ai-chat-leads/*
+!data/ai-chat-leads/.gitkeep
+data/ai-unanswered-questions/*
+!data/ai-unanswered-questions/.gitkeep
+data/ai-feedback/*
+!data/ai-feedback/.gitkeep
 empireone-healthcare/
 *.swp
