@@ -170,7 +170,7 @@ if (empty($languageAlternates)) {
                                             <a href="<?php echo $isSpanishSite ? '/es/soluciones/' : '/solutions'; ?>" class="nav-mega-menu__all"><?php echo $isSpanishSite ? 'Ver todas las soluciones' : 'View All Solutions'; ?> <i class="fas fa-arrow-right"></i></a>
                                         </div>
                                         <div class="nav-mega-menu__grid nav-mega-menu__grid--solutions">
-                                            <a href="/solutions/customer-experience-solutions"><i class="fas fa-headset"></i><span>Customer Experience Solutions</span></a>
+                                            <a href="<?php echo $isSpanishSite ? '/es/soluciones/soluciones-de-experiencia-del-cliente/' : '/solutions/customer-experience-solutions'; ?>"><i class="fas fa-headset"></i><span><?php echo $isSpanishSite ? 'Soluciones de experiencia del cliente' : 'Customer Experience Solutions'; ?></span></a>
                                             <a href="/solutions/multilingual-customer-support"><i class="fas fa-language"></i><span>Multilingual Customer Support</span></a>
                                             <a href="/solutions/omnichannel-contact-center-services"><i class="fas fa-comments"></i><span>Omnichannel Contact Center Services</span></a>
                                             <a href="/solutions/help-desk-technical-support"><i class="fas fa-screwdriver-wrench"></i><span>Help Desk &amp; Technical Support</span></a>
@@ -309,7 +309,7 @@ if (empty($languageAlternates)) {
                             </button>
                         </div>
                         <div id="mobile-solutions-submenu" class="mobile-solutions-submenu">
-                            <a href="/solutions/customer-experience-solutions"><i class="fas fa-headset"></i>Customer Experience Solutions</a>
+                            <a href="<?php echo $isSpanishSite ? '/es/soluciones/soluciones-de-experiencia-del-cliente/' : '/solutions/customer-experience-solutions'; ?>"><i class="fas fa-headset"></i><?php echo $isSpanishSite ? 'Soluciones de experiencia del cliente' : 'Customer Experience Solutions'; ?></a>
                             <a href="/solutions/multilingual-customer-support"><i class="fas fa-language"></i>Multilingual Customer Support</a>
                             <a href="/solutions/omnichannel-contact-center-services"><i class="fas fa-comments"></i>Omnichannel Contact Center Services</a>
                             <a href="/solutions/help-desk-technical-support"><i class="fas fa-screwdriver-wrench"></i>Help Desk &amp; Technical Support</a>

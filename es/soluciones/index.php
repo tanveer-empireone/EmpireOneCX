@@ -135,7 +135,7 @@ include(__DIR__ . "/../../inc/header.php");
                             <p class="text-white text-[16px] leading-[24px] w-[665px] mr-[50px]">
                             Creamos equipos dedicados de atención al cliente, capacitados en sus productos, tono y flujos de trabajo, respaldados por enrutamiento asistido por IA, bases de conocimiento y QA en tiempo real.
                             </p>
-                            <a href="/solutions/customer-experience-solutions"
+                            <a href="/es/soluciones/soluciones-de-experiencia-del-cliente/"
                                 class="py-[10px] px-[24px] bg-white inline-block rounded-[8px]">
                                 <span
                                     style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);
