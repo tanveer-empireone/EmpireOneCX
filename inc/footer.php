@@ -60,7 +60,7 @@
                                 space-y-3 sm:space-y-4 text-gray-300">
                             <li><a href="/case-study" class="hover:text-white transition"><?php echo !empty($isSpanishSite) ? 'Casos de éxito' : 'Case Studies'; ?></a></li>
                             <li><a href="/insights" class="hover:text-white transition"><?php echo !empty($isSpanishSite) ? 'Recursos' : 'Insights'; ?></a></li>
-                            <li><a href="/career" class="hover:text-white transition"><?php echo !empty($isSpanishSite) ? 'Carreras' : 'Careers'; ?></a></li>
+                            <li><a href="https://careers.empireonecx.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition"><?php echo !empty($isSpanishSite) ? 'Carreras' : 'Careers'; ?></a></li>
                             <li><a href="/contact" class="hover:text-white transition"><?php echo !empty($isSpanishSite) ? 'Contacto' : 'Contact'; ?></a></li>
                         </ul>
                     </div>
