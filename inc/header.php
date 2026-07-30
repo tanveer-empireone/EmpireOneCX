@@ -77,7 +77,7 @@ if (empty($languageAlternates)) {
       "@type": "Organization",
       "name": "EmpireOneCX",
       "url": "https://empireonecx.com",
-      "logo": "https://empireonecx.com/assets/images/logo.webp"
+      "logo": "https://empireonecx.com/assets/images/empireonecx.png"
     }
     </script>
 
@@ -90,8 +90,8 @@ if (empty($languageAlternates)) {
     }
     </script>
 
-    <link rel="icon" type="image/png" href="/assets/images/favicon.webp">
-    <link rel="apple-touch-icon" href="/assets/images/favicon.webp">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="/assets/images/favicon.png">
 
     <meta name="description" content="<?php echo htmlspecialchars($description ?? 'EmpireOneCX delivers scalable BPO and CX solutions.', ENT_QUOTES, 'UTF-8'); ?>">
     <meta name="keywords" content="<?php echo htmlspecialchars($keywords, ENT_QUOTES, 'UTF-8'); ?>">
@@ -107,12 +107,12 @@ if (empty($languageAlternates)) {
     <meta property="og:title" content="<?php echo htmlspecialchars($title, ENT_QUOTES, 'UTF-8'); ?>">
     <meta property="og:description" content="<?php echo htmlspecialchars($description, ENT_QUOTES, 'UTF-8'); ?>">
     <meta property="og:url" content="<?php echo htmlspecialchars($canonical, ENT_QUOTES, 'UTF-8'); ?>">
-    <meta property="og:image" content="https://<?php echo $_SERVER['HTTP_HOST']; ?>/assets/images/Empireone-logo.webp">
+    <meta property="og:image" content="https://<?php echo $_SERVER['HTTP_HOST']; ?>/assets/images/empireonecx.png">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="<?php echo htmlspecialchars($title, ENT_QUOTES, 'UTF-8'); ?>">
     <meta name="twitter:description" content="<?php echo htmlspecialchars($description, ENT_QUOTES, 'UTF-8'); ?>">
-    <meta name="twitter:image" content="https://<?php echo $_SERVER['HTTP_HOST']; ?>/assets/images/Empireone-logo.webp">
+    <meta name="twitter:image" content="https://<?php echo $_SERVER['HTTP_HOST']; ?>/assets/images/empireonecx.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -161,7 +161,7 @@ if (empty($languageAlternates)) {
                     <div class="flex items-center justify-between">
                         <div class="headermain flex items-center gap-8">
                             <div class="mainlogooo flex items-center gap-3 cursor-pointer">
-                                <img src="/assets/images/white-logo.webp" alt="EmpireOne Logo" class="logo-img w-[147px] rounded-[5px]" onclick="window.location.href='<?php echo $homeHref; ?>'" />
+                                <img src="/assets/images/empireonecx.png" alt="EmpireOne Logo" class="logo-img w-[200px] rounded-[5px]" onclick="window.location.href='<?php echo $homeHref; ?>'" />
                             </div>
                             <nav class="menuss hidden lg:flex items-center 
                                 space-x-5 xl:space-x-4 
