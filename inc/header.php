@@ -173,10 +173,10 @@ if (empty($languageAlternates)) {
                                             <a href="<?php echo $isSpanishSite ? '/es/soluciones/soluciones-de-experiencia-del-cliente/' : '/solutions/customer-experience-solutions'; ?>"><i class="fas fa-headset"></i><span><?php echo $isSpanishSite ? 'Soluciones de experiencia del cliente' : 'Customer Experience Solutions'; ?></span></a>
                                             <a href="/solutions/multilingual-customer-support"><i class="fas fa-language"></i><span>Multilingual Customer Support</span></a>
                                             <a href="/solutions/omnichannel-contact-center-services"><i class="fas fa-comments"></i><span>Omnichannel Contact Center Services</span></a>
-                                            <a href="/solutions/help-desk-technical-support"><i class="fas fa-screwdriver-wrench"></i><span>Help Desk &amp; Technical Support</span></a>
+                                            <a href="<?php echo $isSpanishSite ? '/es/soluciones/soporte-help-desk-tecnico/' : '/solutions/help-desk-technical-support'; ?>"><i class="fas fa-screwdriver-wrench"></i><span><?php echo $isSpanishSite ? 'Soporte help desk técnico' : 'Help Desk &amp; Technical Support'; ?></span></a>
                                             <a href="/solutions/back-office-support"><i class="fas fa-inbox"></i><span>Back Office Support</span></a>
                                             <a href="/solutions/bpo-solutions"><i class="fas fa-gears"></i><span>BPO Solutions</span></a>
-                                            <a href="/solutions/finance-accounting-bpo"><i class="fas fa-file-invoice-dollar"></i><span>Finance & Accounting BPO</span></a>
+                                            <a href="<?php echo $isSpanishSite ? '/es/soluciones/bpo-finanzas-contabilidad/' : '/solutions/finance-accounting-bpo'; ?>"><i class="fas fa-file-invoice-dollar"></i><span><?php echo $isSpanishSite ? 'BPO de finanzas y contabilidad' : 'Finance &amp; Accounting BPO'; ?></span></a>
                                             <a href="/solutions/quality-assurance-outsourcing"><i class="fas fa-clipboard-check"></i><span>Quality Assurance Outsourcing</span></a>
                                             <a href="/solutions/recruitment-workforce-support"><i class="fas fa-user-group"></i><span>Recruitment & Workforce Support</span></a>
                                         </div>
@@ -312,10 +312,10 @@ if (empty($languageAlternates)) {
                             <a href="<?php echo $isSpanishSite ? '/es/soluciones/soluciones-de-experiencia-del-cliente/' : '/solutions/customer-experience-solutions'; ?>"><i class="fas fa-headset"></i><?php echo $isSpanishSite ? 'Soluciones de experiencia del cliente' : 'Customer Experience Solutions'; ?></a>
                             <a href="/solutions/multilingual-customer-support"><i class="fas fa-language"></i>Multilingual Customer Support</a>
                             <a href="/solutions/omnichannel-contact-center-services"><i class="fas fa-comments"></i>Omnichannel Contact Center Services</a>
-                            <a href="/solutions/help-desk-technical-support"><i class="fas fa-screwdriver-wrench"></i>Help Desk &amp; Technical Support</a>
+                            <a href="<?php echo $isSpanishSite ? '/es/soluciones/soporte-help-desk-tecnico/' : '/solutions/help-desk-technical-support'; ?>"><i class="fas fa-screwdriver-wrench"></i><?php echo $isSpanishSite ? 'Soporte help desk técnico' : 'Help Desk &amp; Technical Support'; ?></a>
                             <a href="/solutions/back-office-support"><i class="fas fa-inbox"></i>Back Office Support</a>
                             <a href="/solutions/bpo-solutions"><i class="fas fa-gears"></i>BPO Solutions</a>
-                            <a href="/solutions/finance-accounting-bpo"><i class="fas fa-file-invoice-dollar"></i>Finance & Accounting BPO</a>
+                            <a href="<?php echo $isSpanishSite ? '/es/soluciones/bpo-finanzas-contabilidad/' : '/solutions/finance-accounting-bpo'; ?>"><i class="fas fa-file-invoice-dollar"></i><?php echo $isSpanishSite ? 'BPO de finanzas y contabilidad' : 'Finance &amp; Accounting BPO'; ?></a>
                             <a href="/solutions/quality-assurance-outsourcing"><i class="fas fa-clipboard-check"></i>Quality Assurance Outsourcing</a>
                             <a href="/solutions/recruitment-workforce-support"><i class="fas fa-user-group"></i>Recruitment & Workforce Support</a>
                         </div>

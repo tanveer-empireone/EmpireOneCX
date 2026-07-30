@@ -266,7 +266,7 @@ include(__DIR__ . "/../../inc/header.php");
         </div>
     </section>
 
-    <section id="finance" class="callopportunity-section samesectionpadding py-24 pt-[80px] relative overflow-hidden bg-cover bg-center" aria-label="Finance and Accounting Outsourcing">
+    <section id="finance" class="callopportunity-section samesectionpadding py-24 pt-[80px] relative overflow-hidden bg-cover bg-center" aria-label="Outsourcing de finanzas y contabilidad">
         <div class="container mx-auto px-4">
             <div class="solution-side-img2 absolute w-[846px] h-[893px] opacity-[40%] bg-cover bg-center bg-no-repeat"></div>
             <div class="solgap grid gap-5 lg:grid-cols-2 gap-16 mb-5" style="align-items: center;">
@@ -288,7 +288,7 @@ include(__DIR__ . "/../../inc/header.php");
                 </div>
                 <div class="reveal-right">
                     <p class="company-culture-abformate-solutions-neww nomargin text-[#3C3B47] text-[16px] leading-[24px]">
-                        Outsource your finance operations to improve accuracy, ensure compliance, and gain real-time financial insight.
+                        Externalice sus operaciones financieras para mejorar la precisión, asegurar el cumplimiento y obtener visibilidad financiera en tiempo real.
                     </p>
                 </div>
             </div>
@@ -364,7 +364,7 @@ include(__DIR__ . "/../../inc/header.php");
                         <div class="hidden md:block h-[42px] w-px bg-white flex-shrink-0"></div>
                        <div class="empsolbtn flex items-center justify-between" style="width: 100%;">
                             <p class="text-white text-[16px] leading-[24px] w-[665px] mr-[50px]"> OCR de facturas con IA, conciliaciones automatizadas y contadores experimentados trabajando como extensión de su equipo.</p>
-                            <a href="/solutions/finance-accounting-bpo"
+                            <a href="/es/soluciones/bpo-finanzas-contabilidad/"
                                 class="py-[10px] px-[24px] bg-white inline-block rounded-[8px]">
                                 <span
                                     style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);
