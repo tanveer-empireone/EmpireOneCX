@@ -67,7 +67,7 @@ if (empty($languageAlternates)) {
       "@type": "Organization",
       "name": "EmpireOneCX",
       "url": "https://empireonecx.com",
-      "logo": "https://empireonecx.com/assets/images/logo.webp"
+      "logo": "https://empireonecx.com/assets/images/empireonecx.jpg"
     }
     </script>
 
@@ -97,12 +97,12 @@ if (empty($languageAlternates)) {
     <meta property="og:title" content="<?php echo htmlspecialchars($title, ENT_QUOTES, 'UTF-8'); ?>">
     <meta property="og:description" content="<?php echo htmlspecialchars($description, ENT_QUOTES, 'UTF-8'); ?>">
     <meta property="og:url" content="<?php echo htmlspecialchars($canonical, ENT_QUOTES, 'UTF-8'); ?>">
-    <meta property="og:image" content="https://<?php echo $_SERVER['HTTP_HOST']; ?>/assets/images/Empireone-logo.webp">
+    <meta property="og:image" content="https://<?php echo $_SERVER['HTTP_HOST']; ?>/assets/images/empireonecx.jpg">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="<?php echo htmlspecialchars($title, ENT_QUOTES, 'UTF-8'); ?>">
     <meta name="twitter:description" content="<?php echo htmlspecialchars($description, ENT_QUOTES, 'UTF-8'); ?>">
-    <meta name="twitter:image" content="https://<?php echo $_SERVER['HTTP_HOST']; ?>/assets/images/Empireone-logo.webp">
+    <meta name="twitter:image" content="https://<?php echo $_SERVER['HTTP_HOST']; ?>/assets/images/empireonecx.jpg">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -149,7 +149,7 @@ if (empty($languageAlternates)) {
                     <div class="flex items-center justify-between">
                         <div class="headermain flex items-center gap-8">
                             <div class="mainlogooo flex items-center gap-3 cursor-pointer">
-                                <img src="/assets/images/white-logo.webp" alt="EmpireOne Logo" class="logo-img w-[147px] rounded-[5px]" onclick="window.location.href='<?php echo $homeHref; ?>'" />
+                                <img src="/assets/images/empireonecx.jpg" alt="EmpireOne Logo" class="logo-img w-[147px] rounded-[5px]" onclick="window.location.href='<?php echo $homeHref; ?>'" />
                             </div>
                             <nav class="menuss hidden lg:flex items-center 
                                 space-x-5 xl:space-x-4 
@@ -171,7 +171,7 @@ if (empty($languageAlternates)) {
                                         </div>
                                         <div class="nav-mega-menu__grid nav-mega-menu__grid--solutions">
                                             <a href="<?php echo $isSpanishSite ? '/es/soluciones/soluciones-de-experiencia-del-cliente/' : '/solutions/customer-experience-solutions'; ?>"><i class="fas fa-headset"></i><span><?php echo $isSpanishSite ? 'Soluciones de experiencia del cliente' : 'Customer Experience Solutions'; ?></span></a>
-                                            <a href="/solutions/multilingual-customer-support"><i class="fas fa-language"></i><span>Multilingual Customer Support</span></a>
+                                            <a href="<?php echo $isSpanishSite ? '/es/soluciones/soporte-cliente-multilingue/' : '/solutions/multilingual-customer-support'; ?>"><i class="fas fa-language"></i><span><?php echo $isSpanishSite ? 'Soporte al cliente multilingüe' : 'Multilingual Customer Support'; ?></span></a>
                                             <a href="/solutions/omnichannel-contact-center-services"><i class="fas fa-comments"></i><span>Omnichannel Contact Center Services</span></a>
                                             <a href="<?php echo $isSpanishSite ? '/es/soluciones/soporte-help-desk-tecnico/' : '/solutions/help-desk-technical-support'; ?>"><i class="fas fa-screwdriver-wrench"></i><span><?php echo $isSpanishSite ? 'Soporte help desk técnico' : 'Help Desk &amp; Technical Support'; ?></span></a>
                                             <a href="/solutions/back-office-support"><i class="fas fa-inbox"></i><span>Back Office Support</span></a>
@@ -310,7 +310,7 @@ if (empty($languageAlternates)) {
                         </div>
                         <div id="mobile-solutions-submenu" class="mobile-solutions-submenu">
                             <a href="<?php echo $isSpanishSite ? '/es/soluciones/soluciones-de-experiencia-del-cliente/' : '/solutions/customer-experience-solutions'; ?>"><i class="fas fa-headset"></i><?php echo $isSpanishSite ? 'Soluciones de experiencia del cliente' : 'Customer Experience Solutions'; ?></a>
-                            <a href="/solutions/multilingual-customer-support"><i class="fas fa-language"></i>Multilingual Customer Support</a>
+                            <a href="<?php echo $isSpanishSite ? '/es/soluciones/soporte-cliente-multilingue/' : '/solutions/multilingual-customer-support'; ?>"><i class="fas fa-language"></i><?php echo $isSpanishSite ? 'Soporte al cliente multilingüe' : 'Multilingual Customer Support'; ?></a>
                             <a href="/solutions/omnichannel-contact-center-services"><i class="fas fa-comments"></i>Omnichannel Contact Center Services</a>
                             <a href="<?php echo $isSpanishSite ? '/es/soluciones/soporte-help-desk-tecnico/' : '/solutions/help-desk-technical-support'; ?>"><i class="fas fa-screwdriver-wrench"></i><?php echo $isSpanishSite ? 'Soporte help desk técnico' : 'Help Desk &amp; Technical Support'; ?></a>
                             <a href="/solutions/back-office-support"><i class="fas fa-inbox"></i>Back Office Support</a>
