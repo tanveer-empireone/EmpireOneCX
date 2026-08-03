@@ -121,30 +121,6 @@ if (empty($languageAlternates)) {
     <div id="top-scroll-progress"></div>
     <div class="wrapper">
             <header>
-                <div class="eocx-top-header" aria-label="Contact and language selector">
-                    <div class="container mx-auto w-full eocx-top-header__inner">
-                        <a class="eocx-top-header__email" href="mailto:info@empireonecx.com">
-                            <i class="far fa-envelope" aria-hidden="true"></i>
-                            <span>info@empireonecx.com</span>
-                        </a>
-                        <div class="eocx-top-header__right">
-                            <a class="eocx-top-header__career" href="https://careers.empireonecx.com/" target="_blank" rel="noopener noreferrer"><?php echo $isSpanishSite ? 'Carreras' : 'Careers'; ?></a>
-                            <div class="eocx-language-dropdown" aria-label="Language selector">
-                            <button type="button" class="eocx-language-dropdown__trigger" aria-haspopup="true">
-                                <img src="<?php echo $isSpanishSite ? '/assets/images/flags/spain.svg' : '/assets/images/flags/united-states.svg'; ?>" alt="" aria-hidden="true">
-                                <span><?php echo $isSpanishSite ? 'ES' : 'EN'; ?></span>
-                                <i class="fas fa-chevron-down" aria-hidden="true"></i>
-                            </button>
-                            <div class="eocx-language-dropdown__menu">
-                                <a href="<?php echo $isSpanishSite ? ($languageSwitchHrefEn ?? '/') : ($languageSwitchHrefEs ?? '/es/'); ?>" hreflang="<?php echo $isSpanishSite ? 'en' : 'es'; ?>">
-                                    <img src="<?php echo $isSpanishSite ? '/assets/images/flags/united-states.svg' : '/assets/images/flags/spain.svg'; ?>" alt="" aria-hidden="true">
-                                    <span><?php echo $isSpanishSite ? 'EN' : 'ES'; ?></span>
-                                </a>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="container mx-auto w-full">
                     <div class="flex items-center justify-between">
                         <div class="headermain flex items-center gap-8">
@@ -264,6 +240,7 @@ if (empty($languageAlternates)) {
                                     </div>
                                 </div>
                                 <a href="<?php echo $isSpanishSite ? '/es/contacto/' : '/contact'; ?>" class="nav-link"><?php echo $isSpanishSite ? 'Contacto' : 'Contact Us'; ?></a>
+                                <a href="https://careers.empireonecx.com" class="nav-link" target="_blank" rel="noopener noreferrer"><?php echo $isSpanishSite ? 'Carreras' : 'Careers'; ?></a>
                             </nav>
                         </div>
 
@@ -394,6 +371,9 @@ if (empty($languageAlternates)) {
                     </div>
                     <a href="<?php echo $isSpanishSite ? '/es/contacto/' : '/contact'; ?>" class="mobile-nav-link block text-gray-800 text-base font-medium hover:text-purple-600 transition-colors">
                         <i class="fas fa-envelope mr-3 w-5 text-center"></i><?php echo $isSpanishSite ? 'Contacto' : 'Contact Us'; ?>
+                    </a>
+                    <a href="https://careers.empireonecx.com" class="mobile-nav-link block text-gray-800 text-base font-medium hover:text-purple-600 transition-colors" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-briefcase mr-3 w-5 text-center"></i><?php echo $isSpanishSite ? 'Carreras' : 'Careers'; ?>
                     </a>
                 </div>
 
