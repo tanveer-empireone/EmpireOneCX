@@ -485,7 +485,9 @@
         }
     }
 
-    document.addEventListener("DOMContentLoaded", function () {
+    function initWidget() {
+        if (document.querySelector(".eocx-ai-chat")) return;
+
         const root = createWidget();
         const input = root.querySelector(".eocx-ai-chat__input");
 
@@ -499,6 +501,12 @@
 
         root.querySelector(".eocx-ai-chat__close").addEventListener("click", function () {
             root.classList.remove("is-open");
+        });
+
+        document.addEventListener("click", function (event) {
+            if (root.classList.contains("is-open") && !root.contains(event.target)) {
+                root.classList.remove("is-open");
+            }
         });
 
         root.querySelector(".eocx-ai-chat__welcome-send").addEventListener("click", function () {
@@ -527,5 +535,11 @@
         addMessage(root, "bot", "What are you looking for today?");
         showInitialOptions(root);
         hideTawkWidget();
-    });
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initWidget, { once: true });
+    } else {
+        initWidget();
+    }
 })();

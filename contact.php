@@ -1,10 +1,8 @@
 <?php
     $page_title = "Contact Us | EmpireOneCX";
     $meta_description = "Contact EmpireOneCX to discuss CX outsourcing, BPO services, customer support, back-office support, and offshore team solutions.";
-    $languageSwitchHrefEs = "/es/contacto/";
     $languageAlternates = [
         "en" => "https://empireonecx.com/contact",
-        "es" => "https://empireonecx.com/es/contacto/",
         "x-default" => "https://empireonecx.com/contact",
     ];
     include("inc/header.php");

@@ -17,10 +17,8 @@
     $pageTitle = "News & Insights";
     $metaDescription = "Explore EmpireOneCX insights on business process outsourcing, customer experience, AI-assisted operations, and scalable support teams.";
     $metaKeywords = "BPO insights, business process outsourcing, BPO guides, customer experience, outsourcing strategy, AI assisted BPO";
-    $languageSwitchHrefEs = "/es/recursos/";
     $languageAlternates = [
         "en" => "https://empireonecx.com/insights/",
-        "es" => "https://empireonecx.com/es/recursos/",
         "x-default" => "https://empireonecx.com/insights/",
     ];
     include(__DIR__ . "/../inc/header.php");

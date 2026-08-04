@@ -23,7 +23,7 @@ include("inc/header.php");
 <main class="relative">
     <section class="hero-section relative flex flex-col items-center justify-center px-4 sm:px-6 text-center overflow-hidden" style="padding-top: 14rem; padding-bottom: 180px;">
         <video class="absolute" autoplay muted loop playsinline poster="assets/images/herobgdownimage.webp" preload="metadata" aria-hidden="true" style="width:100%;object-fit: cover;" width="1920" height="1080">
-            <source src="./assets/images/hero.mp4" type="video/mp4" />
+            <source src="./assets/images/hero.mp4" type="video/mp4" media="(min-width: 768px)" />
         </video>
 
         <div class="absolute bg-black/50 -z-8" style="width:100%; height:100%;"></div>
@@ -227,8 +227,8 @@ include("inc/header.php");
                 </div>
 
                 <div class="animatedvideo empire-slide-right relative block !items-end left-[120px] transition-all duration-700" id="about-right">
-                    <video aria-hidden="true" tabindex="-1" autoplay muted loop playsinline preload="metadata" class="absolute inset-0 w-[519px] h-[582px] object-cover rounded-2xl" width="519" height="582">
-                        <source src="./assets/images/homeabout-bgvideo.mp4" type="video/mp4" />
+                    <video aria-hidden="true" tabindex="-1" autoplay muted loop playsinline preload="none" class="absolute inset-0 w-[519px] h-[582px] object-cover rounded-2xl" width="519" height="582">
+                        <source src="./assets/images/homeabout-bgvideo.mp4" type="video/mp4" media="(min-width: 768px)" />
                     </video>
                     <img src="./assets/images/homeaboutimg.webp" alt="EmpireOneCX innovation showcase" loading="lazy" decoding="async" width="519" height="582" class="about-right-img relative z-10 w-[519px] h-[582px] object-cover" />
                 </div>

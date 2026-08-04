@@ -1,10 +1,8 @@
 <?php
     $pageTitle = "CX, BPO & AI Case Studies: Real Outsourcing Results";
     $metaDescription = "Explore CX & BPO case studies showing how EmpireOneCX's AI-assisted contact center, back-office, and finance outsourcing solutions drive measurable ROI.";
-    $languageSwitchHrefEs = "/es/casos-de-estudio/";
     $languageAlternates = [
         "en" => "https://empireonecx.com/case-study",
-        "es" => "https://empireonecx.com/es/casos-de-estudio/",
         "x-default" => "https://empireonecx.com/case-study",
     ];
 ?>

@@ -3,10 +3,8 @@
 	$pageTitle = "About Us | EmpireOneCX";
 	$meta_description = "Learn about EmpireOneCX, a next-generation BPO and CX outsourcing partner helping businesses scale customer experience operations.";
 	$metaDescription = $meta_description;
-	$languageSwitchHrefEs = "/es/sobre-nosotros/";
 	$languageAlternates = [
 		"en" => "https://empireonecx.com/about-us",
-		"es" => "https://empireonecx.com/es/sobre-nosotros/",
 		"x-default" => "https://empireonecx.com/about-us",
 	];
 	include("inc/header.php");
