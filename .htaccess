@@ -2,6 +2,10 @@
 RewriteEngine On
 RewriteBase /
 
+# Force non-www canonical domain
+RewriteCond %{HTTP_HOST} ^www\.empireonecx\.com$ [NC]
+RewriteRule ^(.*)$ https://empireonecx.com/$1 [R=301,L]
+
 # Redirect old location URLs to Global Footprint
 RewriteRule ^locations/?$ /global-footprint [R=301,L]
 RewriteRule ^locations/(.*)$ /global-footprint/$1 [R=301,L]
