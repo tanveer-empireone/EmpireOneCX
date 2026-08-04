@@ -6,6 +6,9 @@ RewriteBase /
 RewriteCond %{HTTP_HOST} ^www\.empireonecx\.com$ [NC]
 RewriteRule ^(.*)$ https://empireonecx.com/$1 [R=301,L]
 
+# Redirect direct .php URLs to clean canonical URLs
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
+RewriteRule ^ %1 [R=301,L]
 # Redirect old location URLs to Global Footprint
 RewriteRule ^locations/?$ /global-footprint [R=301,L]
 RewriteRule ^locations/(.*)$ /global-footprint/$1 [R=301,L]

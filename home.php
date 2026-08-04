@@ -1117,7 +1117,7 @@ include("inc/header.php");
 								Smarter AI. Real Human Touch. Measurable Results.
 							</p>
 							<div class="future-btn">
-								<a href="about" class="inline-block px-8 md:px-10 py-3 md:py-4 rounded-[8px] text-white text-[14px] md:text-[16px] leading-[20px] md:leading-[24px] font-medium bg-[#7A76FF]">
+								<a href="about-us" class="inline-block px-8 md:px-10 py-3 md:py-4 rounded-[8px] text-white text-[14px] md:text-[16px] leading-[20px] md:leading-[24px] font-medium bg-[#7A76FF]">
 									Explore Our Story <i class="fa fa-arrow-right" style="padding-left:10px;"></i>
 								</a>
 							</div>

@@ -64,8 +64,14 @@ if (empty($languageAlternates)) {
         // Dynamic Keywords
         $keywords = isset($metaKeywords) ? $metaKeywords : $defaultKeywords;
 
-        // Dynamic Canonical URL (Strips tracking parameters like ?gclid=123 for pure SEO indexation)
+        // Dynamic Canonical URL (strips tracking parameters and normalizes .php URLs)
         $clean_uri = strtok($_SERVER['REQUEST_URI'], '?');
+        if ($clean_uri !== '/' && substr($clean_uri, -4) === '.php') {
+            $clean_uri = substr($clean_uri, 0, -4);
+        }
+        if ($clean_uri !== '/' && substr($clean_uri, -6) === '/index') {
+            $clean_uri = substr($clean_uri, 0, -6) ?: '/';
+        }
         $canonical = "https://empireonecx.com" . $clean_uri;
     ?>
 
