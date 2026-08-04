@@ -367,7 +367,7 @@
         <input type="checkbox" name="privacy" id="ecxPrivacy" required>
         <p>
             By ticking this box I agree that I have read the
-            <span class="ecx-privacy-link">privacy policy</span>
+            <a href="/privacy-policy" class="ecx-privacy-link">privacy policy</a>
         </p>
     </div>
 

@@ -837,9 +837,9 @@
                         <input type="checkbox"  name="privacy" class="contact-form-checkbox accent-purple-500" required>
                         <p class="contact-form-privacy-text text-[18px] leading-[24px] text-[rgba(0, 0, 0, 1)]">
                             By ticking this box I agree that I have read the
-                            <span class="contact-form-privacy-link bg-gradient-to-r underline from-[#CB46FA] to-[#FE881C] bg-clip-text text-transparent cursor-pointer">
+                            <a href="/privacy-policy" class="contact-form-privacy-link bg-gradient-to-r underline from-[#CB46FA] to-[#FE881C] bg-clip-text text-transparent cursor-pointer">
                                 privacy policy
-                            </span>
+                            </a>
                         </p>
                     </div>
 
@@ -869,15 +869,6 @@
                     <p class="global-presence-subtitle scroll-animate text-[16px] leading-[24px] text-white mt-2">
                         Wherever you are, EmpireOneCX is just one call or message away.
                     </p>
-                    <br></br>
-                    <div class="global-presence-phone flex items-center gap-2">
-                                    <img src="./assets/images/contact-phone-logo.webp" class="w-[20px] h-[20px]" alt="Phone Contact">
-                                    <span class="text-[14px] leading-[24px] text-white"><a href="tel:+18002330843" class="text-[14px] leading-[24px] text-white hover:underline transition-all">800-233-0843</a></span>
-                                </div>
-                                <div class="global-presence-email flex items-center gap-2">
-                                    <img src="./assets/images/contact-mail-logo.webp" class="w-[20px] h-[20px]" alt="Email Contact">
-                                    <span class="text-[14px] leading-[24px] text-white"><a href="mailto:info@empireonecx.com" class="text-[14px] leading-[24px] text-white hover:underline transition-all">info@empireonecx.com</a></span>
-                                </div>
                 </div>
                 <div class="slider-arrows flex gap-2">
                     <button id="prevSlide" class="swiper-button-prev w-[50px] h-[50px] flex items-center justify-center text-white text-[22px] rounded-full 
