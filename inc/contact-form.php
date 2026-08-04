@@ -263,7 +263,7 @@
             <label class="ecx-label">Contact Number</label>
             <div class="ecx-phone-wrapper">
                 <div class="ecx-country-toggle" id="ecxCountryToggle">
-                    <img id="ecxSelectedFlag" src="https://flagcdn.com/w20/us.webp" alt="">
+                    <img id="ecxSelectedFlag" src="https://flagcdn.com/w20/us.webp" alt="United States flag" loading="lazy" decoding="async">
                     <span class="ecx-code" id="ecxSelectedCode">+1</span>
                     <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor" style="color:#666;">
                         <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.24 4.5a.75.75 0 01-1.08 0l-4.24-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
@@ -341,7 +341,7 @@
                 <div class="ecx-country-item"
                      data-code="<?= htmlspecialchars($c[1]) ?>"
                      data-flag="<?= htmlspecialchars($c[2]) ?>">
-                    <img src="https://flagcdn.com/w20/<?= htmlspecialchars($c[2]) ?>.webp" alt="">
+                    <img src="https://flagcdn.com/w20/<?= htmlspecialchars($c[2]) ?>.webp" alt="<?= htmlspecialchars($c[0]) ?> flag" loading="lazy" decoding="async">
                     <span class="ecx-cname"><?= htmlspecialchars($c[0]) ?></span>
                     <span class="ecx-ccode"><?= htmlspecialchars($c[1]) ?></span>
                 </div>
@@ -401,7 +401,9 @@
         if (!item) return;
         var code = item.dataset.code;
         var flag = item.dataset.flag;
+        var country = item.querySelector('.ecx-cname').textContent;
         flagImg.src      = 'https://flagcdn.com/w20/' + flag + '.webp';
+        flagImg.alt      = country + ' flag';
         codeSpan.textContent = code;
         codeHid.value    = code;
         dropdown.classList.remove('open');
@@ -450,6 +452,7 @@
                 });
                 form.reset();
                 flagImg.src          = 'https://flagcdn.com/w20/us.webp';
+                flagImg.alt          = 'United States flag';
                 codeSpan.textContent = '+1';
                 codeHid.value        = '+1';
             } else {

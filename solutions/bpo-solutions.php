@@ -258,7 +258,7 @@ include(__DIR__ . "/../inc/header.php");
         <div class="container mx-auto w-full relative z-10">
 
             <nav class="breadcrumb-nav mb-6 animate-reveal delay-1" aria-label="Breadcrumb">
-                <a href="/solutions">Solutions</a>
+                <a href="/solutions/">Solutions</a>
                 <span class="sep">/</span>
                 <span class="current">AI-Enabled BPO Solutions</span>
             </nav>
@@ -281,7 +281,7 @@ include(__DIR__ . "/../inc/header.php");
                     </p>
 
                     <div class="animate-reveal delay-4 flex flex-wrap items-center justify-center lg:justify-start gap-4">
-                        <button onclick="window.location.href='/solutions'" class="text-white py-4 px-8 text-sm sm:text-base border border-white/30 hover:border-white/60 transition-all duration-300" style="border-radius: 8px !important; background: rgba(255,255,255,0.08);">
+                        <button onclick="window.location.href='/solutions/'" class="text-white py-4 px-8 text-sm sm:text-base border border-white/30 hover:border-white/60 transition-all duration-300" style="border-radius: 8px !important; background: rgba(255,255,255,0.08);">
                             Explore All BPO Solutions
                         </button>
                     </div>
@@ -906,7 +906,7 @@ document.addEventListener('DOMContentLoaded', function () {
     "@type": "ListItem",
     "position": 1,
     "name": "Solutions",
-    "item": "https://empireonecx.com/solutions"
+    "item": "https://empireonecx.com/solutions/"
   },{
     "@type": "ListItem",
     "position": 2,

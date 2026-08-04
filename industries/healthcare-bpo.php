@@ -679,7 +679,7 @@ $faqs = [
         <div class="container mx-auto px-4 healthcare-hero__grid">
             <div>
                 <nav class="healthcare-breadcrumb" aria-label="Breadcrumb">
-                    <a href="/industries">Industries</a>
+                    <a href="/industries/">Industries</a>
                     <span>/</span>
                     <span>Healthcare BPO</span>
                 </nav>
@@ -866,7 +866,7 @@ $faqs = [
                 <a class="text-[#7a76ff] font-semibold hover:text-[#cb46fa]" href="/solutions/bpo-solutions">Explore our full BPO solutions</a>
                 <a class="text-[#7a76ff] font-semibold hover:text-[#cb46fa]" href="/solutions/back-office-support">Back-office support services</a>
                 <a class="text-[#7a76ff] font-semibold hover:text-[#cb46fa]" href="/solutions/customer-experience-solutions">Patient experience and CX solutions</a>
-                <a class="text-[#7a76ff] font-semibold hover:text-[#cb46fa]" href="/industries">View all industries we serve</a>
+                <a class="text-[#7a76ff] font-semibold hover:text-[#cb46fa]" href="/industries/">View all industries we serve</a>
             </div>
         </div>
     </section>

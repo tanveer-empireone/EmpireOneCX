@@ -17,6 +17,12 @@
     $pageTitle = "News & Insights";
     $metaDescription = "Explore EmpireOneCX insights on business process outsourcing, customer experience, AI-assisted operations, and scalable support teams.";
     $metaKeywords = "BPO insights, business process outsourcing, BPO guides, customer experience, outsourcing strategy, AI assisted BPO";
+    $languageSwitchHrefEs = "/es/recursos/";
+    $languageAlternates = [
+        "en" => "https://empireonecx.com/insights/",
+        "es" => "https://empireonecx.com/es/recursos/",
+        "x-default" => "https://empireonecx.com/insights/",
+    ];
     include(__DIR__ . "/../inc/header.php");
 ?>
 
@@ -62,9 +68,9 @@
             <h2 class="newstext text-[32px] font-bold mb-8 text-gray-900 scroll-animate">Explore all posts</h2>
 
             <div class="mybtnanchor flex flex-wrap gap-3 mb-8">
-                <a href="/insights" class="<?= $selectedCategory === '' ? 'btn-gradient text-white' : 'border border-gray-200 text-[rgba(0,0,0,1)]' ?> px-4 py-2 rounded-md text-[16px] leading-[24px] font-medium">All Posts</a>
+                <a href="/insights/" class="<?= $selectedCategory === '' ? 'btn-gradient text-white' : 'border border-gray-200 text-[rgba(0,0,0,1)]' ?> px-4 py-2 rounded-md text-[16px] leading-[24px] font-medium">All Posts</a>
                 <?php foreach ($categories as $categorySlug => $categoryName): ?>
-                    <a href="/insights?category=<?= htmlspecialchars($categorySlug, ENT_QUOTES, 'UTF-8') ?>" class="<?= $selectedCategory === $categorySlug ? 'btn-gradient text-white' : 'border border-gray-200 text-[rgba(0,0,0,1)]' ?> px-4 py-2 rounded-md text-[16px] leading-[24px] font-medium">
+                    <a href="/insights/?category=<?= htmlspecialchars($categorySlug, ENT_QUOTES, 'UTF-8') ?>" class="<?= $selectedCategory === $categorySlug ? 'btn-gradient text-white' : 'border border-gray-200 text-[rgba(0,0,0,1)]' ?> px-4 py-2 rounded-md text-[16px] leading-[24px] font-medium">
                         <?= htmlspecialchars($categoryName, ENT_QUOTES, 'UTF-8') ?>
                     </a>
                 <?php endforeach; ?>

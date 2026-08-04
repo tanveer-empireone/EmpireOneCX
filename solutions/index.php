@@ -2,6 +2,12 @@
 $page_title = "Services & Solutions | EmpireOneCX";
 $meta_description = "Explore EmpireOneCX services and solutions, including CX outsourcing, BPO, back-office support, finance operations, QA, and workforce support.";
 $metaKeywords = "Customer Experience, BPO solutions, AI automation services, finance outsourcing, QA services, customer support outsourcing, recruitment outsourcing";
+$languageSwitchHrefEs = "/es/soluciones/";
+$languageAlternates = [
+    "en" => "https://empireonecx.com/solutions/",
+    "es" => "https://empireonecx.com/es/soluciones/",
+    "x-default" => "https://empireonecx.com/solutions/",
+];
 include(__DIR__ . "/../inc/header.php");
 ?>
 <main class="relative">
@@ -747,7 +753,7 @@ include(__DIR__ . "/../inc/header.php");
                                 Because your customers deserve nothing less.
                             </p>
                             <div class="future-btn">
-                                <a href="../industries" class="inline-block px-8 md:px-10 py-3 md:py-4 rounded-[8px] text-white text-[14px] md:text-[16px] leading-[20px] md:leading-[24px] font-medium bg-[#7A76FF]">
+                                <a href="../industries/" class="inline-block px-8 md:px-10 py-3 md:py-4 rounded-[8px] text-white text-[14px] md:text-[16px] leading-[20px] md:leading-[24px] font-medium bg-[#7A76FF]">
                                     Discover Our Industry Solutions <i class="fa fa-arrow-right" style="padding-left:10px;"></i>
                                 </a>
                             </div>

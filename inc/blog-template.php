@@ -43,7 +43,7 @@ include(__DIR__ . '/header.php');
         <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/75 to-black"></div>
         <div class="container mx-auto relative z-10">
             <div class="max-w-5xl">
-                <a href="/insights" class="inline-flex items-center gap-2 text-[14px] leading-[22px] text-white/70 hover:text-white transition mb-8">
+                <a href="/insights/" class="inline-flex items-center gap-2 text-[14px] leading-[22px] text-white/70 hover:text-white transition mb-8">
                     <span class="h-[2px] w-8 bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C]"></span>
                     Insights
                 </a>

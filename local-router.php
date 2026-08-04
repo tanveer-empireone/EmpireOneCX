@@ -3,9 +3,9 @@ $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $file = __DIR__ . $path;
 
 $legacyLocationPrefixes = [
-    '/locations' => '/global-footprint',
-    '/global-markets' => '/global-footprint',
-    '/global-footprints' => '/global-footprint',
+    '/locations' => '/global-footprint/',
+    '/global-markets' => '/global-footprint/',
+    '/global-footprints' => '/global-footprint/',
 ];
 
 foreach ($legacyLocationPrefixes as $legacyPrefix => $newPrefix) {

@@ -867,7 +867,7 @@ span.font-reckless.font-normal.text-\[24px\].leading-\[32px\].tracking-\[-0\.03e
 
 .nav-dropdown-menu {
   position: absolute;
-  top: calc(100% + 8px);
+  top: calc(100% + 12px);
   left: 50%;
   width: 318px;
   transform: translate(-50%, 10px);
@@ -880,6 +880,7 @@ span.font-reckless.font-normal.text-\[24px\].leading-\[32px\].tracking-\[-0\.03e
   visibility: hidden;
   pointer-events: none;
   transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease;
+  z-index: 1001;
 }
 
 .nav-dropdown-menu--locations {
@@ -991,7 +992,7 @@ span.font-reckless.font-normal.text-\[24px\].leading-\[32px\].tracking-\[-0\.03e
 }
 
 .nav-mega-menu {
-  top: calc(100% + 8px);
+  top: calc(100% + 12px);
   left: 0;
   width: min(920px, calc(100vw - 48px));
   transform: translate(-30%, 10px);
@@ -1090,10 +1091,10 @@ span.font-reckless.font-normal.text-\[24px\].leading-\[32px\].tracking-\[-0\.03e
 .nav-dropdown-menu::before {
   content: "";
   position: absolute;
-  top: -9px;
+  top: -12px;
   left: 0;
   right: 0;
-  height: 9px;
+  height: 12px;
 }
 
 .nav-dropdown-menu a {
@@ -1427,6 +1428,15 @@ header.scrolled .btnchangescroll {
 header.scrolled .header-btn {
   transform: translateY(-2px);
   transition: all 0.3s ease;
+}
+
+header.scrolled .nav-dropdown-menu {
+  top: calc(100% + 10px);
+}
+
+header.scrolled .nav-dropdown-menu::before {
+  top: -10px;
+  height: 10px;
 }
 
 
@@ -1803,7 +1813,7 @@ footer .fa-instagram:hover {
 
 .globe-capability-work-header p {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 10px;
   max-width: 740px;
   margin: 0 auto 60px;
   font-family: "helveticanormal";
@@ -1838,7 +1848,7 @@ footer .fa-instagram:hover {
 
 .globe-capability-work-country span {
     font-size: 13px;
-    line-height: 24px;
+    line-height: 10px;
     font-family: "helveticaregular";
     letter-spacing: -2%;
 	color: #fff;
@@ -2286,10 +2296,9 @@ p.myfooterline {
 /* //////////About Page Work ///////////// */
 
 .aboutpage-bg-videowork{
-	width:1246px;
-	height:674px;
+	width: 1950px;
+	height:774px;
 	object-fit: cover;
-	left: 455px;
 }
 
 .standout-section {
@@ -2646,7 +2655,7 @@ p.myfooterline {
 }
 .quote-block {
 	width: 12px;
-	height: 24px;
+	height: 10px;
 	border-radius: 2px;
 }
 
@@ -2871,7 +2880,7 @@ p.myfooterline {
     border-radius: 8px;
     color: #fff;
     font-size: 15px;
-    line-height: 24px;
+    line-height: 10px;
     font-weight: 500;
     background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50%, #FE881C 100%);
     box-shadow: 0 10px 24px rgba(122, 118, 255, 0.18);
@@ -4141,7 +4150,7 @@ p.global-presence-address {
 	}
 	.mainherowork p
 	{
-		line-height: 24px;
+		line-height: 10px;
 	}
 	.solution-heading{
 		line-height: 48px !important;
@@ -4413,7 +4422,7 @@ p.global-presence-address {
     }
 	.hover-reveal-content p {
     	font-size: 14px;
-		line-height: 24px;
+		line-height: 10px;
 	}
 	.makespx{
 		font-size: 16px !important;
@@ -4721,7 +4730,7 @@ p.global-presence-address {
     }
 	p.hero-subpara {
         font-size: 14px !important;
-        line-height: 24px;
+        line-height: 10px;
         padding: 0;
     }
 	.buildwithpara {

@@ -70,8 +70,8 @@ $faqs = [
         "question" => "Which business processes can be outsourced?",
         "answer" => "Commonly outsourced processes include customer service, technical support, data entry, document processing, order management, accounts payable and receivable support, bookkeeping, recruitment coordination, quality monitoring, claims support, and industry-specific administration.",
         "links" => [
-            ["/solutions", "View all outsourcing solutions"],
-            ["/industries", "Browse industry-specific services"],
+            ["/solutions/", "View all outsourcing solutions"],
+            ["/industries/", "Browse industry-specific services"],
         ],
     ],
     [
@@ -111,7 +111,7 @@ $faqs = [
         "question" => "How is data protected in an outsourced operation?",
         "answer" => "A secure outsourcing program uses access controls, encryption, documented procedures, workforce training, monitoring, incident response, and contractual safeguards. Requirements should be aligned with the data involved and frameworks such as SOC 2, ISO 27001, HIPAA, PCI DSS, or GDPR.",
         "links" => [
-            ["/compliance-security", "Review compliance and security controls"],
+            ["/compliance-security/", "Review compliance and security controls"],
         ],
     ],
     [
@@ -120,7 +120,7 @@ $faqs = [
         "answer" => "Onshore outsourcing keeps delivery in the client's country. Nearshore outsourcing uses a nearby country with closer time-zone or cultural alignment. Offshore outsourcing uses a more distant delivery market and can provide broader talent access, extended coverage, and cost advantages.",
         "links" => [
             ["/insights/types-of-bpo", "Compare the main types of BPO"],
-            ["/global-footprint", "Explore delivery locations"],
+            ["/global-footprint/", "Explore delivery locations"],
         ],
     ],
     [
@@ -786,7 +786,7 @@ include(__DIR__ . "/../inc/header.php");
                     <p>Discuss your workflows, service levels, compliance requirements, staffing model, and implementation goals with an EmpireOneCX specialist.</p>
                     <div class="faq-hub-cta__actions">
                         <a class="faq-hub-button faq-hub-button--primary" href="/contact">Ask Our Team <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-                        <a class="faq-hub-button" href="/insights">Browse Insights</a>
+                        <a class="faq-hub-button" href="/insights/">Browse Insights</a>
                     </div>
                 </div>
             </div>
@@ -991,8 +991,8 @@ include(__DIR__ . "/../inc/header.php");
     "@graph" => [
         [
             "@type" => "CollectionPage",
-            "@id" => "https://empireonecx.com/faq#webpage",
-            "url" => "https://empireonecx.com/faq",
+            "@id" => "https://empireonecx.com/faq/#webpage",
+            "url" => "https://empireonecx.com/faq/",
             "name" => "BPO, CX & AI Support FAQ Hub",
             "description" => $metaDescription,
             "isPartOf" => ["@id" => "https://empireonecx.com/#website"],
@@ -1005,7 +1005,7 @@ include(__DIR__ . "/../inc/header.php");
         ],
         [
             "@type" => "FAQPage",
-            "@id" => "https://empireonecx.com/faq#faq",
+            "@id" => "https://empireonecx.com/faq/#faq",
             "mainEntity" => array_map(function ($faq) {
                 return [
                     "@type" => "Question",
@@ -1021,8 +1021,8 @@ include(__DIR__ . "/../inc/header.php");
             "@type" => "BreadcrumbList",
             "itemListElement" => [
                 ["@type" => "ListItem", "position" => 1, "name" => "Home", "item" => "https://empireonecx.com/"],
-                ["@type" => "ListItem", "position" => 2, "name" => "Resources", "item" => "https://empireonecx.com/insights"],
-                ["@type" => "ListItem", "position" => 3, "name" => "FAQ Hub", "item" => "https://empireonecx.com/faq"],
+                ["@type" => "ListItem", "position" => 2, "name" => "Resources", "item" => "https://empireonecx.com/insights/"],
+                ["@type" => "ListItem", "position" => 3, "name" => "FAQ Hub", "item" => "https://empireonecx.com/faq/"],
             ],
         ],
     ],

@@ -2,6 +2,12 @@
 $page_title = "Global Footprint | EmpireOneCX";
 $metaDescription = "Explore EmpireOneCX global footprint pages across North America, Europe, the Middle East, Africa, Asia, and Latin America. Learn how our global CX and BPO delivery model supports growing brands.";
 $metaKeywords = "EmpireOneCX global footprint, BPO global delivery, CX outsourcing Canada, United States, United Kingdom, Australia, UAE, Morocco, Nicaragua, Colombia, Venezuela, Bolivia, Paraguay, South Africa, Pakistan, Philippines";
+$languageSwitchHrefEs = "/es/presencia-global/";
+$languageAlternates = [
+    "en" => "https://empireonecx.com/global-footprint/",
+    "es" => "https://empireonecx.com/es/presencia-global/",
+    "x-default" => "https://empireonecx.com/global-footprint/",
+];
 
 $locations = [
     [

@@ -20,7 +20,7 @@ $faqs = [
         "category" => "Basics",
         "question" => "Is BPO the same as a call center?",
         "answer" => "No. A call center is one type of customer-facing BPO operation focused primarily on voice interactions. BPO is broader and can include customer experience, back-office administration, finance, data processing, quality assurance, recruitment, and industry-specific workflows.",
-        "links" => [["/solutions", "View all outsourcing services"]],
+        "links" => [["/solutions/", "View all outsourcing services"]],
     ],
     [
         "category" => "Services",
@@ -38,13 +38,13 @@ $faqs = [
         "category" => "Services",
         "question" => "What industries use BPO services?",
         "answer" => "BPO is used across healthcare, retail, financial services, insurance, technology, telecommunications, travel, utilities, automotive, government, legal services, logistics, real estate, gaming, and other industries with repeatable customer or administrative operations.",
-        "links" => [["/industries", "Browse industry BPO services"]],
+        "links" => [["/industries/", "Browse industry BPO services"]],
     ],
     [
         "category" => "Models",
         "question" => "What are onshore, nearshore, and offshore BPO?",
         "answer" => "Onshore BPO delivers services from the client's home country. Nearshore BPO uses a nearby country, often for time-zone or cultural alignment. Offshore BPO uses a more distant delivery market, often to access broader talent, extended coverage, or lower operating costs.",
-        "links" => [["/global-footprint", "Explore EmpireOneCX locations"]],
+        "links" => [["/global-footprint/", "Explore EmpireOneCX locations"]],
     ],
     [
         "category" => "Models",
@@ -110,7 +110,7 @@ $faqs = [
         "category" => "Implementation",
         "question" => "Can a BPO team use the client's existing systems?",
         "answer" => "Yes. Outsourced teams commonly work within client-approved CRM, help desk, ERP, telephony, workforce, finance, or industry platforms. Access should follow role-based controls and documented security requirements.",
-        "links" => [["/compliance-security", "Review security controls"]],
+        "links" => [["/compliance-security/", "Review security controls"]],
     ],
     [
         "category" => "Performance",
@@ -140,13 +140,13 @@ $faqs = [
         "category" => "Security",
         "question" => "How does a BPO provider protect business and customer data?",
         "answer" => "A BPO provider should use access controls, encryption, secure networks, workforce screening and training, monitoring, incident response, business continuity, documented policies, and contractual data-protection requirements.",
-        "links" => [["/compliance-security", "View EmpireOneCX compliance and security"]],
+        "links" => [["/compliance-security/", "View EmpireOneCX compliance and security"]],
     ],
     [
         "category" => "Security",
         "question" => "Which compliance standards matter when selecting a BPO provider?",
         "answer" => "Relevant standards depend on the process and data involved. Common considerations include SOC 2, ISO 27001, HIPAA for protected health information, PCI DSS for payment card data, and GDPR for applicable personal data processing.",
-        "links" => [["/compliance-security", "Review certifications and controls"]],
+        "links" => [["/compliance-security/", "Review certifications and controls"]],
     ],
     [
         "category" => "AI",
@@ -844,7 +844,7 @@ include(__DIR__ . "/../../inc/header.php");
                 </div>
                 <div class="bpo-faq-actions">
                     <a class="bpo-faq-button bpo-faq-button--primary" href="/contact">Ask Our Team <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-                    <a class="bpo-faq-button" href="/faq">Back to FAQ Hub</a>
+                    <a class="bpo-faq-button" href="/faq/">Back to FAQ Hub</a>
                 </div>
             </div>
         </div>
@@ -1053,7 +1053,7 @@ include(__DIR__ . "/../../inc/header.php");
             "@type" => "BreadcrumbList",
             "itemListElement" => [
                 ["@type" => "ListItem", "position" => 1, "name" => "Home", "item" => "https://empireonecx.com/"],
-                ["@type" => "ListItem", "position" => 2, "name" => "FAQ Hub", "item" => "https://empireonecx.com/faq"],
+                ["@type" => "ListItem", "position" => 2, "name" => "FAQ Hub", "item" => "https://empireonecx.com/faq/"],
                 ["@type" => "ListItem", "position" => 3, "name" => "BPO FAQ", "item" => "https://empireonecx.com/faq/bpo-faq"],
             ],
         ],

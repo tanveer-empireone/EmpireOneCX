@@ -1,12 +1,20 @@
 <?php
 	$page_title = "About Us | EmpireOneCX";
+	$pageTitle = "About Us | EmpireOneCX";
 	$meta_description = "Learn about EmpireOneCX, a next-generation BPO and CX outsourcing partner helping businesses scale customer experience operations.";
+	$metaDescription = $meta_description;
+	$languageSwitchHrefEs = "/es/sobre-nosotros/";
+	$languageAlternates = [
+		"en" => "https://empireonecx.com/about-us",
+		"es" => "https://empireonecx.com/es/sobre-nosotros/",
+		"x-default" => "https://empireonecx.com/about-us",
+	];
 	include("inc/header.php");
 ?>
 <main class="relative">
 	<section class="hero-section aboutpage-section relative flex flex-col items-center justify-center px-4 sm:px-6 text-center overflow-hidden" style="padding-top: 17rem; padding-bottom: 180px;">
 		<video class="aboutpage-bg-videowork absolute opacity-[0.45]" autoplay muted loop playsinline preload="metadata" aria-hidden="true" poster="assets/images/aboutherobg-poster.webp">
-			<source src="./assets/images/aboutherobg.mp4" type="video/mp4" />
+			<source src="./assets/images/aboutpgbg.mp4" type="video/mp4" />
 		</video>
 		<div class="absolute bg-black/50 -z-10" style="width:1920px; height:611px;"></div>
 		<div class="container mx-auto w-full relative z-10">
@@ -191,37 +199,37 @@
 			<div id="sliderTrack" class="flex">
 				<div class="slide flex-shrink-0 basis-1/2 md:basis-1/3 lg:basis-1/4 p-2">
 					<div class="overflow-hidden shadow-md rounded-[24px] h-[180px] md:h-[220px] lg:h-[360px]">
-						<img src="assets/images/cultureimg1.webp" class="w-full h-full object-cover" />
+						<img src="assets/images/cultureimg1.webp" class="w-full h-full object-cover" alt="EmpireOneCX team culture and workplace collaboration" loading="lazy" decoding="async" />
 					</div>
 				</div>
 				<div class="slide flex-shrink-0 basis-1/2 md:basis-1/3 lg:basis-1/4 p-2">
 					<div class="overflow-hidden shadow-md rounded-[24px] h-[180px] md:h-[220px] lg:h-[360px]">
-						<img src="assets/images/cultureimg2.webp" class="w-full h-full object-cover" />
+						<img src="assets/images/cultureimg2.webp" class="w-full h-full object-cover" alt="EmpireOneCX team members collaborating in the office" loading="lazy" decoding="async" />
 					</div>
 				</div>
 				<div class="slide flex-shrink-0 basis-1/2 md:basis-1/3 lg:basis-1/4 p-2">
 					<div class="overflow-hidden shadow-md rounded-[24px] h-[180px] md:h-[220px] lg:h-[360px]">
-						<img src="assets/images/cultureimg3.webp" class="w-full h-full object-cover" />
+						<img src="assets/images/cultureimg3.webp" class="w-full h-full object-cover" alt="EmpireOneCX workplace culture and employee engagement" loading="lazy" decoding="async" />
 					</div>
 				</div>
 				<div class="slide flex-shrink-0 basis-1/2 md:basis-1/3 lg:basis-1/4 p-2">
 					<div class="overflow-hidden shadow-md rounded-[24px] h-[180px] md:h-[220px] lg:h-[360px]">
-						<img src="assets/images/cultureimg4.webp" class="w-full h-full object-cover" />
+						<img src="assets/images/cultureimg4.webp" class="w-full h-full object-cover" alt="EmpireOneCX office culture and team environment" loading="lazy" decoding="async" />
 					</div>
 				</div>
 				<div class="slide flex-shrink-0 basis-1/2 md:basis-1/3 lg:basis-1/4 p-2">
 					<div class="overflow-hidden shadow-md rounded-[24px] h-[180px] md:h-[220px] lg:h-[360px]">
-						<img src="assets/images/cultureimg2.webp" class="w-full h-full object-cover" />
+						<img src="assets/images/cultureimg2.webp" class="w-full h-full object-cover" alt="EmpireOneCX team members collaborating in the office" loading="lazy" decoding="async" />
 					</div>
 				</div>
 				<div class="slide flex-shrink-0 basis-1/2 md:basis-1/3 lg:basis-1/4 p-2">
 					<div class="overflow-hidden shadow-md rounded-[24px] h-[180px] md:h-[220px] lg:h-[360px]">
-						<img src="assets/images/cultureimg1.webp" class="w-full h-full object-cover" />
+						<img src="assets/images/cultureimg1.webp" class="w-full h-full object-cover" alt="EmpireOneCX team culture and workplace collaboration" loading="lazy" decoding="async" />
 					</div>
 				</div>
 				<div class="slide flex-shrink-0 basis-1/2 md:basis-1/3 lg:basis-1/4 p-2">
 					<div class="overflow-hidden shadow-md rounded-[24px] h-[180px] md:h-[220px] lg:h-[360px]">
-						<img src="assets/images/cultureimg4.webp" class="w-full h-full object-cover" />
+						<img src="assets/images/cultureimg4.webp" class="w-full h-full object-cover" alt="EmpireOneCX office culture and team environment" loading="lazy" decoding="async" />
 					</div>
 				</div>
 			</div>

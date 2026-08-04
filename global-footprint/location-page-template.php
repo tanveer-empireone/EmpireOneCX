@@ -258,7 +258,7 @@ include(__DIR__ . "/../inc/header.php");
             <div class="location-detail-grid">
                 <div>
                     <nav class="breadcrumb-nav mb-6 mt-10 lg:mt-14" aria-label="Breadcrumb">
-                        <a href="/global-footprint">Global Footprint</a>
+                        <a href="/global-footprint/">Global Footprint</a>
                         <span class="sep">/</span>
                         <span class="current"><?= htmlspecialchars($location["name"], ENT_QUOTES, "UTF-8") ?></span>
                     </nav>
@@ -279,7 +279,7 @@ include(__DIR__ . "/../inc/header.php");
                         <a href="/contact" class="herobtns inline-flex items-center justify-center bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] text-white py-4 px-8 text-sm sm:text-base shadow-lg hover:shadow-purple-400/20" style="border-radius: 8px !important;">
                             Discuss <?= htmlspecialchars($location["name"], ENT_QUOTES, "UTF-8") ?> Support
                         </a>
-                        <a href="/global-footprint" class="inline-flex items-center justify-center text-white py-4 px-8 text-sm sm:text-base border border-white/30 hover:border-white/60 transition-all duration-300" style="border-radius: 8px !important; background: rgba(255,255,255,0.08);">
+                        <a href="/global-footprint/" class="inline-flex items-center justify-center text-white py-4 px-8 text-sm sm:text-base border border-white/30 hover:border-white/60 transition-all duration-300" style="border-radius: 8px !important; background: rgba(255,255,255,0.08);">
                             View All Global Footprint
                         </a>
                     </div>

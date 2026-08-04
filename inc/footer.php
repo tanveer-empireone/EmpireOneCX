@@ -58,8 +58,8 @@
                                 space-y-3 sm:space-y-4 text-gray-300">
                             <li><a href="<?php echo !empty($isSpanishSite) ? '/es/' : '/'; ?>" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Inicio' : 'Home'; ?></a></li>
                             <li><a href="/about-us" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Sobre nosotros' : 'About Us'; ?></a></li>
-                            <li><a href="/solutions" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Soluciones' : 'Solutions'; ?></a></li>
-                            <li><a href="/industries" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Industrias' : 'Industries'; ?></a></li>
+                            <li><a href="/solutions/" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Soluciones' : 'Solutions'; ?></a></li>
+                            <li><a href="/industries/" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Industrias' : 'Industries'; ?></a></li>
                         </ul>
                     </div>
 
@@ -67,7 +67,7 @@
                         <ul class="text-[24px] leading-[35px] tracking-[-0.02em]
                                 space-y-3 sm:space-y-4 text-gray-300">
                             <li><a href="/case-study" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Casos de éxito' : 'Case Studies'; ?></a></li>
-                            <li><a href="/insights" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Recursos' : 'Insights'; ?></a></li>
+                            <li><a href="/insights/" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Recursos' : 'Insights'; ?></a></li>
                             <li><a href="https://careers.empireonecx.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Carreras' : 'Careers'; ?></a></li>
                             <li><a href="/contact" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Contacto' : 'Contact'; ?></a></li>
                         </ul>
@@ -152,14 +152,14 @@
     if (
         linkPath === currentPath ||
         linkPage === currentPage ||
-        (linkPath === '/solutions' && currentPath.startsWith('/solutions/')) ||
-        (linkPath === '/industries' && currentPath.startsWith('/industries/')) ||
-        (linkPath === '/global-footprint' && currentPath.startsWith('/global-footprint/')) ||
+        (linkPath === '/solutions/' && currentPath.startsWith('/solutions/')) ||
+        (linkPath === '/industries/' && currentPath.startsWith('/industries/')) ||
+        (linkPath === '/global-footprint/' && currentPath.startsWith('/global-footprint/')) ||
         (link.classList.contains('nav-resources-link') && (
-            currentPath.startsWith('/insights') ||
+            currentPath.startsWith('/insights/') ||
             currentPath.startsWith('/case-study') ||
-            currentPath.startsWith('/compliance-security') ||
-            currentPath.startsWith('/faq')
+            currentPath.startsWith('/compliance-security/') ||
+            currentPath.startsWith('/faq/')
         ))
     ) {
         link.classList.add('active');
@@ -173,10 +173,10 @@
 
     document.querySelectorAll('.mobile-resources-link').forEach(link => {
         link.classList.toggle('active',
-            currentPath.startsWith('/insights') ||
+            currentPath.startsWith('/insights/') ||
             currentPath.startsWith('/case-study') ||
-            currentPath.startsWith('/compliance-security') ||
-            currentPath.startsWith('/faq')
+            currentPath.startsWith('/compliance-security/') ||
+            currentPath.startsWith('/faq/')
         );
     });
 })();

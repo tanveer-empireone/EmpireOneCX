@@ -70,7 +70,7 @@ $assurance = [
         <div class="container mx-auto px-4 industry-detail-hero-grid">
             <div>
                 <nav class="industry-detail-breadcrumb" aria-label="Breadcrumb">
-                    <a href="/industries">Industries</a><span>/</span>
+                    <a href="/industries/">Industries</a><span>/</span>
                     <span><?= htmlspecialchars($page["name"], ENT_QUOTES, "UTF-8") ?> BPO</span>
                 </nav>
                 <p class="industry-detail-eyebrow"><?= htmlspecialchars($page["name"], ENT_QUOTES, "UTF-8") ?> BPO</p>
@@ -195,7 +195,7 @@ $assurance = [
                 <a href="/solutions/bpo-solutions">Explore our full BPO solutions</a>
                 <a href="/solutions/back-office-support">Back-office support services</a>
                 <a href="/solutions/customer-experience-solutions">Customer experience solutions</a>
-                <a href="/industries">View all industries</a>
+                <a href="/industries/">View all industries</a>
             </div>
         </div>
     </section>
@@ -286,7 +286,7 @@ document.querySelectorAll(".industry-detail-faq-toggle").forEach(function (butto
     "@context" => "https://schema.org",
     "@type" => "BreadcrumbList",
     "itemListElement" => [
-        ["@type" => "ListItem", "position" => 1, "name" => "Industries", "item" => "https://empireonecx.com/industries"],
+        ["@type" => "ListItem", "position" => 1, "name" => "Industries", "item" => "https://empireonecx.com/industries/"],
         ["@type" => "ListItem", "position" => 2, "name" => $page["name"] . " BPO", "item" => "https://empireonecx.com/industries/" . $page["slug"]],
     ],
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) ?>

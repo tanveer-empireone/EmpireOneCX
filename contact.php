@@ -1,6 +1,12 @@
 <?php
     $page_title = "Contact Us | EmpireOneCX";
     $meta_description = "Contact EmpireOneCX to discuss CX outsourcing, BPO services, customer support, back-office support, and offshore team solutions.";
+    $languageSwitchHrefEs = "/es/contacto/";
+    $languageAlternates = [
+        "en" => "https://empireonecx.com/contact",
+        "es" => "https://empireonecx.com/es/contacto/",
+        "x-default" => "https://empireonecx.com/contact",
+    ];
     include("inc/header.php");
 ?>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -71,7 +77,7 @@
 <main class="relative bg-black">
     <section class="hero-section careerhero mainherowork relative flex flex-col items-center justify-center px-4 sm:px-6 text-center overflow-hidden">
         <video class="solutions-bg-videowork absolute w-[100%]" autoplay muted loop playsinline  preload="none">
-            <source src="./assets/images/contactpagebg.mp4" type="video/mp4" />
+            <source src="./assets/images/contactpgbg.mp4" type="video/mp4" />
         </video>
         <div class="absolute bg-black/50 -z-10" style="width:1920px; height:611px;"></div>
         <div class="container mx-auto w-full relative z-10">
@@ -152,7 +158,7 @@
                                         class="flex items-center gap-2 cursor-pointer select-none">
                                         <img id="selectedFlag"
                                             src="https://flagcdn.com/w20/us.webp"
-                                            class="w-[20px] h-[14px]" alt="">
+                                            class="w-[20px] h-[14px]" alt="United States flag" loading="lazy" decoding="async">
                                         <span id="selectedCode" class="text-[15px]">+1</span>
                                         <svg class="w-3 h-3 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
                                             <path fill-rule="evenodd"
@@ -171,394 +177,394 @@
                                 <div id="countryDropdown"
                                     class="absolute left-0 w-[260px] h-[300px] overflow-y-auto bg-white rounded-[10px] shadow-lg border hidden z-50">
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+213" data-flag="dz">
-                                        <img src="https://flagcdn.com/w20/dz.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/dz.png" class="w-5 h-4" alt="Algeria flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Algeria</span>
                                         <span class="text-sm text-gray-500">+213</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+355" data-flag="al">
-                                        <img src="https://flagcdn.com/w20/al.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/al.png" class="w-5 h-4" alt="Albania flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Albania</span>
                                         <span class="text-sm text-gray-500">+355</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+376" data-flag="ad">
-                                        <img src="https://flagcdn.com/w20/ad.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/ad.png" class="w-5 h-4" alt="Andorra flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Andorra</span>
                                         <span class="text-sm text-gray-500">+376</span>
                                     </div>
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+61" data-flag="au">
-                                        <img src="https://flagcdn.com/w20/au.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/au.png" class="w-5 h-4" alt="Australia flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Australia</span>
                                         <span class="text-sm text-gray-500">+61</span>
                                     </div>
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+54" data-flag="ar">
-                                        <img src="https://flagcdn.com/w20/ar.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/ar.png" class="w-5 h-4" alt="Argentina flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Argentina</span>
                                         <span class="text-sm text-gray-500">+54</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+359" data-flag="bg">
-                                        <img src="https://flagcdn.com/w20/bg.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/bg.png" class="w-5 h-4" alt="Bulgaria flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Bulgaria</span>
                                         <span class="text-sm text-gray-500">+359</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+973" data-flag="bh">
-                                        <img src="https://flagcdn.com/w20/bh.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/bh.png" class="w-5 h-4" alt="Bahrain flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Bahrain</span>
                                         <span class="text-sm text-gray-500">+973</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+1-242" data-flag="bs">
-                                        <img src="https://flagcdn.com/w20/bs.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/bs.png" class="w-5 h-4" alt="Bahamas flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Bahamas</span>
                                         <span class="text-sm text-gray-500">+1-242</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+880" data-flag="bd">
-                                        <img src="https://flagcdn.com/w20/bd.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/bd.png" class="w-5 h-4" alt="Bangladesh flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Bangladesh</span>
                                         <span class="text-sm text-gray-500">+880</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+1-246" data-flag="bb">
-                                        <img src="https://flagcdn.com/w20/bb.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/bb.png" class="w-5 h-4" alt="Barbados flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Barbados</span>
                                         <span class="text-sm text-gray-500">+1-246</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+32" data-flag="be">
-                                        <img src="https://flagcdn.com/w20/be.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/be.png" class="w-5 h-4" alt="Belgium flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Belgium</span>
                                         <span class="text-sm text-gray-500">+32</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+229" data-flag="bj">
-                                        <img src="https://flagcdn.com/w20/bj.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/bj.png" class="w-5 h-4" alt="Benin flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Benin</span>
                                         <span class="text-sm text-gray-500">+229</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+975" data-flag="bt">
-                                        <img src="https://flagcdn.com/w20/bt.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/bt.png" class="w-5 h-4" alt="Bhutan flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Bhutan</span>
                                         <span class="text-sm text-gray-500">+975</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+387" data-flag="ba">
-                                        <img src="https://flagcdn.com/w20/ba.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/ba.png" class="w-5 h-4" alt="Bosnia &amp; Herzegovina flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Bosnia & Herzegovina</span>
                                         <span class="text-sm text-gray-500">+387</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+267" data-flag="bw">
-                                        <img src="https://flagcdn.com/w20/bw.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/bw.png" class="w-5 h-4" alt="Botswana flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Botswana</span>
                                         <span class="text-sm text-gray-500">+267</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+55" data-flag="br">
-                                        <img src="https://flagcdn.com/w20/br.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/br.png" class="w-5 h-4" alt="Brazil flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Brazil</span>
                                         <span class="text-sm text-gray-500">+55</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+246" data-flag="io">
-                                        <img src="https://flagcdn.com/w20/io.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/io.png" class="w-5 h-4" alt="British Indian Ocean Territory flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">British Indian Ocean Territory</span>
                                         <span class="text-sm text-gray-500">+246</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+673" data-flag="bn">
-                                        <img src="https://flagcdn.com/w20/bn.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/bn.png" class="w-5 h-4" alt="Brunei flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Brunei</span>
                                         <span class="text-sm text-gray-500">+673</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+359" data-flag="bg">
-                                        <img src="https://flagcdn.com/w20/bg.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/bg.png" class="w-5 h-4" alt="Bulgaria flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Bulgaria</span>
                                         <span class="text-sm text-gray-500">+359</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+226" data-flag="bf">
-                                        <img src="https://flagcdn.com/w20/bf.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/bf.png" class="w-5 h-4" alt="Burkina Faso flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Burkina Faso</span>
                                         <span class="text-sm text-gray-500">+226</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+257" data-flag="bi">
-                                        <img src="https://flagcdn.com/w20/bi.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/bi.png" class="w-5 h-4" alt="Burundi flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Burundi</span>
                                         <span class="text-sm text-gray-500">+257</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+591" data-flag="bo">
-                                        <img src="https://flagcdn.com/w20/bo.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/bo.png" class="w-5 h-4" alt="Bolivia flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Bolivia</span>
                                         <span class="text-sm text-gray-500">+591</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+501" data-flag="bz">
-                                        <img src="https://flagcdn.com/w20/bz.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/bz.png" class="w-5 h-4" alt="Belize flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Belize</span>
                                         <span class="text-sm text-gray-500">+501</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+229" data-flag="bj">
-                                        <img src="https://flagcdn.com/w20/bj.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/bj.png" class="w-5 h-4" alt="Benin flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Benin</span>
                                         <span class="text-sm text-gray-500">+229</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+375" data-flag="by">
-                                        <img src="https://flagcdn.com/w20/by.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/by.png" class="w-5 h-4" alt="Belarus flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Belarus</span>
                                         <span class="text-sm text-gray-500">+375</span>
                                     </div>
                                      <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+236" data-flag="cf">
-                                        <img src="https://flagcdn.com/w20/cf.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/cf.png" class="w-5 h-4" alt="Central African Republic flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Central African Republic</span>
                                         <span class="text-sm text-gray-500">+236</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+235" data-flag="td">
-                                        <img src="https://flagcdn.com/w20/td.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/td.png" class="w-5 h-4" alt="Chad flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Chad</span>
                                         <span class="text-sm text-gray-500">+235</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+1" data-flag="ca">
-                                        <img src="https://flagcdn.com/w20/ca.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/ca.png" class="w-5 h-4" alt="Canada flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Canada</span>
                                         <span class="text-sm text-gray-500">+1</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+57" data-flag="co">
-                                        <img src="https://flagcdn.com/w20/co.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/co.png" class="w-5 h-4" alt="Colombia flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Colombia</span>
                                         <span class="text-sm text-gray-500">+57</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+269" data-flag="km">
-                                        <img src="https://flagcdn.com/w20/km.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/km.png" class="w-5 h-4" alt="Comoros flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Comoros</span>
                                         <span class="text-sm text-gray-500">+269</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+242" data-flag="cg">
-                                        <img src="https://flagcdn.com/w20/cg.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/cg.png" class="w-5 h-4" alt="Congo (Republic) flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Congo (Republic)</span>
                                         <span class="text-sm text-gray-500">+242</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+56" data-flag="cl">
-                                        <img src="https://flagcdn.com/w20/cl.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/cl.png" class="w-5 h-4" alt="Chile flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Chile</span>
                                         <span class="text-sm text-gray-500">+56</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+855" data-flag="kh">
-                                        <img src="https://flagcdn.com/w20/kh.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/kh.png" class="w-5 h-4" alt="Cambodia flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Cambodia</span>
                                         <span class="text-sm text-gray-500">+855</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+237" data-flag="cm">
-                                        <img src="https://flagcdn.com/w20/cm.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/cm.png" class="w-5 h-4" alt="Cameroon flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Cameroon</span>
                                         <span class="text-sm text-gray-500">+237</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+357" data-flag="cy">
-                                        <img src="https://flagcdn.com/w20/cy.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/cy.png" class="w-5 h-4" alt="Cyprus flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Cyprus</span>
                                         <span class="text-sm text-gray-500">+357</span>
                                     </div>
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+238" data-flag="cv">
-                                        <img src="https://flagcdn.com/w20/cv.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/cv.png" class="w-5 h-4" alt="Cape Verde flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Cape Verde</span>
                                         <span class="text-sm text-gray-500">+238</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+599" data-flag="bq">
-                                        <img src="https://flagcdn.com/w20/bq.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/bq.png" class="w-5 h-4" alt="Caribbean Netherlands flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Caribbean Netherlands</span>
                                         <span class="text-sm text-gray-500">+599</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+682" data-flag="ck">
-                                        <img src="https://flagcdn.com/w20/ck.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/ck.png" class="w-5 h-4" alt="Cook Islands flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Cook Islands</span>
                                         <span class="text-sm text-gray-500">+682</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+506" data-flag="cr">
-                                        <img src="https://flagcdn.com/w20/cr.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/cr.png" class="w-5 h-4" alt="Costa Rica flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Costa Rica</span>
                                         <span class="text-sm text-gray-500">+506</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+225" data-flag="ci">
-                                        <img src="https://flagcdn.com/w20/ci.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/ci.png" class="w-5 h-4" alt="C&#244;te d’Ivoire flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Côte d’Ivoire</span>
                                         <span class="text-sm text-gray-500">+225</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+385" data-flag="hr">
-                                        <img src="https://flagcdn.com/w20/hr.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/hr.png" class="w-5 h-4" alt="Croatia flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Croatia</span>
                                         <span class="text-sm text-gray-500">+385</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+53" data-flag="cu">
-                                        <img src="https://flagcdn.com/w20/cu.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/cu.png" class="w-5 h-4" alt="Cuba flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Cuba</span>
                                         <span class="text-sm text-gray-500">+53</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+420" data-flag="cz">
-                                        <img src="https://flagcdn.com/w20/cz.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/cz.png" class="w-5 h-4" alt="Czech Republic flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Czech Republic</span>
                                         <span class="text-sm text-gray-500">+420</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+45" data-flag="dk">
-                                        <img src="https://flagcdn.com/w20/dk.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/dk.png" class="w-5 h-4" alt="Denmark flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Denmark</span>
                                         <span class="text-sm text-gray-500">+45</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+253" data-flag="dj">
-                                        <img src="https://flagcdn.com/w20/dj.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/dj.png" class="w-5 h-4" alt="Djibouti flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Djibouti</span>
                                         <span class="text-sm text-gray-500">+253</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+670" data-flag="tl">
-                                        <img src="https://flagcdn.com/w20/tl.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/tl.png" class="w-5 h-4" alt="East Timor flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">East Timor</span>
                                         <span class="text-sm text-gray-500">+670</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+593" data-flag="ec">
-                                        <img src="https://flagcdn.com/w20/ec.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/ec.png" class="w-5 h-4" alt="Ecuador flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Ecuador</span>
                                         <span class="text-sm text-gray-500">+593</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+20" data-flag="eg">
-                                        <img src="https://flagcdn.com/w20/eg.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/eg.png" class="w-5 h-4" alt="Egypt flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Egypt</span>
                                         <span class="text-sm text-gray-500">+20</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+503" data-flag="sv">
-                                        <img src="https://flagcdn.com/w20/sv.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/sv.png" class="w-5 h-4" alt="El Salvador flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">El Salvador</span>
                                         <span class="text-sm text-gray-500">+503</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+240" data-flag="gq">
-                                        <img src="https://flagcdn.com/w20/gq.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/gq.png" class="w-5 h-4" alt="Equatorial Guinea flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Equatorial Guinea</span>
                                         <span class="text-sm text-gray-500">+240</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+291" data-flag="er">
-                                        <img src="https://flagcdn.com/w20/er.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/er.png" class="w-5 h-4" alt="Eritrea flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Eritrea</span>
                                         <span class="text-sm text-gray-500">+291</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+372" data-flag="ee">
-                                        <img src="https://flagcdn.com/w20/ee.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/ee.png" class="w-5 h-4" alt="Estonia flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Estonia</span>
                                         <span class="text-sm text-gray-500">+372</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+251" data-flag="et">
-                                        <img src="https://flagcdn.com/w20/et.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/et.png" class="w-5 h-4" alt="Ethiopia flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Ethiopia</span>
                                         <span class="text-sm text-gray-500">+251</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+503" data-flag="sv">
-                                        <img src="https://flagcdn.com/w20/sv.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/sv.png" class="w-5 h-4" alt="El Salvador flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">El Salvador</span>
                                         <span class="text-sm text-gray-500">+503</span>
                                     </div>
                                     <!-- France -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+33" data-flag="fr">
-                                        <img src="https://flagcdn.com/w20/fr.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/fr.png" class="w-5 h-4" alt="France flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">France</span>
                                         <span class="text-sm text-gray-500">+33</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+679" data-flag="fj">
-                                        <img src="https://flagcdn.com/w20/fj.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/fj.png" class="w-5 h-4" alt="Fiji flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Fiji</span>
                                         <span class="text-sm text-gray-500">+679</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+358" data-flag="fi">
-                                        <img src="https://flagcdn.com/w20/fi.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/fi.png" class="w-5 h-4" alt="Finland flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Finland</span>
                                         <span class="text-sm text-gray-500">+358</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+241" data-flag="ga">
-                                        <img src="https://flagcdn.com/w20/ga.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/ga.png" class="w-5 h-4" alt="Gabon flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Gabon</span>
                                         <span class="text-sm text-gray-500">+241</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+220" data-flag="gm">
-                                        <img src="https://flagcdn.com/w20/gm.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/gm.png" class="w-5 h-4" alt="Gambia flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Gambia</span>
                                         <span class="text-sm text-gray-500">+220</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+995" data-flag="ge">
-                                        <img src="https://flagcdn.com/w20/ge.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/ge.png" class="w-5 h-4" alt="Georgia flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Georgia</span>
                                         <span class="text-sm text-gray-500">+995</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+49" data-flag="de">
-                                        <img src="https://flagcdn.com/w20/de.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/de.png" class="w-5 h-4" alt="Germany flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Germany</span>
                                         <span class="text-sm text-gray-500">+49</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+233" data-flag="gh">
-                                        <img src="https://flagcdn.com/w20/gh.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/gh.png" class="w-5 h-4" alt="Ghana flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Ghana</span>
                                         <span class="text-sm text-gray-500">+233</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+350" data-flag="gi">
-                                        <img src="https://flagcdn.com/w20/gi.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/gi.png" class="w-5 h-4" alt="Gibraltar flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Gibraltar</span>
                                         <span class="text-sm text-gray-500">+350</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+30" data-flag="gr">
-                                        <img src="https://flagcdn.com/w20/gr.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/gr.png" class="w-5 h-4" alt="Greece flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Greece</span>
                                         <span class="text-sm text-gray-500">+30</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+299" data-flag="gl">
-                                        <img src="https://flagcdn.com/w20/gl.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/gl.png" class="w-5 h-4" alt="Greenland flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Greenland</span>
                                         <span class="text-sm text-gray-500">+299</span>
                                     </div>
 
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer" data-code="+502" data-flag="gt">
-                                        <img src="https://flagcdn.com/w20/gt.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/gt.png" class="w-5 h-4" alt="Guatemala flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Guatemala</span>
                                         <span class="text-sm text-gray-500">+502</span>
                                     </div>
@@ -566,7 +572,7 @@
                                     <!-- India -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+91" data-flag="in">
-                                        <img src="https://flagcdn.com/w20/in.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/in.png" class="w-5 h-4" alt="India flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">India</span>
                                         <span class="text-sm text-gray-500">+91</span>
                                     </div>
@@ -574,7 +580,7 @@
                                     <!-- Indonesia -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+62" data-flag="id">
-                                        <img src="https://flagcdn.com/w20/id.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/id.png" class="w-5 h-4" alt="Indonesia flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Indonesia</span>
                                         <span class="text-sm text-gray-500">+62</span>
                                     </div>
@@ -582,7 +588,7 @@
                                     <!-- Iraq -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+964" data-flag="iq">
-                                        <img src="https://flagcdn.com/w20/iq.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/iq.png" class="w-5 h-4" alt="Iraq flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Iraq</span>
                                         <span class="text-sm text-gray-500">+964</span>
                                     </div>
@@ -590,7 +596,7 @@
                                     <!-- Ireland -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+353" data-flag="ie">
-                                        <img src="https://flagcdn.com/w20/ie.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/ie.png" class="w-5 h-4" alt="Ireland flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Ireland</span>
                                         <span class="text-sm text-gray-500">+353</span>
                                     </div>
@@ -598,7 +604,7 @@
                                     <!-- Israel -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+972" data-flag="il">
-                                        <img src="https://flagcdn.com/w20/il.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/il.png" class="w-5 h-4" alt="Israel flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Israel</span>
                                         <span class="text-sm text-gray-500">+972</span>
                                     </div>
@@ -606,7 +612,7 @@
                                     <!-- Italy -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+39" data-flag="it">
-                                        <img src="https://flagcdn.com/w20/it.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/it.png" class="w-5 h-4" alt="Italy flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Italy</span>
                                         <span class="text-sm text-gray-500">+39</span>
                                     </div>
@@ -614,7 +620,7 @@
                                     <!-- Japan -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+81" data-flag="jp">
-                                        <img src="https://flagcdn.com/w20/jp.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/jp.png" class="w-5 h-4" alt="Japan flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Japan</span>
                                         <span class="text-sm text-gray-500">+81</span>
                                     </div>
@@ -622,7 +628,7 @@
                                     <!-- Kenya -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+254" data-flag="ke">
-                                        <img src="https://flagcdn.com/w20/ke.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/ke.png" class="w-5 h-4" alt="Kenya flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Kenya</span>
                                         <span class="text-sm text-gray-500">+254</span>
                                     </div>
@@ -630,7 +636,7 @@
                                     <!-- Malaysia -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+60" data-flag="my">
-                                        <img src="https://flagcdn.com/w20/my.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/my.png" class="w-5 h-4" alt="Malaysia flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Malaysia</span>
                                         <span class="text-sm text-gray-500">+60</span>
                                     </div>
@@ -638,7 +644,7 @@
                                     <!-- Mexico -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+52" data-flag="mx">
-                                        <img src="https://flagcdn.com/w20/mx.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/mx.png" class="w-5 h-4" alt="Mexico flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Mexico</span>
                                         <span class="text-sm text-gray-500">+52</span>
                                     </div>
@@ -646,7 +652,7 @@
                                     <!-- Nepal -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+977" data-flag="np">
-                                        <img src="https://flagcdn.com/w20/np.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/np.png" class="w-5 h-4" alt="Nepal flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Nepal</span>
                                         <span class="text-sm text-gray-500">+977</span>
                                     </div>
@@ -654,7 +660,7 @@
                                     <!-- Netherlands -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+31" data-flag="nl">
-                                        <img src="https://flagcdn.com/w20/nl.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/nl.png" class="w-5 h-4" alt="Netherlands flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Netherlands</span>
                                         <span class="text-sm text-gray-500">+31</span>
                                     </div>
@@ -662,7 +668,7 @@
                                     <!-- New Zealand -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+64" data-flag="nz">
-                                        <img src="https://flagcdn.com/w20/nz.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/nz.png" class="w-5 h-4" alt="New Zealand flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">New Zealand</span>
                                         <span class="text-sm text-gray-500">+64</span>
                                     </div>
@@ -670,7 +676,7 @@
                                     <!-- Nigeria -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+234" data-flag="ng">
-                                        <img src="https://flagcdn.com/w20/ng.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/ng.png" class="w-5 h-4" alt="Nigeria flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Nigeria</span>
                                         <span class="text-sm text-gray-500">+234</span>
                                     </div>
@@ -678,7 +684,7 @@
                                     <!-- Pakistan -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+92" data-flag="pk">
-                                        <img src="https://flagcdn.com/w20/pk.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/pk.png" class="w-5 h-4" alt="Pakistan flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Pakistan</span>
                                         <span class="text-sm text-gray-500">+92</span>
                                     </div>
@@ -686,7 +692,7 @@
                                     <!-- Philippines -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+63" data-flag="ph">
-                                        <img src="https://flagcdn.com/w20/ph.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/ph.png" class="w-5 h-4" alt="Philippines flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Philippines</span>
                                         <span class="text-sm text-gray-500">+63</span>
                                     </div>
@@ -694,7 +700,7 @@
                                     <!-- Portugal -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+351" data-flag="pt">
-                                        <img src="https://flagcdn.com/w20/pt.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/pt.png" class="w-5 h-4" alt="Portugal flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Portugal</span>
                                         <span class="text-sm text-gray-500">+351</span>
                                     </div>
@@ -702,7 +708,7 @@
                                     <!-- Russia -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+7" data-flag="ru">
-                                        <img src="https://flagcdn.com/w20/ru.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/ru.png" class="w-5 h-4" alt="Russia flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Russia</span>
                                         <span class="text-sm text-gray-500">+7</span>
                                     </div>
@@ -710,7 +716,7 @@
                                     <!-- Saudi Arabia -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+966" data-flag="sa">
-                                        <img src="https://flagcdn.com/w20/sa.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/sa.png" class="w-5 h-4" alt="Saudi Arabia flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Saudi Arabia</span>
                                         <span class="text-sm text-gray-500">+966</span>
                                     </div>
@@ -718,7 +724,7 @@
                                     <!-- Singapore -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+65" data-flag="sg">
-                                        <img src="https://flagcdn.com/w20/sg.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/sg.png" class="w-5 h-4" alt="Singapore flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Singapore</span>
                                         <span class="text-sm text-gray-500">+65</span>
                                     </div>
@@ -726,7 +732,7 @@
                                     <!-- South Africa -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+27" data-flag="za">
-                                        <img src="https://flagcdn.com/w20/za.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/za.png" class="w-5 h-4" alt="South Africa flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">South Africa</span>
                                         <span class="text-sm text-gray-500">+27</span>
                                     </div>
@@ -734,7 +740,7 @@
                                     <!-- South Korea -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+82" data-flag="kr">
-                                        <img src="https://flagcdn.com/w20/kr.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/kr.png" class="w-5 h-4" alt="South Korea flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">South Korea</span>
                                         <span class="text-sm text-gray-500">+82</span>
                                     </div>
@@ -742,7 +748,7 @@
                                     <!-- Spain -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+34" data-flag="es">
-                                        <img src="https://flagcdn.com/w20/es.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/es.png" class="w-5 h-4" alt="Spain flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Spain</span>
                                         <span class="text-sm text-gray-500">+34</span>
                                     </div>
@@ -750,7 +756,7 @@
                                     <!-- Sri Lanka -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+94" data-flag="lk">
-                                        <img src="https://flagcdn.com/w20/lk.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/lk.png" class="w-5 h-4" alt="Sri Lanka flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Sri Lanka</span>
                                         <span class="text-sm text-gray-500">+94</span>
                                     </div>
@@ -758,7 +764,7 @@
                                     <!-- Sweden -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+46" data-flag="se">
-                                        <img src="https://flagcdn.com/w20/se.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/se.png" class="w-5 h-4" alt="Sweden flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Sweden</span>
                                         <span class="text-sm text-gray-500">+46</span>
                                     </div>
@@ -766,7 +772,7 @@
                                     <!-- Switzerland -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+41" data-flag="ch">
-                                        <img src="https://flagcdn.com/w20/ch.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/ch.png" class="w-5 h-4" alt="Switzerland flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Switzerland</span>
                                         <span class="text-sm text-gray-500">+41</span>
                                     </div>
@@ -774,7 +780,7 @@
                                     <!-- Thailand -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+66" data-flag="th">
-                                        <img src="https://flagcdn.com/w20/th.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/th.png" class="w-5 h-4" alt="Thailand flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Thailand</span>
                                         <span class="text-sm text-gray-500">+66</span>
                                     </div>
@@ -782,7 +788,7 @@
                                     <!-- Turkey -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+90" data-flag="tr">
-                                        <img src="https://flagcdn.com/w20/tr.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/tr.png" class="w-5 h-4" alt="Turkey flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">Turkey</span>
                                         <span class="text-sm text-gray-500">+90</span>
                                     </div>
@@ -790,7 +796,7 @@
                                     <!-- United Arab Emirates -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+971" data-flag="ae">
-                                        <img src="https://flagcdn.com/w20/ae.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/ae.png" class="w-5 h-4" alt="United Arab Emirates flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">United Arab Emirates</span>
                                         <span class="text-sm text-gray-500">+971</span>
                                     </div>
@@ -798,7 +804,7 @@
                                     <!-- United Kingdom -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+44" data-flag="gb">
-                                        <img src="https://flagcdn.com/w20/gb.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/gb.png" class="w-5 h-4" alt="United Kingdom flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">United Kingdom</span>
                                         <span class="text-sm text-gray-500">+44</span>
                                     </div>
@@ -806,7 +812,7 @@
                                     <!-- United States -->
                                     <div class="country-item flex items-center gap-3 px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                         data-code="+1" data-flag="us">
-                                        <img src="https://flagcdn.com/w20/us.png" class="w-5 h-4">
+                                        <img src="https://flagcdn.com/w20/us.png" class="w-5 h-4" alt="United States flag" loading="lazy" decoding="async">
                                         <span class="flex-1 text-sm">United States</span>
                                         <span class="text-sm text-gray-500">+1</span>
                                     </div>

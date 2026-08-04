@@ -3,6 +3,12 @@
     $metaDescription = "Explore tailored BPO services and AI automation solutions for 18+ industries. Scale your operations with our healthcare, finance, and tech outsourcing experts.";
     // $metaKeywords removed to prevent competitor scraping and because it is deprecated
     $baseHref = "/";
+    $languageSwitchHrefEs = "/es/industrias/";
+    $languageAlternates = [
+        "en" => "https://empireonecx.com/industries/",
+        "es" => "https://empireonecx.com/es/industrias/",
+        "x-default" => "https://empireonecx.com/industries/",
+    ];
     include(__DIR__ . "/../inc/header.php");
 ?>
 <main style="background-color: #000;">
@@ -54,75 +60,75 @@
                         snap-x snap-mandatory
                         [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
                 
-                <a href="/industries#retail" class="line-btn snap-center whitespace-nowrap active flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#retail" class="line-btn snap-center whitespace-nowrap active flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v1.webp" class="w-[24px] h-[24px] object-contain" alt="Retail icon"> <span>Retails</span>
                 </a>
 
-                <a href="/industries#automotive" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#automotive" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v2.webp" class="w-[24px] h-[24px] object-contain" alt="Automotive icon"> <span>Automotive</span>
                 </a>
 
-                <a href="/industries#travel" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#travel" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v3.webp" class="w-[24px] h-[24px] object-contain" alt="Travel icon"> <span>Travel</span>
                 </a>
 
-                <a href="/industries#technical" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#technical" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v4.webp" class="w-[24px] h-[24px] object-contain" alt="Telco icon"> <span>Telco</span>
                 </a>
 
-                <a href="/industries#insurance" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#insurance" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v5.webp" class="w-[24px] h-[24px] object-contain" alt="Insurance icon"> <span>Insurance</span>
                 </a>
 
-                <a href="/industries#healthcare" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#healthcare" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v6.webp" class="w-[24px] h-[24px] object-contain" alt="Healthcare icon"> <span>Healthcare</span>
                 </a>
 
-                <a href="/industries#energy" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#energy" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v7.webp" class="w-[24px] h-[24px] object-contain" alt="Energy icon"> <span>Energy</span>
                 </a>
 
-                <a href="/industries#utility" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#utility" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v8.webp" class="w-[24px] h-[24px] object-contain" alt="Utility icon"> <span>Utility</span>
                 </a>
 
-                <a href="/industries#technology" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#technology" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v9.webp" class="w-[24px] h-[24px] object-contain" alt="Technology icon"> <span>Technology</span>
                 </a>
 
-                <a href="/industries#government" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#government" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v10.webp" class="w-[24px] h-[24px] object-contain" alt="Government icon"> <span>Government</span>
                 </a>
 
-                <a href="/industries#legal" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#legal" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v11.webp" class="w-[24px] h-[24px] object-contain" alt="Legal icon"> <span>Legal</span>
                 </a>
 
-                <a href="/industries#financeservices" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#financeservices" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v12.webp" class="w-[24px] h-[24px] object-contain" alt="Finance icon"> <span>Finance Services</span>
                 </a>
 
-                <a href="/industries#ecommerce" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#ecommerce" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v13.webp" class="w-[24px] h-[24px] object-contain" alt="eCommerce icon"> <span>eCommerce</span>
                 </a>
 
-                <a href="/industries#realestate" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#realestate" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v14.webp" class="w-[24px] h-[24px] object-contain" alt="Real Estate icon"> <span>Real Estate</span>
                 </a>
 
-                <a href="/industries#gaming" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#gaming" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v15.webp" class="w-[24px] h-[24px] object-contain" alt="Gaming icon"> <span>Gaming</span>
                 </a>
 
-                <a href="/industries#homeservices" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#homeservices" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v16.webp" class="w-[24px] h-[24px] object-contain" alt="Home Services icon"> <span>Home Services</span>
                 </a>
 
-                <a href="/industries#homewarranty" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#homewarranty" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v17.webp" class="w-[24px] h-[24px] object-contain" alt="Home Warranty icon"> <span>Home Warranty</span>
                 </a>
 
-                <a href="/industries#transportationlogistics" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#transportationlogistics" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v18.webp" class="w-[24px] h-[24px] object-contain" alt="Transportation icon"> <span>Transportation & Logistics</span>
                 </a>
 

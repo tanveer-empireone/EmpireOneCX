@@ -85,7 +85,7 @@ include(__DIR__ . "/../inc/header.php");
         <div class="container mx-auto px-4">
             <div class="topic-faq-next">
                 <div><h2><?= htmlspecialchars($ctaHeading, ENT_QUOTES, "UTF-8") ?></h2><p><?= htmlspecialchars($ctaCopy, ENT_QUOTES, "UTF-8") ?></p></div>
-                <div class="topic-faq-actions"><a class="topic-faq-button topic-faq-button--primary" href="/contact">Ask Our Team <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a><a class="topic-faq-button" href="/faq">Back to FAQ Hub</a></div>
+                <div class="topic-faq-actions"><a class="topic-faq-button topic-faq-button--primary" href="/contact">Ask Our Team <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a><a class="topic-faq-button" href="/faq/">Back to FAQ Hub</a></div>
             </div>
         </div>
     </section>
@@ -260,7 +260,7 @@ include(__DIR__ . "/../inc/header.php");
     ["@type"=>"FAQPage","@id"=>"https://empireonecx.com".$pageUrl."#faq","url"=>"https://empireonecx.com".$pageUrl,"name"=>$page_title,"description"=>$metaDescription,"mainEntity"=>array_map(function($faq){return["@type"=>"Question","name"=>$faq["question"],"acceptedAnswer"=>["@type"=>"Answer","text"=>$faq["answer"]]];},$faqs)],
     ["@type"=>"BreadcrumbList","itemListElement"=>[
         ["@type"=>"ListItem","position"=>1,"name"=>"Home","item"=>"https://empireonecx.com/"],
-        ["@type"=>"ListItem","position"=>2,"name"=>"FAQ Hub","item"=>"https://empireonecx.com/faq"],
+        ["@type"=>"ListItem","position"=>2,"name"=>"FAQ Hub","item"=>"https://empireonecx.com/faq/"],
         ["@type"=>"ListItem","position"=>3,"name"=>$shortTitle,"item"=>"https://empireonecx.com".$pageUrl]
     ]]
 ]], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT) ?>
