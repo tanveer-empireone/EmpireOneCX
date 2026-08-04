@@ -10,8 +10,8 @@
                         <span class="text-[#7A76FF]"><?php echo !empty($isSpanishSite) ? 'La alianza' : 'The Perfect'; ?></span>
                         <span class="bg-gradient-to-r from-[#CB46FA] to-[#FE881C] bg-clip-text text-transparent"> <?php echo !empty($isSpanishSite) ? 'perfecta' : 'Partnership'; ?></span>
                     </p>
-                    <h2 class="text-[40px] leading-[48px] tracking-[-0.01em] max-w-[630px]">
-                        <?php echo !empty($isSpanishSite) ? 'IA avanzada + inteligencia humana<br class="hidden sm:block"> real = satisfacción del cliente garantizada' : 'Advanced AI + Real Human<br class="hidden sm:block"> Intelligence = Customer Satisfaction Guaranteed'; ?>
+                    <h2 class="text-[30px] md:text-[34px] leading-[38px] md:leading-[42px] tracking-[-0.01em] max-w-[720px]">
+                        <?php echo !empty($isSpanishSite) ? 'IA avanzada + inteligencia humana<br class="hidden sm:block"> real = satisfacción del cliente garantizada' : 'Where advanced AI meets real human intelligence,<br class="hidden sm:block"> customer satisfaction follows.'; ?>
                     </h2>
                 </div>
                 <div class="flex flex-col lg:items-end gap-6 w-full lg:w-auto">
@@ -43,30 +43,38 @@
                 </div>
             </div>
             <div class="border-t border-gray-800/50 mb-10 md:mb-16"></div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
-                <div class="footermenu flex flex-col sm:flex-row gap-8 sm:gap-16">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-12 items-start">
+                <div class="footer-contact text-left">
+                    <h3 class="font-reckless text-white text-[24px] leading-[32px] mb-4"><?php echo !empty($isSpanishSite) ? 'Contacto:' : 'Contact:'; ?></h3>
+                    <address class="not-italic text-gray-300 text-[16px] leading-[28px] space-y-3">
+                        <p>250 Consumers Rd suite 810,<br>Toronto, ON M2J 4V6</p>
+                        <p><a href="mailto:info@empireonecx.com" class="hover:text-white transition whitespace-nowrap">info@empireonecx.com</a></p>
+                        <p><a href="tel:+18002332843" class="hover:text-white transition whitespace-nowrap">+1 (800) 233 2843</a></p>
+                    </address>
+                </div>
+                <div class="footermenu flex flex-col sm:flex-row justify-center text-left gap-8 sm:gap-16 lg:mx-auto lg:min-w-[360px]">
                     <div>
                         <ul class="text-[24px] leading-[35px] tracking-[-0.02em]
                                 space-y-3 sm:space-y-4 text-gray-300">
-                            <li><a href="<?php echo !empty($isSpanishSite) ? '/es/' : '/'; ?>" class="hover:text-white transition"><?php echo !empty($isSpanishSite) ? 'Inicio' : 'Home'; ?></a></li>
-                            <li><a href="/about-us" class="hover:text-white transition"><?php echo !empty($isSpanishSite) ? 'Sobre nosotros' : 'About Us'; ?></a></li>
-                            <li><a href="/solutions" class="hover:text-white transition"><?php echo !empty($isSpanishSite) ? 'Soluciones' : 'Solutions'; ?></a></li>
-                            <li><a href="/industries" class="hover:text-white transition"><?php echo !empty($isSpanishSite) ? 'Industrias' : 'Industries'; ?></a></li>
+                            <li><a href="<?php echo !empty($isSpanishSite) ? '/es/' : '/'; ?>" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Inicio' : 'Home'; ?></a></li>
+                            <li><a href="/about-us" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Sobre nosotros' : 'About Us'; ?></a></li>
+                            <li><a href="/solutions" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Soluciones' : 'Solutions'; ?></a></li>
+                            <li><a href="/industries" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Industrias' : 'Industries'; ?></a></li>
                         </ul>
                     </div>
 
                     <div>
                         <ul class="text-[24px] leading-[35px] tracking-[-0.02em]
                                 space-y-3 sm:space-y-4 text-gray-300">
-                            <li><a href="/case-study" class="hover:text-white transition"><?php echo !empty($isSpanishSite) ? 'Casos de éxito' : 'Case Studies'; ?></a></li>
-                            <li><a href="/insights" class="hover:text-white transition"><?php echo !empty($isSpanishSite) ? 'Recursos' : 'Insights'; ?></a></li>
-                            <li><a href="https://careers.empireonecx.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition"><?php echo !empty($isSpanishSite) ? 'Carreras' : 'Careers'; ?></a></li>
-                            <li><a href="/contact" class="hover:text-white transition"><?php echo !empty($isSpanishSite) ? 'Contacto' : 'Contact'; ?></a></li>
+                            <li><a href="/case-study" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Casos de éxito' : 'Case Studies'; ?></a></li>
+                            <li><a href="/insights" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Recursos' : 'Insights'; ?></a></li>
+                            <li><a href="https://careers.empireonecx.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Carreras' : 'Careers'; ?></a></li>
+                            <li><a href="/contact" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Contacto' : 'Contact'; ?></a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="flex flex-col gap-6 md:gap-8">
-                    <div class="flex justify-start md:justify-end">
+                <div class="flex flex-col gap-6 md:gap-8 lg:items-end">
+                    <div class="flex justify-start lg:justify-end">
                         <div class="footericons flex gap-5 sm:gap-6">
                             <a href="https://www.facebook.com/profile.php?id=100089467625882" target="_blank" rel="noopener noreferrer" class="text-white hover:text-[#7A76FF] transition-colors duration-300 text-xl sm:text-4xl">
                                 <i class="fab fa-facebook"></i>
@@ -84,9 +92,9 @@
                     </div>
 
                     <div class="mainherit [font-family:'helvetica',Arial,sans-serif] font-normal text-[16px] leading-[30px] tracking-normal
-                                flex flex-col items-start md:items-end gap-4">
+                                flex flex-col items-start lg:items-end gap-4">
 
-                        <div class="footerterms flex flex-wrap justify-start md:justify-end gap-3 sm:gap-4 md:gap-6">
+                        <div class="footerterms flex flex-wrap justify-start lg:justify-end gap-3 sm:gap-4 md:gap-6">
                             <a href="/termsandconditions" class="text-white text-[16px] hover:text-white/70 transition whitespace-nowrap">
                                 <?php echo !empty($isSpanishSite) ? 'Términos y condiciones' : 'Terms and Conditions'; ?>
                             </a>
@@ -102,7 +110,7 @@
                             <?php endif; ?>
                         </div>
 
-                        <p class="mycenter myfooterline text-white/70 text-left md:text-right w-full" style="font-size: 14px;">
+                        <p class="mycenter myfooterline text-white/70 text-left lg:text-right w-full" style="font-size: 14px;">
                             © <?= date('Y'); ?> EmpireOneCX <?php echo !empty($isSpanishSite) ? 'Todos los derechos reservados.' : 'All Rights Reserved.'; ?>
                         </p>
                     </div>
