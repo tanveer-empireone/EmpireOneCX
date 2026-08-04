@@ -120,8 +120,8 @@ if (empty($languageAlternates)) {
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <link rel="stylesheet" href="/assets/css/style.css?v=20260723-1">
-    <link rel="stylesheet" href="/assets/css/ai-chatbot.css?v=20260613-6">
+    <link rel="stylesheet" href="/assets/css/style.min.css?v=20260804-1">
+    <link rel="stylesheet" href="/assets/css/ai-chatbot.min.css?v=20260804-1">
     <?php if (!empty($enableCookieConsent)): ?>
     <link rel="stylesheet" href="/assets/css/cookie-consent.css?v=20260619-1">
     <?php endif; ?>

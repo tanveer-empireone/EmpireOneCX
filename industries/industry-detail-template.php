@@ -63,7 +63,7 @@ $assurance = [
 ];
 ?>
 
-<link rel="stylesheet" href="/assets/css/industry-detail.css?v=20260611-1">
+<link rel="stylesheet" href="/assets/css/industry-detail.min.css?v=20260804-1">
 
 <main class="industry-detail-page">
     <section class="industry-detail-hero" style="background-image:url('/assets/images/<?= htmlspecialchars($page["image"], ENT_QUOTES, "UTF-8") ?>')">
