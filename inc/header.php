@@ -3,13 +3,7 @@ $siteLanguage = 'en';
 $isSpanishSite = false;
 $homeHref = '/';
 $languageAlternates = $languageAlternates ?? [];
-
-if (empty($languageAlternates)) {
-    $languageAlternates = [
-        'en' => 'https://empireonecx.com/',
-        'x-default' => 'https://empireonecx.com/',
-    ];
-}
+$suppressHreflang = $suppressHreflang ?? false;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,6 +53,16 @@ if (empty($languageAlternates)) {
             $clean_uri = substr($clean_uri, 0, -6) ?: '/';
         }
         $canonical = "https://empireonecx.com" . $clean_uri;
+
+        $hasQueryString = strpos($_SERVER['REQUEST_URI'] ?? '', '?') !== false;
+        if ($suppressHreflang || $hasQueryString) {
+            $languageAlternates = [];
+        } elseif (empty($languageAlternates)) {
+            $languageAlternates = [
+                'en' => $canonical,
+                'x-default' => $canonical,
+            ];
+        }
     ?>
 
     <title><?php echo htmlspecialchars($title ?? 'EmpireOneCX', ENT_QUOTES, 'UTF-8'); ?></title>
