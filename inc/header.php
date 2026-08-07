@@ -119,7 +119,7 @@ $suppressHreflang = $suppressHreflang ?? false;
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
-    <link rel="stylesheet" href="/assets/css/style.min.css?v=20260805-1">
+    <link rel="stylesheet" href="/assets/css/style.min.css?v=20260808-2">
     <link rel="preload" href="/assets/css/ai-chatbot.min.css?v=20260805-1" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/assets/css/ai-chatbot.min.css?v=20260805-1"></noscript>
     <?php if (!empty($enableCookieConsent)): ?>

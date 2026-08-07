@@ -868,7 +868,7 @@ span.font-reckless.font-normal.text-\[24px\].leading-\[32px\].tracking-\[-0\.03e
 .nav-dropdown-menu {
   position: absolute;
   top: 100%;
-  margin-top: 6px;
+  margin-top: 12px;
   left: 50%;
   width: 318px;
   transform: translate(-50%, 10px);
@@ -994,7 +994,7 @@ span.font-reckless.font-normal.text-\[24px\].leading-\[32px\].tracking-\[-0\.03e
 
 .nav-mega-menu {
   top: 100%;
-  margin-top: 6px;
+  margin-top: 12px;
   left: 0;
   width: min(920px, calc(100vw - 48px));
   transform: translate(-30%, 10px);
@@ -1434,12 +1434,12 @@ header.scrolled .header-btn {
 
 header.scrolled .nav-dropdown-menu {
   top: 100%;
-  margin-top: 6px;
+  margin-top: 10px;
 }
 
 header.scrolled .nav-dropdown-menu::before {
-  top: -6px;
-  height: 6px;
+  top: -10px;
+  height: 10px;
 }
 
 
