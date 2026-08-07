@@ -1034,8 +1034,8 @@ include(__DIR__ . "/../../inc/header.php");
     "@graph" => [
         [
             "@type" => "FAQPage",
-            "@id" => "https://empireonecx.com/faq/bpo-faq#faq",
-            "url" => "https://empireonecx.com/faq/bpo-faq",
+            "@id" => "https://empireonecx.com/faq/bpo-faq/#faq",
+            "url" => "https://empireonecx.com/faq/bpo-faq/",
             "name" => "BPO FAQ: Business Process Outsourcing Questions",
             "description" => $metaDescription,
             "mainEntity" => array_map(function ($faq) {
@@ -1054,7 +1054,7 @@ include(__DIR__ . "/../../inc/header.php");
             "itemListElement" => [
                 ["@type" => "ListItem", "position" => 1, "name" => "Home", "item" => "https://empireonecx.com/"],
                 ["@type" => "ListItem", "position" => 2, "name" => "FAQ Hub", "item" => "https://empireonecx.com/faq/"],
-                ["@type" => "ListItem", "position" => 3, "name" => "BPO FAQ", "item" => "https://empireonecx.com/faq/bpo-faq"],
+                ["@type" => "ListItem", "position" => 3, "name" => "BPO FAQ", "item" => "https://empireonecx.com/faq/bpo-faq/"],
             ],
         ],
     ],

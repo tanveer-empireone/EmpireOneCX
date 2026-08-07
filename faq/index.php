@@ -8,25 +8,25 @@ $faqTopics = [
         "icon" => "fa-diagram-project",
         "title" => "BPO FAQ",
         "description" => "Business process outsourcing models, services, pricing, implementation, governance, and provider selection.",
-        "url" => "/faq/bpo-faq",
+        "url" => "/faq/bpo-faq/",
     ],
     [
         "icon" => "fa-headset",
         "title" => "CX Outsourcing FAQ",
         "description" => "Customer experience teams, omnichannel support, service quality, scalability, and customer journey management.",
-        "url" => "/faq/cx-outsourcing-faq",
+        "url" => "/faq/cx-outsourcing-faq/",
     ],
     [
         "icon" => "fa-phone-volume",
         "title" => "Call Center FAQ",
         "description" => "Inbound and outbound operations, staffing, coverage, performance metrics, technology, and quality assurance.",
-        "url" => "/faq/call-center-faq",
+        "url" => "/faq/call-center-faq/",
     ],
     [
         "icon" => "fa-robot",
         "title" => "AI Support FAQ",
         "description" => "AI-assisted customer support, automation, human oversight, knowledge systems, security, and responsible deployment.",
-        "url" => "/faq/ai-support-faq",
+        "url" => "/faq/ai-support-faq/",
     ],
 ];
 

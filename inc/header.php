@@ -45,14 +45,17 @@ $suppressHreflang = $suppressHreflang ?? false;
         $keywords = isset($metaKeywords) ? $metaKeywords : $defaultKeywords;
 
         // Dynamic Canonical URL (strips tracking parameters and normalizes .php URLs)
-        $clean_uri = strtok($_SERVER['REQUEST_URI'], '?');
+        $clean_uri = strtok($_SERVER['REQUEST_URI'] ?? '/', '?');
+        if ($clean_uri === false || $clean_uri === '') {
+            $clean_uri = '/';
+        }
         if ($clean_uri !== '/' && substr($clean_uri, -4) === '.php') {
             $clean_uri = substr($clean_uri, 0, -4);
         }
         if ($clean_uri !== '/' && substr($clean_uri, -6) === '/index') {
             $clean_uri = substr($clean_uri, 0, -6) ?: '/';
         }
-        $canonical = "https://empireonecx.com" . $clean_uri;
+        $canonical = $clean_uri === '/' ? 'https://empireonecx.com/' : "https://empireonecx.com" . $clean_uri;
 
         $hasQueryString = strpos($_SERVER['REQUEST_URI'] ?? '', '?') !== false;
         if ($suppressHreflang || $hasQueryString) {

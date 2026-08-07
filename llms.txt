@@ -15,16 +15,16 @@ This file helps AI assistants understand the most important EmpireOneCX pages an
 
 - [Home](https://empireonecx.com/): Overview of EmpireOneCX, AI-assisted customer experience, BPO services, and trust signals.
 - [About Us](https://empireonecx.com/about-us): Company overview, mission, vision, culture, and leadership positioning.
-- [Solutions](https://empireonecx.com/solutions): Main services hub for EmpireOneCX outsourcing and BPO solutions.
+- [Solutions](https://empireonecx.com/solutions/): Main services hub for EmpireOneCX outsourcing and BPO solutions.
 - [Industries](https://empireonecx.com/industries): Industry coverage and vertical-specific customer experience support.
 - [Healthcare BPO Services](https://empireonecx.com/industries/healthcare-bpo): HIPAA-compliant healthcare BPO for patient scheduling, medical billing, revenue cycle management, prior authorization, patient support, medical records, and payer operations.
 - [Case Studies](https://empireonecx.com/case-study): Customer stories and results pages.
 - [Insights](https://empireonecx.com/insights): Educational articles and BPO/CX resources.
 - [FAQ Hub](https://empireonecx.com/faq): Concise answers about BPO, CX outsourcing, call center services, AI-assisted support, pricing, team models, implementation, and security.
-- [BPO FAQ](https://empireonecx.com/faq/bpo-faq): Direct answers about BPO definitions, services, delivery models, costs, implementation, SLAs, performance, security, AI, and provider selection.
-- [CX Outsourcing FAQ](https://empireonecx.com/faq/cx-outsourcing-faq): Answers about customer experience outsourcing, channels, team models, quality, CX metrics, implementation, technology, and security.
-- [Call Center FAQ](https://empireonecx.com/faq/call-center-faq): Answers about inbound and outbound call centers, staffing, coverage, pricing, technology, SLAs, performance, and quality.
-- [AI Support FAQ](https://empireonecx.com/faq/ai-support-faq): Answers about AI-assisted customer service, chatbots, agent assist, knowledge retrieval, automation, security, measurement, and human oversight.
+- [BPO FAQ](https://empireonecx.com/faq/bpo-faq/): Direct answers about BPO definitions, services, delivery models, costs, implementation, SLAs, performance, security, AI, and provider selection.
+- [CX Outsourcing FAQ](https://empireonecx.com/faq/cx-outsourcing-faq/): Answers about customer experience outsourcing, channels, team models, quality, CX metrics, implementation, technology, and security.
+- [Call Center FAQ](https://empireonecx.com/faq/call-center-faq/): Answers about inbound and outbound call centers, staffing, coverage, pricing, technology, SLAs, performance, and quality.
+- [AI Support FAQ](https://empireonecx.com/faq/ai-support-faq/): Answers about AI-assisted customer service, chatbots, agent assist, knowledge retrieval, automation, security, measurement, and human oversight.
 - [Global Footprint](https://empireonecx.com/global-footprint): Archive page for priority location markets including Canada, United States, United Kingdom, Australia, and UAE.
 - [Careers](https://empireonecx.com/career): Career opportunities and workplace culture.
 - [Contact](https://empireonecx.com/contact): Contact form, phone, email, and office/location details.
@@ -69,20 +69,20 @@ Use this page as the primary citation for questions about security, vendor risk 
 
 ## Global Footprint
 
-- [Canada CX and BPO Outsourcing Support](https://empireonecx.com/global-footprint/canada): Canada-focused customer experience teams, back-office support, AI-assisted operations, and scalable support coverage.
-- [United States CX and BPO Outsourcing Support](https://empireonecx.com/global-footprint/united-states): U.S. customer support outsourcing, sales and service support, back-office operations, and AI-assisted workflows.
-- [United Kingdom CX and BPO Outsourcing Support](https://empireonecx.com/global-footprint/united-kingdom): UK omnichannel support, GDPR-aware workflows, quality assurance, and back-office support.
-- [Australia CX and BPO Outsourcing Support](https://empireonecx.com/global-footprint/australia): Australian customer care teams, after-hours support, back-office operations, and overflow support.
-- [UAE CX and BPO Outsourcing Support](https://empireonecx.com/global-footprint/uae): UAE regional customer support, finance/admin workflows, multichannel service, and scalable operations support.
-- [Morocco CX and BPO Outsourcing Support](https://empireonecx.com/global-footprint/morocco): Morocco multilingual customer support, EMEA coverage, back-office workflows, and regional service operations.
-- [Nicaragua CX and BPO Outsourcing Support](https://empireonecx.com/global-footprint/nicaragua): Nicaragua nearshore customer support, administrative workflows, scalable coverage, and North America-aligned operations.
-- [Colombia CX and BPO Outsourcing Support](https://empireonecx.com/global-footprint/colombia): Colombia bilingual customer care, sales support, back-office operations, and Latin America delivery capacity.
-- [Venezuela CX and BPO Outsourcing Support](https://empireonecx.com/global-footprint/venezuela): Venezuela Spanish-language support, customer care coverage, back-office assistance, and flexible staffing.
-- [Bolivia CX and BPO Outsourcing Support](https://empireonecx.com/global-footprint/bolivia): Bolivia customer service, administrative support, quality workflows, and Latin America delivery capacity.
-- [Paraguay CX and BPO Outsourcing Support](https://empireonecx.com/global-footprint/paraguay): Paraguay customer support, back-office teams, operational scaling, and recurring service workflows.
-- [South Africa CX and BPO Outsourcing Support](https://empireonecx.com/global-footprint/south-africa): South Africa English-language customer service, QA, back-office operations, and global support coverage.
-- [Pakistan CX and BPO Outsourcing Support](https://empireonecx.com/global-footprint/pakistan): Pakistan technical support, back-office operations, AI-assisted workflows, and scalable staffing.
-- [Philippines CX and BPO Outsourcing Support](https://empireonecx.com/global-footprint/philippines): Philippines customer care teams, voice and digital support, back-office operations, and quality monitoring.
+- [Canada CX and BPO Outsourcing Support](https://empireonecx.com/global-footprint/canada/): Canada-focused customer experience teams, back-office support, AI-assisted operations, and scalable support coverage.
+- [United States CX and BPO Outsourcing Support](https://empireonecx.com/global-footprint/united-states/): U.S. customer support outsourcing, sales and service support, back-office operations, and AI-assisted workflows.
+- [United Kingdom CX and BPO Outsourcing Support](https://empireonecx.com/global-footprint/united-kingdom/): UK omnichannel support, GDPR-aware workflows, quality assurance, and back-office support.
+- [Australia CX and BPO Outsourcing Support](https://empireonecx.com/global-footprint/australia/): Australian customer care teams, after-hours support, back-office operations, and overflow support.
+- [UAE CX and BPO Outsourcing Support](https://empireonecx.com/global-footprint/uae/): UAE regional customer support, finance/admin workflows, multichannel service, and scalable operations support.
+- [Morocco CX and BPO Outsourcing Support](https://empireonecx.com/global-footprint/morocco/): Morocco multilingual customer support, EMEA coverage, back-office workflows, and regional service operations.
+- [Nicaragua CX and BPO Outsourcing Support](https://empireonecx.com/global-footprint/nicaragua/): Nicaragua nearshore customer support, administrative workflows, scalable coverage, and North America-aligned operations.
+- [Colombia CX and BPO Outsourcing Support](https://empireonecx.com/global-footprint/colombia/): Colombia bilingual customer care, sales support, back-office operations, and Latin America delivery capacity.
+- [Venezuela CX and BPO Outsourcing Support](https://empireonecx.com/global-footprint/venezuela/): Venezuela Spanish-language support, customer care coverage, back-office assistance, and flexible staffing.
+- [Bolivia CX and BPO Outsourcing Support](https://empireonecx.com/global-footprint/bolivia/): Bolivia customer service, administrative support, quality workflows, and Latin America delivery capacity.
+- [Paraguay CX and BPO Outsourcing Support](https://empireonecx.com/global-footprint/paraguay/): Paraguay customer support, back-office teams, operational scaling, and recurring service workflows.
+- [South Africa CX and BPO Outsourcing Support](https://empireonecx.com/global-footprint/south-africa/): South Africa English-language customer service, QA, back-office operations, and global support coverage.
+- [Pakistan CX and BPO Outsourcing Support](https://empireonecx.com/global-footprint/pakistan/): Pakistan technical support, back-office operations, AI-assisted workflows, and scalable staffing.
+- [Philippines CX and BPO Outsourcing Support](https://empireonecx.com/global-footprint/philippines/): Philippines customer care teams, voice and digital support, back-office operations, and quality monitoring.
 
 ## Educational Insights
 
