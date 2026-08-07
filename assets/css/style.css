@@ -4994,3 +4994,13 @@ p.global-presence-address {
         font-size: 0.7rem;
     }
 }
+
+.counter,
+.countss {
+  display: inline-block;
+  background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+}
