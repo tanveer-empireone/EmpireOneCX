@@ -1009,7 +1009,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
         }
     });
 
-    fetch("/send-mail.php", {
+    fetch("/send-mail", {
         method: "POST",
         body: formData
     })

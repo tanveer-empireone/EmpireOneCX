@@ -13,7 +13,7 @@
  *   - jQuery       (assets/js/jquery.js)
  *   - Tailwind CSS
  *
- * The form POSTs to /send-mail.php and expects a JSON response:
+ * The form POSTs to /send-mail and expects a JSON response:
  *   { "status": "success"|"error", "message": "..." }
  */
 ?>
@@ -431,7 +431,7 @@
             didOpen: function () { Swal.showLoading(); }
         });
 
-        fetch('/send-mail.php', {
+        fetch('/send-mail', {
             method: 'POST',
             body: formData
         })
