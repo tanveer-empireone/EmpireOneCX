@@ -1,10 +1,33 @@
 
- <?php
+<?php
 
-header('Content-Type: application/json');
-//error_reporting(E_ALL);
-//ini_set('display_errors', 1);
-//ini_set('display_startup_errors', 1);
+ob_start();
+error_reporting(E_ALL);
+ini_set('display_errors', '0');
+ini_set('display_startup_errors', '0');
+
+function sendJsonResponse(array $payload, int $statusCode = 200): void
+{
+    while (ob_get_level() > 0) {
+        ob_end_clean();
+    }
+
+    http_response_code($statusCode);
+    header('Content-Type: application/json');
+    echo json_encode($payload);
+    exit;
+}
+
+register_shutdown_function(function () {
+    $error = error_get_last();
+    if ($error && in_array($error['type'], [E_ERROR, E_PARSE, E_CORE_ERROR, E_COMPILE_ERROR], true)) {
+        error_log('EmpireOneCX contact form fatal error: ' . $error['message']);
+        sendJsonResponse([
+            'status' => 'error',
+            'message' => 'Server configuration error. Please check the hosting PHP error log.'
+        ], 500);
+    }
+});
 
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -13,7 +36,16 @@ use PHPMailer\PHPMailer\Exception;
 
 
 
-require 'vendor/autoload.php';
+$autoloadPath = __DIR__ . '/vendor/autoload.php';
+if (!is_readable($autoloadPath)) {
+    error_log('EmpireOneCX contact form missing Composer autoload file.');
+    sendJsonResponse([
+        'status' => 'error',
+        'message' => 'Server configuration error: mail library is missing.'
+    ], 500);
+}
+
+require $autoloadPath;
 function splitLeadName($fullName)
 {
     $fullName = trim(preg_replace('/\s+/', ' ', $fullName));
@@ -33,19 +65,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-    $fullName = htmlspecialchars($_POST['full_name']);
+    $fullName = htmlspecialchars($_POST['full_name'] ?? '', ENT_QUOTES, 'UTF-8');
 
-    $company  = htmlspecialchars($_POST['company_name']);
+    $company  = htmlspecialchars($_POST['company_name'] ?? '', ENT_QUOTES, 'UTF-8');
 
-    $email    = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $email    = filter_var($_POST['email'] ?? '', FILTER_SANITIZE_EMAIL);
 
-    $countryCode = htmlspecialchars($_POST['country_code']);
+    $countryCode = htmlspecialchars($_POST['country_code'] ?? '', ENT_QUOTES, 'UTF-8');
 
-    $phoneNumber = htmlspecialchars($_POST['phone']);
+    $phoneNumber = htmlspecialchars($_POST['phone'] ?? '', ENT_QUOTES, 'UTF-8');
 
     $phone = $countryCode . " " . $phoneNumber;
 
-    $inquiry  = htmlspecialchars($_POST['inquiry_type']);
+    $inquiry  = htmlspecialchars($_POST['inquiry_type'] ?? '', ENT_QUOTES, 'UTF-8');
 
     // $message  = htmlspecialchars($_POST['message']);
 
@@ -53,15 +85,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty($fullName) || empty($email)) {
 
-        echo json_encode([
+        sendJsonResponse([
 
             "status" => "error",
 
             "message" => "Required fields are missing."
 
         ]);
-
-        exit;
 
     }
 
@@ -433,7 +463,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-        echo json_encode([
+        sendJsonResponse([
 
             "status" => "success",
 
@@ -443,15 +473,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-    } catch (Exception $e) {
+    } catch (\Throwable $e) {
 
 
 
-        echo json_encode([
+        error_log('EmpireOneCX contact form mail error: ' . $e->getMessage());
+
+        $mailError = isset($mail) && $mail instanceof PHPMailer ? $mail->ErrorInfo : '';
+
+        sendJsonResponse([
 
             "status" => "error",
 
-            "message" => "Mail Error: " . ($mail->ErrorInfo ?: $e->getMessage())
+            "message" => "Mail Error: " . ($mailError ?: $e->getMessage())
 
         ]);
 

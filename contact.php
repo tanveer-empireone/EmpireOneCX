@@ -1013,7 +1013,15 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
         method: "POST",
         body: formData
     })
-    .then(response => response.json())
+    .then(response => response.text())
+    .then(text => {
+        try {
+            return JSON.parse(text);
+        } catch (error) {
+            const cleanText = text.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+            throw new Error(cleanText || "The server returned an invalid response.");
+        }
+    })
     .then(data => {
 
         Swal.close();
@@ -1060,7 +1068,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
         Swal.fire({
             icon: "error",
             title: "Server Error",
-            text: "Please try again later.",
+            text: error.message || "Please try again later.",
             background: "linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%)",
             color: "#ffffff",
             confirmButtonColor: "#ffffff"
