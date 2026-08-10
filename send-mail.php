@@ -90,6 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $smtpPort = $smtpConfig['port'] ?? getenv('ECX_SMTP_PORT') ?: 465;
         $smtpUsername = $smtpConfig['username'] ?? getenv('ECX_SMTP_USERNAME') ?: 'info@empireonecx.com';
         $smtpPassword = $smtpConfig['password'] ?? getenv('ECX_SMTP_PASSWORD') ?: '';
+        $smtpEncryption = strtolower($smtpConfig['encryption'] ?? getenv('ECX_SMTP_ENCRYPTION') ?: ((int) $smtpPort === 587 ? 'tls' : 'ssl'));
 
         if ($smtpPassword === '') {
             throw new Exception('SMTP password is not configured.');
@@ -103,9 +104,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $mail->Password   = $smtpPassword;
 
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        $mail->SMTPSecure = $smtpEncryption === 'tls'
+            ? PHPMailer::ENCRYPTION_STARTTLS
+            : PHPMailer::ENCRYPTION_SMTPS;
 
         $mail->Port       = (int) $smtpPort;
+
+        $mail->Timeout    = 20;
 
 
 
