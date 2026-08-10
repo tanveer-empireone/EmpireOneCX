@@ -1,5 +1,7 @@
-
 <?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
 ob_start();
 error_reporting(E_ALL);
@@ -14,6 +16,7 @@ function sendJsonResponse($payload, $statusCode = 200)
 
     http_response_code($statusCode);
     header('Content-Type: application/json');
+    header('X-EmpireOneCX-Mail-Handler: 20260810-1');
     echo json_encode($payload);
     exit;
 }
@@ -28,13 +31,6 @@ register_shutdown_function(function () {
         ], 500);
     }
 });
-
-
-use PHPMailer\PHPMailer\PHPMailer;
-
-use PHPMailer\PHPMailer\Exception;
-
-
 
 $autoloadPath = __DIR__ . '/vendor/autoload.php';
 if (!is_readable($autoloadPath)) {
@@ -491,5 +487,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     }
 
-} 
+}
+
+sendJsonResponse([
+    'status' => 'error',
+    'message' => 'Invalid contact form request method: ' . (isset($_SERVER['REQUEST_METHOD']) ? $_SERVER['REQUEST_METHOD'] : 'unknown')
+], 405);
 
