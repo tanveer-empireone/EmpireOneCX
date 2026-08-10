@@ -29,46 +29,6 @@ function splitLeadName($fullName)
     return [$parts[0], $parts[1]];
 }
 
-function submitSalesforceLead(array $leadData)
-{
-    $endpoint = 'https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8';
-    $body = http_build_query($leadData, '', '&');
-
-    $context = stream_context_create([
-        'http' => [
-            'method' => 'POST',
-            'header' => "Content-Type: application/x-www-form-urlencoded\r\n" .
-                        "Content-Length: " . strlen($body) . "\r\n",
-            'content' => $body,
-            'timeout' => 10,
-            'ignore_errors' => true,
-        ],
-    ]);
-
-    $response = @file_get_contents($endpoint, false, $context);
-    $statusCode = 0;
-    if (isset($http_response_header[0]) && preg_match('/\s(\d{3})\s/', $http_response_header[0], $matches)) {
-        $statusCode = (int) $matches[1];
-    }
-
-    if ($response === false || $statusCode < 200 || $statusCode >= 400) {
-        $statusLabel = $statusCode > 0 ? $statusCode : 'no HTTP response';
-        throw new Exception('Salesforce Web-to-Lead submission failed with ' . $statusLabel . '.');
-    }
-}
-
-
-function logSalesforceLeadError(Exception $exception, array $leadData)
-{
-    $safeLeadData = $leadData;
-    unset($safeLeadData['oid']);
-
-    error_log('EmpireOneCX Salesforce lead submission failed: ' . $exception->getMessage() . ' Lead: ' . json_encode($safeLeadData));
-}
-
-
-
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
@@ -332,28 +292,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Body = $adminBody;
 
         $mail->send();
-
-        [$firstName, $lastName] = splitLeadName($fullName);
-        $sourceUrl = $_SERVER['HTTP_REFERER'] ?? 'https://empireonecx.com/contact';
-        $description = "Inquiry Type: {$inquiry}\nPhone Country Code: {$countryCode}\nPhone Number: {$phoneNumber}\nSource Page: {$sourceUrl}";
-
-        $salesforceLeadData = [
-            'oid' => '00Dau00000BgNWX',
-            'retURL' => 'https://empireonecx.com/contact',
-            'first_name' => $firstName,
-            'last_name' => $lastName,
-            'email' => $email,
-            'company' => $company !== '' ? $company : 'Not Provided',
-            'phone' => $phone,
-            'lead_source' => 'Web',
-            'description' => $description,
-        ];
-
-        try {
-            submitSalesforceLead($salesforceLeadData);
-        } catch (Exception $salesforceException) {
-            logSalesforceLeadError($salesforceException, $salesforceLeadData);
-        }
 
         /* ===========================
 
