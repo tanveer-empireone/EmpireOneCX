@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', '0');
 ini_set('display_startup_errors', '0');
 
-function sendJsonResponse(array $payload, int $statusCode = 200): void
+function sendJsonResponse($payload, $statusCode = 200)
 {
     while (ob_get_level() > 0) {
         ob_end_clean();
@@ -65,19 +65,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-    $fullName = htmlspecialchars($_POST['full_name'] ?? '', ENT_QUOTES, 'UTF-8');
+    $fullName = htmlspecialchars(isset($_POST['full_name']) ? $_POST['full_name'] : '', ENT_QUOTES, 'UTF-8');
 
-    $company  = htmlspecialchars($_POST['company_name'] ?? '', ENT_QUOTES, 'UTF-8');
+    $company  = htmlspecialchars(isset($_POST['company_name']) ? $_POST['company_name'] : '', ENT_QUOTES, 'UTF-8');
 
-    $email    = filter_var($_POST['email'] ?? '', FILTER_SANITIZE_EMAIL);
+    $email    = filter_var(isset($_POST['email']) ? $_POST['email'] : '', FILTER_SANITIZE_EMAIL);
 
-    $countryCode = htmlspecialchars($_POST['country_code'] ?? '', ENT_QUOTES, 'UTF-8');
+    $countryCode = htmlspecialchars(isset($_POST['country_code']) ? $_POST['country_code'] : '', ENT_QUOTES, 'UTF-8');
 
-    $phoneNumber = htmlspecialchars($_POST['phone'] ?? '', ENT_QUOTES, 'UTF-8');
+    $phoneNumber = htmlspecialchars(isset($_POST['phone']) ? $_POST['phone'] : '', ENT_QUOTES, 'UTF-8');
 
     $phone = $countryCode . " " . $phoneNumber;
 
-    $inquiry  = htmlspecialchars($_POST['inquiry_type'] ?? '', ENT_QUOTES, 'UTF-8');
+    $inquiry  = htmlspecialchars(isset($_POST['inquiry_type']) ? $_POST['inquiry_type'] : '', ENT_QUOTES, 'UTF-8');
 
     // $message  = htmlspecialchars($_POST['message']);
 
@@ -116,11 +116,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }
 
-        $smtpHost = $smtpConfig['host'] ?? getenv('ECX_SMTP_HOST') ?: 'smtp.gmail.com';
-        $smtpPort = $smtpConfig['port'] ?? getenv('ECX_SMTP_PORT') ?: 465;
-        $smtpUsername = $smtpConfig['username'] ?? getenv('ECX_SMTP_USERNAME') ?: 'info@empireonecx.com';
-        $smtpPassword = $smtpConfig['password'] ?? getenv('ECX_SMTP_PASSWORD') ?: '';
-        $smtpEncryption = strtolower($smtpConfig['encryption'] ?? getenv('ECX_SMTP_ENCRYPTION') ?: ((int) $smtpPort === 587 ? 'tls' : 'ssl'));
+        $smtpHost = isset($smtpConfig['host']) ? $smtpConfig['host'] : (getenv('ECX_SMTP_HOST') ?: 'smtp.gmail.com');
+        $smtpPort = isset($smtpConfig['port']) ? $smtpConfig['port'] : (getenv('ECX_SMTP_PORT') ?: 465);
+        $smtpUsername = isset($smtpConfig['username']) ? $smtpConfig['username'] : (getenv('ECX_SMTP_USERNAME') ?: 'info@empireonecx.com');
+        $smtpPassword = isset($smtpConfig['password']) ? $smtpConfig['password'] : (getenv('ECX_SMTP_PASSWORD') ?: '');
+        $smtpEncryption = strtolower(isset($smtpConfig['encryption']) ? $smtpConfig['encryption'] : (getenv('ECX_SMTP_ENCRYPTION') ?: ((int) $smtpPort === 587 ? 'tls' : 'ssl')));
 
         if ($smtpPassword === '') {
             throw new Exception('SMTP password is not configured.');
@@ -473,7 +473,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-    } catch (\Throwable $e) {
+    } catch (Exception $e) {
 
 
 

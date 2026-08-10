@@ -1013,13 +1013,13 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
         method: "POST",
         body: formData
     })
-    .then(response => response.text())
-    .then(text => {
+    .then(response => response.text().then(text => ({ response, text })))
+    .then(({ response, text }) => {
         try {
             return JSON.parse(text);
         } catch (error) {
             const cleanText = text.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
-            throw new Error(cleanText || "The server returned an invalid response.");
+            throw new Error(cleanText || "The server returned an invalid response. HTTP status: " + response.status);
         }
     })
     .then(data => {
