@@ -10,15 +10,8 @@ $suppressHreflang = $suppressHreflang ?? false;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T4T918R7V0"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-T4T918R7V0');
-    </script>
+    <?php // Keep analytics isolated so production tracking survives header layout edits. ?>
+    <?php include(__DIR__ . '/analytics.php'); ?>
     <?php if (!empty($baseHref)): ?>
     <base href="<?php echo htmlspecialchars($baseHref, ENT_QUOTES, 'UTF-8'); ?>">
     <?php endif; ?>
