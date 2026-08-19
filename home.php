@@ -18,6 +18,108 @@ include("inc/header.php");
 .hero-css-reveal.delay-2 { animation-delay: 0.28s; }
 .hero-css-reveal.delay-3 { animation-delay: 0.46s; }
 .hero-css-reveal.delay-4 { animation-delay: 0.64s; }
+
+@media (max-width: 767px) {
+    .globe-capability-work {
+        padding-top: 48px !important;
+        padding-bottom: 24px !important;
+    }
+
+    .globe-capability-work-header {
+        padding: 0 18px;
+        margin-bottom: 24px;
+    }
+
+    .globe-capability-work-header h2 {
+        max-width: 280px;
+        margin: 0 auto 12px !important;
+        font-size: 20px !important;
+        line-height: 28px !important;
+        letter-spacing: 0 !important;
+    }
+
+    .globe-capability-work-header p {
+        max-width: 285px;
+        margin: 0 auto !important;
+        font-size: 13px !important;
+        line-height: 19px !important;
+        letter-spacing: 0 !important;
+    }
+
+    .globe-capability-work-wrapper.mobileshow {
+        margin-top: 8px;
+    }
+
+    .homepage-stats {
+        padding-bottom: 64px !important;
+    }
+
+    .homepage-stats .container {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+
+    .homepage-stats .bgcustomer {
+        padding: 34px 14px 30px !important;
+    }
+
+    .homepage-stats .customersformat {
+        max-width: 230px;
+        margin: 0 auto 24px !important;
+        font-size: 22px !important;
+        line-height: 30px !important;
+    }
+
+    .homepage-stats .mytexx {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 22px 12px !important;
+        margin-top: 0 !important;
+        font-size: inherit !important;
+    }
+
+    .homepage-stats .mytexx > div {
+        min-width: 0;
+        padding: 0 !important;
+        gap: 6px !important;
+        justify-content: flex-start;
+    }
+
+    .homepage-stats .counter,
+    .homepage-stats .countss {
+        width: 100%;
+        min-height: 34px;
+        padding-bottom: 0 !important;
+        font-size: 30px !important;
+        line-height: 34px !important;
+        letter-spacing: 0 !important;
+        white-space: normal;
+    }
+
+    .homepage-stats .counterpara {
+        width: 100%;
+        max-width: 112px;
+        margin: 0 auto !important;
+        font-size: 12px !important;
+        line-height: 16px !important;
+        letter-spacing: 0 !important;
+        white-space: normal !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .homepage-stats .counter,
+    .homepage-stats .countss {
+        font-size: 27px !important;
+        line-height: 32px !important;
+    }
+
+    .homepage-stats .counterpara {
+        max-width: 104px;
+        font-size: 11px !important;
+        line-height: 15px !important;
+    }
+}
 </style>
 
 <main class="relative">
@@ -240,7 +342,7 @@ include("inc/header.php");
         </div>
     </section>
 
-    <section class="customer-service pb-[100px]">
+    <section class="customer-service homepage-stats pb-[100px]">
         <div class="container mx-auto w-full px-4">
             <div class="rounded-[16px] p-[2px] bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] opacity-100">
                 <div class="bgcustomer bg-white rounded-[14px] px-10 py-12">
