@@ -62,9 +62,158 @@ include(__DIR__ . "/../inc/header.php");
 .delay-2 { animation-delay: 0.25s; }
 .delay-3 { animation-delay: 0.4s; }
 .delay-4 { animation-delay: 0.55s; }
+
+@media (max-width: 767px) {
+  .helpdesk-page .cx-hero-section {
+    height: auto !important;
+    min-height: 720px !important;
+    padding: 188px 20px 62px !important;
+    justify-content: flex-start !important;
+  }
+
+  .helpdesk-page .cx-hero-section .container {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .helpdesk-page .cx-hero-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 26px !important;
+  }
+
+  .helpdesk-page .breadcrumb-nav {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 18px !important;
+    line-height: 20px !important;
+  }
+
+  .helpdesk-page .breadcrumb-nav a,
+  .helpdesk-page .breadcrumb-nav span {
+    font-size: 13px !important;
+    line-height: 20px !important;
+  }
+
+  .helpdesk-page .breadcrumb-nav .sep {
+    margin: 0 !important;
+  }
+
+  .helpdesk-page .cx-hero-section .herosubtitle {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 auto 14px !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    letter-spacing: 0.08em !important;
+    text-align: center !important;
+  }
+
+  .helpdesk-page .cx-hero-section .solutions-hero-heading {
+    max-width: min(350px, calc(100vw - 40px)) !important;
+    margin: 0 auto 16px !important;
+    font-size: 34px !important;
+    line-height: 42px !important;
+    letter-spacing: 0 !important;
+    text-align: center !important;
+    text-wrap: balance;
+  }
+
+  .helpdesk-page .cx-hero-section .subpara,
+  .helpdesk-page .cx-hero-section .text-center > p:not(.herosubtitle) {
+    max-width: min(330px, calc(100vw - 42px)) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    font-size: 14px !important;
+    line-height: 22px !important;
+    letter-spacing: 0 !important;
+    text-align: center !important;
+  }
+
+  .helpdesk-page .cx-hero-section .subpara {
+    margin-bottom: 26px !important;
+  }
+
+  .helpdesk-page .cx-hero-section .delay-4 {
+    display: flex !important;
+    width: 100% !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 12px !important;
+  }
+
+  .helpdesk-page .cx-hero-section .delay-4 a {
+    display: flex !important;
+    width: min(100%, 300px) !important;
+    min-height: 52px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 14px 18px !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    text-align: center !important;
+    white-space: normal !important;
+  }
+
+  .helpdesk-page .cx-hero-form {
+    display: none !important;
+  }
+
+  .helpdesk-page .samesectionpadding {
+    padding-top: 58px !important;
+    padding-bottom: 58px !important;
+  }
+
+  .helpdesk-page .solution-heading,
+  .helpdesk-page .solution-heading span {
+    max-width: 100% !important;
+    font-size: 30px !important;
+    line-height: 38px !important;
+    letter-spacing: 0 !important;
+  }
+
+  .helpdesk-page .cx-stat-number {
+    font-size: 28px !important;
+    line-height: 1.05 !important;
+    letter-spacing: 0 !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+  }
+
+  .helpdesk-page .helpdesk-stats-grid {
+    gap: 24px !important;
+  }
+
+  .helpdesk-page .helpdesk-stat-card {
+    min-height: 176px !important;
+    padding: 28px 14px !important;
+  }
+
+  .helpdesk-page .helpdesk-stat-card p {
+    font-size: 14px !important;
+    line-height: 20px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .helpdesk-page .cx-hero-section {
+    min-height: 750px !important;
+    padding-top: 184px !important;
+  }
+
+  .helpdesk-page .cx-hero-section .solutions-hero-heading {
+    font-size: 31px !important;
+    line-height: 39px !important;
+  }
+}
 </style>
 
-<main class="relative">
+<main class="helpdesk-page relative">
 <section class="hero-section mainherowork cx-hero-section relative flex flex-col items-center justify-center px-4 sm:px-6 text-center overflow-hidden">
     <video class="solutions-bg-videowork absolute" autoplay muted loop playsinline preload="metadata" poster="/assets/images/solutions-herobg-poster.webp"><source src="/assets/images/solutions-herobg.mp4" type="video/mp4" /></video>
     <div class="absolute inset-0 bg-black/75 z-0 pointer-events-none"></div>
@@ -89,9 +238,9 @@ include(__DIR__ . "/../inc/header.php");
             <div><h2 class="relative flex items-center gap-2 text-sm py-3 overflow-hidden m-0"><span class="relative z-10 flex items-center gap-2"><span class="spanfont block w-[24px] h-[4px] rounded" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%);"></span><span class="spanfont text-[20px] leading-[28px] tracking-[-0.03em]" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Help Desk &amp; Technical Support</span></span></h2><h3 class="solution-heading headingspace text-[32px] leading-[40px] tracking-[-0.03em] text-black mb-[20px]" style="max-width:560px;">What Is Help Desk &amp; Technical Support?</h3></div>
             <div><p class="nomargin text-[#3C3B47] text-[16px] leading-[24px]">Help desk and technical support means resolving issues from password resets to advanced product diagnostics for customers or internal users. In practice, many operations become ticket queues with slow handoffs. A real tiered system routes each issue to the right level on the first try, so resolution happens without repeat contacts.</p><p class="nomargin text-[#3C3B47] text-[16px] leading-[24px] mt-4">The gap between a help desk that drives churn and one that builds retention is measured in two numbers: first response time and the percentage of tickets resolved without escalation.</p></div>
         </div>
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+        <div class="helpdesk-stats-grid grid grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
             <?php foreach ([["3", "Support tiers, from basic troubleshooting to advanced diagnostics"], ["<2 min", "Average first response time"], ["80%+", "First-contact resolution rate at Tier-1"], ["24/7/365", "Coverage across global time zones"]] as $s): ?>
-            <div class="text-center p-8 rounded-[16px]" style="background:#fafafa; border:1px solid #f0eeff;"><div class="cx-stat-number mb-2"><?= htmlspecialchars($s[0], ENT_QUOTES, 'UTF-8') ?></div><p class="text-[14px] leading-[20px] text-[#555]"><?= htmlspecialchars($s[1], ENT_QUOTES, 'UTF-8') ?></p></div>
+            <div class="helpdesk-stat-card text-center p-8 rounded-[16px]" style="background:#fafafa; border:1px solid #f0eeff;"><div class="cx-stat-number mb-2"><?= htmlspecialchars($s[0], ENT_QUOTES, 'UTF-8') ?></div><p class="text-[14px] leading-[20px] text-[#555]"><?= htmlspecialchars($s[1], ENT_QUOTES, 'UTF-8') ?></p></div>
             <?php endforeach; ?>
         </div>
     </div>

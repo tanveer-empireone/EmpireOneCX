@@ -62,9 +62,174 @@ include(__DIR__ . "/../inc/header.php");
 .delay-2 { animation-delay: 0.25s; }
 .delay-3 { animation-delay: 0.4s; }
 .delay-4 { animation-delay: 0.55s; }
+
+@media (max-width: 767px) {
+    .multilingual-page .cx-hero-section {
+        height: auto !important;
+        min-height: 690px !important;
+        padding: 196px 20px 58px !important;
+    }
+
+    .multilingual-page .cx-hero-section .container {
+        max-width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .multilingual-page .cx-hero-grid {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 26px !important;
+    }
+
+    .multilingual-page .breadcrumb-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 18px !important;
+    }
+
+    .multilingual-page .breadcrumb-nav a,
+    .multilingual-page .breadcrumb-nav span {
+        font-size: 13px !important;
+        line-height: 20px !important;
+    }
+
+    .multilingual-page .breadcrumb-nav .sep {
+        margin: 0 !important;
+    }
+
+    .multilingual-page .cx-hero-section .herosubtitle {
+        display: block;
+        width: 100%;
+        margin: 0 auto 14px !important;
+        font-size: 17px !important;
+        line-height: 24px !important;
+        text-align: center;
+    }
+
+    .multilingual-page .cx-hero-section .solutions-hero-heading {
+        max-width: min(330px, calc(100vw - 40px)) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-bottom: 16px !important;
+        font-size: 35px !important;
+        line-height: 43px !important;
+        letter-spacing: 0 !important;
+        text-align: center;
+        text-wrap: balance;
+    }
+
+    .multilingual-page .cx-hero-section .subpara {
+        max-width: min(320px, calc(100vw - 42px)) !important;
+        margin: 0 auto 26px !important;
+        font-size: 14px !important;
+        line-height: 22px !important;
+        letter-spacing: 0 !important;
+        text-align: center;
+    }
+
+    .multilingual-page .cx-hero-section .delay-4 {
+        display: flex !important;
+        width: 100%;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 12px !important;
+    }
+
+    .multilingual-page .cx-hero-section .delay-4 a {
+        display: flex !important;
+        width: min(100%, 300px) !important;
+        justify-content: center;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding: 14px 18px !important;
+        font-size: 14px !important;
+        line-height: 20px !important;
+        text-align: center;
+    }
+
+    .multilingual-page .cx-hero-section .delay-4 a + a {
+        margin-top: 12px !important;
+    }
+
+    .multilingual-page .cx-hero-form {
+        display: none !important;
+    }
+
+    .multilingual-page .samesectionpadding {
+        padding-top: 58px !important;
+        padding-bottom: 58px !important;
+    }
+
+    .multilingual-page .solgap {
+        gap: 18px !important;
+        margin-bottom: 28px !important;
+    }
+
+    .multilingual-page .solution-heading,
+    .multilingual-page .solution-heading span {
+        max-width: 100% !important;
+        font-size: 30px !important;
+        line-height: 38px !important;
+        letter-spacing: 0 !important;
+    }
+
+    .multilingual-page .solution-side-img1,
+    .multilingual-page .solution-side-img2 {
+        display: none !important;
+    }
+
+    .multilingual-page [aria-label="What Is Multilingual Customer Support"] .grid.grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 14px !important;
+    }
+
+    .multilingual-page [aria-label="What Is Multilingual Customer Support"] .grid.grid-cols-2 > div {
+        padding: 22px 12px !important;
+        min-height: 190px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .multilingual-page .cx-stat-number {
+        font-size: 40px !important;
+        line-height: 44px !important;
+        letter-spacing: 0 !important;
+        white-space: nowrap;
+    }
+
+    .multilingual-page .cx-stat-number + p {
+        max-width: 126px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 13px !important;
+        line-height: 18px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .multilingual-page .cx-hero-section .solutions-hero-heading {
+        font-size: 31px !important;
+        line-height: 38px !important;
+    }
+
+    .multilingual-page .cx-stat-number {
+        font-size: 36px !important;
+        line-height: 40px !important;
+    }
+
+    .multilingual-page .cx-stat-number + p {
+        font-size: 12px !important;
+        line-height: 17px !important;
+    }
+}
 </style>
 
-<main class="relative">
+<main class="multilingual-page relative">
 <section class="hero-section mainherowork cx-hero-section relative flex flex-col items-center justify-center px-4 sm:px-6 text-center overflow-hidden">
     <video class="solutions-bg-videowork absolute" autoplay muted loop playsinline preload="metadata" poster="/assets/images/solutions-herobg-poster.webp"><source src="/assets/images/solutions-herobg.mp4" type="video/mp4" /></video>
     <div class="absolute inset-0 bg-black/75 z-0 pointer-events-none"></div>

@@ -1,7 +1,7 @@
 <?php
-$pageTitle = "Omnichannel Contact Center Services | EmpireOne CX";
-$metaDescription = "EmpireOneCX omnichannel contact center services unify voice, chat, email, SMS, and social support with AI-assisted routing, CRM integration, 24/7 coverage, and cross-channel QA.";
-$metaKeywords = "omnichannel contact center services, omnichannel customer support, contact center outsourcing, voice chat email SMS social support, AI routing, CRM integrated contact center";
+$pageTitle = "Call Center Outsourcing & Contact Center Services | EmpireOneCX";
+$metaDescription = "Outsource voice, chat, email, SMS and social customer support with EmpireOneCX. Build a scalable contact center team around your channels, coverage and KPIs.";
+$metaKeywords = "call center outsourcing, contact center services, contact center outsourcing, outsourced customer support, inbound call center outsourcing, omnichannel customer support, after hours customer support";
 include(__DIR__ . "/../inc/header.php");
 ?>
 
@@ -25,7 +25,7 @@ include(__DIR__ . "/../inc/header.php");
 .ecx-compact .ecx-country-dropdown { background: #1a1a1a !important; border-color: rgba(255,255,255,0.2) !important; }
 .ecx-compact .ecx-country-item { color: #ddd !important; }
 .ecx-compact .ecx-country-item:hover { background: rgba(122,118,255,0.2) !important; }
-.cx-hero-section { padding-top: 18rem; padding-bottom: 180px; }
+.cx-hero-section { padding-top: 18rem; padding-bottom: 160px; }
 @media (max-width: 1024px) { .cx-hero-grid { grid-template-columns: 1fr !important; } .cx-hero-form { display: block !important; } .cx-hero-section { padding-top: 10rem !important; padding-bottom: 80px !important; height: auto !important; min-height: 100vh !important; } }
 .cx-comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; border-radius: 16px; overflow: hidden; }
 .cx-comparison-table thead th { padding: 20px 24px; font-size: 15px; font-weight: 600; text-align: left; }
@@ -42,7 +42,6 @@ include(__DIR__ . "/../inc/header.php");
 .cx-feature-icon { width: 52px; height: 52px; border-radius: 12px; background: linear-gradient(135deg, #7A76FF 0%, #CB46FA 100%); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: #fff; font-size: 22px; }
 .cx-industry-pill { display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 100px; background: #fff; border: 1px solid #e8e4ff; font-size: 14px; color: #2a2a2a; }
 .cx-industry-pill span.dot { width: 8px; height: 8px; border-radius: 50%; background: linear-gradient(135deg, #7A76FF, #FE881C); flex-shrink: 0; }
-.cx-stat-number { font-size: 48px; font-weight: 700; line-height: 1; background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .cx-faq-item { border-bottom: 1px solid rgba(255,255,255,0.12); }
 .cx-faq-item:last-child { border-bottom: none; }
 .cx-faq-toggle { width: 100%; background: none; border: none; padding: 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer; text-align: left; }
@@ -51,71 +50,316 @@ include(__DIR__ . "/../inc/header.php");
 .cx-faq-icon svg { width: 14px; height: 14px; stroke: #fff; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
 .cx-faq-item.open .cx-faq-icon { transform: rotate(180deg); }
 .cx-faq-answer { font-size: 16px; line-height: 26px; color: #b7b7b7; max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding-bottom 0.25s ease; }
-.cx-faq-item.open .cx-faq-answer { max-height: 420px; padding-bottom: 24px; }
+.cx-faq-item.open .cx-faq-answer { max-height: 520px; padding-bottom: 24px; }
 .breadcrumb-nav a, .breadcrumb-nav span { font-size: 14px; color: #aaa; text-decoration: none; }
 .breadcrumb-nav a:hover { color: #CB46FA; }
 .breadcrumb-nav .sep { margin: 0 8px; }
 .breadcrumb-nav .current { color: #fff; }
+.cx-list li { display: flex; gap: 12px; align-items: flex-start; }
+.cx-list li::before { content: ""; width: 9px; height: 9px; border-radius: 999px; margin-top: 9px; flex: 0 0 auto; background: linear-gradient(135deg, #7A76FF, #FE881C); }
 @keyframes revealUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
 .animate-reveal { animation: revealUp 0.7s ease forwards; }
 .delay-1 { animation-delay: 0.1s; }
 .delay-2 { animation-delay: 0.25s; }
 .delay-3 { animation-delay: 0.4s; }
 .delay-4 { animation-delay: 0.55s; }
+
+@media (max-width: 767px) {
+  .omnichannel-page .cx-hero-section {
+    height: auto !important;
+    min-height: 760px !important;
+    padding: 188px 20px 64px !important;
+    justify-content: flex-start !important;
+  }
+
+  .omnichannel-page .cx-hero-section .container {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .omnichannel-page .cx-hero-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 26px !important;
+  }
+
+  .omnichannel-page .breadcrumb-nav {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 18px !important;
+    line-height: 20px !important;
+  }
+
+  .omnichannel-page .breadcrumb-nav a,
+  .omnichannel-page .breadcrumb-nav span {
+    font-size: 13px !important;
+    line-height: 20px !important;
+  }
+
+  .omnichannel-page .breadcrumb-nav .sep {
+    margin: 0 !important;
+  }
+
+  .omnichannel-page .cx-hero-section .herosubtitle {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 auto 14px !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    letter-spacing: 0.08em !important;
+    text-align: center !important;
+  }
+
+  .omnichannel-page .cx-hero-section .solutions-hero-heading {
+    max-width: min(350px, calc(100vw - 40px)) !important;
+    margin: 0 auto 16px !important;
+    font-size: 34px !important;
+    line-height: 42px !important;
+    letter-spacing: 0 !important;
+    text-align: center !important;
+    text-wrap: balance;
+  }
+
+  .omnichannel-page .cx-hero-section .subpara,
+  .omnichannel-page .cx-hero-section .text-center > p:not(.herosubtitle) {
+    max-width: min(330px, calc(100vw - 42px)) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    font-size: 14px !important;
+    line-height: 22px !important;
+    letter-spacing: 0 !important;
+    text-align: center !important;
+  }
+
+  .omnichannel-page .cx-hero-section .subpara {
+    margin-bottom: 14px !important;
+  }
+
+  .omnichannel-page .cx-hero-section .subpara + .subpara {
+    margin-bottom: 26px !important;
+  }
+
+  .omnichannel-page .cx-hero-section .delay-4 {
+    display: flex !important;
+    width: 100% !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 12px !important;
+  }
+
+  .omnichannel-page .cx-hero-section .delay-4 a {
+    display: flex !important;
+    width: min(100%, 300px) !important;
+    min-height: 52px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 14px 18px !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    text-align: center !important;
+    white-space: normal !important;
+  }
+
+  .omnichannel-page .cx-hero-section .delay-4 a + a {
+    margin-top: 0 !important;
+  }
+
+  .omnichannel-page .cx-hero-section .text-white\/65 {
+    display: none !important;
+  }
+
+  .omnichannel-page .cx-hero-form {
+    display: none !important;
+  }
+
+  .omnichannel-page .samesectionpadding {
+    padding-top: 58px !important;
+    padding-bottom: 58px !important;
+  }
+
+  .omnichannel-page .solution-heading,
+  .omnichannel-page .solution-heading span {
+    max-width: 100% !important;
+    font-size: 30px !important;
+    line-height: 38px !important;
+    letter-spacing: 0 !important;
+  }
+
+  .omnichannel-page .contact-center-cost-section .cx-feature-cta {
+    display: flex !important;
+    width: 100% !important;
+    min-height: 56px !important;
+    margin-top: 28px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 14px 18px !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    text-align: center !important;
+    white-space: normal !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .omnichannel-page .cx-hero-section {
+    min-height: 790px !important;
+    padding-top: 184px !important;
+  }
+
+  .omnichannel-page .cx-hero-section .solutions-hero-heading {
+    font-size: 31px !important;
+    line-height: 39px !important;
+  }
+}
 </style>
 
-<main class="relative">
+<main class="omnichannel-page relative">
 <section class="hero-section mainherowork cx-hero-section relative flex flex-col items-center justify-center px-4 sm:px-6 text-center overflow-hidden">
     <video class="solutions-bg-videowork absolute" autoplay muted loop playsinline preload="metadata" poster="/assets/images/solutions-herobg-poster.webp"><source src="/assets/images/solutions-herobg.mp4" type="video/mp4" /></video>
     <div class="absolute inset-0 bg-black/75 z-0 pointer-events-none"></div>
     <div class="container mx-auto w-full relative z-10">
         <div class="cx-hero-grid" style="display:grid; grid-template-columns:1fr 440px; gap:48px; align-items:center;">
             <div class="text-center lg:text-left">
-                <nav class="breadcrumb-nav mb-6 animate-reveal delay-1" aria-label="Breadcrumb"><a href="/solutions/">Solutions</a><span class="sep">/</span><span class="current">Omnichannel Contact Center Services</span></nav>
-                <p class="herosubtitle text-[20px] leading-[28px] mb-4 animate-reveal delay-1 bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] bg-clip-text text-transparent"><span class="spanfont bg-gradient-to-r from-[#CB46FA] to-[#FE881C] bg-clip-text text-transparent">Omnichannel Contact Center Services</span></p>
-                <h1 class="solutions-hero-heading herocheck animate-reveal delay-2 text-[48px] font-medium leading-[54px] sm:leading-[1.1] mb-4 text-white mx-auto lg:mx-0" style="max-width:900px;">Omnichannel Contact Center Services That Keep Every Conversation Connected</h1>
-                <p class="subpara font-normal animate-reveal delay-3 text-gray-300 text-sm sm:text-base lg:text-lg mb-8 mx-auto lg:mx-0" style="max-width:848px !important;">When customers reach out through different channels, information can slip through the cracks. EmpireOneCX unites voice, chat, email, SMS, and social media into a single efficient system, supported by skilled teams in North America, the UK, and Australia.</p>
-                <div class="animate-reveal delay-4 flex flex-wrap items-center justify-center lg:justify-start gap-4"><a href="/solutions/" class="text-white py-4 px-8 text-sm sm:text-base border border-white/30 hover:border-white/60 transition-all duration-300" style="border-radius:8px !important; background:rgba(255,255,255,0.08);">Explore All BPO Solutions</a><a href="/contact" class="herobtns inline-flex items-center justify-center bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] text-white py-4 px-8 text-sm sm:text-base shadow-lg hover:shadow-purple-400/20" style="border-radius:8px !important;">Get a Free Consultation</a></div>
+                <nav class="breadcrumb-nav mb-6 animate-reveal delay-1" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">/</span><a href="/solutions/">Solutions</a><span class="sep">/</span><span class="current">Call Center & Contact Center Outsourcing Services</span></nav>
+                <p class="herosubtitle text-[20px] leading-[28px] mb-4 animate-reveal delay-1 bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] bg-clip-text text-transparent"><span class="spanfont bg-gradient-to-r from-[#CB46FA] to-[#FE881C] bg-clip-text text-transparent">CALL CENTER OUTSOURCING</span></p>
+                <h1 class="solutions-hero-heading herocheck animate-reveal delay-2 text-[48px] font-medium leading-[54px] sm:leading-[1.1] mb-4 text-white mx-auto lg:mx-0" style="max-width:900px;">Call Center & Contact Center Outsourcing Services</h1>
+                <p class="subpara font-normal animate-reveal delay-3 text-gray-300 text-sm sm:text-base lg:text-lg mb-4 mx-auto lg:mx-0" style="max-width:848px !important;">Outsource voice, live chat, email, SMS and social customer support to dedicated contact center teams built around your customer volumes, service hours and workflows.</p>
+                <p class="subpara font-normal animate-reveal delay-3 text-gray-300 text-sm sm:text-base lg:text-lg mb-8 mx-auto lg:mx-0" style="max-width:848px !important;">EmpireOneCX combines trained call center agents with AI-assisted routing, quality monitoring, connected customer history and performance reporting, helping U.S. and Canadian organizations extend coverage, manage demand and operate customer support across channels without building every capability in-house.</p>
+                <div class="animate-reveal delay-4 flex flex-wrap items-center justify-center lg:justify-start gap-4"><a href="/contact/" class="herobtns inline-flex items-center justify-center bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] text-white py-4 px-8 text-sm sm:text-base shadow-lg hover:shadow-purple-400/20" style="border-radius:8px !important;">Get Your Contact Center Plan</a><a href="/contact/" class="text-white py-4 px-8 text-sm sm:text-base border border-white/30 hover:border-white/60 transition-all duration-300" style="border-radius:8px !important; background:rgba(255,255,255,0.08);">Talk to a Contact Center Expert</a></div>
+                <p class="text-white/65 text-[14px] leading-[22px] mt-4 max-w-[620px]">Tell us your current volume, channels and coverage requirements. We will help map the staffing and operating model you need.</p>
             </div>
-            <div class="cx-hero-form animate-reveal delay-3" style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.14); border-radius:16px; padding:24px;"><p style="color:#fff; font-size:15px; font-weight:600; text-align:center; margin:0 0 16px;">Get a Free Consultation</p><div class="ecx-compact"><?php include(__DIR__ . "/../inc/contact-form.php"); ?></div></div>
+            <div class="cx-hero-form animate-reveal delay-3" style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.14); border-radius:16px; padding:24px;"><p style="color:#fff; font-size:15px; font-weight:600; text-align:center; margin:0 0 16px;">Get Your Contact Center Plan</p><div class="ecx-compact"><?php include(__DIR__ . "/../inc/contact-form.php"); ?></div></div>
         </div>
     </div>
 </section>
 
-<section class="samesectionpadding py-24 pt-[80px] relative overflow-hidden bg-white" aria-label="What Is Omnichannel Contact Center Services">
+<section class="samesectionpadding py-24 pt-[80px] relative overflow-hidden bg-white" aria-label="When to outsource your call center">
     <div class="container mx-auto px-4">
         <div class="solution-side-img1 absolute w-[846px] h-[893px] opacity-[40%] bg-cover bg-center bg-no-repeat"></div>
         <div class="solgap grid gap-5 lg:grid-cols-2 gap-16 mb-12" style="align-items:center;">
-            <div><h2 class="relative flex items-center gap-2 text-sm py-3 overflow-hidden m-0"><span class="relative z-10 flex items-center gap-2"><span class="spanfont block w-[24px] h-[4px] rounded" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%);"></span><span class="spanfont text-[20px] leading-[28px] tracking-[-0.03em]" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Omnichannel Contact Center Services</span></span></h2><h3 class="solution-heading headingspace text-[32px] leading-[40px] tracking-[-0.03em] text-black mb-[20px]" style="max-width:560px;">What Are Omnichannel Contact Center Services?</h3></div>
-            <div><p class="nomargin text-[#3C3B47] text-[16px] leading-[24px]">When companies run separate service channels, agents often miss important details and customers have to repeat themselves. Our omnichannel contact center brings together phone, email, live chat, SMS, and social media into one system, so your team sees the complete customer history from the very first touchpoint.</p><p class="nomargin text-[#3C3B47] text-[16px] leading-[24px] mt-4">With traditional multichannel setups, each channel operates in a silo. Customers are forced to start over every time they switch. Our approach removes those barriers, making it easy for conversations to flow smoothly, no matter how customers choose to reach out.</p></div>
+            <div><h2 class="relative flex items-center gap-2 text-sm py-3 overflow-hidden m-0"><span class="relative z-10 flex items-center gap-2"><span class="spanfont block w-[24px] h-[4px] rounded" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%);"></span><span class="spanfont text-[20px] leading-[28px] tracking-[-0.03em]" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Buyer Fit</span></span></h2><h3 class="solution-heading headingspace text-[32px] leading-[40px] tracking-[-0.03em] text-black mb-[20px]" style="max-width:620px;">When Should You Outsource Your Call Center?</h3></div>
+            <div><p class="nomargin text-[#3C3B47] text-[16px] leading-[24px]">Call center outsourcing can make sense when the challenge is no longer simply answering more calls. It becomes an operating-model decision: how much capacity you need, where it should sit, which hours it should cover and how consistently customers are being served.</p></div>
         </div>
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
-            <?php foreach ([['9', 'Countries with 24/7/365 delivery coverage'], ['40%', 'Average reduction in repeat-contact rate'], ['750+', 'Agents deployable across channels on demand'], ['<1 min', 'Average channel handoff time with full context retained']] as $s): ?>
-            <div class="text-center p-8 rounded-[16px]" style="background:#fafafa; border:1px solid #f0eeff;"><div class="cx-stat-number mb-2"><?= $s[0] ?></div><p class="text-[14px] leading-[20px] text-[#555]"><?= $s[1] ?></p></div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <?php $fitCards = [
+                ['Internal support costs keep increasing', 'Recruiting, training, workforce management, technology and supervision can create significant fixed overhead. Outsourcing can shift part of that operating burden to a specialist team.'],
+                ['Service levels fall during peak periods', 'Promotions, launches, seasonal demand or unexpected spikes can overwhelm an internal team. Overflow capacity can absorb demand without permanently staffing every peak.'],
+                ['Customers wait too long for help', 'Long call queues, delayed email responses and unattended chats create avoidable friction. An outsourced team can add capacity where response times are slipping.'],
+                ['You need after-hours support', 'Organizations serving customers across time zones may need coverage beyond the hours their internal team can reasonably maintain.'],
+                ['Hiring and retaining agents is difficult', 'Persistent recruiting gaps can affect schedules, coaching capacity and service quality. A BPO partner brings established recruiting, training and workforce-management operations.'],
+                ['You need multilingual customer support', 'Serving additional customer segments or markets may require language capabilities that are difficult to maintain internally.'],
+                ['Seasonal demand makes staffing inefficient', 'Retail peaks, open-enrollment periods, launches and other demand cycles can create months where normal staffing is insufficient or unnecessarily expensive.'],
+                ['Leadership needs predictable capacity', 'A defined outsourcing model can make headcount, coverage, reporting expectations and escalation responsibilities easier to plan around.'],
+                ['You are expanding into new markets', 'A contact center outsourcing partner can help extend service hours, channels and language coverage without recreating customer operations in every market.'],
+            ]; foreach ($fitCards as $card): ?>
+            <div class="cx-feature-card"><h4 class="text-[20px] leading-[28px] font-semibold text-black mb-3"><?= htmlspecialchars($card[0], ENT_QUOTES, 'UTF-8') ?></h4><p class="text-[15px] leading-[24px] text-[#555]"><?= htmlspecialchars($card[1], ENT_QUOTES, 'UTF-8') ?></p></div>
             <?php endforeach; ?>
         </div>
     </div>
 </section>
 
-<section class="samesectionpadding bg-[rgba(0,0,0,1)] py-24" aria-label="Multichannel vs True Omnichannel Delivery">
+<section class="samesectionpadding bg-[rgba(0,0,0,1)] py-24" aria-label="Call center outsourcing services">
     <div class="container mx-auto px-4">
-        <div class="solgap grid gap-5 lg:grid-cols-2 gap-16 mb-10" style="align-items:center;"><div><h2 class="relative flex items-center gap-2 text-sm py-3 overflow-hidden m-0"><span class="relative z-10 flex items-center gap-2"><span class="spanfont block w-[24px] h-[4px] rounded" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%);"></span><span class="spanfont text-[20px] leading-[28px] tracking-[-0.03em]" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">See the Difference</span></span></h2><h3 class="solution-heading headingspace text-[32px] leading-[40px] tracking-[-0.03em] text-white mb-[20px]" style="max-width:620px;">Multichannel vs. True <span class="solutionsitalic-font text-[32px] leading-[40px] tracking-[-0.03em] text-white">Omnichannel Delivery</span></h3></div><div><p class="nomargin text-white text-[16px] leading-[24px]">Many providers say they offer omnichannel service, but often depend on manual fixes to bridge gaps between channels. We deliver true omnichannel support: a single platform, a unified customer record, and a consistently connected experience for every customer.</p></div></div>
-        <div class="overflow-x-auto rounded-[16px]"><table class="cx-comparison-table" role="table" aria-label="Omnichannel contact center comparison table"><thead><tr><th>Operational Dimension</th><th>Fragmented Multichannel</th><th>EmpireOneCX Omnichannel</th></tr></thead><tbody>
-        <?php foreach ([['Channel Continuity','Customer repeats context on every switch','Full history follows the customer across channels'],['Routing Logic','Manual triage, inconsistent handoffs','AI-assisted intent routing to the right agent, first time'],['Agent View','Separate dashboards per channel','Single unified console, one customer record'],['Peak Handling','Overflow causes dropped chats and abandoned calls','Elastic scaling absorbs volume spikes without SLA slippage'],['Reporting','Channel-siloed metrics','Cross-channel CSAT, FCR, and sentiment in one dashboard']] as $row): ?><tr><td><?= $row[0] ?></td><td><?= $row[1] ?></td><td><?= $row[2] ?></td></tr><?php endforeach; ?>
+        <div class="solgap grid gap-5 lg:grid-cols-2 gap-16 mb-14" style="align-items:center;"><div><h2 class="relative flex items-center gap-2 text-sm py-3 overflow-hidden m-0"><span class="relative z-10 flex items-center gap-2"><span class="spanfont block w-[24px] h-[4px] rounded" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%);"></span><span class="spanfont text-[20px] leading-[28px] tracking-[-0.03em]" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Services</span></span></h2><h3 class="solution-heading headingspace text-[32px] leading-[40px] tracking-[-0.03em] text-white mb-[20px]">Call Center Outsourcing Services We Provide</h3></div><div><p class="nomargin text-white/75 text-[16px] leading-[24px]">EmpireOneCX builds customer support operations around the work your customers actually need completed, not a generic call center script.</p></div></div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><?php $services = [
+            ['fa-headset', 'Inbound Customer Support', 'Support for general inquiries, account assistance, order and delivery status, billing questions, complaints, appointment scheduling, returns, follow-up and escalations.', ['Customer Inquiries', 'Billing', 'Escalations']],
+            ['fa-phone-volume', 'Outbound Call Center Services', 'Where outbound support is approved, teams can handle follow-up, appointment confirmations, retention outreach, service reminders, surveys and lead-response workflows.', ['Follow-Up', 'Appointments', 'Surveys']],
+            ['fa-comments', 'Omnichannel Customer Support', 'Operate customer service across phone, email, live chat, SMS and social media with connected history, routing and reporting across channels.', ['Phone', 'Email', 'Chat', 'SMS', 'Social']],
+            ['fa-clock', 'After-Hours & Overflow Support', 'Extend internal operations outside core hours or add capacity when call, chat or ticket volumes exceed what your internal team can handle.', ['After-Hours', 'Overflow', 'Peak Support']],
+            ['fa-screwdriver-wrench', 'Technical & Tier-1 Support', 'Incorporate Tier-1 support, issue triage and escalation into the contact operation. For deeper support, see help desk and technical support services.', ['Tier-1', 'Triage', 'Escalation']],
+            ['fa-language', 'Multilingual Support', 'Design customer support around language requirements across voice and digital channels for regional or global customers.', ['Language Coverage', 'Voice', 'Digital']],
+        ]; foreach ($services as $card): ?><div class="cx-feature-card"><div class="cx-feature-icon"><i class="fas <?= $card[0] ?>"></i></div><h4 class="text-[20px] leading-[28px] font-semibold text-black mb-3"><?= $card[1] ?></h4><p class="text-[15px] leading-[24px] text-[#555] mb-5"><?= $card[2] ?></p><div class="flex flex-wrap gap-2"><?php foreach ($card[3] as $tag): ?><span class="cx-industry-pill"><span class="dot"></span><?= $tag ?></span><?php endforeach; ?></div></div><?php endforeach; ?></div>
+        <p class="text-white/70 text-[15px] leading-[24px] mt-8">For specialized coverage, explore <a href="/solutions/multilingual-customer-support/" class="text-white underline">multilingual customer support services</a> and <a href="/solutions/help-desk-technical-support/" class="text-white underline">Help Desk & Technical Support services</a>.</p>
+    </div>
+</section>
+
+<section class="samesectionpadding py-24 bg-white" aria-label="Contact center engagement models">
+    <div class="container mx-auto px-4">
+        <div class="solgap grid gap-5 lg:grid-cols-2 gap-16 mb-14" style="align-items:center;"><div><h2 class="relative flex items-center gap-2 text-sm py-3 overflow-hidden m-0"><span class="relative z-10 flex items-center gap-2"><span class="spanfont block w-[24px] h-[4px] rounded" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%);"></span><span class="spanfont text-[20px] leading-[28px] tracking-[-0.03em]" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Engagement Models</span></span></h2><h3 class="solution-heading headingspace text-[32px] leading-[40px] tracking-[-0.03em] text-black mb-[20px]">Choose the Contact Center Model That Fits Your Operation</h3></div><div><p class="nomargin text-[#3C3B47] text-[16px] leading-[24px]">The right contact center outsourcing model depends on whether you are replacing, extending or supplementing internal support.</p></div></div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"><?php $models = [
+            ['Dedicated Teams', 'Assigned to your operation and trained around your products, customer types, systems and brand standards. Best suited for ongoing volumes and complex workflows.'],
+            ['Overflow Support', 'Adds capacity when your internal operation reaches agreed thresholds or during periods of increased demand.'],
+            ['After-Hours Support', 'Covers customer contacts outside your internal operating hours, including evening, weekend, holiday or overnight coverage where approved.'],
+            ['Seasonal Scaling', 'Adds temporary capacity around predictable volume increases such as holiday demand, promotions, launches or enrollment periods.'],
+        ]; foreach ($models as $model): ?><div class="cx-feature-card"><h4 class="text-[20px] leading-[28px] font-semibold text-black mb-3"><?= $model[0] ?></h4><p class="text-[15px] leading-[24px] text-[#555]"><?= $model[1] ?></p></div><?php endforeach; ?></div>
+    </div>
+</section>
+
+<section class="samesectionpadding bg-[rgba(0,0,0,1)] py-24" aria-label="Multichannel vs connected omnichannel support">
+    <div class="container mx-auto px-4">
+        <div class="solgap grid gap-5 lg:grid-cols-2 gap-16 mb-10" style="align-items:center;"><div><h2 class="relative flex items-center gap-2 text-sm py-3 overflow-hidden m-0"><span class="relative z-10 flex items-center gap-2"><span class="spanfont block w-[24px] h-[4px] rounded" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%);"></span><span class="spanfont text-[20px] leading-[28px] tracking-[-0.03em]" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Connected CX</span></span></h2><h3 class="solution-heading headingspace text-[32px] leading-[40px] tracking-[-0.03em] text-white mb-[20px]" style="max-width:680px;">More Than an Outsourced Call Center: One Connected Customer Experience</h3></div><div><p class="nomargin text-white/75 text-[16px] leading-[24px]">Traditional call center outsourcing is often centered on voice. Modern customer operations extend well beyond the phone. EmpireOneCX can bring voice, email, live chat, SMS and social support into one connected operating model.</p></div></div>
+        <div class="overflow-x-auto rounded-[16px]"><table class="cx-comparison-table" role="table" aria-label="Multichannel versus connected omnichannel support"><thead><tr><th>Operational Dimension</th><th>Fragmented Multichannel</th><th>EmpireOneCX Omnichannel Model</th></tr></thead><tbody>
+        <?php foreach ([
+            ['Channel continuity', 'Customers may need to repeat information when switching channels.', 'Relevant conversation history follows the customer across supported channels.'],
+            ['Routing', 'Separate queues and manual triage.', 'AI-assisted intent and skills-based routing can direct contacts to the appropriate workflow or agent.'],
+            ['Agent view', 'Agents work from disconnected channel tools.', 'Customer information can be brought into a more unified operating view.'],
+            ['Peak handling', 'Individual queues can become overloaded.', 'Staffing and overflow capacity can be coordinated across supported channels.'],
+            ['Reporting', 'Performance is reviewed one channel at a time.', 'Cross-channel reporting can combine service, quality and customer-experience measures.'],
+            ['Quality management', 'QA processes vary by queue or team.', 'Shared QA frameworks can be applied across voice and digital support.'],
+        ] as $row): ?><tr><td><?= $row[0] ?></td><td><?= $row[1] ?></td><td><?= $row[2] ?></td></tr><?php endforeach; ?>
         </tbody></table></div>
     </div>
 </section>
 
-<section class="samesectionpadding py-24 bg-white" aria-label="Omnichannel Contact Center Capabilities"><div class="container mx-auto px-4"><div class="solgap grid gap-5 lg:grid-cols-2 gap-16 mb-14" style="align-items:center;"><div><h2 class="relative flex items-center gap-2 text-sm py-3 overflow-hidden m-0"><span class="relative z-10 flex items-center gap-2"><span class="spanfont block w-[24px] h-[4px] rounded" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%);"></span><span class="spanfont text-[20px] leading-[28px] tracking-[-0.03em]" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Capabilities</span></span></h2><h3 class="solution-heading headingspace text-[32px] leading-[40px] tracking-[-0.03em] text-black mb-[20px]">What Our Omnichannel Contact Center Delivers</h3></div><div><p class="nomargin text-[#3C3B47] text-[16px] leading-[24px]">Voice, email, live chat, SMS, and social all run through one connected operating model, so agents can see context, route faster, and resolve without making customers start over.</p></div></div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><?php $cards = [['fa-diagram-project','Unified Channel Management','Every channel runs through one console. Agents have access to previous interactions and can pick up where the last conversation ended.',['Voice','Email','Live Chat','SMS','Social']],['fa-route','AI-Assisted Intent Routing','Customer inquiries are routed to the right specialist or self-service option quickly, reducing confusion and saving time.',['Intent Detection','Smart Routing','AHT Reduction']],['fa-clock','Always-On Coverage','24/7/365 coverage across nine countries keeps every channel monitored and every time zone staffed.',['24/7 Coverage','Multi-Region','Overflow Support']],['fa-up-right-and-down-left-from-center','Elastic Scalability','Scale from a small team to hundreds of agents for seasonal peaks, launches, or unexpected surges.',['On-Demand Scaling','Peak Season Ready','Flexible Staffing']],['fa-plug','Native CRM & Telephony Integration','We work within your ecosystem, including Salesforce, Zendesk, HubSpot, Freshdesk, and cloud telephony platforms.',['Salesforce','Zendesk','HubSpot','Freshdesk']],['fa-chart-pie','Cross-Channel Analytics & QA','Real-time insights on CSAT, first-contact resolution, sentiment, and quality in one dashboard.',['CSAT','FCR','Sentiment Analysis','QA Monitoring']]]; foreach ($cards as $card): ?><div class="cx-feature-card"><div class="cx-feature-icon"><i class="fas <?= $card[0] ?>"></i></div><h4 class="text-[20px] leading-[28px] font-semibold text-black mb-3"><?= $card[1] ?></h4><p class="text-[15px] leading-[24px] text-[#555] mb-5"><?= $card[2] ?></p><div class="flex flex-wrap gap-2"><?php foreach ($card[3] as $tag): ?><span class="cx-industry-pill"><span class="dot"></span><?= $tag ?></span><?php endforeach; ?></div></div><?php endforeach; ?></div></div></section>
+<section class="samesectionpadding py-24 bg-white" aria-label="Contact center implementation process"><div class="container mx-auto px-4"><div class="solgap grid gap-5 lg:grid-cols-2 gap-16 mb-14" style="align-items:center;"><div><h2 class="relative flex items-center gap-2 text-sm py-3 overflow-hidden m-0"><span class="relative z-10 flex items-center gap-2"><span class="spanfont block w-[24px] h-[4px] rounded" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%);"></span><span class="spanfont text-[20px] leading-[28px] tracking-[-0.03em]" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Implementation</span></span></h2><h3 class="solution-heading headingspace text-[32px] leading-[40px] tracking-[-0.03em] text-black mb-[20px]">What Happens When You Outsource Your Contact Center to EmpireOneCX?</h3></div><div><p class="nomargin text-[#3C3B47] text-[16px] leading-[24px]">Moving customer operations to an outsourced contact center requires more than hiring agents. The transition should define responsibilities, systems, customer journeys, service levels and escalation rules before live contacts begin.</p></div></div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"><?php $steps = [
+    ['1. Discovery & Requirements', 'Document volumes, channels, hours, languages, customer types, systems, contact reasons, escalation requirements, service levels and security needs.'],
+    ['2. Solution & Staffing Design', 'Translate requirements into team structure, shift coverage, supervisor roles, channel responsibilities, reporting, QA and KPIs.'],
+    ['3. Recruitment & Training', 'Prepare agents around brand standards, products, customer journeys, systems, knowledge resources, handling procedures and escalation rules.'],
+    ['4. Systems & Knowledge Transfer', 'Coordinate approved access to CRM, ticketing, telephony, live chat, knowledge base, order systems and reporting tools.'],
+    ['5. Calibration & Pilot', 'Validate routing, test interactions, calibrate QA scorecards, test escalations, confirm knowledge checks and review reporting.'],
+    ['6. Go-Live', 'Begin production according to the approved channels, schedules, staffing plan and escalation process.'],
+    ['7. Optimization', 'Use reporting, QA findings, coaching and contact trends to improve response times, resolution, quality, escalations and staffing patterns.'],
+]; foreach ($steps as $step): ?><div class="cx-feature-card"><h4 class="text-[18px] leading-[26px] font-semibold text-black mb-3"><?= $step[0] ?></h4><p class="text-[15px] leading-[24px] text-[#555]"><?= $step[1] ?></p></div><?php endforeach; ?></div></div></section>
 
-<section class="samesectionpadding bg-[rgba(0,0,0,1)] py-24" aria-label="Omnichannel Contact Center Business Impact"><div class="container mx-auto px-4"><div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start"><div><h2 class="relative flex items-center gap-2 text-sm py-3 overflow-hidden m-0"><span class="relative z-10 flex items-center gap-2"><span class="spanfont block w-[24px] h-[4px] rounded" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%);"></span><span class="spanfont text-[20px] leading-[28px] tracking-[-0.03em]" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">What You Get</span></span></h2><h3 class="solution-heading headingspace text-[32px] leading-[40px] tracking-[-0.03em] text-white mb-[20px]">Contact Center Operations Built for Continuity, Compliance, and Customer Retention</h3><p class="text-white/75 text-[16px] leading-[26px] mb-8">When service channels are not connected, customers reach out multiple times and wait longer for solutions. We treat every channel as part of a single conversation, leading to higher satisfaction, lower costs, and stronger retention.</p><a href="/contact" class="inline-flex items-center justify-center bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] text-white font-bold py-4 px-8 rounded-[8px] text-sm sm:text-base">Build Your Omnichannel Team</a></div><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><div class="rounded-[16px] p-7 bg-[#111] border border-white/10"><h4 class="text-white text-[22px] leading-[30px] mb-5">What You Get</h4><ul class="space-y-3 text-white/75 text-[15px] leading-[24px]"><?php foreach (['Inbound and outbound omnichannel handling','Unified routing across voice, chat, email, SMS, and social','24/7/365 coverage with overflow and after-hours support','AI-assisted intent routing and self-service deflection','Native CRM and telephony integration','Real-time cross-channel dashboards','QA monitoring and structured CSAT reporting','Elastic scaling from 10 to 500+ agents'] as $item): ?><li class="flex gap-3"><span style="color:#CB46FA;">&#10003;</span><span><?= $item ?></span></li><?php endforeach; ?></ul></div><div class="rounded-[16px] p-7 bg-[#111] border border-white/10"><h4 class="text-white text-[22px] leading-[30px] mb-5">Business Impact</h4><ul class="space-y-3 text-white/75 text-[15px] leading-[24px]"><?php foreach (['Fewer repeat contacts and shorter resolution times','Higher CSAT and NPS across every channel','Lower cost-per-contact at peak volume','No single-channel impediments or dropped SLAs'] as $item): ?><li class="flex gap-3"><span style="color:#FE881C;">&#9656;</span><span><?= $item ?></span></li><?php endforeach; ?></ul><div class="mt-6 rounded-[12px] p-5" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%);"><p class="text-white text-[15px] leading-[24px]"><strong>How we make it work:</strong> Our teams are trained on your brand and products and operate from a single unified platform. Customers can move between channels without added hassle or expense.</p></div></div></div></div></div></section>
+<section class="samesectionpadding bg-[rgba(0,0,0,1)] py-24" aria-label="Contact center technology and integrations"><div class="container mx-auto px-4"><div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start"><div><h2 class="relative flex items-center gap-2 text-sm py-3 overflow-hidden m-0"><span class="relative z-10 flex items-center gap-2"><span class="spanfont block w-[24px] h-[4px] rounded" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%);"></span><span class="spanfont text-[20px] leading-[28px] tracking-[-0.03em]" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Technology</span></span></h2><h3 class="solution-heading headingspace text-[32px] leading-[40px] tracking-[-0.03em] text-white mb-[20px]">Work Inside the Systems You Already Use</h3><p class="text-white/75 text-[16px] leading-[26px] mb-6">Outsourcing your contact center should not automatically mean replacing the technology your customer operation already depends on. EmpireOneCX can operate inside established customer-service environments, including Salesforce, Zendesk, HubSpot and Freshdesk, depending on the engagement and approved access model.</p><p class="text-white/75 text-[16px] leading-[26px]">Integration is not simply about connecting a logo to a platform. The objective is to make the customer-support workflow usable for agents and measurable for operations leaders.</p></div><div class="rounded-[16px] p-7 bg-[#111] border border-white/10"><ul class="space-y-4 text-white/75 text-[15px] leading-[24px] cx-list"><?php foreach (['Customer history for prior interactions, tickets, case records and account details.','Ticket and case creation inside the appropriate help desk or CRM workflow.','Contact routing by channel, intent, skill, priority or approved business logic.','Call logging associated with the right customer or account record.','Escalation workflows for specialist, management or internal-team involvement.','Reporting workflows for contact activity and operational performance.','Knowledge management with current procedures and approved customer information.'] as $item): ?><li><span><?= $item ?></span></li><?php endforeach; ?></ul></div></div></div></section>
 
-<section class="samesectionpadding py-24 bg-white" aria-label="Industry Expertise"><div class="container mx-auto px-4"><div class="solgap grid gap-5 lg:grid-cols-2 gap-16 mb-14" style="align-items:center;"><div><h2 class="relative flex items-center gap-2 text-sm py-3 overflow-hidden m-0"><span class="relative z-10 flex items-center gap-2"><span class="spanfont block w-[24px] h-[4px] rounded" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%);"></span><span class="spanfont text-[20px] leading-[28px] tracking-[-0.03em]" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Industry Expertise</span></span></h2><h3 class="solution-heading headingspace text-[32px] leading-[40px] tracking-[-0.03em] text-black mb-[20px]">Why Businesses Choose EmpireOneCX for Omnichannel Contact Center Support</h3></div><div><p class="nomargin text-[#3C3B47] text-[16px] leading-[24px]">Every solution is tailored for your industry, covering channel mix, routing logic, compliance, and local regulations like GDPR, HIPAA, and PCI-DSS across the US, Canada, UK, and Australia.</p></div></div><div class="grid grid-cols-1 lg:grid-cols-2 gap-8"><?php foreach ([['Retail & E-Commerce','Order status, returns, and cart-recovery messaging route between chat, SMS, and voice during high-volume seasonal peaks.',['Order Support','Returns','Seasonal Scale']],['Financial Services & Fintech','Fraud-aware handling and identity verification run across every channel, from calls to chat to messaging.',['Fraud Awareness','Secure Verification','Compliance']],['Healthcare & Insurance','Patient-first interactions are routed with the same care and compliance posture across phone, portal messaging, and chat.',['HIPAA Aligned','Patient Support','Claims Assistance']],['Technology & SaaS','Tier-1 and Tier-2 support run across chat, email, and in-app messaging while users keep context.',['Tech Support','In-App Messaging','Onboarding']]] as $ind): ?><div class="cx-feature-card"><h4 class="text-[20px] leading-[28px] font-semibold text-black mb-3"><?= htmlspecialchars($ind[0], ENT_QUOTES, 'UTF-8') ?></h4><p class="text-[15px] leading-[24px] text-[#555] mb-5"><?= htmlspecialchars($ind[1], ENT_QUOTES, 'UTF-8') ?></p><div class="flex flex-wrap gap-2"><?php foreach ($ind[2] as $tag): ?><span class="cx-industry-pill"><span class="dot"></span><?= htmlspecialchars($tag, ENT_QUOTES, 'UTF-8') ?></span><?php endforeach; ?></div></div><?php endforeach; ?></div></div></section>
+<section class="samesectionpadding py-24 bg-white" aria-label="Contact center KPIs and SLAs"><div class="container mx-auto px-4"><div class="solgap grid gap-5 lg:grid-cols-2 gap-16 mb-10" style="align-items:center;"><div><h2 class="relative flex items-center gap-2 text-sm py-3 overflow-hidden m-0"><span class="relative z-10 flex items-center gap-2"><span class="spanfont block w-[24px] h-[4px] rounded" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%);"></span><span class="spanfont text-[20px] leading-[28px] tracking-[-0.03em]" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">KPIs & SLAs</span></span></h2><h3 class="solution-heading headingspace text-[32px] leading-[40px] tracking-[-0.03em] text-black mb-[20px]">How We Measure Contact Center Performance</h3></div><div><p class="nomargin text-[#3C3B47] text-[16px] leading-[24px]">A contact center SLA should reflect the customer journey and operating model, not an arbitrary set of identical targets applied to every client.</p></div></div>
+<div class="overflow-x-auto rounded-[16px]"><table class="cx-comparison-table" role="table" aria-label="Contact center KPI table"><thead><tr><th>KPI</th><th>What It Helps Measure</th><th>How It Supports the Program</th></tr></thead><tbody><?php foreach ([
+    ['First Response Time', 'How quickly a customer receives an initial response.', 'Shows whether coverage and queue design match customer demand.'],
+    ['Average Speed of Answer', 'How quickly inbound calls are answered.', 'Helps monitor call center staffing and service availability.'],
+    ['Average Handle Time', 'The average time required to handle a contact.', 'Useful when balanced with quality and resolution measures.'],
+    ['First Contact Resolution', 'How often an issue is resolved without another contact.', 'Indicates whether agents have the knowledge and authority to resolve issues.'],
+    ['Resolution Time', 'Total time required to close an issue.', 'Highlights workflow delays, escalation friction and process gaps.'],
+    ['CSAT', 'Customer satisfaction following an interaction.', 'Connects operating performance to customer perception.'],
+    ['QA Score', 'Performance against the agreed quality scorecard.', 'Shows whether interactions follow approved standards and procedures.'],
+    ['Abandonment Rate', 'Contacts that end before reaching an agent.', 'Reveals queue pressure and coverage gaps.'],
+    ['Cost per Contact', 'Cost required to handle customer demand.', 'Helps compare staffing, channel and process efficiency.'],
+    ['Escalation Rate', 'Percentage of contacts requiring additional support.', 'Identifies training needs, process limits and unresolved ownership.'],
+    ['Schedule Adherence', 'How closely staffing follows the workforce plan.', 'Measures operational discipline and forecast accuracy.'],
+    ['Service Level', 'Percentage of contacts handled within an agreed threshold.', 'Tracks whether the team meets defined response commitments.'],
+] as $row): ?><tr><td><?= $row[0] ?></td><td><?= $row[1] ?></td><td><?= $row[2] ?></td></tr><?php endforeach; ?></tbody></table></div></div></section>
 
-<section class="samesectionpadding bg-[rgba(0,0,0,1)] py-24" aria-label="Omnichannel Contact Center Services FAQ"><div class="container mx-auto px-4"><div class="solgap grid gap-5 lg:grid-cols-2 gap-16 mb-14" style="align-items:flex-start;"><div><h2 class="relative flex items-center gap-2 text-sm py-3 overflow-hidden m-0"><span class="relative z-10 flex items-center gap-2"><span class="spanfont block w-[24px] h-[4px] rounded" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%);"></span><span class="spanfont text-[20px] leading-[28px] tracking-[-0.03em]" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Common Questions</span></span></h2><h3 class="solution-heading headingspace text-[32px] leading-[40px] tracking-[-0.03em] text-white mb-[20px]">Omnichannel Contact Center FAQs</h3><p class="text-[16px] leading-[24px] text-gray-400">Everything you need to know before building an omnichannel contact center team with EmpireOneCX.</p></div><div class="bg-[#111] rounded-[16px] p-6 md:p-8"><?php $faqs = [['What is the difference between an omnichannel contact center and a traditional call center?','A traditional call center is built around voice as the primary channel. An omnichannel contact center unifies voice, chat, email, SMS, and social into one system so agents have full customer context.'],['Can an omnichannel model reduce our cost-per-contact?','Yes. AI-assisted self-service, smarter routing, and fewer duplicate contacts can reduce cost-per-contact while improving resolution speed.'],['How does channel switching work for the customer?','A customer who starts on live chat and later calls is identified immediately. Their conversation history is visible and the call continues the existing conversation.'],['How fast can EmpireOneCX stand up an omnichannel team?','Most engagements go live within four to six weeks, including system integration, channel setup, agent training, and QA process design.'],['How does EmpireOneCX support compliance?','EmpireOneCX designs engagements around relevant data protection standards, including GDPR, HIPAA, and PCI-DSS, with audited operations and robust data security.']]; foreach ($faqs as $i => $faq): ?><div class="cx-faq-item" id="faq-<?= $i ?>"><button type="button" class="cx-faq-toggle" aria-expanded="false" aria-controls="faq-answer-<?= $i ?>"><span class="cx-faq-question"><?= htmlspecialchars($faq[0], ENT_QUOTES, 'UTF-8') ?></span><span class="cx-faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><polyline points="6 9 12 15 18 9"/></svg></span></button><div class="cx-faq-answer" id="faq-answer-<?= $i ?>" role="region"><?= htmlspecialchars($faq[1], ENT_QUOTES, 'UTF-8') ?></div></div><?php endforeach; ?></div></div></div></section>
+<section class="samesectionpadding bg-[rgba(0,0,0,1)] py-24" aria-label="Global delivery and security"><div class="container mx-auto px-4"><div class="grid grid-cols-1 lg:grid-cols-2 gap-8"><div class="rounded-[16px] p-8 bg-[#111] border border-white/10"><h2 class="solution-heading headingspace text-[32px] leading-[40px] tracking-[-0.03em] text-white mb-[20px]">Global Delivery for U.S. and Canadian Customer Operations</h2><p class="text-white/75 text-[16px] leading-[26px] mb-6">Call center outsourcing gives organizations more options for where and when customer support is delivered. EmpireOneCX can design customer operations around the delivery model approved for the engagement, using global capacity to support U.S. and Canadian customer requirements.</p><ul class="space-y-3 text-white/75 text-[15px] leading-[24px] cx-list"><?php foreach (['Extended time-zone coverage beyond a single office schedule.','Multilingual talent for different customer populations.','Flexible cost structures based on skill, hours and work type.','Overnight and after-hours coverage where operationally approved.','Scaling capacity through access to more than one labor market.'] as $item): ?><li><span><?= $item ?></span></li><?php endforeach; ?></ul><p class="text-white/70 text-[15px] leading-[24px] mt-6">Explore the <a href="/global-footprint/" class="text-white underline">EmpireOneCX global delivery footprint</a>, including <a href="/global-footprint/united-states/" class="text-white underline">U.S.</a> and <a href="/global-footprint/canada/" class="text-white underline">Canadian</a> customer operations.</p></div><div class="rounded-[16px] p-8 bg-[#111] border border-white/10"><h2 class="solution-heading headingspace text-[32px] leading-[40px] tracking-[-0.03em] text-white mb-[20px]">Contact Center Security & Compliance</h2><p class="text-white/75 text-[16px] leading-[26px] mb-6">An outsourced contact center may interact with customer records, account information, support systems and other sensitive business data. Security therefore needs to be designed into the operating model rather than added after launch.</p><ul class="space-y-3 text-white/75 text-[15px] leading-[24px] cx-list"><?php foreach (['Controlled system access limited to required workflows.','Role-based permissions for agents, supervisors, QA and escalation roles.','Documented data-handling procedures appropriate to the engagement.','Quality monitoring to confirm approved procedures are followed.','Secure working environments matched to the data and systems involved.','Incident-management and privacy controls mapped to client obligations.'] as $item): ?><li><span><?= $item ?></span></li><?php endforeach; ?></ul><p class="text-white/70 text-[15px] leading-[24px] mt-6">For certification status, security architecture and compliance-specific requirements, review <a href="/compliance-security/" class="text-white underline">EmpireOneCX Compliance & Security</a>.</p></div></div></div></section>
 
-<section class="future-customer-section samesectionpadding relative py-24 bg-white overflow-hidden"><div class="container mx-auto px-4 relative z-10"><div class="mx-auto relative"><div class="absolute inset-0 rounded-[16px] overflow-hidden"><div class="absolute inset-0" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50%,#FE881C 100%);"></div><div class="absolute inset-[3px] rounded-[13px] bg-white"><div class="absolute inset-0"><div class="hidden md:block absolute inset-0" style="background:url('/assets/images/cta-bg-image.webp') no-repeat center/cover;"></div><div class="md:hidden absolute inset-0" style="background:url('/assets/images/cta-gradient.webp') no-repeat center/cover;"></div></div></div></div><div class="future-innerwork py-5 px-4 md:px-16 relative z-10"><div class="ctamain text-center"><div class="cta-left-sidework pt-[60px] pb-[60px]"><h2 class="solution-heading cta-solution-section future-heading text-[32px] md:text-[48px] leading-[38px] md:leading-[56px] tracking-[-0.03em] text-black mb-[15px] md:mb-[20px]">Ready to Unify <span class="solutionsitalic-font text-[32px] md:text-[48px] leading-[56px] md:leading-[56px] tracking-[-0.03em]">Every Customer Channel?</span></h2><p class="future-customer-para text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] text-[#2A2A2A] mb-8 md:mb-10">Speak with a contact center expert about your business goals, compliance requirements, and operational needs. We will design a solution tailored to your organization.</p><div class="future-btn w-full max-w-2xl mx-auto mt-6"><a href="/contact" class="inline-flex items-center justify-center bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] text-white font-bold py-4 px-8 rounded-[8px] text-sm sm:text-base hover:scale-[1.02] active:scale-95 transition shadow-lg hover:shadow-purple-400/20">Get a Free Contact Center Consultation</a></div></div></div></div></div></div></section>
+<section class="samesectionpadding py-24 bg-white" aria-label="Industry contact center use cases"><div class="container mx-auto px-4"><div class="solgap grid gap-5 lg:grid-cols-2 gap-16 mb-14" style="align-items:center;"><div><h2 class="relative flex items-center gap-2 text-sm py-3 overflow-hidden m-0"><span class="relative z-10 flex items-center gap-2"><span class="spanfont block w-[24px] h-[4px] rounded" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%);"></span><span class="spanfont text-[20px] leading-[28px] tracking-[-0.03em]" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Industry Workflows</span></span></h2><h3 class="solution-heading headingspace text-[32px] leading-[40px] tracking-[-0.03em] text-black mb-[20px]">Contact Center Outsourcing Built Around Your Customer Workflows</h3></div><div><p class="nomargin text-[#3C3B47] text-[16px] leading-[24px]">The right call center operation depends heavily on why customers contact you, what systems agents need and what happens after the initial interaction.</p></div></div><div class="grid grid-cols-1 lg:grid-cols-2 gap-8"><?php $industries = [
+    ['Ecommerce & Retail', 'Customer service volume can change rapidly around promotions, holidays and product launches. Outsourced support can cover order status, delivery questions, returns, refunds, product questions, marketplace support and peak-season overflow.', '/industries/ecommerce-bpo/', 'Explore Ecommerce BPO services'],
+    ['Healthcare & Insurance', 'Customer and patient support operations require clear procedures, accurate escalation and careful handling of sensitive information. Programs should be designed around the client-specific compliance, privacy and security requirements.', '/industries/healthcare-bpo/', 'Explore Healthcare BPO services'],
+    ['Financial Services', 'Financial-services customer support often requires structured authentication, documented workflows and clear escalation boundaries for account inquiries, billing questions, case routing and secure follow-up.', '/industries/financial-services-bpo/', 'Explore Financial Services BPO'],
+    ['Technology & SaaS', 'Technology companies can use outsourced contact center teams for onboarding, Tier-1 support, account assistance, product questions, troubleshooting intake, ticket triage and escalation to technical teams.', '/industries/technology-bpo/', 'Explore Technology & SaaS BPO services'],
+    ['Automotive', 'Where supported by the approved service scope, automotive customer operations can include appointment-related inquiries, customer follow-up, general support and escalation workflows.', '/industries/automotive-bpo/', 'Explore Automotive BPO services'],
+]; foreach ($industries as $ind): ?><div class="cx-feature-card"><h4 class="text-[20px] leading-[28px] font-semibold text-black mb-3"><?= htmlspecialchars($ind[0], ENT_QUOTES, 'UTF-8') ?></h4><p class="text-[15px] leading-[24px] text-[#555] mb-5"><?= htmlspecialchars($ind[1], ENT_QUOTES, 'UTF-8') ?></p><a href="<?= $ind[2] ?>" class="text-[15px] font-semibold bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] bg-clip-text text-transparent"><?= htmlspecialchars($ind[3], ENT_QUOTES, 'UTF-8') ?></a></div><?php endforeach; ?></div></div></section>
+
+<section class="contact-center-cost-section samesectionpadding bg-[rgba(0,0,0,1)] py-24" aria-label="Call center outsourcing cost and results"><div class="container mx-auto px-4"><div class="grid grid-cols-1 lg:grid-cols-2 gap-8"><div class="rounded-[16px] p-8 bg-[#111] border border-white/10"><h2 class="solution-heading headingspace text-[32px] leading-[40px] tracking-[-0.03em] text-white mb-[20px]">What Does Call Center Outsourcing Cost?</h2><p class="text-white/75 text-[16px] leading-[26px] mb-6">There is no responsible single price for outsourced call center services without understanding the operation being staffed. The right way to estimate cost is to map your actual contact volume, channels, hours, staffing profile and delivery model first.</p><ul class="space-y-3 text-white/75 text-[15px] leading-[24px] cx-list"><?php foreach (['Delivery location','Number of agents','Coverage hours','Inbound versus outbound work','Staffing model','Language requirements','Interaction complexity','Training requirements','Channel mix','Seasonality','Technology requirements'] as $item): ?><li><span><?= $item ?></span></li><?php endforeach; ?></ul><a href="/contact/" class="cx-feature-cta inline-flex items-center justify-center mt-7 bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] text-white font-bold py-4 px-8 rounded-[8px] text-sm sm:text-base">Request a Contact Center Cost Plan</a></div><div class="rounded-[16px] p-8 bg-[#111] border border-white/10"><h2 class="solution-heading headingspace text-[32px] leading-[40px] tracking-[-0.03em] text-white mb-[20px]">Contact Center Results</h2><p class="text-white/75 text-[16px] leading-[26px] mb-6">A vendor evaluation should include evidence from comparable operating environments, not unsupported headline statistics. Review EmpireOneCX case studies for examples of outsourcing programs, operational challenges and measurable outcomes.</p><ul class="space-y-3 text-white/75 text-[15px] leading-[24px] cx-list"><?php foreach (['Customer industry and operating challenge.','Baseline conditions before the engagement.','Staffing, routing, QA, workflow, training or technology intervention.','Dedicated, overflow, after-hours, seasonal or other approved operating model.','Measurement period and verified result.'] as $item): ?><li><span><?= $item ?></span></li><?php endforeach; ?></ul><a href="/case-study/" class="cx-feature-cta inline-flex items-center justify-center mt-7 border border-white/30 text-white font-bold py-4 px-8 rounded-[8px] text-sm sm:text-base hover:border-white/60 transition">View Case Studies</a></div></div></div></section>
+
+<section class="samesectionpadding bg-[rgba(0,0,0,1)] py-24" aria-label="Call center outsourcing FAQ"><div class="container mx-auto px-4"><div class="solgap grid gap-5 lg:grid-cols-2 gap-16 mb-14" style="align-items:flex-start;"><div><h2 class="relative flex items-center gap-2 text-sm py-3 overflow-hidden m-0"><span class="relative z-10 flex items-center gap-2"><span class="spanfont block w-[24px] h-[4px] rounded" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%);"></span><span class="spanfont text-[20px] leading-[28px] tracking-[-0.03em]" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50.14%,#FE881C 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Common Questions</span></span></h2><h3 class="solution-heading headingspace text-[32px] leading-[40px] tracking-[-0.03em] text-white mb-[20px]">Call Center Outsourcing FAQs</h3><p class="text-[16px] leading-[24px] text-gray-400">Answers to common questions about outsourcing call center and contact center operations with EmpireOneCX.</p></div><div class="bg-[#111] rounded-[16px] p-6 md:p-8"><?php $faqs = [
+    ['What is call center outsourcing?', 'Call center outsourcing is the use of an external service provider to handle some or all customer call operations. Depending on the engagement, this can include inbound customer support, after-hours service, overflow handling, outbound customer follow-up and related workflows.'],
+    ['What is the difference between call center outsourcing and contact center outsourcing?', 'A call center is primarily associated with voice. Contact center outsourcing includes voice as well as digital channels such as email, live chat, SMS and social media. An omnichannel contact center goes further by connecting customer context and operating processes across those channels.'],
+    ['What services can an outsourced call center handle?', 'An outsourced call center can handle customer inquiries, account assistance, order status, billing questions, complaint handling, scheduling, customer follow-up, escalation management and other documented customer-service workflows. Scope depends on the client, industry and engagement design.'],
+    ['How much does call center outsourcing cost?', 'Cost depends on factors including delivery location, number of agents, operating hours, language requirements, channel mix, contact complexity, training, technology and whether the team is dedicated, overflow or after-hours. EmpireOneCX can build a cost plan after reviewing the operating requirements.'],
+    ['How long does it take to launch an outsourced contact center?', 'Implementation time depends on recruiting needs, team size, training complexity, integrations, security requirements and knowledge transfer. EmpireOneCX maps the implementation requirements during solution design rather than applying one launch timeline to every program.'],
+    ['Can EmpireOneCX provide 24/7 customer support?', 'EmpireOneCX can design programs around extended-hours, after-hours and, where operationally available for the approved engagement, 24/7 coverage. Exact coverage should be confirmed during staffing and delivery design.'],
+    ['Can we keep our existing CRM and phone systems?', 'In many engagements, yes. EmpireOneCX can operate inside existing customer-service environments and currently references platforms including Salesforce, Zendesk, HubSpot and Freshdesk. Final compatibility depends on your technology, access model, APIs and security requirements.'],
+    ['How does EmpireOneCX measure call center quality?', 'Quality measurement can combine QA scorecards, interaction monitoring, coaching and operational KPIs. Relevant measures may include CSAT, first-contact resolution, response time, resolution time, escalation rate and service level. Targets are agreed according to the engagement.'],
+    ['Can EmpireOneCX support seasonal or overflow volume?', 'Yes, subject to the staffing model and capacity agreed for the program. Overflow and seasonal outsourcing can supplement internal teams during predictable peaks, launches, promotional periods or other increases in customer demand.'],
+]; foreach ($faqs as $i => $faq): ?><div class="cx-faq-item" id="faq-<?= $i ?>"><button type="button" class="cx-faq-toggle" aria-expanded="false" aria-controls="faq-answer-<?= $i ?>"><span class="cx-faq-question"><?= htmlspecialchars($faq[0], ENT_QUOTES, 'UTF-8') ?></span><span class="cx-faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><polyline points="6 9 12 15 18 9"/></svg></span></button><div class="cx-faq-answer" id="faq-answer-<?= $i ?>" role="region"><?= htmlspecialchars($faq[1], ENT_QUOTES, 'UTF-8') ?></div></div><?php endforeach; ?></div></div></div></section>
+
+<section class="future-customer-section samesectionpadding relative py-24 bg-white overflow-hidden"><div class="container mx-auto px-4 relative z-10"><div class="mx-auto relative"><div class="absolute inset-0 rounded-[16px] overflow-hidden"><div class="absolute inset-0" style="background:linear-gradient(90deg,#7A76FF 0%,#CB46FA 50%,#FE881C 100%);"></div><div class="absolute inset-[3px] rounded-[13px] bg-white"><div class="absolute inset-0"><div class="hidden md:block absolute inset-0" style="background:url('/assets/images/cta-bg-image.webp') no-repeat center/cover;"></div><div class="md:hidden absolute inset-0" style="background:url('/assets/images/cta-gradient.webp') no-repeat center/cover;"></div></div></div></div><div class="future-innerwork py-5 px-4 md:px-16 relative z-10"><div class="ctamain text-center"><div class="cta-left-sidework pt-[60px] pb-[60px]"><h2 class="solution-heading cta-solution-section future-heading text-[32px] md:text-[48px] leading-[38px] md:leading-[56px] tracking-[-0.03em] text-black mb-[15px] md:mb-[20px]">Build a Contact Center Around <span class="solutionsitalic-font text-[32px] md:text-[48px] leading-[56px] md:leading-[56px] tracking-[-0.03em] text-black">Your Actual Customer Volume</span></h2><p class="future-customer-para text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] text-[#2A2A2A] mb-8 md:mb-10">The right outsourcing model starts with the operation you have today, not a preset package. We can assess your contact volume, customer reasons, channels, service hours, staffing needs, languages, technology environment, delivery requirements, service levels and expected KPIs.</p><div class="future-btn w-full max-w-2xl mx-auto mt-6 flex flex-wrap justify-center gap-4"><a href="/contact/" class="inline-flex items-center justify-center bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] text-white font-bold py-4 px-8 rounded-[8px] text-sm sm:text-base hover:scale-[1.02] active:scale-95 transition shadow-lg hover:shadow-purple-400/20">Get Your Contact Center Plan</a><a href="/contact/" class="inline-flex items-center justify-center border border-gray-300 text-black font-bold py-4 px-8 rounded-[8px] text-sm sm:text-base hover:border-black transition">Talk to a Contact Center Expert</a></div></div></div></div></div></div></section>
 </main>
 
 <script>
@@ -143,6 +387,6 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () { var heroWrap = document.querySelector('.ecx-compact'); if (!heroWrap) return; var toggle = heroWrap.querySelector('.ecx-country-toggle'); var dropdown = heroWrap.querySelector('.ecx-country-dropdown'); var codeHid = heroWrap.querySelector('[name="country_code"]'); if (!toggle || !dropdown) return; var newToggle = toggle.cloneNode(true); toggle.parentNode.replaceChild(newToggle, toggle); newToggle.addEventListener('click', function (e) { e.stopPropagation(); dropdown.classList.toggle('open'); }); dropdown.addEventListener('click', function (e) { var item = e.target.closest('.ecx-country-item'); if (!item) return; var code = item.dataset.code; var flag = item.dataset.flag; heroWrap.querySelector('#ecxSelectedFlag').src = 'https://flagcdn.com/w20/' + flag + '.webp'; heroWrap.querySelector('.ecx-code').textContent = code; codeHid.value = code; dropdown.classList.remove('open'); }); document.addEventListener('click', function () { dropdown.classList.remove('open'); }); });
 </script>
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Omnichannel Contact Center Services","provider":{"@type":"Organization","name":"EmpireOne CX","url":"https://empireonecx.com"},"description":"Omnichannel contact center services across voice, chat, email, SMS, and social with AI-assisted routing, CRM integration, and cross-channel QA.","url":"https://empireonecx.com/solutions/omnichannel-contact-center-services","areaServed":"Worldwide"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Call Center & Contact Center Outsourcing Services","provider":{"@type":"Organization","name":"EmpireOneCX","url":"https://empireonecx.com"},"description":"Call center and contact center outsourcing services across voice, live chat, email, SMS and social customer support.","url":"https://empireonecx.com/solutions/omnichannel-contact-center-services","areaServed":["United States","Canada"]}</script>
 
 <?php include(__DIR__ . "/../inc/footer.php"); ?>

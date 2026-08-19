@@ -283,9 +283,157 @@ include(__DIR__ . "/../inc/header.php");
 .delay-3 { animation-delay: 0.4s; }
 .delay-4 { animation-delay: 0.55s; }
 
+@media (max-width: 767px) {
+    .cx-page .cx-hero-section {
+        height: auto !important;
+        min-height: 650px !important;
+        padding: 112px 20px 54px !important;
+    }
+
+    .cx-page .cx-hero-section .container {
+        max-width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .cx-page .cx-hero-grid {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 26px !important;
+    }
+
+    .cx-page .breadcrumb-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 18px !important;
+    }
+
+    .cx-page .breadcrumb-nav a,
+    .cx-page .breadcrumb-nav span {
+        font-size: 13px !important;
+        line-height: 20px !important;
+    }
+
+    .cx-page .breadcrumb-nav .sep {
+        margin: 0 !important;
+    }
+
+    .cx-page .cx-hero-section .herosubtitle {
+        display: block;
+        width: 100%;
+        margin: 0 auto 14px !important;
+        font-size: 17px !important;
+        line-height: 24px !important;
+        text-align: center;
+    }
+
+    .cx-page .cx-hero-section .solutions-hero-heading {
+        max-width: min(330px, calc(100vw - 40px)) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-bottom: 16px !important;
+        font-size: 35px !important;
+        line-height: 43px !important;
+        letter-spacing: 0 !important;
+        text-align: center;
+        text-wrap: balance;
+    }
+
+    .cx-page .cx-hero-section .subpara {
+        max-width: min(320px, calc(100vw - 42px)) !important;
+        margin: 0 auto 26px !important;
+        font-size: 14px !important;
+        line-height: 22px !important;
+        letter-spacing: 0 !important;
+        text-align: center;
+    }
+
+    .cx-page .cx-hero-section button {
+        width: min(100%, 300px) !important;
+        padding: 14px 18px !important;
+        font-size: 14px !important;
+        line-height: 20px !important;
+    }
+
+    .cx-page .cx-hero-form {
+        display: none !important;
+    }
+
+    .cx-page .samesectionpadding {
+        padding-top: 58px !important;
+        padding-bottom: 58px !important;
+    }
+
+    .cx-page .solgap {
+        gap: 18px !important;
+        margin-bottom: 28px !important;
+    }
+
+    .cx-page .solution-heading,
+    .cx-page .solution-heading span {
+        max-width: 100% !important;
+        font-size: 30px !important;
+        line-height: 38px !important;
+        letter-spacing: 0 !important;
+    }
+
+    .cx-page .solution-side-img1,
+    .cx-page .solution-side-img2 {
+        display: none !important;
+    }
+
+    .cx-page [aria-label="What Are Customer Experience Solutions"] .grid.grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 14px !important;
+    }
+
+    .cx-page [aria-label="What Are Customer Experience Solutions"] .grid.grid-cols-2 > div {
+        padding: 22px 12px !important;
+        min-height: 190px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .cx-page .cx-stat-number {
+        font-size: 40px !important;
+        line-height: 44px !important;
+        letter-spacing: 0 !important;
+        white-space: nowrap;
+    }
+
+    .cx-page .cx-stat-number + p {
+        max-width: 120px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 13px !important;
+        line-height: 18px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .cx-page .cx-hero-section .solutions-hero-heading {
+        font-size: 31px !important;
+        line-height: 38px !important;
+    }
+
+    .cx-page .cx-stat-number {
+        font-size: 36px !important;
+        line-height: 40px !important;
+    }
+
+    .cx-page .cx-stat-number + p {
+        font-size: 12px !important;
+        line-height: 17px !important;
+    }
+}
+
 </style>
 
-<main class="relative">
+<main class="cx-page relative">
 
     <section class="hero-section mainherowork cx-hero-section relative flex flex-col items-center justify-center px-4 sm:px-6 text-center overflow-hidden">
 

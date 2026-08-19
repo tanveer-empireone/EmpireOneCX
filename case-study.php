@@ -1,8 +1,10 @@
 <?php
     $pageTitle = "CX, BPO & AI Case Studies: Real Outsourcing Results";
     $metaDescription = "Explore CX & BPO case studies showing how EmpireOneCX's AI-assisted contact center, back-office, and finance outsourcing solutions drive measurable ROI.";
+    $languageSwitchHrefEs = "/es/casos-de-estudio/";
     $languageAlternates = [
         "en" => "https://empireonecx.com/case-study",
+        "es" => "https://empireonecx.com/es/casos-de-estudio/",
         "x-default" => "https://empireonecx.com/case-study",
     ];
 ?>
@@ -41,8 +43,219 @@
         z-index: -1;
         opacity: 0.6;
     }
+
+    @media (max-width: 767px) {
+        .case-study-page .hero-section {
+            height: auto !important;
+            min-height: 690px !important;
+            padding: 170px 16px 76px !important;
+            justify-content: flex-start !important;
+        }
+
+        .case-study-page .hero-section .solutions-bg-videowork {
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            z-index: 0 !important;
+        }
+
+        .case-study-page .hero-section > .absolute.bg-black\/50 {
+            inset: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            z-index: 1 !important;
+        }
+
+        .case-study-page .hero-section .container {
+            max-width: 100% !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            z-index: 2 !important;
+        }
+
+        .case-study-page .hero-section .herosubtitle {
+            margin-bottom: 14px !important;
+            font-size: 16px !important;
+            line-height: 24px !important;
+            letter-spacing: 0.08em !important;
+        }
+
+        .case-study-page .hero-section .solutions-hero-heading {
+            max-width: min(352px, calc(100vw - 32px)) !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            margin-bottom: 16px !important;
+            font-size: 34px !important;
+            line-height: 42px !important;
+            letter-spacing: 0 !important;
+            text-wrap: balance;
+        }
+
+        .case-study-page .hero-section .subpara {
+            max-width: min(342px, calc(100vw - 36px)) !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            margin-bottom: 20px !important;
+            font-size: 14px !important;
+            line-height: 22px !important;
+            letter-spacing: 0 !important;
+        }
+
+        .case-study-page .hero-section .delay-4 {
+            padding-top: 0 !important;
+        }
+
+        .case-study-page .hero-section .delay-4 button {
+            width: min(100%, 352px) !important;
+            min-height: 54px !important;
+            padding: 14px 18px !important;
+            font-size: 14px !important;
+            line-height: 20px !important;
+            white-space: normal !important;
+        }
+
+        .case-study-page section:not(.hero-section) {
+            padding-top: 58px !important;
+            padding-bottom: 58px !important;
+        }
+
+        .case-study-page .maincaseboxes {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 28px !important;
+        }
+
+        .case-study-page .mainleftbox,
+        .case-study-page .mainrightsbox {
+            width: 100% !important;
+            padding-top: 0 !important;
+        }
+
+        .case-study-page .solution-heading,
+        .case-study-page .solution-heading span {
+            max-width: 100% !important;
+            font-size: 30px !important;
+            line-height: 38px !important;
+            letter-spacing: 0 !important;
+        }
+
+        .case-study-page .spanfont {
+            font-size: 17px !important;
+            line-height: 25px !important;
+        }
+
+        .case-study-page .smpadd {
+            padding-top: 12px !important;
+        }
+
+        .case-study-page .noflexemp {
+            display: flex !important;
+            gap: 16px !important;
+            align-items: flex-start !important;
+        }
+
+        .case-study-page .mainheadcase {
+            padding-top: 0 !important;
+        }
+
+        .case-study-page .noflexemp + .noflexemp {
+            margin-top: 30px !important;
+        }
+
+        .case-study-page .noflexemp img,
+        .case-study-page .noflexemp > div:first-child {
+            width: 48px !important;
+            height: 48px !important;
+            flex: 0 0 48px !important;
+        }
+
+        .case-study-page .mainheadcase h4 {
+            font-size: 24px !important;
+            line-height: 32px !important;
+        }
+
+        .case-study-page .mainheadcase p {
+            font-size: 15px !important;
+            line-height: 24px !important;
+        }
+
+        .case-study-page .results-gradient-bg {
+            min-height: auto !important;
+            padding: 28px 22px !important;
+            border-radius: 16px !important;
+        }
+
+        .case-study-page .results-gradient-bg h4 {
+            margin-bottom: 18px !important;
+            font-size: 22px !important;
+            line-height: 30px !important;
+        }
+
+        .case-study-page .results-gradient-bg .w-16 {
+            margin-bottom: 26px !important;
+        }
+
+        .case-study-page .results-gradient-bg .space-y-10 > :not([hidden]) ~ :not([hidden]) {
+            margin-top: 26px !important;
+        }
+
+        .case-study-page .empmaints {
+            gap: 14px !important;
+        }
+
+        .case-study-page .empmaints span {
+            width: 74px !important;
+            font-size: 34px !important;
+            line-height: 1 !important;
+        }
+
+        .case-study-page .emptspace {
+            font-size: 14px !important;
+            line-height: 20px !important;
+        }
+
+        .case-study-page .results-gradient-bg a {
+            margin-top: 30px !important;
+            padding: 14px 16px !important;
+            font-size: 14px !important;
+            line-height: 20px !important;
+        }
+
+        .case-study-page .empgaps {
+            gap: 14px !important;
+        }
+
+        .case-study-page .mytextemp {
+            min-width: 0 !important;
+            font-size: 18px !important;
+            line-height: 26px !important;
+        }
+
+        .case-study-page .empsolbtn {
+            display: block !important;
+        }
+
+        .case-study-page .empsolbtn p {
+            font-size: 15px !important;
+            line-height: 24px !important;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .case-study-page .hero-section {
+            min-height: 710px !important;
+            padding-top: 160px !important;
+        }
+
+        .case-study-page .hero-section .solutions-hero-heading {
+            font-size: 31px !important;
+            line-height: 39px !important;
+        }
+    }
 </style>
-<main>
+<main class="case-study-page">
     <section class="hero-section mainherowork relative flex flex-col items-center justify-center px-4 sm:px-6 text-center overflow-hidden" style="padding-top: 18rem; padding-bottom: 180px;">
         <video class="solutions-bg-videowork absolute" autoplay muted loop playsinline preload="none">
             <source src="./assets/images/case-study.mp4" type="video/mp4" />
