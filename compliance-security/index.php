@@ -9,23 +9,23 @@ $securityCallUrl = "https://calendly.com/empireonegroup-marketing/30min";
 $faqs = [
     [
         "question" => "What certifications does EmpireOne CX hold?",
-        "answer" => "EmpireOne CX is certified in SOC 2 Type II and ISO/IEC 27001:2022. We also maintain full compliance with HIPAA, PCI DSS, and GDPR, and hold BBB Accreditation.",
+        "answer" => "EmpireOne CX is certified in SOC 2 Type II and ISO/IEC 27001:2022. We also support HIPAA, PCI DSS, and GDPR-aligned operations and hold BBB Accreditation.",
     ],
     [
         "question" => "How quickly can EmpireOne CX onboard a compliant team?",
-        "answer" => "Because our infrastructure is pre-built to meet SOC 2, HIPAA, and PCI DSS standards, we can securely onboard and launch dedicated teams in as little as 72 hours, bypassing the typical months-long audit delays.",
+        "answer" => "Our core security controls are already in place. That helps us onboard dedicated teams quickly, with some programs launching in as little as 72 hours after scope and access are approved.",
     ],
     [
         "question" => "How does HIPAA compliance work in BPO?",
-        "answer" => "Our HIPAA-compliant BPO environment utilizes end-to-end encrypted systems, clean-room physical floors, and strict role-based access controls to guarantee that electronic Protected Health Information (ePHI) is never compromised.",
+        "answer" => "HIPAA work requires strict controls around electronic Protected Health Information (ePHI). We use encrypted systems, controlled production floors, and role-based access to help protect sensitive healthcare data.",
     ],
     [
         "question" => "Does EmpireOne CX support GDPR for European clients?",
-        "answer" => "Yes. Our global delivery centers in Toronto, Bogota, and Lahore are fully GDPR compliant, ensuring that all European citizen data is processed legally, transparently, and securely according to EU regulations.",
+        "answer" => "Yes. We support GDPR-aligned data handling for European customer data. Our teams follow documented privacy, access, and processing controls across approved delivery locations.",
     ],
     [
         "question" => "How does EmpireOne CX monitor data security?",
-        "answer" => "We deploy AI-assisted monitoring to audit 100% of customer interactions. This system automatically redacts sensitive information, flags anomalous agent behavior, and provides continuous, transparent security reporting.",
+        "answer" => "We use AI-assisted monitoring and quality checks to review customer interactions. These controls help flag unusual activity, protect sensitive information, and support clear reporting.",
     ],
 ];
 ?>
@@ -422,7 +422,7 @@ $faqs = [
                         SOC 2 Certified BPO & CX Outsourcing You Can Trust
                     </h2>
                     <p class="security-hero-description mx-auto lg:mx-0">
-                        Your customer data never takes a day off. Neither does our security infrastructure. EmpireOne CX delivers AI-assisted, globally scalable teams backed by the world's strictest security and compliance standards.
+                        Your customer data needs constant protection. EmpireOne CX delivers AI-assisted CX and BPO teams backed by clear controls, independent certifications, and secure global delivery practices.
                     </p>
                     <a href="<?= htmlspecialchars($securityCallUrl, ENT_QUOTES, 'UTF-8'); ?>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-7 py-4 rounded-[8px] text-white text-[15px] md:text-[16px] font-medium security-gradient-bg hover:opacity-90 transition">
                         Schedule a Security Consultation
@@ -448,8 +448,8 @@ $faqs = [
                     </h2>
                 </div>
                 <div class="text-[17px] leading-[30px] text-[#3C3B47]">
-                    <p class="mb-5">At EmpireOne CX, world-class customer service requires world-class data protection. Operating from our secure global delivery centers in Bogota, Lahore, and Toronto, we've invested heavily in independent audits, certifications, and continuous monitoring.</p>
-                    <p>Whether you are handling healthcare records, processing payments, or scaling into European markets, our infrastructure is pre-built to meet your industry's exact regulatory requirements.</p>
+                    <p class="mb-5">Great customer service depends on strong data protection. EmpireOne CX runs secure delivery operations supported by independent audits, certifications, and ongoing monitoring.</p>
+                    <p>We help clients support regulated workflows, including healthcare records, payment-related processes, and European customer data. Each program is scoped around the rules and risks that apply to your business.</p>
                 </div>
             </div>
         </div>
@@ -468,33 +468,33 @@ $faqs = [
                 $certifications = [
                     [
                         "title" => "What is SOC 2 Type II and why does it matter for BPO?",
-                        "impact" => "Pass stringent Vendor Risk Assessments (VRAs) instantly. Knowing our internal security practices are consistently enforced allows you to safely integrate our offshore teams into your proprietary workflows.",
-                        "proof" => "SOC 2 Type II is an independent third-party audit conducted by accredited external auditors, confirming a service provider consistently protects client data across security, availability, confidentiality, processing integrity, and privacy. The Type II designation means the controls were tested over a sustained period, not a single snapshot.",
+                        "impact" => "SOC 2 helps speed up vendor risk reviews. It shows that our security controls are documented, tested, and consistently followed.",
+                        "proof" => "SOC 2 Type II is an independent audit by external auditors. It reviews controls for security, availability, confidentiality, processing integrity, and privacy over a sustained period.",
                     ],
                     [
                         "title" => "What is ISO/IEC 27001:2022 and why does it matter for BPO?",
-                        "impact" => "It provides a globally recognized guarantee of resilience against cyber threats, giving your enterprise stakeholders and IT departments instant peace of mind when partnering with us.",
-                        "proof" => "It is the highest international standard for Information Security Management Systems (ISMS). Certified by internationally recognized bodies, it confirms we have a robust, systematic approach to managing sensitive company information so that it remains secure.",
+                        "impact" => "ISO 27001 gives enterprise teams confidence that information security is managed through a formal system.",
+                        "proof" => "ISO/IEC 27001:2022 is a global standard for Information Security Management Systems. It confirms that we use a structured approach to protect sensitive information.",
                     ],
                     [
                         "title" => "What is HIPAA Compliance and why does it matter for BPO?",
-                        "impact" => "Healthcare providers and health-tech companies can safely outsource support, billing, and back-office operations to EmpireOne CX without risking catastrophic regulatory fines or patient trust.",
-                        "proof" => "We adhere strictly to the Health Insurance Portability and Accountability Act, utilizing encrypted systems and stringent physical access controls to protect electronic Protected Health Information (ePHI).",
+                        "impact" => "Healthcare and health-tech teams can outsource selected support, billing, and back-office workflows with stronger privacy controls.",
+                        "proof" => "HIPAA-related work is handled with encrypted systems, controlled access, and documented safeguards for electronic Protected Health Information (ePHI).",
                     ],
                     [
                         "title" => "What is PCI DSS Compliance and why does it matter for BPO?",
-                        "impact" => "If your financial CX team handles payments, refunds, or subscriptions, our environment ensures cardholder data is never exposed, drastically reducing your liability.",
-                        "proof" => "We maintain the Payment Card Industry Data Security Standard. Our networks, physical floors, and agent workflows are heavily restricted and monitored to process credit card information securely.",
+                        "impact" => "PCI DSS controls help reduce risk when support teams assist with payments, refunds, or subscription questions.",
+                        "proof" => "PCI DSS sets security requirements for cardholder data. We use restricted networks, controlled workflows, and monitored environments for approved payment-related processes.",
                     ],
                     [
                         "title" => "What is GDPR Compliance and why does it matter for BPO?",
-                        "impact" => "If you have customers in Europe, a single misstep in data handling can result in massive fines. We provide a fully compliant bridge to support your global customer base legally and safely.",
-                        "proof" => "We strictly follow the General Data Protection Regulation (EU), ensuring transparent, secure, and lawful processing of personal data across all global delivery centers.",
+                        "impact" => "GDPR-aligned processes help protect European customer data and reduce privacy risk.",
+                        "proof" => "GDPR requires lawful, transparent, and secure handling of personal data. We map access, processing, and retention controls to the approved client workflow.",
                     ],
                     [
                         "title" => "A Commitment to Ethical Business",
-                        "impact" => "EmpireOne CX is a BBB Accredited Business, giving partners confidence that their outsourcing provider is committed to ethical operations and responsive customer service.",
-                        "proof" => "We meet the Better Business Bureau's rigorous Standards for Trust, maintaining a proven track record of transparent, responsive, and highly ethical customer service.",
+                        "impact" => "BBB Accreditation gives partners another signal of trust, transparency, and service accountability.",
+                        "proof" => "BBB Accreditation reflects standards for honest business practices, clear communication, and responsive customer service.",
                     ],
                 ];
                 ?>
@@ -532,20 +532,20 @@ $faqs = [
                 <div>
                     <p class="security-section-label security-gradient-text">Business Advantage</p>
                     <h2 class="text-[34px] md:text-[46px] leading-[1.12] text-black mb-5">Why Our Compliance is Your Competitive Advantage</h2>
-                    <p class="text-[17px] leading-[30px] text-[#3C3B47]">For growing businesses and enterprise brands, outsourcing often comes with a fear of losing control over data. Our compliance framework transforms that risk into a strategic advantage.</p>
+                    <p class="text-[17px] leading-[30px] text-[#3C3B47]">Outsourcing should not mean losing control of customer data. Our compliance framework gives clients clearer oversight, stronger controls, and faster vendor approval.</p>
                 </div>
                 <div class="grid grid-cols-1 gap-5">
                     <div class="security-card p-6">
                         <h3 class="text-[23px] leading-[31px] mb-3 text-black">Unlock Enterprise Deals</h3>
-                        <p class="text-[16px] leading-[27px] text-[#3C3B47]">Pass stringent vendor risk assessments immediately. Clients using EmpireOne's SOC 2 and ISO 27001 certified environment have reduced VRA completion timelines by an average of 3 to 4 weeks.</p>
+                        <p class="text-[16px] leading-[27px] text-[#3C3B47]">SOC 2 and ISO 27001 documentation can help clients move through vendor risk reviews faster and with fewer follow-up questions.</p>
                     </div>
                     <div class="security-card p-6">
                         <h3 class="text-[23px] leading-[31px] mb-3 text-black">Accelerate Onboarding</h3>
-                        <p class="text-[16px] leading-[27px] text-[#3C3B47]">Because our infrastructure in Bogota, Lahore, and Toronto is already compliant with healthcare and financial regulations, we can launch dedicated teams in as little as 72 hours.</p>
+                        <p class="text-[16px] leading-[27px] text-[#3C3B47]">Our security controls, training processes, and access procedures are already defined. That helps approved teams launch faster.</p>
                     </div>
                     <div class="security-card p-6">
                         <h3 class="text-[23px] leading-[31px] mb-3 text-black">Protect Your Reputation</h3>
-                        <p class="text-[16px] leading-[27px] text-[#3C3B47]">24/7 AI-monitored workflows help ensure that human error does not lead to data leaks. We protect your brand equity as fiercely as you do.</p>
+                        <p class="text-[16px] leading-[27px] text-[#3C3B47]">AI-assisted monitoring and clear workflows help reduce avoidable mistakes. Your customer trust stays protected.</p>
                     </div>
                 </div>
             </div>
@@ -557,15 +557,15 @@ $faqs = [
             <div class="max-w-3xl mb-12">
                 <p class="security-section-label">Security Workflow</p>
                 <h2 class="text-[34px] md:text-[46px] leading-[1.12] mb-4">Our Security-First Process</h2>
-                <p class="text-[17px] leading-[28px] text-white/72">A clear, auditable progression from infrastructure controls to transparent reporting.</p>
+                <p class="text-[17px] leading-[28px] text-white/72">A simple path from secure setup to clear reporting.</p>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
                 <?php
                 $steps = [
-                    ["Infrastructure Lockdown", "Our global delivery centers utilize restricted-access network environments, zero-trust architecture, and strict physical security protocols, including no mobile phones, pens, or paper on PCI/HIPAA production floors."],
-                    ["Secure Talent Onboarding", "Every dedicated agent undergoes rigorous background checks, secure endpoint device provisioning, and mandatory, industry-specific compliance training before touching your systems."],
-                    ["AI-Assisted Monitoring", "We deploy AI-driven QA to monitor 100% of interactions. Our systems automatically redact sensitive data from transcripts and alert management to behavioral anomalies."],
-                    ["Transparent Reporting & Auditing", "We do not just secure your data; we prove it. You receive regular compliance reports and QA scorecards, giving you full visibility into our ongoing security posture."],
+                    ["Secure Work Environment", "Approved production areas use restricted access, secure networks, and clear physical security rules. Sensitive workflows can include no-phone, no-paper, and no-pen controls."],
+                    ["Trained, Approved Teams", "Agents complete background checks, role-based training, and secure system onboarding before working in client environments."],
+                    ["AI-Assisted Monitoring", "AI-assisted QA helps review interactions, identify risky behavior, and support sensitive-data protection."],
+                    ["Clear Reporting", "Clients receive compliance updates, QA scorecards, and operational reporting so security performance remains visible."],
                 ];
                 ?>
                 <div class="space-y-10">
@@ -592,7 +592,7 @@ $faqs = [
                 <div>
                     <p class="security-section-label security-gradient-text">Answers</p>
                     <h2 class="text-[34px] md:text-[46px] leading-[1.12] text-black mb-5">Frequently Asked Questions</h2>
-                    <p class="text-[17px] leading-[30px] text-[#3C3B47]">Common security, compliance, and onboarding questions for regulated CX and BPO operations.</p>
+                    <p class="text-[17px] leading-[30px] text-[#3C3B47]">Clear answers to common security, compliance, and onboarding questions.</p>
                 </div>
                 <div class="space-y-4">
                     <?php foreach ($faqs as $index => $faq): ?>
