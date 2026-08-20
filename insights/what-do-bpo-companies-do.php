@@ -141,7 +141,7 @@ ob_start();
                                 <li><strong>Financial services:</strong> A financial-services business may outsource customer service, document processing, reconciliation support, collections support, or other controlled workflows that match its regulatory requirements.</li>
                                 <li><strong>Healthcare:</strong> A healthcare organization may outsource scheduling, billing support, patient communications, or nonclinical administrative work when the provider can meet the required privacy and security controls.</li>
                             </ul>
-                            <p>The best delivery model depends on the industry's customer expectations, regulations, workflow complexity, and volume pattern. Explore <a href="/industries">EmpireOneCX industry solutions</a> for examples by sector.</p>
+                            <p>The best delivery model depends on the industry's customer expectations, regulations, workflow complexity, and volume pattern. Explore <a href="/industries/">EmpireOneCX industry solutions</a> for examples by sector.</p>
                         </section>
 
                         <section id="why-companies-outsource">
@@ -207,7 +207,7 @@ ob_start();
                             <p>A serious evaluation should test how the provider will run the work after the sales process ends. Use the following areas as a buyer's scorecard.</p>
 
                             <h3>1. Relevant Experience</h3>
-                            <p>Ask for experience with a comparable workflow, customer profile, risk level, channel mix, and volume pattern. A familiar industry logo is less useful than evidence that the provider understands the actual process, systems, failure modes, and performance expectations. Explore <a href="/industries">EmpireOneCX industry solutions</a> for relevant sector experience.</p>
+                            <p>Ask for experience with a comparable workflow, customer profile, risk level, channel mix, and volume pattern. A familiar industry logo is less useful than evidence that the provider understands the actual process, systems, failure modes, and performance expectations. Explore <a href="/industries/">EmpireOneCX industry solutions</a> for relevant sector experience.</p>
 
                             <h3>2. Team and Staffing Model</h3>
                             <p>Confirm whether the team will be dedicated or shared, where it will be located, how agents or specialists are selected, who supervises them, and how attrition, absence, and peak demand are covered. Dedicated teams can improve continuity and brand knowledge; shared teams can be more economical for smaller or irregular workloads. Compare <a href="/insights/dedicated-vs-shared-bpo-teams">dedicated and shared BPO teams</a> before choosing a model.</p>
@@ -216,7 +216,7 @@ ob_start();
                             <p>Agree on definitions, data sources, targets, reporting frequency, and ownership for each KPI. Ask how the provider investigates misses, runs calibration, coaches the team, and converts recurring issues into process improvements. Avoid metrics that reward speed while encouraging repeat contacts, errors, or poor customer outcomes.</p>
 
                             <h3>4. Security and Compliance</h3>
-                            <p>Request evidence that matches the data in scope rather than a generic list of badges. Review the provider's current assurance reports or certifications, access model, data locations, subprocessors, incident history, continuity plans, audit rights, and contractual obligations. Review <a href="/compliance-security">EmpireOneCX security and compliance information</a> as part of your due diligence.</p>
+                            <p>Request evidence that matches the data in scope rather than a generic list of badges. Review the provider's current assurance reports or certifications, access model, data locations, subprocessors, incident history, continuity plans, audit rights, and contractual obligations. Review <a href="/compliance-security/">EmpireOneCX security and compliance information</a> as part of your due diligence.</p>
 
                             <h3>5. Technology and Integration</h3>
                             <p>Confirm whether the provider can work inside your current systems, what integrations are required, who pays for licenses, who owns configurations and reporting data, and how changes are tested. The proposal should distinguish included technology from optional tools or implementation fees.</p>

@@ -202,7 +202,7 @@ ob_start();
                             <h2>How to Evaluate BPO Security and Compliance</h2>
                             <p>Start with the actual data flow. Identify what information the provider will receive, where it will be stored, who can access it, which systems it touches, and which legal or contractual obligations apply.</p>
                             <p>Then request evidence that matches those risks. This may include independent assurance reports, certifications, data-protection terms, business associate agreements, payment-security validation, penetration-test summaries, incident-response procedures, subprocessor lists, continuity plans, and audit rights.</p>
-                            <p>The goal is not to collect the largest possible stack of badges. It is to understand whether the provider's controls are appropriate for your specific workflow. Review <a href="/compliance-security">EmpireOneCX security and compliance information</a> as one example of the evidence buyers should examine during due diligence.</p>
+                            <p>The goal is not to collect the largest possible stack of badges. It is to understand whether the provider's controls are appropriate for your specific workflow. Review <a href="/compliance-security/">EmpireOneCX security and compliance information</a> as one example of the evidence buyers should examine during due diligence.</p>
                         </section>
 
                         <section id="rollout">
@@ -274,7 +274,7 @@ ob_start();
                             <div class="gradient-rule"></div>
                             <h2>How EmpireOneCX Approaches BPO Evaluation and Launch</h2>
                             <p>EmpireOneCX provides AI-assisted BPO and customer experience services across contact center operations, multilingual support, help desk, back-office processes, finance and accounting, quality assurance, recruitment, workforce support, and automation. Engagements are scoped around the client's workflows, systems, coverage requirements, risk profile, and performance goals.</p>
-                            <p>Buyers evaluating EmpireOneCX can review its <a href="/industries">industry experience</a>, <a href="/case-study">case studies</a>, <a href="/solutions/bpo-solutions">service capabilities</a>, <a href="/compliance-security">security and compliance information</a>, and delivery model before entering detailed scoping. A productive first conversation should cover volumes, channels, hours, languages, current performance, systems, risks, and the business outcome the program is expected to improve.</p>
+                            <p>Buyers evaluating EmpireOneCX can review its <a href="/industries/">industry experience</a>, <a href="/case-study">case studies</a>, <a href="/solutions/bpo-solutions">service capabilities</a>, <a href="/compliance-security/">security and compliance information</a>, and delivery model before entering detailed scoping. A productive first conversation should cover volumes, channels, hours, languages, current performance, systems, risks, and the business outcome the program is expected to improve.</p>
                             <p><a href="/contact"><strong>Talk to EmpireOneCX to compare your requirements with the right delivery model and implementation path.</strong></a></p>
                         </section>
 
@@ -291,7 +291,7 @@ ob_start();
                                 <li><a href="/insights/dedicated-vs-shared-bpo-teams">Dedicated vs. Shared BPO Teams</a></li>
                                 <li><a href="/insights/how-much-does-bpo-cost-2026">How Much Does BPO Cost in 2026?</a></li>
                                 <li><a href="/solutions/bpo-solutions">BPO Solutions</a></li>
-                                <li><a href="/industries">Industries</a></li>
+                                <li><a href="/industries/">Industries</a></li>
                                 <li><a href="/case-study">Case Studies</a></li>
                             </ul>
                         </section>

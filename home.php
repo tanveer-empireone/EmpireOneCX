@@ -492,7 +492,7 @@ include("inc/header.php");
                             <p class="pt-[12px] text-[16px] leading-[24px] text-white/90 max-w-[340px] mb-6">
                                 Outsource customer support with dedicated offshore agents powered by AI. Improve CSAT, reduce costs, and scale support fast.
                             </p>
-                            <a href="solutions#customersupport" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
+                            <a href="/solutions/#customersupport" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
                                 See the Impact
                                 <img src="assets/images/aboutbtnlearmore.webp" class="w-[24px] h-[24px]" loading="lazy" alt="Learn More Button" decoding="async" width="24" height="24" />
                             </a>
@@ -517,7 +517,7 @@ include("inc/header.php");
                             <p class="pt-[12px] text-[16px] leading-[24px] text-white/90 max-w-[340px] mb-6">
                                 Streamline operations with back office support services. Accurate, scalable, and cost-efficient offshore teams for admin work.
                             </p>
-                            <a href="solutions#bookofficesupport" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
+                            <a href="/solutions/#bookofficesupport" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
                                 See the Impact
                                 <img src="assets/images/aboutbtnlearmore.webp" class="w-[24px] h-[24px]" loading="lazy" alt="Learn More Button" decoding="async" width="24" height="24" />
                             </a>
@@ -542,7 +542,7 @@ include("inc/header.php");
                             <p class="pt-[12px] text-[16px] leading-[24px] text-white/90 max-w-[340px] mb-6">
                                 Outsource finance and accounting to reduce costs and improve accuracy. Bookkeeping, AP/AR, payroll, and reporting services.
                             </p>
-                            <a href="solutions#finance" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
+                            <a href="/solutions/#finance" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
                                 See the Impact
                                 <img src="assets/images/aboutbtnlearmore.webp" class="w-[24px] h-[24px]" loading="lazy" alt="Learn More Button" decoding="async" width="24" height="24" />
                             </a>
@@ -567,7 +567,7 @@ include("inc/header.php");
                             <p class="pt-[12px] text-[16px] leading-[24px] text-white/90 max-w-[340px] mb-6">
                                 Improve service quality with QA outsourcing. AI-powered audits, scorecards, coaching insights, and performance tracking.
                             </p>
-                            <a href="solutions#qualityassurance" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
+                            <a href="/solutions/#qualityassurance" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
                                 See the Impact
                                 <img src="assets/images/aboutbtnlearmore.webp" class="w-[24px] h-[24px]" loading="lazy" alt="Learn More Button" decoding="async" width="24" height="24" />
                             </a>
@@ -592,7 +592,7 @@ include("inc/header.php");
                             <p class="pt-[12px] text-[16px] leading-[24px] text-white/90 max-w-[340px] mb-6">
                                 Hire faster with offshore recruitment and workforce support. End-to-end hiring, onboarding, and workforce management.
                             </p>
-                            <a href="solutions#recruitment" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
+                            <a href="/solutions/#recruitment" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
                                 See the Impact
                                 <img src="assets/images/aboutbtnlearmore.webp" class="w-[24px] h-[24px]" loading="lazy" alt="Learn More Button" decoding="async" width="24" height="24" />
                             </a>
@@ -617,7 +617,7 @@ include("inc/header.php");
                             <p class="pt-[12px] text-[16px] leading-[24px] text-white/90 max-w-[340px] mb-6">
                                 Transform operations with AI-Assisted Customer Experience. Automate workflows, QA, documents, and analytics at scale.
                             </p>
-                            <a href="solutions#aienablebpo" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
+                            <a href="/solutions/#aienablebpo" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
                                 See the Impact
                                 <img src="assets/images/aboutbtnlearmore.webp" class="w-[24px] h-[24px]" loading="lazy" alt="Learn More Button" decoding="async" width="24" height="24" />
                             </a>
