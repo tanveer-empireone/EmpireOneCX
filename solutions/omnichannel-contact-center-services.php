@@ -1,5 +1,5 @@
 <?php
-$pageTitle = "Call Center Outsourcing & Contact Center Services | EmpireOneCX";
+$pageTitle = "Call Center Outsourcing Services";
 $metaDescription = "Outsource voice, chat, email, SMS and social customer support with EmpireOneCX. Build a scalable contact center team around your channels, coverage and KPIs.";
 $metaKeywords = "call center outsourcing, contact center services, contact center outsourcing, outsourced customer support, inbound call center outsourcing, omnichannel customer support, after hours customer support";
 include(__DIR__ . "/../inc/header.php");
