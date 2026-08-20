@@ -403,7 +403,7 @@ include(__DIR__ . "/../inc/header.php");
                                                 <?php endforeach; ?>
                                             </div>
                                         </div>
-                                        <a href="/global-footprint/<?= htmlspecialchars($location["slug"], ENT_QUOTES, "UTF-8") ?>" class="inline-flex items-center justify-center shrink-0 px-6 py-3 rounded-[8px] text-white text-[14px] leading-[20px] font-medium bg-[#7A76FF]">
+                                        <a href="/global-footprint/<?= htmlspecialchars($location["slug"], ENT_QUOTES, "UTF-8") ?>/" class="inline-flex items-center justify-center shrink-0 px-6 py-3 rounded-[8px] text-white text-[14px] leading-[20px] font-medium bg-[#7A76FF]">
                                             View <?= htmlspecialchars($location["name"], ENT_QUOTES, "UTF-8") ?> Page
                                         </a>
                                     </div>
