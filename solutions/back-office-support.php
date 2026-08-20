@@ -727,7 +727,7 @@ include(__DIR__ . "/../inc/header.php");
                 </div>
                 <div class="reveal-right">
                     <p class="nomargin text-white text-[16px] leading-[24px]">
-                        Hiring, training, and retaining in-house staff for back office functions is expensive, inflexible, and operationally inefficient at scale. Outsourcing to EmpireOneCX replaces that overhead with a dedicated, trained team that is ready to operate within your systems from day one - and that scales with your volume, not against it.
+                        Hiring, training, and retaining back office staff is expensive and hard to scale. EmpireOneCX replaces that overhead with a trained team that can work inside your systems from day one. Your capacity can grow with your volume instead of holding it back.
                     </p>
                 </div>
             </div>
@@ -741,7 +741,7 @@ include(__DIR__ . "/../inc/header.php");
                                 <img src="/assets/images/check.webp" alt="check" class="w-[20px] h-[20px] mt-1" />
                                 <div>
                                     <h4 class="text-[18px] font-semibold text-white mb-1">AI-Assisted Workflows, Not Just Headcount</h4>
-                                    <p class="text-[16px] leading-[24px] text-gray-400">Every EmpireOneCX back office engagement is embedded with automation. We deploy Robotic Process Automation (RPA) scripts - including UiPath and custom macros - and AI-powered OCR to eliminate repetitive manual steps, reduce error rates, and accelerate turnaround times.</p>
+                                    <p class="text-[16px] leading-[24px] text-gray-400">Every EmpireOneCX back office engagement includes automation. We use RPA scripts, including UiPath and custom macros, along with AI-powered OCR. These tools reduce repetitive manual steps, lower error rates, and speed up turnaround times.</p>
                                 </div>
                             </div>
                             
@@ -749,7 +749,7 @@ include(__DIR__ . "/../inc/header.php");
                                 <img src="/assets/images/check.webp" alt="check" class="w-[20px] h-[20px] mt-1" />
                                 <div>
                                     <h4 class="text-[18px] font-semibold text-white mb-1">System-Agnostic Integration</h4>
-                                    <p class="text-[16px] leading-[24px] text-gray-400">We work inside your existing technology stack - not alongside it. Our teams are trained to operate natively within your specific ERP, CRM, document management, and workflow platforms. No new software required. No disruption to existing processes.</p>
+                                    <p class="text-[16px] leading-[24px] text-gray-400">We work inside your existing technology stack. Our teams are trained on your ERP, CRM, document management, and workflow platforms. No new software is required, and your existing process stays intact.</p>
                                 </div>
                             </div>
                             
@@ -757,7 +757,7 @@ include(__DIR__ . "/../inc/header.php");
                                 <img src="/assets/images/check.webp" alt="check" class="w-[20px] h-[20px] mt-1" />
                                 <div>
                                     <h4 class="text-[18px] font-semibold text-white mb-1">Documented, Trackable, Audit-Ready</h4>
-                                    <p class="text-[16px] leading-[24px] text-gray-400">Every process is documented. Every output is tracked. Every team member is trained on your specific systems, accuracy standards, and escalation protocols before handling live data. This gives you an audit trail that is always accessible.</p>
+                                    <p class="text-[16px] leading-[24px] text-gray-400">Every process is documented, and every output is tracked. Each team member is trained on your systems, accuracy standards, and escalation rules before handling live data. You get a clear audit trail whenever you need it.</p>
                                 </div>
                             </div>
 

@@ -636,7 +636,7 @@ include(__DIR__ . "/../inc/header.php");
                 </div>
                 <div class="reveal-right">
                     <p class="nomargin text-[#3C3B47] text-[16px] leading-[24px]">
-                        The true cost of HR administration is not the salaries of your HR team — it is the time your entire organization loses when recruiting moves slowly, onboarding is inconsistent, and workforce data is fragmented across systems. EmpireOneCX eliminates that drag by building a dedicated operational layer around your people function.
+                        The true cost of HR administration is not only team salary. It is also the time lost when recruiting is slow, onboarding is inconsistent, and workforce data is spread across systems. EmpireOneCX reduces that drag by building a dedicated operating layer around your people function.
                     </p>
                 </div>
             </div>
@@ -645,32 +645,32 @@ include(__DIR__ . "/../inc/header.php");
                 
                 <div class="cx-feature-card">
                     <h4 class="text-[20px] leading-[28px] font-semibold text-black mb-3">Strategic Workforce Planning, Not Just Admin Coverage</h4>
-                    <p class="text-[15px] leading-[24px] text-[#555] mb-5">EmpireOneCX's workforce support model is built around your hiring roadmap, not just your current open roles. We align our coordination capacity to your growth plan — so when hiring accelerates, support scales with it, and when it slows, your costs adjust accordingly.</p>
+                    <p class="text-[15px] leading-[24px] text-[#555] mb-5">EmpireOneCX's workforce support model is built around your hiring roadmap, not just today's open roles. We align coordination capacity to your growth plan. When hiring accelerates, support scales with it. When hiring slows, your costs can adjust.</p>
                 </div>
                 
                 <div class="cx-feature-card">
                     <h4 class="text-[20px] leading-[28px] font-semibold text-black mb-3">Contingent Workforce Expertise at Scale</h4>
-                    <p class="text-[15px] leading-[24px] text-[#555] mb-5">Managing contingent talent is operationally complex: different contract types, variable engagement lengths, compliance requirements that vary by state and jurisdiction, and off-boarding timelines that are easy to mismanage. Our contingent workforce outsourcing teams are trained across these variables and maintain clean documentation throughout every engagement.</p>
+                    <p class="text-[15px] leading-[24px] text-[#555] mb-5">Managing contingent talent is complex. Contract types, engagement lengths, compliance rules, and offboarding timelines can all vary. Our contingent workforce teams manage those details and keep clean documentation throughout each engagement.</p>
                 </div>
                 
                 <div class="cx-feature-card">
                     <h4 class="text-[20px] leading-[28px] font-semibold text-black mb-3">Dedicated Virtual Assistants, Not a Rotating Pool</h4>
-                    <p class="text-[15px] leading-[24px] text-[#555] mb-5">EmpireOneCX's virtual assistant model is built around continuity. Your assigned VAs learn your systems, your terminology, your preferences, and your workflows — and they stay. You are not re-briefing a new person every month. That consistency compounds into meaningful productivity gains across your workforce operations.</p>
+                    <p class="text-[15px] leading-[24px] text-[#555] mb-5">EmpireOneCX's virtual assistant model is built around continuity. Your assigned VAs learn your systems, terms, preferences, and workflows. You are not re-briefing a new person every month. That consistency creates real productivity gains.</p>
                 </div>
                 
                 <div class="cx-feature-card">
                     <h4 class="text-[20px] leading-[28px] font-semibold text-black mb-3">System-Agnostic Integration</h4>
-                    <p class="text-[15px] leading-[24px] text-[#555] mb-5">We work inside your existing HR and workforce tools — whether that is Workday, BambooHR, Greenhouse, Lever, ADP, Rippling, or a custom ATS. No migration, no retraining your team, no disruption to processes that are already working.</p>
+                    <p class="text-[15px] leading-[24px] text-[#555] mb-5">We work inside your existing HR and workforce tools, including Workday, BambooHR, Greenhouse, Lever, ADP, Rippling, or a custom ATS. No migration is required. Your team does not need to relearn processes that already work.</p>
                 </div>
                 
                 <div class="cx-feature-card">
                     <h4 class="text-[20px] leading-[28px] font-semibold text-black mb-3">Compliance Coordination Across Industries</h4>
-                    <p class="text-[15px] leading-[24px] text-[#555] mb-5">Workforce compliance requirements differ significantly by sector and by workforce type. EmpireOneCX's HR BPO teams are trained across: Technology and SaaS (remote workforce coordination, multi-state compliance), Financial services and fintech (licensing verification, background screening), Healthcare (credentialing support, HIPAA-aligned documentation), Retail and e-commerce, Legal, and Real estate.</p>
+                    <p class="text-[15px] leading-[24px] text-[#555] mb-5">Workforce compliance needs differ by sector and workforce type. EmpireOneCX HR BPO teams support technology and SaaS, financial services, fintech, healthcare, retail, e-commerce, legal, and real estate operations.</p>
                 </div>
                 
                 <div class="cx-feature-card">
                     <h4 class="text-[20px] leading-[28px] font-semibold text-black mb-3">Secure Handling of Employee and Candidate Data</h4>
-                    <p class="text-[15px] leading-[24px] text-[#555] mb-5">Workforce data is among the most sensitive information your organization holds. EmpireOneCX protects it with AES-256 encryption, mandatory multi-factor authentication, SOC 2-compliant infrastructure, and isolated access environments — ensuring your employee records and candidate data are handled with the security they require.</p>
+                    <p class="text-[15px] leading-[24px] text-[#555] mb-5">Workforce data is highly sensitive. EmpireOneCX protects employee records and candidate data with AES-256 encryption, mandatory multi-factor authentication, SOC 2-compliant infrastructure, and isolated access environments.</p>
                 </div>
 
             </div>

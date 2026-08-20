@@ -663,7 +663,7 @@ include(__DIR__ . "/../inc/header.php");
                 </div>
                 <div class="reveal-right">
                     <p class="nomargin text-[#3C3B47] text-[16px] leading-[24px]">
-                        Deploying automation in a BPO context is operationally complex. Bots break when source systems change. AI models require training data, calibration, and ongoing governance. Human teams need to be restructured around exception management rather than transaction processing. Most organizations lack the internal capacity to manage all three simultaneously while also running the business. EmpireOneCX removes that complexity entirely. We bring the automation infrastructure, the AI tooling, the trained human teams, and the operational governance model — so your business gets the output of AI-enabled BPO without building the capability from scratch.
+                        Deploying automation in BPO is complex. Bots can break when source systems change. AI models need training data, calibration, and governance. Human teams also need to shift toward exception handling. EmpireOneCX brings the automation tools, trained teams, and operating model, so your business can use AI-enabled BPO without building it from scratch.
                     </p>
                 </div>
             </div>
@@ -672,32 +672,32 @@ include(__DIR__ . "/../inc/header.php");
                 
                 <div class="cx-feature-card">
                     <h4 class="text-[20px] leading-[28px] font-semibold text-black mb-3">Automation That Operates Inside Your Systems</h4>
-                    <p class="text-[15px] leading-[24px] text-[#555] mb-5">EmpireOneCX's RPA and AI tools are configured to work within your existing tech stack — your ERP, your CRM, your document management system, your accounting software. There is no requirement to migrate platforms or rebuild integrations. We adapt the automation layer to your environment.</p>
+                    <p class="text-[15px] leading-[24px] text-[#555] mb-5">EmpireOneCX's RPA and AI tools work inside your existing tech stack. That can include your ERP, CRM, document system, or accounting software. There is no need to migrate platforms or rebuild integrations. We adapt the automation layer to your environment.</p>
                 </div>
                 
                 <div class="cx-feature-card">
                     <h4 class="text-[20px] leading-[28px] font-semibold text-black mb-3">Human Oversight Built Into Every Workflow</h4>
-                    <p class="text-[15px] leading-[24px] text-[#555] mb-5">AI-enabled BPO does not mean removing humans from the process. It means repositioning them. EmpireOneCX's human operators manage exception queues, handle edge cases, perform calibration reviews, and provide the judgment layer that automation cannot replicate. Every automated workflow has a defined human escalation path.</p>
+                    <p class="text-[15px] leading-[24px] text-[#555] mb-5">AI-enabled BPO does not remove humans from the process. It gives them better work to manage. EmpireOneCX operators handle exceptions, edge cases, calibration reviews, and judgment calls. Every automated workflow has a clear human escalation path.</p>
                 </div>
                 
                 <div class="cx-feature-card">
                     <h4 class="text-[20px] leading-[28px] font-semibold text-black mb-3">Continuous Improvement, Not Set-and-Forget</h4>
-                    <p class="text-[15px] leading-[24px] text-[#555] mb-5">Automation without governance degrades over time as processes, systems, and volumes change. EmpireOneCX's operations teams actively monitor bot performance, retrain AI models when accuracy drifts, and update automation rules as your business evolves. The capability improves with use — it does not stagnate.</p>
+                    <p class="text-[15px] leading-[24px] text-[#555] mb-5">Automation needs governance as processes, systems, and volumes change. EmpireOneCX monitors bot performance, retrains AI models when accuracy drifts, and updates rules as your business evolves. The capability improves with use.</p>
                 </div>
                 
                 <div class="cx-feature-card">
                     <h4 class="text-[20px] leading-[28px] font-semibold text-black mb-3">Measurable Cost Reduction From the First Billing Cycle</h4>
-                    <p class="text-[15px] leading-[24px] text-[#555] mb-5">Because automation absorbs a significant share of transaction volume from day one, clients typically see cost-per-transaction reductions within the first full engagement period — not after a multi-year implementation runway. The efficiency gains are immediate and compounding.</p>
+                    <p class="text-[15px] leading-[24px] text-[#555] mb-5">Automation can absorb a meaningful share of transaction volume from day one. Clients can often see lower cost per transaction within the first full engagement period, not after a multi-year rollout. The gains build over time.</p>
                 </div>
                 
                 <div class="cx-feature-card">
                     <h4 class="text-[20px] leading-[28px] font-semibold text-black mb-3">AI Governance and Data Security</h4>
-                    <p class="text-[15px] leading-[24px] text-[#555] mb-5">All AI-processed data is handled with enterprise-grade security: AES-256 encryption, SOC 2-compliant infrastructure, multi-factor authentication, and isolated processing environments. AI model outputs are auditable, and data residency requirements are respected across all engagements.</p>
+                    <p class="text-[15px] leading-[24px] text-[#555] mb-5">AI-processed data is handled with enterprise-grade security. Controls include AES-256 encryption, SOC 2-compliant infrastructure, multi-factor authentication, and isolated processing environments. AI outputs are auditable, and data residency needs are respected.</p>
                 </div>
                 
                 <div class="cx-feature-card">
                     <h4 class="text-[20px] leading-[28px] font-semibold text-black mb-3">Industry-Specific AI BPO Configuration</h4>
-                    <p class="text-[15px] leading-[24px] text-[#555] mb-5">AI automation requirements differ by sector. EmpireOneCX's AI-enabled BPO capabilities are deployed across: Financial services and fintech, Healthcare, Insurance, Retail and e-commerce, Legal and professional services, Technology and SaaS.</p>
+                    <p class="text-[15px] leading-[24px] text-[#555] mb-5">AI automation needs differ by sector. EmpireOneCX supports financial services, fintech, healthcare, insurance, retail, e-commerce, legal, professional services, technology, and SaaS teams.</p>
                 </div>
 
             </div>
