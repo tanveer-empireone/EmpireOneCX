@@ -64,8 +64,8 @@
             <div class="flex flex-col lg:flex-row justify-between items-center items-start gap-8 lg:gap-12 mb-12 md:mb-16">
                 <div class="perfectwork w-full">
                     <p class="perfectfonts font-reckless font-normal text-[24px] leading-[32px] tracking-[-0.03em] mb-4">
-                        <span class="text-[#7A76FF]"><?php echo !empty($isSpanishSite) ? 'La alianza' : 'The Perfect'; ?></span>
-                        <span class="bg-gradient-to-r from-[#CB46FA] to-[#FE881C] bg-clip-text text-transparent"> <?php echo !empty($isSpanishSite) ? 'perfecta' : 'Partnership'; ?></span>
+                        <span class="text-[#D8B4FE]"><?php echo !empty($isSpanishSite) ? 'La alianza' : 'The Perfect'; ?></span>
+                        <span class="text-[#FDBA74]"> <?php echo !empty($isSpanishSite) ? 'perfecta' : 'Partnership'; ?></span>
                     </p>
                     <h2 class="text-[30px] md:text-[34px] leading-[38px] md:leading-[42px] tracking-[-0.01em] max-w-[720px]">
                         <?php echo !empty($isSpanishSite) ? 'IA avanzada + inteligencia humana<br class="hidden sm:block"> real = satisfacción del cliente garantizada' : 'Where advanced AI meets real human intelligence,<br class="hidden sm:block"> customer satisfaction follows.'; ?>
@@ -155,19 +155,19 @@
                             <a href="/termsandconditions" class="text-white text-[16px] hover:text-white/70 transition whitespace-nowrap">
                                 <?php echo !empty($isSpanishSite) ? 'Términos y condiciones' : 'Terms and Conditions'; ?>
                             </a>
-                            <span class="text-gray-600 hidden sm:inline">|</span>
+                            <span class="text-white/70 hidden sm:inline">|</span>
                             <a href="/privacy-policy" class="text-white text-[16px] hover:text-white/70 transition whitespace-nowrap nopadright">
                                 <?php echo !empty($isSpanishSite) ? 'Política de privacidad' : 'Privacy policy'; ?>
                             </a>
                             <?php if (!empty($enableCookieConsent)): ?>
-                                <span class="text-gray-600 hidden sm:inline">|</span>
+                                <span class="text-white/70 hidden sm:inline">|</span>
                                 <button type="button" class="eocx-cookie-preferences-link whitespace-nowrap" data-cookie-preferences>
                                     <?php echo !empty($isSpanishSite) ? 'Preferencias de cookies' : 'Cookie Preferences'; ?>
                                 </button>
                             <?php endif; ?>
                         </div>
 
-                        <p class="mycenter myfooterline text-white/70 text-left lg:text-right w-full" style="font-size: 14px;">
+                        <p class="mycenter myfooterline text-white text-left lg:text-right w-full" style="font-size: 14px;">
                             © <?= date('Y'); ?> EmpireOneCX <?php echo !empty($isSpanishSite) ? 'Todos los derechos reservados.' : 'All Rights Reserved.'; ?>
                         </p>
                     </div>
