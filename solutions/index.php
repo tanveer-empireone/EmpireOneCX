@@ -2,10 +2,8 @@
 $page_title = "Services & Solutions | EmpireOneCX";
 $meta_description = "Explore EmpireOneCX services and solutions, including CX outsourcing, BPO, back-office support, finance operations, QA, and workforce support.";
 $metaKeywords = "Customer Experience, BPO solutions, AI automation services, finance outsourcing, QA services, customer support outsourcing, recruitment outsourcing";
-$languageSwitchHrefEs = "/es/soluciones/";
 $languageAlternates = [
     "en" => "https://empireonecx.com/solutions/",
-    "es" => "https://empireonecx.com/es/soluciones/",
     "x-default" => "https://empireonecx.com/solutions/",
 ];
 include(__DIR__ . "/../inc/header.php");
