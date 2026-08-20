@@ -1,11 +1,7 @@
 <?php
     $page_title = "Contact Us | EmpireOneCX";
     $meta_description = "Contact EmpireOneCX to discuss CX outsourcing, BPO services, customer support, back-office support, and offshore team solutions.";
-    $languageAlternates = [
-        "en" => "https://empireonecx.com/contact",
-        "x-default" => "https://empireonecx.com/contact",
-    ];
-    include("inc/header.php");
+include("inc/header.php");
 ?>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 <style>
@@ -984,133 +980,9 @@
     </section>
 </main>
 <?php include("inc/footer.php"); ?>
-<script>
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault();
 
-    let form = this;
-    let formData = new FormData(form);
-    let submitBtn = form.querySelector("button[type='submit']");
-
-    // Disable button
-    submitBtn.disabled = true;
-    submitBtn.innerText = "Sending...";
-
-    // Show Loading SweetAlert
-    Swal.fire({
-        title: "Sending Message...",
-        text: "Please wait while we submit your request.",
-        allowOutsideClick: false,
-        showConfirmButton: false,
-        background: "linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%)",
-        color: "#fff",
-        didOpen: () => {
-            Swal.showLoading();
-        }
-    });
-
-    fetch("/send-mail", {
-        method: "POST",
-        body: formData
-    })
-    .then(response => response.text().then(text => ({ response, text })))
-    .then(({ response, text }) => {
-        try {
-            return JSON.parse(text);
-        } catch (error) {
-            const cleanText = text.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
-            throw new Error(cleanText || "The server returned an invalid response. HTTP status: " + response.status);
-        }
-    })
-    .then(data => {
-
-        Swal.close();
-
-        if (data.status === "success") {
-
-            Swal.fire({
-                icon: "success",
-                title: "Message Sent Successfully!",
-                text: data.message,
-                background: "linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%)",
-                color: "#ffffff",
-                confirmButtonColor: "#ffffff",
-                confirmButtonText: "OK",
-                customClass: {
-                    confirmButton: "custom-confirm-btn"
-                }
-            });
-
-            form.reset();
-
-        } else {
-
-            Swal.fire({
-                icon: "error",
-                title: "Something Went Wrong",
-                text: data.message,
-                background: "linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%)",
-                color: "#ffffff",
-                confirmButtonColor: "#ffffff",
-                confirmButtonText: "Try Again"
-            });
-        }
-
-        // Enable button again
-        submitBtn.disabled = false;
-        submitBtn.innerText = "Send Message";
-
-    })
-    .catch(error => {
-
-        Swal.close();
-
-        Swal.fire({
-            icon: "error",
-            title: "Server Error",
-            text: error.message || "Please try again later.",
-            background: "linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%)",
-            color: "#ffffff",
-            confirmButtonColor: "#ffffff"
-        });
-
-        submitBtn.disabled = false;
-        submitBtn.innerText = "Send Message";
-    });
-});
-</script>
 <script src="assets/js/jquery.js"></script>
-<script>
-$(document).ready(function () {
-    
-    $(".country-item").on("click", function () {
-        let code = $(this).data("code");
-        $("#country_code").val(code);
-    });
-});
-</script>
+
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<script>
-const swiper = new Swiper('.global-presence-swiper', {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    loop: true, 
-    autoplay: {
-        delay: 3000,            
-        disableOnInteraction: false, 
-        pauseOnMouseEnter: false,    
-    },
-    speed: 1000, 
-    loopFillGroupWithBlank: true, 
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-        600: { slidesPerView: 1 },
-        1024: { slidesPerView: 2 },
-        1280: { slidesPerView: 4 },
-    },
-});
-</script>
+<script src="/assets/js/contact-page.js?v=20260821-1"></script>

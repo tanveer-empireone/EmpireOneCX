@@ -2,11 +2,6 @@
 $page_title = "Global Footprint | EmpireOneCX";
 $metaDescription = "Explore EmpireOneCX global footprint pages across North America, Europe, the Middle East, Africa, Asia, and Latin America. Learn how our global CX and BPO delivery model supports growing brands.";
 $metaKeywords = "EmpireOneCX global footprint, BPO global delivery, CX outsourcing Canada, United States, United Kingdom, Australia, UAE, Morocco, Nicaragua, Colombia, Venezuela, Bolivia, Paraguay, South Africa, Pakistan, Philippines";
-$languageAlternates = [
-    "en" => "https://empireonecx.com/global-footprint/",
-    "x-default" => "https://empireonecx.com/global-footprint/",
-];
-
 $locations = [
     [
         "name" => "Canada",
@@ -111,180 +106,7 @@ $locations = [
 include(__DIR__ . "/../inc/header.php");
 ?>
 
-<style>
-@media (max-width: 767px) {
-    .global-footprint-page .hero-section {
-        height: auto !important;
-        min-height: 680px !important;
-        padding: 160px 16px 76px !important;
-        justify-content: flex-start !important;
-    }
-
-    .global-footprint-page .hero-section .container {
-        max-width: 100% !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-
-    .global-footprint-page .hero-section .herosubtitle {
-        margin-bottom: 14px !important;
-        font-size: 16px !important;
-        line-height: 24px !important;
-        letter-spacing: 0.08em !important;
-    }
-
-    .global-footprint-page .hero-section .solutions-hero-heading {
-        max-width: min(352px, calc(100vw - 32px)) !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        margin-bottom: 16px !important;
-        font-size: 34px !important;
-        line-height: 42px !important;
-        letter-spacing: 0 !important;
-        text-wrap: balance;
-    }
-
-    .global-footprint-page .hero-section .subpara {
-        max-width: min(342px, calc(100vw - 36px)) !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        margin-bottom: 18px !important;
-        padding-bottom: 0 !important;
-        font-size: 14px !important;
-        line-height: 22px !important;
-        letter-spacing: 0 !important;
-    }
-
-    .global-footprint-page .hero-section .delay-3 {
-        max-width: min(330px, calc(100vw - 36px));
-        margin-left: auto !important;
-        margin-right: auto !important;
-        font-size: 13px !important;
-        line-height: 21px !important;
-    }
-
-    .global-footprint-page .hero-section .delay-4 button {
-        width: min(100%, 352px) !important;
-        min-height: 52px !important;
-        padding: 14px 18px !important;
-        font-size: 14px !important;
-        line-height: 20px !important;
-        white-space: normal !important;
-    }
-
-    .global-footprint-page .controlbtns {
-        padding-top: 40px !important;
-        padding-bottom: 22px !important;
-    }
-
-    .global-footprint-page .linebtns {
-        display: flex !important;
-        flex-wrap: nowrap !important;
-        justify-content: flex-start !important;
-        gap: 12px !important;
-        width: 100% !important;
-        max-width: 100vw !important;
-        overflow-x: auto !important;
-        overflow-y: hidden !important;
-        padding: 0 16px 12px !important;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .global-footprint-page .linebtns .line-btn {
-        flex: 0 0 auto !important;
-        min-width: max-content !important;
-        padding: 14px 22px !important;
-        font-size: 15px !important;
-        line-height: 20px !important;
-    }
-
-    .global-footprint-page .industrysection {
-        padding-top: 42px !important;
-        padding-bottom: 54px !important;
-    }
-
-    .global-footprint-page .locations-mainflextag {
-        display: block !important;
-    }
-
-    .global-footprint-page .leftsideline {
-        display: none !important;
-    }
-
-    .global-footprint-page .rightsideline {
-        width: 100% !important;
-    }
-
-    .global-footprint-page .indussections {
-        padding-top: 34px !important;
-        padding-bottom: 50px !important;
-    }
-
-    .global-footprint-page .toptextwork .spanfont {
-        font-size: 17px !important;
-        line-height: 25px !important;
-    }
-
-    .global-footprint-page .solution-heading,
-    .global-footprint-page .solution-heading span {
-        max-width: 100% !important;
-        font-size: 30px !important;
-        line-height: 38px !important;
-        letter-spacing: 0 !important;
-    }
-
-    .global-footprint-page .toptextwork p {
-        font-size: 15px !important;
-        line-height: 24px !important;
-    }
-
-    .global-footprint-page .imagetop {
-        margin-top: 24px !important;
-    }
-
-    .global-footprint-page .heightimg img {
-        height: 220px !important;
-    }
-
-    .global-footprint-page .indusweoffer {
-        width: 100% !important;
-        margin-top: 18px !important;
-    }
-
-    .global-footprint-page .mytextoffer {
-        padding: 24px 18px !important;
-    }
-
-    .global-footprint-page .indusweoffer h3 {
-        font-size: 22px !important;
-        line-height: 30px !important;
-    }
-
-    .global-footprint-page .indusweoffer a {
-        width: 100% !important;
-        min-height: 48px !important;
-        margin-top: 4px !important;
-    }
-
-    .global-footprint-page .future-customer-section {
-        padding-top: 58px !important;
-        padding-bottom: 58px !important;
-    }
-}
-
-@media (max-width: 360px) {
-    .global-footprint-page .hero-section {
-        min-height: 700px !important;
-        padding-top: 154px !important;
-    }
-
-    .global-footprint-page .hero-section .solutions-hero-heading {
-        font-size: 31px !important;
-        line-height: 39px !important;
-    }
-}
-</style>
+<link rel="stylesheet" href="/assets/css/extracted/global-footprint.css?v=20260821-1">
 
 <main class="global-footprint-page" style="background-color: #ffffff;">
     <script type="application/ld+json">
@@ -403,7 +225,7 @@ include(__DIR__ . "/../inc/header.php");
                                                 <?php endforeach; ?>
                                             </div>
                                         </div>
-                                        <a href="/global-footprint/<?= htmlspecialchars($location["slug"], ENT_QUOTES, "UTF-8") ?>/" class="inline-flex items-center justify-center shrink-0 px-6 py-3 rounded-[8px] text-white text-[14px] leading-[20px] font-medium bg-[#7A76FF]">
+                        <a href="/global-footprint/<?= htmlspecialchars($location["slug"], ENT_QUOTES, "UTF-8") ?>/" class="inline-flex items-center justify-center shrink-0 px-6 py-3 rounded-[8px] text-white text-[14px] leading-[20px] font-medium bg-[#7A76FF]">
                                             View <?= htmlspecialchars($location["name"], ENT_QUOTES, "UTF-8") ?> Page
                                         </a>
                                     </div>
@@ -455,60 +277,6 @@ include(__DIR__ . "/../inc/header.php");
     </section>
 </main>
 
-<script>
-function initLocationArchive() {
-    const locationProgress = document.getElementById('location-scroll-progress');
-    const locationsMainFlex = document.querySelector('.locations-mainflextag');
-
-    if (locationProgress && locationsMainFlex) {
-        window.addEventListener('scroll', () => {
-            const rect = locationsMainFlex.getBoundingClientRect();
-            const viewportCenter = window.innerHeight / 2;
-            const distance = viewportCenter - rect.top;
-            const total = rect.height;
-            let percent = (distance / total) * 100;
-            percent = Math.max(6, Math.min(100, percent));
-            locationProgress.style.height = percent + '%';
-        });
-    }
-
-    window.scrollToLocationTarget = function (targetId) {
-        const target = document.getElementById(targetId);
-
-        if (!target) {
-            return;
-        }
-
-        const header = document.querySelector("header");
-        const headerOffset = header ? header.offsetHeight + 24 : 110;
-        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
-
-        window.scrollTo({
-            top: targetPosition,
-            behavior: "auto"
-        });
-    };
-
-    document.querySelectorAll(".location-scroll-trigger").forEach(btn => {
-        btn.addEventListener("click", function (event) {
-            const targetId = this.getAttribute("data-location-target");
-
-            if (!targetId) {
-                return;
-            }
-
-            if (this.classList.contains("line-btn")) {
-                document.querySelectorAll(".line-btn").forEach(item => item.classList.remove("btn-active"));
-                this.classList.add("btn-active");
-            }
-
-            event.preventDefault();
-            window.setTimeout(() => window.scrollToLocationTarget(targetId), 40);
-        });
-    });
-}
-
-initLocationArchive();
-</script>
+<script defer src="/assets/js/global-footprint.js?v=20260821-1"></script>
 
 <?php include(__DIR__ . "/../inc/footer.php"); ?>

@@ -86,29 +86,7 @@ include(__DIR__ . '/header.php');
                 </aside>
 
                 <article class="max-w-4xl">
-                    <style>
-                        .blog-hero-title { font-size: 34px; line-height: 1.16; font-weight: 400; max-width: 980px; }
-                        @media (min-width: 640px) { .blog-hero-title { font-size: 40px; line-height: 1.14; } }
-                        @media (min-width: 768px) { .blog-hero-title { font-size: 46px; line-height: 1.12; } }
-                        @media (min-width: 1024px) { .blog-hero-title { font-size: 52px; line-height: 1.1; } }
-                        @media (min-width: 1280px) { .blog-hero-title { font-size: 50px; line-height: 1.09; } }
-                        .blog-article h2 { font-family: helveticaregular, Arial, sans-serif; font-size: 34px; line-height: 42px; letter-spacing: 0; color: #050505; margin: 0 0 18px; }
-                        .blog-article h3 { font-family: helveticaregular, Arial, sans-serif; font-size: 23px; line-height: 31px; color: #111; margin: 34px 0 12px; }
-                        .blog-article p { font-size: 17px; line-height: 30px; color: #3C3B47; margin: 0 0 18px; }
-                        .blog-article ul, .blog-article ol { margin: 0 0 28px; color: #3C3B47; }
-                        .blog-article ul { list-style: none; padding-left: 0; }
-                        .blog-article ol { list-style: decimal; padding-left: 24px; }
-                        .blog-article li { font-size: 17px; line-height: 30px; margin-bottom: 10px; }
-                        .blog-article ul > li { position: relative; padding-left: 32px; }
-                        .blog-article ul > li::before { content: ""; position: absolute; left: 0; top: 0.25em; width: 22px; height: 22px; background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%); -webkit-mask: url("data:image/svg+xml,%3Csvg width='800px' height='800px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.4297 5.93018L20.4997 12.0002L14.4297 18.0702' stroke='%23292D32' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath opacity='0.4' d='M3.5 12H20.33' stroke='%23292D32' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat; mask: url("data:image/svg+xml,%3Csvg width='800px' height='800px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.4297 5.93018L20.4997 12.0002L14.4297 18.0702' stroke='%23292D32' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath opacity='0.4' d='M3.5 12H20.33' stroke='%23292D32' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat; }
-                        .blog-article section { scroll-margin-top: 110px; margin-bottom: 56px; }
-                        .blog-article strong { color: #111; font-family: helveticaregular, Arial, sans-serif; }
-                        .gradient-rule { width: 56px; height: 4px; border-radius: 999px; background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%); margin-bottom: 18px; }
-                        .blog-toc-link { position: relative; padding-left: 14px; transition: color 180ms ease, transform 180ms ease; }
-                        .blog-toc-link::before { content: ""; position: absolute; left: 0; top: 0.45em; width: 4px; height: 4px; border-radius: 999px; background: transparent; transition: background 180ms ease, height 180ms ease, top 180ms ease; }
-                        .blog-toc-link.is-active { color: #7A76FF; font-weight: 600; transform: translateX(2px); }
-                        .blog-toc-link.is-active::before { top: 0.15em; width: 4px; height: 18px; background: linear-gradient(180deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%); }
-                    </style>
+                    <link rel="stylesheet" href="/assets/css/extracted/inc-blog-template.css?v=20260821-1">
 
                     <div class="blog-article" id="article">
                         <?= $blogPost['content'] ?? '' ?>

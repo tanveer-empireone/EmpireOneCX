@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/html-optimizer.php';
 $siteLanguage = 'en';
 $isSpanishSite = false;
 $homeHref = '/';
