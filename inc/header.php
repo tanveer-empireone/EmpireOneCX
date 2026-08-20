@@ -255,7 +255,7 @@ $suppressHreflang = $suppressHreflang ?? false;
                                     </div>
                                 </div>
                                 <a href="/contact" class="nav-link">Contact Us</a>
-                                <a href="https://careers.empireonecx.com" class="nav-link" target="_blank" rel="noopener noreferrer">Careers</a>
+                                <a href="https://careers.empireonecx.com/" class="nav-link" target="_blank" rel="noopener noreferrer">Careers</a>
                             </nav>
                         </div>
 
@@ -270,7 +270,7 @@ $suppressHreflang = $suppressHreflang ?? false;
                         </div>
 
                         <div class="lg:hidden flex items-center gap-3">
-                            <button id="menu-toggle" class="mobilehumburger p-2 focus:outline-none">
+                            <button id="menu-toggle" class="mobilehumburger p-2 focus:outline-none" type="button" aria-label="Open main menu" aria-controls="mobile-menu-container" aria-expanded="false">
                                 <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                                 </svg>
@@ -387,7 +387,7 @@ $suppressHreflang = $suppressHreflang ?? false;
                     <a href="/contact" class="mobile-nav-link block text-gray-800 text-base font-medium hover:text-purple-600 transition-colors">
                         <i class="fas fa-envelope mr-3 w-5 text-center"></i>Contact Us
                     </a>
-                    <a href="https://careers.empireonecx.com" class="mobile-nav-link block text-gray-800 text-base font-medium hover:text-purple-600 transition-colors" target="_blank" rel="noopener noreferrer">
+                    <a href="https://careers.empireonecx.com/" class="mobile-nav-link block text-gray-800 text-base font-medium hover:text-purple-600 transition-colors" target="_blank" rel="noopener noreferrer">
                         <i class="fas fa-briefcase mr-3 w-5 text-center"></i>Careers
                     </a>
                 </div>

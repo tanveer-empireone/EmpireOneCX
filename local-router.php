@@ -31,6 +31,11 @@ if ($path === '/' || $path === '') {
     return true;
 }
 
+if ($path === '/career' || $path === '/career/') {
+    header('Location: https://careers.empireonecx.com/', true, 301);
+    return true;
+}
+
 if (is_file($file)) {
     return false;
 }

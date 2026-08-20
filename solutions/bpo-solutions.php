@@ -798,6 +798,7 @@ include(__DIR__ . "/../inc/header.php");
                         AI-Enabled BPO Solutions
                         <span class="solutionsitalic-font text-[32px] leading-[40px] tracking-[-0.03em] text-white"> FAQs</span>
                     </h3>
+                    <p class="text-[16px] leading-[24px] text-gray-400">For broader questions about outsourcing models, pricing, implementation, SLAs, and provider selection, visit the <a href="/faq/bpo-faq/" class="text-white underline">BPO FAQ</a>. For AI-assisted customer service questions, see the <a href="/faq/ai-support-faq/" class="text-white underline">AI Support FAQ</a>.</p>
                 </div>
 
                 <div class="reveal-right bg-[#111] rounded-[16px] p-6 md:p-8">

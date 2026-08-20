@@ -362,7 +362,7 @@ include("inc/header.php");
         { title: "Pakistan", url: "/global-footprint/pakistan/", keywords: "pakistan technical support cx bpo outsourcing" },
         { title: "Philippines", url: "/global-footprint/philippines/", keywords: "philippines customer care cx bpo outsourcing" },
         { title: "Compliance & Security", url: "/compliance-security/", keywords: "compliance security soc iso gdpr pci" },
-        { title: "Careers", url: "/career", keywords: "careers jobs hiring" },
+        { title: "Careers", url: "https://careers.empireonecx.com/", keywords: "careers jobs hiring" },
         { title: "Contact Us", url: "/contact", keywords: "contact quote proposal call" }
     ];
 

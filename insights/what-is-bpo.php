@@ -217,6 +217,7 @@ ob_start();
                         <section id="faqs">
                             <div class="gradient-rule"></div>
                             <h2>Frequently Asked Questions About BPO</h2>
+                            <p>For more direct answers on outsourcing models, pricing, implementation, SLAs, security, and AI, visit the <a href="/faq/bpo-faq/">BPO FAQ</a>.</p>
                             <div class="space-y-5">
                                 <div class="rounded-[8px] border border-gray-200 p-6">
                                     <h3 class="mt-0">What is BPO in simple terms?</h3>

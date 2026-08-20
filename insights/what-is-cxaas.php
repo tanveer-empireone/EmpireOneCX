@@ -418,6 +418,8 @@ ob_start();
                                 <li><a href="/insights/how-much-does-bpo-cost-2026">How Much Does BPO Cost in 2026?</a></li>
                                 <li><a href="/solutions/customer-experience-solutions">Customer Experience Solutions</a></li>
                                 <li><a href="/solutions/omnichannel-contact-center-services">Omnichannel Contact Center Services</a></li>
+                                <li><a href="/faq/cx-outsourcing-faq/">CX Outsourcing FAQ</a></li>
+                                <li><a href="/faq/ai-support-faq/">AI Support FAQ</a></li>
                                 <li><a href="/case-study">Case Studies</a></li>
                             </ul>
                         </section>

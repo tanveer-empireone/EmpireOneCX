@@ -293,6 +293,7 @@ ob_start();
                                 <li><strong>US and UK Market Expertise:</strong> Support for regional compliance standards and localized communication protocols.</li>
                             </ul>
                             <p>CX outsourcing with EmpireOne removes operational bottlenecks, allowing internal teams to focus on product development and strategic growth while we help ensure every customer interaction is executed cleanly.</p>
+                            <p>For practical questions about outsourced customer service, omnichannel operations, staffing, quality, and customer metrics, see the <a href="/faq/cx-outsourcing-faq/">CX Outsourcing FAQ</a>.</p>
                         </section>
 
                         <section id="faqs">

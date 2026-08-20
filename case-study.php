@@ -688,7 +688,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="career" class="mt-10 bg-white text-center py-4 px-4 rounded-xl font-bold text-[15px] shadow-md transition-all hover:scale-[1.02] active:scale-[0.98]">
+                        <a href="https://careers.empireonecx.com/" target="_blank" rel="noopener noreferrer" class="mt-10 bg-white text-center py-4 px-4 rounded-xl font-bold text-[15px] shadow-md transition-all hover:scale-[1.02] active:scale-[0.98]">
                             <span class="gradient-text">Accelerate Your Hiring Now</span>
                         </a>
                     </div>

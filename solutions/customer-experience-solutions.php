@@ -822,7 +822,7 @@ include(__DIR__ . "/../inc/header.php");
                         <div class="hidden md:block h-[42px] w-px bg-white flex-shrink-0"></div>
                         <div class="empsolbtn flex items-center justify-between" style="width: 100%;">
                             <p class="text-white text-[16px] leading-[24px] w-[665px] mr-[50px]">
-                                We build dedicated customer service teams trained on your products, tone, and workflows — backed by AI-assisted routing, knowledge bases, and real-time QA.
+                                We build dedicated customer service teams trained on your products, tone, and workflows — backed by AI-assisted routing, knowledge bases, and real-time QA. For planning questions, review the <a href="/faq/cx-outsourcing-faq/" class="text-white underline">CX Outsourcing FAQ</a> or the <a href="/faq/call-center-faq/" class="text-white underline">Call Center FAQ</a>.
                             </p>
                             <a href="/contact" class="py-[10px] px-[24px] bg-white inline-block rounded-[8px]">
                                 <span style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
