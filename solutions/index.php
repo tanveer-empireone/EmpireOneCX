@@ -21,9 +21,28 @@ include(__DIR__ . "/../inc/header.php");
             <h1 class="solutions-hero-heading herocheck animate-reveal delay-2 text-[48px] font-medium leading-[54px] sm:leading-[1.1] mb-4 text-white mx-auto">
                 AI-Assisted CX & BPO Solutions for Smarter, Scalable Business
             </h1>
-            <p class="subpara font-normal animate-reveal delay-3 text-gray-300 text-sm sm:text-base lg:text-lg sm:max-w-3xl mx-auto mb-8 sm:mb-8" style="max-width: 848px !important;">Reliable, people powered outsourcing and AI-driven solutions that help organizations operate efficiently, serve customers better, and grow with confidence.</p>
+            <p class="subpara font-normal animate-reveal delay-3 text-gray-300 text-sm sm:text-base lg:text-lg sm:max-w-3xl mx-auto mb-8 sm:mb-8" style="max-width: 848px !important;">Reliable, people powered outsourcing and AI-driven solutions that help organizations operate efficiently, serve customers better, and grow with confidence. EmpireOneCX supports customer service, multilingual support, back-office operations, finance and accounting, quality assurance, recruitment, workforce support, and AI-assisted process improvement with flexible delivery models built around measurable outcomes.</p>
             <div class="animate-reveal delay-4">
                 <button onclick="window.location.href='../contact'" class="herobtns bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] text-white py-4 px-8 text-sm sm:text-base hover:transition-all duration-300 shadow-lg hover:shadow-purple-400/20" style="border-radius: 8px !important;"> Unlock Solutions Today </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white px-4 py-12">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div class="rounded-[10px] border border-[#ECEAF5] p-6">
+                    <h2 class="text-[22px] leading-[30px] text-black mb-3">How We Design Solutions</h2>
+                    <p class="text-[16px] leading-[26px] text-[#3C3B47]">Every program starts with the work you need to move, the customer experience you want to protect, and the metrics that define success. We map channels, volumes, hours, language needs, compliance requirements, tools, training, and reporting before recommending a delivery model.</p>
+                </div>
+                <div class="rounded-[10px] border border-[#ECEAF5] p-6">
+                    <h2 class="text-[22px] leading-[30px] text-black mb-3">What Teams Receive</h2>
+                    <p class="text-[16px] leading-[26px] text-[#3C3B47]">Clients get dedicated or flexible support teams, structured onboarding, documented workflows, performance scorecards, quality monitoring, and management visibility. The goal is to reduce operational pressure while keeping service standards, accountability, and customer trust intact.</p>
+                </div>
+                <div class="rounded-[10px] border border-[#ECEAF5] p-6">
+                    <h2 class="text-[22px] leading-[30px] text-black mb-3">Where AI Fits</h2>
+                    <p class="text-[16px] leading-[26px] text-[#3C3B47]">AI is used to improve routing, knowledge access, quality reviews, reporting, and workflow efficiency. Human teams still handle judgment, empathy, escalation, and brand-sensitive communication, creating a practical operating model for modern CX and BPO programs.</p>
+                </div>
             </div>
         </div>
     </section>

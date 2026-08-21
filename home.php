@@ -234,6 +234,12 @@ include("inc/header.php");
                     <h2 class="customersformat text-center text-[32px] leading-[40px] font-medium text-[#000000]">
                         Operational Excellence, Backed by Numbers
                     </h2>
+                    <p class="text-center text-[16px] leading-[26px] text-[#3C3B47] max-w-[900px] mx-auto mt-5">
+                        These operating indicators reflect how EmpireOneCX plans customer experience and BPO programs: experienced leadership, scalable staffing, flexible seating capacity, retention discipline, measurable satisfaction, AI-assisted operations, enterprise workflow deployment, quality monitoring, and continuous coverage. The numbers help clients understand the size, maturity, and reliability behind the teams that support their customers.
+                    </p>
+                    <p class="text-center text-[16px] leading-[26px] text-[#3C3B47] max-w-[900px] mx-auto mt-3">
+                        Behind each metric is a delivery model built around hiring, onboarding, coaching, reporting, compliance, and process improvement. That structure allows brands to expand support capacity while keeping service quality, customer satisfaction, and operational visibility at the center of the program.
+                    </p>
                     <div class="mytexx grid grid-cols-1 md:grid-cols-5 gap-x-6 gap-y-10 md:gap-x-8 md:gap-y-6 text-center mt-8">
                         <div class="flex flex-col items-center space-y-3">
                             <div class="counter text-[40px] leading-[48px] tracking-[-0.03em] text-center font-medium bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)] bg-clip-text text-transparent" data-target="10">

@@ -13,6 +13,21 @@
 
         return false;
     }) : $allPosts;
+    $categoryDescriptions = [
+        "ai" => "Explore practical AI guidance for customer experience teams, support leaders, and operations teams. These articles explain how AI can support routing, quality monitoring, knowledge access, automation, forecasting, and human-led service without weakening accountability.",
+        "bpo" => "Browse BPO resources covering outsourcing models, provider evaluation, operating costs, transition planning, service design, and performance management. These guides help teams understand when to outsource, what to measure, and how to compare partners responsibly.",
+        "bpo-strategy" => "Read strategic BPO guidance for leaders planning customer support, back-office, finance, technical support, QA, and workforce operations. Topics include dedicated teams, shared teams, pricing models, risk controls, vendor selection, and long-term operating structure.",
+        "customer-experience" => "Review customer experience insights focused on service quality, customer journey design, omnichannel support, satisfaction measurement, retention, and customer operations. These resources help businesses build support models that are responsive, measurable, and scalable.",
+        "customer-support" => "Find customer support articles on call centers, help desks, multilingual service, response times, escalation workflows, customer satisfaction, and support outsourcing. Each guide is written for teams that need dependable coverage and consistent service outcomes.",
+        "cx" => "Explore CX resources about customer care, service delivery, digital engagement, AI-assisted operations, and outsourced support teams. These articles connect customer experience goals with the workflows, people, systems, and reporting needed to deliver them.",
+        "news" => "Read company news, brand updates, and announcements from EmpireOneCX. This section includes business updates, service developments, and information relevant to clients, partners, job candidates, and organizations evaluating customer experience outsourcing.",
+        "outsourcing" => "Browse outsourcing guides that explain delivery models, cost drivers, transition planning, compliance considerations, staffing options, and provider responsibilities. These articles help teams assess whether outsourcing is the right next step for a specific workflow.",
+        "pricing" => "Review pricing and cost-planning resources for BPO, call center outsourcing, customer support, and operational delivery. These guides explain the variables that affect cost, including staffing, location, hours, complexity, tools, training, and service levels.",
+    ];
+    $selectedCategoryName = $selectedCategory && isset($categories[$selectedCategory]) ? $categories[$selectedCategory] : "";
+    $archiveDescription = $selectedCategory && isset($categoryDescriptions[$selectedCategory])
+        ? $categoryDescriptions[$selectedCategory]
+        : "Explore EmpireOneCX articles on customer experience, BPO strategy, AI-assisted operations, outsourcing models, support delivery, pricing, and operational improvement. These resources are written for leaders comparing service providers, building support teams, and scaling customer operations.";
     $latestPost = reset($allPosts);
     $pageTitle = "News & Insights";
     $metaDescription = "Explore EmpireOneCX insights on business process outsourcing, customer experience, AI-assisted operations, and scalable support teams.";
@@ -64,6 +79,28 @@
     <section class="py-16 px-6 bg-white">
         <div class="container mx-auto">
             <h2 class="newstext text-[32px] font-bold mb-8 text-gray-900 scroll-animate">Explore all posts</h2>
+            <div class="rounded-[10px] border border-gray-100 bg-[#fbfbfd] p-6 md:p-8 mb-8">
+                <p class="text-[14px] leading-[20px] font-semibold tracking-[0.08em] uppercase text-[#7A76FF] mb-3">
+                    <?= $selectedCategoryName ? htmlspecialchars($selectedCategoryName, ENT_QUOTES, 'UTF-8') . ' Insights' : 'EmpireOneCX Knowledge Hub' ?>
+                </p>
+                <p class="text-[16px] md:text-[17px] leading-[26px] md:leading-[28px] text-[#3C3B47] max-w-[980px]">
+                    <?= htmlspecialchars($archiveDescription, ENT_QUOTES, 'UTF-8') ?>
+                </p>
+                <p class="text-[16px] md:text-[17px] leading-[26px] md:leading-[28px] text-[#3C3B47] max-w-[980px] mt-4">
+                    Use these resources to compare outsourcing options, understand delivery models, prepare stakeholder questions, and identify the operational details that affect service quality. EmpireOneCX publishes practical guidance for teams evaluating customer support, call center operations, back-office workflows, AI-assisted service, multilingual coverage, quality assurance, staffing, and vendor governance.
+                </p>
+                <ul class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-5 text-[15px] leading-[22px] text-[#3C3B47]">
+                    <li>Plan service scope, coverage hours, staffing levels, and escalation paths before choosing a provider.</li>
+                    <li>Review cost drivers such as training, tools, quality monitoring, location, language mix, and operating complexity.</li>
+                    <li>Build a measurable CX or BPO program with reporting, accountability, transition planning, and continuous improvement.</li>
+                </ul>
+                <p class="text-[16px] md:text-[17px] leading-[26px] md:leading-[28px] text-[#3C3B47] max-w-[980px] mt-5">
+                    If you are comparing providers, start with articles that explain the service category, then move into checklist-style pieces that cover governance, risk, cost, and implementation. For established teams, the most useful resources are often the ones that help refine quality assurance, staffing ratios, automation opportunities, customer effort, knowledge management, and reporting cadence.
+                </p>
+                <p class="text-[16px] md:text-[17px] leading-[26px] md:leading-[28px] text-[#3C3B47] max-w-[980px] mt-4">
+                    EmpireOneCX keeps this library focused on decisions operators actually make: whether to build in-house or outsource, which workflows to move first, how to protect brand voice, how to measure performance, and how to combine AI with trained human teams without losing accountability.
+                </p>
+            </div>
 
             <div class="mybtnanchor flex flex-wrap gap-3 mb-8">
                 <a href="/insights/" class="<?= $selectedCategory === '' ? 'btn-gradient text-white' : 'border border-gray-200 text-[rgba(0,0,0,1)]' ?> px-4 py-2 rounded-md text-[16px] leading-[24px] font-medium">All Posts</a>

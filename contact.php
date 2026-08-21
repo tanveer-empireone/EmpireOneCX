@@ -101,6 +101,11 @@ include("inc/header.php");
                     </h2>
                     <p class="text-[18px] w-[455px] pt-[22px]">Tell us where you want to go. We'll design a high-performance, AI-Assisted offshore solution built specifically for your business.</p>
                     <p class="text-[18px] w-[455px] pt-[22px]"><b>Most clients launch in 2-4 Weeks.</b></p>
+                    <div class="contact-page-context text-[16px] leading-[25px] text-[#3C3B47] max-w-[455px] pt-[22px] space-y-3">
+                        <p>Use this form to start a conversation about customer support, contact center outsourcing, back-office operations, finance and accounting BPO, quality assurance, recruitment, or AI-assisted workflow support. Share the business goal, current team size, service channels, coverage hours, and any service-level targets you already track.</p>
+                        <p>Our team reviews each request to understand the operating model first. That includes contact volume, language needs, technology stack, escalation rules, compliance requirements, launch timeline, and the internal resources available for onboarding.</p>
+                        <p>After review, EmpireOneCX can recommend a delivery approach, staffing structure, transition plan, and next-step discussion tailored to the customer experience or BPO program you want to build.</p>
+                    </div>
                     <div class="contact-side-img1 absolute w-[732px] h-[774px] opacity-[40%] bg-cover bg-center bg-no-repeat"></div>
                     
                 </div>
@@ -851,6 +856,33 @@ include("inc/header.php");
                     </button>
 
                 </form>
+            </div>
+        </div>
+    </section>
+    <section class="bg-white px-4 py-14">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div class="rounded-[12px] border border-[#ECEAF5] p-6">
+                    <h2 class="text-[24px] leading-[32px] text-black mb-3">What to Include</h2>
+                    <p class="text-[16px] leading-[26px] text-[#3C3B47]">Tell us which function you want to improve, the channels you use today, the number of agents or seats you are considering, your preferred coverage hours, and any current pain points such as long response times, backlog, seasonal volume, quality gaps, or high operating cost.</p>
+                </div>
+                <div class="rounded-[12px] border border-[#ECEAF5] p-6">
+                    <h2 class="text-[24px] leading-[32px] text-black mb-3">How We Review</h2>
+                    <p class="text-[16px] leading-[26px] text-[#3C3B47]">EmpireOneCX reviews each request against delivery model, staffing structure, training needs, compliance expectations, reporting requirements, technology stack, and launch timeline. This helps us respond with a practical recommendation instead of a generic outsourcing quote.</p>
+                </div>
+                <div class="rounded-[12px] border border-[#ECEAF5] p-6">
+                    <h2 class="text-[24px] leading-[32px] text-black mb-3">What Happens Next</h2>
+                    <p class="text-[16px] leading-[26px] text-[#3C3B47]">A team member will review your request, clarify the most important operating details, and help map the next step. Depending on your needs, that may include a discovery call, a staffing estimate, a phased transition plan, or a custom CX and BPO solution outline.</p>
+                </div>
+            </div>
+            <div class="rounded-[12px] border border-[#ECEAF5] p-6 md:p-8 mt-6">
+                <h2 class="text-[26px] leading-[34px] text-black mb-4">Common Reasons Teams Contact EmpireOneCX</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <p class="text-[16px] leading-[26px] text-[#3C3B47]">Some teams reach out because their customer support queue is growing faster than their internal hiring plan. Others need a partner for after-hours coverage, overflow volume, multilingual support, live chat, email support, social media response, or a dedicated contact center team that can follow brand-specific processes. We also speak with companies that want to move repetitive back-office tasks, finance workflows, quality reviews, data processing, or administrative work into a managed BPO model.</p>
+                    <p class="text-[16px] leading-[26px] text-[#3C3B47]">The best first conversation is specific but does not need to be perfect. Share what you know today: monthly ticket volume, call volume, average handle time, backlog, target response time, current tools, number of internal team members, countries served, and the service outcomes you want to improve. From there, EmpireOneCX can help shape a realistic operating model, whether that means a small pilot team, a larger dedicated support operation, or a phased transition across multiple workflows.</p>
+                    <p class="text-[16px] leading-[26px] text-[#3C3B47]">If your priority is cost control, we can review the drivers that affect pricing, including agent count, delivery location, management support, training, quality assurance, schedule coverage, and technology requirements. If your priority is service quality, we can focus on coaching, knowledge management, escalation design, QA scorecards, reporting cadence, and customer satisfaction measurement.</p>
+                    <p class="text-[16px] leading-[26px] text-[#3C3B47]">For AI-assisted operations, we look for practical use cases first. That may include routing, summaries, quality monitoring, workflow automation, reporting, agent assist, knowledge base improvement, or document processing. The goal is not to replace the human relationship with customers, but to make the team faster, more consistent, and easier to manage.</p>
+                </div>
             </div>
         </div>
     </section>

@@ -170,6 +170,32 @@ include(__DIR__ . "/../inc/header.php");
 
     <section id="location-markets" class="industrysection samesectionpadding">
         <div class="container mx-auto px-4">
+            <div class="rounded-[12px] border border-[#E6E4EC] bg-white p-6 md:p-8 mb-10">
+                <h2 class="text-[28px] leading-[36px] text-black mb-4">How EmpireOneCX Uses a Global Delivery Footprint</h2>
+                <p class="text-[16px] leading-[26px] text-[#3C3B47] mb-4">A global footprint is valuable only when it supports the customer journey, the operating hours, and the service standards a business needs to protect. EmpireOneCX evaluates each market for talent availability, language coverage, customer expectations, workflow complexity, compliance considerations, and the level of management visibility required by the client.</p>
+                <p class="text-[16px] leading-[26px] text-[#3C3B47] mb-4">The result is a delivery model that can combine nearshore, offshore, and regional support teams without weakening accountability. Clients can plan customer care, technical support, back-office work, finance operations, quality assurance, and AI-assisted workflows across locations while keeping reporting, training, escalation, and service governance consistent.</p>
+                <p class="text-[16px] leading-[26px] text-[#3C3B47]">Each location profile below highlights how EmpireOneCX can support customer experience and business process outsourcing programs for brands that need scale, resilience, multilingual service, and flexible operating coverage.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                    <div>
+                        <h3 class="text-[20px] leading-[28px] text-black mb-2">Coverage Planning</h3>
+                        <p class="text-[15px] leading-[24px] text-[#3C3B47]">We align staffing with customer demand, time zones, seasonal pressure, service channels, language needs, and escalation requirements so teams can support customers when they are most likely to reach out.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-[20px] leading-[28px] text-black mb-2">Operational Control</h3>
+                        <p class="text-[15px] leading-[24px] text-[#3C3B47]">Global delivery still needs clear ownership. We define training, QA, reporting, workforce management, knowledge base updates, and performance reviews so outsourced teams stay aligned with client expectations.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-[20px] leading-[28px] text-black mb-2">Scalable Support</h3>
+                        <p class="text-[15px] leading-[24px] text-[#3C3B47]">Clients can expand coverage, add channels, launch new workflows, or adjust capacity as customer volume changes. The footprint supports growth without forcing every process to remain inside one internal location.</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-7">
+                    <p class="text-[16px] leading-[26px] text-[#3C3B47]">Global delivery planning usually starts with a simple question: what does the customer need at the moment they reach out? The answer changes by region, language, product, urgency, channel, and customer profile. A retail program may need seasonal live chat and order support. A SaaS company may need tiered help desk coverage and ticket triage. A healthcare or finance team may require stricter documentation, privacy controls, and quality monitoring. EmpireOneCX uses the footprint to match those requirements with the right staffing model.</p>
+                    <p class="text-[16px] leading-[26px] text-[#3C3B47]">The same footprint can also support back-office work that does not happen directly in front of customers. Data processing, billing support, document review, account maintenance, finance operations, QA audits, recruitment support, and administrative workflows can be distributed across teams while still following one governance structure. That balance helps clients improve speed and cost control without creating disconnected operating silos.</p>
+                    <p class="text-[16px] leading-[26px] text-[#3C3B47]">For leadership teams, visibility matters as much as capacity. Reporting should show volume, service levels, quality trends, customer satisfaction, escalation reasons, attendance, productivity, and opportunities for improvement. EmpireOneCX designs global programs with these reporting needs in mind so managers can understand performance across locations instead of relying on disconnected updates.</p>
+                    <p class="text-[16px] leading-[26px] text-[#3C3B47]">The location pages below are a planning resource for companies comparing delivery options. They show where EmpireOneCX can support customer experience and BPO programs, how different markets can fit into a broader operating model, and how global teams can help businesses serve customers consistently while scaling in a controlled way.</p>
+                </div>
+            </div>
             <div class="mainflextag locations-mainflextag flex">
                 <div class="leftsideline pt-[45px] relative">
                     <div class="w-1 bg-gray-300 h-full rounded relative">

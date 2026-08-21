@@ -38,8 +38,8 @@
             <h1 class="solutions-hero-heading herocheck animate-reveal delay-2 text-[48px] font-medium leading-[54px] sm:leading-[1.1] mb-4 text-white mx-auto">
                 Industry-Specific CX & BPO Solutions
             </h1>
-            <p class="subpara shortspace font-normal animate-reveal delay-3 text-gray-300 text-sm sm:text-base lg:text-lg sm:max-w-3xl mx-auto sm:mb-2" style="max-width: 848px !important;padding-bottom: 10px;"> 
-                The future of business is here. EmpireOneCX empowers industries with cutting-edge AI solutions, customer experience (CX), and human ingenuity for outsourcing operations, driving smarter decisions and breakthrough growth.  
+            <p class="subpara shortspace font-normal animate-reveal delay-3 text-gray-300 text-sm sm:text-base lg:text-lg sm:max-w-3xl mx-auto sm:mb-2" style="max-width: 848px !important;padding-bottom: 10px;">
+                The future of business is here. EmpireOneCX empowers industries with cutting-edge AI solutions, customer experience (CX), and human ingenuity for outsourcing operations, driving smarter decisions and breakthrough growth. Our industry teams align support models with customer expectations, regulatory requirements, seasonality, channel mix, and the operational workflows that matter most in each market.
             </p>
             <div class="animate-reveal delay-3 mb-8 text-gray-300 text-sm font-medium tracking-wide">
                 <span>HIPAA Compliant</span> &nbsp;|&nbsp; <span>PCI-DSS Certified</span> &nbsp;|&nbsp; <span>ISO 27001 Secure</span>
@@ -138,6 +138,11 @@
 
     <section class="industrysection samesectionpadding">
         <div class="container mx-auto px-4">
+            <div class="rounded-[12px] border border-[#272331] bg-[#08080A] p-6 md:p-8 mb-10">
+                <h2 class="text-[28px] leading-[36px] text-white mb-4">Industry-Specific Outsourcing Built Around Real Workflows</h2>
+                <p class="text-[16px] leading-[26px] text-gray-300 mb-4">No two industries handle customer experience the same way. Retail teams need fast seasonal coverage. Healthcare and financial services require secure handling, documentation discipline, and clear escalation paths. Technology, telecom, and utilities often need technical triage, outage communication, and high-volume service continuity.</p>
+                <p class="text-[16px] leading-[26px] text-gray-300">EmpireOneCX designs CX and BPO programs around the operating environment first. We evaluate contact volume, support channels, compliance needs, knowledge base maturity, reporting cadence, hiring timelines, and service-level goals before recommending a team structure. That approach helps clients launch support that is practical, measurable, and aligned with the way their customers actually seek help.</p>
+            </div>
             <div class="mainflextag flex">
                 <div class="leftsideline pt-[45px] relative">
                     <div id="scroll-line" class="w-1 bg-gray-300 h-full rounded relative">

@@ -48,6 +48,7 @@
 					</h2>
 					<p class="about-para about-story-lead">EmpireOneCX is a next-generation outsourcing partner built to elevate customer experience. We combine advanced digital systems with skilled professionals who understand that every interaction matters.</p>
 					<p class="about-para about-story-text">We do not just answer calls. We build trust, strengthen relationships, and help brands lead with secure, scalable service excellence.</p>
+					<p class="about-para about-story-text">Our work spans customer support, contact center operations, back-office services, finance and accounting support, quality assurance, workforce support, multilingual delivery, and AI-assisted workflow improvement. Each program is shaped around the client’s customer journey, internal tools, compliance expectations, reporting needs, and growth plans.</p>
 					<div class="about-story-actions">
 						<a href="contact" class="about-story-btn">Build Your Offshore Team <i class="fas fa-arrow-right"></i></a>
 						<a href="/solutions/" class="about-story-link">Explore solutions</a>
