@@ -79,28 +79,86 @@
     <section class="py-16 px-6 bg-white">
         <div class="container mx-auto">
             <h2 class="newstext text-[32px] font-bold mb-8 text-gray-900 scroll-animate">Explore all posts</h2>
-            <div class="rounded-[10px] border border-gray-100 bg-[#fbfbfd] p-6 md:p-8 mb-8">
+            <style>
+                .insights-intro-copy {
+                    max-height: 56px;
+                    overflow: hidden;
+                    position: relative;
+                    transition: max-height 0.3s ease;
+                }
+
+                .insights-intro-copy::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    height: 28px;
+                    background: linear-gradient(180deg, rgba(251, 251, 253, 0), #fbfbfd);
+                    pointer-events: none;
+                }
+
+                .insights-intro-card.is-expanded .insights-intro-copy {
+                    max-height: 1200px;
+                }
+
+                .insights-intro-card.is-expanded .insights-intro-copy::after {
+                    display: none;
+                }
+
+                .insights-intro-toggle {
+                    margin-top: 14px;
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-weight: 600;
+                    color: #7A76FF;
+                    text-decoration: underline;
+                    text-underline-offset: 4px;
+                }
+            </style>
+            <div class="insights-intro-card rounded-[10px] border border-gray-100 bg-[#fbfbfd] p-6 md:p-8 mb-8">
                 <p class="text-[14px] leading-[20px] font-semibold tracking-[0.08em] uppercase text-[#7A76FF] mb-3">
                     <?= $selectedCategoryName ? htmlspecialchars($selectedCategoryName, ENT_QUOTES, 'UTF-8') . ' Insights' : 'EmpireOneCX Knowledge Hub' ?>
                 </p>
-                <p class="text-[16px] md:text-[17px] leading-[26px] md:leading-[28px] text-[#3C3B47] max-w-[980px]">
-                    <?= htmlspecialchars($archiveDescription, ENT_QUOTES, 'UTF-8') ?>
-                </p>
-                <p class="text-[16px] md:text-[17px] leading-[26px] md:leading-[28px] text-[#3C3B47] max-w-[980px] mt-4">
-                    Use these resources to compare outsourcing options, understand delivery models, prepare stakeholder questions, and identify the operational details that affect service quality. EmpireOneCX publishes practical guidance for teams evaluating customer support, call center operations, back-office workflows, AI-assisted service, multilingual coverage, quality assurance, staffing, and vendor governance.
-                </p>
-                <ul class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-5 text-[15px] leading-[22px] text-[#3C3B47]">
-                    <li>Plan service scope, coverage hours, staffing levels, and escalation paths before choosing a provider.</li>
-                    <li>Review cost drivers such as training, tools, quality monitoring, location, language mix, and operating complexity.</li>
-                    <li>Build a measurable CX or BPO program with reporting, accountability, transition planning, and continuous improvement.</li>
-                </ul>
-                <p class="text-[16px] md:text-[17px] leading-[26px] md:leading-[28px] text-[#3C3B47] max-w-[980px] mt-5">
-                    If you are comparing providers, start with articles that explain the service category, then move into checklist-style pieces that cover governance, risk, cost, and implementation. For established teams, the most useful resources are often the ones that help refine quality assurance, staffing ratios, automation opportunities, customer effort, knowledge management, and reporting cadence.
-                </p>
-                <p class="text-[16px] md:text-[17px] leading-[26px] md:leading-[28px] text-[#3C3B47] max-w-[980px] mt-4">
-                    EmpireOneCX keeps this library focused on decisions operators actually make: whether to build in-house or outsource, which workflows to move first, how to protect brand voice, how to measure performance, and how to combine AI with trained human teams without losing accountability.
-                </p>
+                <div class="insights-intro-copy" id="insightsIntroCopy">
+                    <p class="text-[16px] md:text-[17px] leading-[26px] md:leading-[28px] text-[#3C3B47] max-w-[980px]">
+                        <?= htmlspecialchars($archiveDescription, ENT_QUOTES, 'UTF-8') ?>
+                    </p>
+                    <p class="text-[16px] md:text-[17px] leading-[26px] md:leading-[28px] text-[#3C3B47] max-w-[980px] mt-4">
+                        Use these resources to compare outsourcing options, understand delivery models, prepare stakeholder questions, and identify the operational details that affect service quality. EmpireOneCX publishes practical guidance for teams evaluating customer support, call center operations, back-office workflows, AI-assisted service, multilingual coverage, quality assurance, staffing, and vendor governance.
+                    </p>
+                    <ul class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-5 text-[15px] leading-[22px] text-[#3C3B47]">
+                        <li>Plan service scope, coverage hours, staffing levels, and escalation paths before choosing a provider.</li>
+                        <li>Review cost drivers such as training, tools, quality monitoring, location, language mix, and operating complexity.</li>
+                        <li>Build a measurable CX or BPO program with reporting, accountability, transition planning, and continuous improvement.</li>
+                    </ul>
+                    <p class="text-[16px] md:text-[17px] leading-[26px] md:leading-[28px] text-[#3C3B47] max-w-[980px] mt-5">
+                        If you are comparing providers, start with articles that explain the service category, then move into checklist-style pieces that cover governance, risk, cost, and implementation. For established teams, the most useful resources are often the ones that help refine quality assurance, staffing ratios, automation opportunities, customer effort, knowledge management, and reporting cadence.
+                    </p>
+                    <p class="text-[16px] md:text-[17px] leading-[26px] md:leading-[28px] text-[#3C3B47] max-w-[980px] mt-4">
+                        EmpireOneCX keeps this library focused on decisions operators actually make: whether to build in-house or outsource, which workflows to move first, how to protect brand voice, how to measure performance, and how to combine AI with trained human teams without losing accountability.
+                    </p>
+                </div>
+                <button type="button" class="insights-intro-toggle" aria-expanded="false" aria-controls="insightsIntroCopy">
+                    Read more...
+                </button>
             </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const introCard = document.querySelector('.insights-intro-card');
+                    const introToggle = document.querySelector('.insights-intro-toggle');
+
+                    if (!introCard || !introToggle) {
+                        return;
+                    }
+
+                    introToggle.addEventListener('click', function () {
+                        const isExpanded = introCard.classList.toggle('is-expanded');
+                        introToggle.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+                        introToggle.textContent = isExpanded ? 'Show less' : 'Read more...';
+                    });
+                });
+            </script>
 
             <div class="mybtnanchor flex flex-wrap gap-3 mb-8">
                 <a href="/insights/" class="<?= $selectedCategory === '' ? 'btn-gradient text-white' : 'border border-gray-200 text-[rgba(0,0,0,1)]' ?> px-4 py-2 rounded-md text-[16px] leading-[24px] font-medium">All Posts</a>
