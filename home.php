@@ -26,7 +26,7 @@ include("inc/header.php");
     
                 <h2 class="heromaintitle hero-css-reveal delay-2 text-[40px] font-medium leading-tight sm:leading-[1.1] mb-4 text-white">
                      AI-Assisted <span class="bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] bg-clip-text text-transparent">Customer Experience</span>
-                    <span class="text-white font-medium">& <span class="bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] bg-clip-text text-transparent">BPO Solutions</span></span>
+                    <span class="text-white font-medium">&nbsp;&amp; <span class="bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] bg-clip-text text-transparent">BPO Solutions</span></span>
                 </h2>
     
                 <div class="hero-subpara font-normal hero-css-reveal delay-3 text-gray-300 text-sm sm:text-base lg:text-lg sm:max-w-3xl mx-auto px-4 mb-8 sm:mb-6">
