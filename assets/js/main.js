@@ -22,6 +22,8 @@ const openMobileMenu = () => {
     menuIcon.innerHTML =
       '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
   }
+  menuToggle?.setAttribute('aria-expanded', 'true');
+  menuToggle?.setAttribute('aria-label', 'Close main menu');
   isMenuOpen = true;
 };
 
@@ -36,6 +38,8 @@ const closeMobileMenu = () => {
     menuIcon.innerHTML =
       '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
   }
+  menuToggle?.setAttribute('aria-expanded', 'false');
+  menuToggle?.setAttribute('aria-label', 'Open main menu');
   isMenuOpen = false;
 };
 

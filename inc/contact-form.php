@@ -18,223 +18,7 @@
  */
 ?>
 
-<style>
-@media (max-width: 1024px) {
-    .cx-hero-grid { grid-template-columns: 1fr !important; }
-    .cx-hero-grid .cx-hero-form { display: none; } /* or show below copy */
-}
-/* ─── Contact Form Embed — scoped to .ecx-form-wrap ─── */
-.ecx-form-wrap {
-    width: 100%;
-    text-align: left;
-}
-.ecx-form-wrap .ecx-label {
-    display: block;
-    font-size: 18px;
-    line-height: 24px;
-    color: #000;
-    margin-bottom: 6px;
-    text-align: left;
-}
-.ecx-form-wrap .ecx-input,
-.ecx-form-wrap .ecx-select {
-    width: 100%;
-    padding: 12px 16px;
-    border-radius: 6px;
-    background: rgba(229,229,229,1);
-    border: 1px solid #E5E5E5;
-    font-size: 16px;
-    line-height: 24px;
-    color: #000;
-    text-align: left;
-    transition: box-shadow 0.2s ease, border-color 0.2s ease;
-    outline: none;
-    appearance: none;
-    -webkit-appearance: none;
-}
-.ecx-form-wrap .ecx-input:focus,
-.ecx-form-wrap .ecx-select:focus {
-    border-color: #CB46FA;
-    box-shadow: 0 0 0 3px rgba(203,70,250,0.15);
-}
-.ecx-form-wrap .ecx-input::placeholder {
-    color: #999;
-}
-
-/* Phone wrapper */
-.ecx-phone-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(229,229,229,1);
-    border: 1px solid #E5E5E5;
-    border-radius: 6px;
-    padding: 12px 16px;
-    transition: box-shadow 0.2s ease, border-color 0.2s ease;
-}
-.ecx-phone-wrapper:focus-within {
-    border-color: #CB46FA;
-    box-shadow: 0 0 0 3px rgba(203,70,250,0.15);
-}
-.ecx-phone-wrapper input[type="tel"] {
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    width: 100%;
-    color: #000;
-}
-.ecx-phone-wrapper input[type="tel"]::placeholder {
-    color: #999;
-}
-.ecx-country-toggle {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    cursor: pointer;
-    user-select: none;
-    flex-shrink: 0;
-}
-.ecx-country-toggle img {
-    width: 20px;
-    height: 14px;
-}
-.ecx-country-toggle span.ecx-code {
-    font-size: 15px;
-    white-space: nowrap;
-}
-.ecx-divider {
-    color: #bbb;
-    height: 22px;
-    line-height: 22px;
-    flex-shrink: 0;
-}
-
-/* Dropdown */
-.ecx-country-dropdown {
-    position: absolute;
-    left: 0;
-    top: calc(100% + 4px);
-    width: 280px;
-    max-height: 300px;
-    overflow-y: auto;
-    background: #fff;
-    border-radius: 10px;
-    border: 1px solid #e5e5e5;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-    z-index: 999;
-    display: none;
-}
-.ecx-country-dropdown.open {
-    display: block;
-}
-.ecx-country-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 9px 16px;
-    cursor: pointer;
-    font-size: 14px;
-    color: #222;
-    text-align: left;
-    transition: background 0.15s;
-}
-.ecx-country-item:hover {
-    background: #f5f0ff;
-}
-.ecx-country-item img {
-    width: 20px;
-    height: 14px;
-    flex-shrink: 0;
-}
-.ecx-country-item .ecx-cname {
-    flex: 1;
-}
-.ecx-country-item .ecx-ccode {
-    color: #888;
-}
-
-/* Checkbox row */
-.ecx-privacy-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 20px;
-}
-.ecx-privacy-row input[type="checkbox"] {
-    accent-color: #CB46FA;
-    width: 16px;
-    height: 16px;
-    flex-shrink: 0;
-    cursor: pointer;
-}
-.ecx-privacy-row p {
-    font-size: 16px;
-    line-height: 24px;
-    color: #000;
-    margin: 0;
-}
-.ecx-privacy-link {
-    background: linear-gradient(90deg, #CB46FA, #FE881C);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-/* Submit button */
-.ecx-submit-btn {
-    display: inline-block;
-    margin-top: 24px;
-    padding: 14px 32px;
-    border-radius: 10px;
-    background: linear-gradient(90deg, #CB46FA 0%, #FE881C 100%);
-    color: #fff;
-    font-size: 16px;
-    font-weight: 500;
-    border: none;
-    cursor: pointer;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-    width: 100%;
-}
-.ecx-submit-btn:hover {
-    opacity: 0.92;
-    transform: translateY(-1px);
-}
-.ecx-submit-btn:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-    transform: none;
-}
-
-/* SweetAlert confirm button override */
-.ecx-swal-confirm {
-    background: #ffffff !important;
-    color: #000 !important;
-    font-weight: 600;
-    border-radius: 8px !important;
-    padding: 10px 24px !important;
-}
-
-/* Grid helpers */
-.ecx-grid-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-}
-.ecx-field {
-    position: relative;
-}
-.ecx-mt {
-    margin-top: 20px;
-}
-@media (max-width: 640px) {
-    .ecx-grid-2 {
-        grid-template-columns: 1fr;
-    }
-}
-</style>
+<link rel="stylesheet" href="/assets/css/extracted/inc-contact-form.css?v=20260821-1">
 
 <form id="ecxContactForm" class="ecx-form-wrap" novalidate>
 
@@ -263,7 +47,7 @@
             <label class="ecx-label">Contact Number</label>
             <div class="ecx-phone-wrapper">
                 <div class="ecx-country-toggle" id="ecxCountryToggle">
-                    <img id="ecxSelectedFlag" src="https://flagcdn.com/w20/us.webp" alt="">
+                    <img id="ecxSelectedFlag" src="https://flagcdn.com/w20/us.webp" alt="United States flag" loading="lazy" decoding="async">
                     <span class="ecx-code" id="ecxSelectedCode">+1</span>
                     <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor" style="color:#666;">
                         <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.24 4.5a.75.75 0 01-1.08 0l-4.24-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
@@ -341,7 +125,7 @@
                 <div class="ecx-country-item"
                      data-code="<?= htmlspecialchars($c[1]) ?>"
                      data-flag="<?= htmlspecialchars($c[2]) ?>">
-                    <img src="https://flagcdn.com/w20/<?= htmlspecialchars($c[2]) ?>.webp" alt="">
+                    <img src="https://flagcdn.com/w20/<?= htmlspecialchars($c[2]) ?>.webp" alt="<?= htmlspecialchars($c[0]) ?> flag" loading="lazy" decoding="async">
                     <span class="ecx-cname"><?= htmlspecialchars($c[0]) ?></span>
                     <span class="ecx-ccode"><?= htmlspecialchars($c[1]) ?></span>
                 </div>
@@ -401,7 +185,9 @@
         if (!item) return;
         var code = item.dataset.code;
         var flag = item.dataset.flag;
+        var country = item.querySelector('.ecx-cname').textContent;
         flagImg.src      = 'https://flagcdn.com/w20/' + flag + '.webp';
+        flagImg.alt      = country + ' flag';
         codeSpan.textContent = code;
         codeHid.value    = code;
         dropdown.classList.remove('open');
@@ -450,6 +236,7 @@
                 });
                 form.reset();
                 flagImg.src          = 'https://flagcdn.com/w20/us.webp';
+                flagImg.alt          = 'United States flag';
                 codeSpan.textContent = '+1';
                 codeHid.value        = '+1';
             } else {

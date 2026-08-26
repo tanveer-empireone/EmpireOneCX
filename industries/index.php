@@ -5,9 +5,9 @@
     $baseHref = "/";
     $languageSwitchHrefEs = "/es/industrias/";
     $languageAlternates = [
-        "en" => "https://empireonecx.com/industries",
+        "en" => "https://empireonecx.com/industries/",
         "es" => "https://empireonecx.com/es/industrias/",
-        "x-default" => "https://empireonecx.com/industries",
+        "x-default" => "https://empireonecx.com/industries/",
     ];
     include(__DIR__ . "/../inc/header.php");
 ?>
@@ -40,8 +40,8 @@
             <h1 class="solutions-hero-heading herocheck animate-reveal delay-2 text-[48px] font-medium leading-[54px] sm:leading-[1.1] mb-4 text-white mx-auto">
                 Industry-Specific CX & BPO Solutions
             </h1>
-            <p class="subpara shortspace font-normal animate-reveal delay-3 text-gray-300 text-sm sm:text-base lg:text-lg sm:max-w-3xl mx-auto sm:mb-2" style="max-width: 848px !important;padding-bottom: 10px;"> 
-                The future of business is here. EmpireOneCX empowers industries with cutting-edge AI solutions, customer experience (CX), and human ingenuity for outsourcing operations, driving smarter decisions and breakthrough growth.  
+            <p class="subpara shortspace font-normal animate-reveal delay-3 text-gray-300 text-sm sm:text-base lg:text-lg sm:max-w-3xl mx-auto sm:mb-2" style="max-width: 848px !important;padding-bottom: 10px;">
+                The future of business is here. EmpireOneCX empowers industries with cutting-edge AI solutions, customer experience (CX), and human ingenuity for outsourcing operations, driving smarter decisions and breakthrough growth. Our industry teams align support models with customer expectations, regulatory requirements, seasonality, channel mix, and the operational workflows that matter most in each market.
             </p>
             <div class="animate-reveal delay-3 mb-8 text-gray-300 text-sm font-medium tracking-wide">
                 <span>HIPAA Compliant</span> &nbsp;|&nbsp; <span>PCI-DSS Certified</span> &nbsp;|&nbsp; <span>ISO 27001 Secure</span>
@@ -60,75 +60,75 @@
                         snap-x snap-mandatory
                         [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
                 
-                <a href="/industries#retail" class="line-btn snap-center whitespace-nowrap active flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#retail" class="line-btn snap-center whitespace-nowrap active flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v1.webp" class="w-[24px] h-[24px] object-contain" alt="Retail icon"> <span>Retails</span>
                 </a>
 
-                <a href="/industries#automotive" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#automotive" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v2.webp" class="w-[24px] h-[24px] object-contain" alt="Automotive icon"> <span>Automotive</span>
                 </a>
 
-                <a href="/industries#travel" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#travel" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v3.webp" class="w-[24px] h-[24px] object-contain" alt="Travel icon"> <span>Travel</span>
                 </a>
 
-                <a href="/industries#technical" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#technical" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v4.webp" class="w-[24px] h-[24px] object-contain" alt="Telco icon"> <span>Telco</span>
                 </a>
 
-                <a href="/industries#insurance" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#insurance" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v5.webp" class="w-[24px] h-[24px] object-contain" alt="Insurance icon"> <span>Insurance</span>
                 </a>
 
-                <a href="/industries#healthcare" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#healthcare" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v6.webp" class="w-[24px] h-[24px] object-contain" alt="Healthcare icon"> <span>Healthcare</span>
                 </a>
 
-                <a href="/industries#energy" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#energy" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v7.webp" class="w-[24px] h-[24px] object-contain" alt="Energy icon"> <span>Energy</span>
                 </a>
 
-                <a href="/industries#utility" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#utility" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v8.webp" class="w-[24px] h-[24px] object-contain" alt="Utility icon"> <span>Utility</span>
                 </a>
 
-                <a href="/industries#technology" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#technology" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v9.webp" class="w-[24px] h-[24px] object-contain" alt="Technology icon"> <span>Technology</span>
                 </a>
 
-                <a href="/industries#government" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#government" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v10.webp" class="w-[24px] h-[24px] object-contain" alt="Government icon"> <span>Government</span>
                 </a>
 
-                <a href="/industries#legal" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#legal" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v11.webp" class="w-[24px] h-[24px] object-contain" alt="Legal icon"> <span>Legal</span>
                 </a>
 
-                <a href="/industries#financeservices" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#financeservices" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v12.webp" class="w-[24px] h-[24px] object-contain" alt="Finance icon"> <span>Finance Services</span>
                 </a>
 
-                <a href="/industries#ecommerce" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#ecommerce" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v13.webp" class="w-[24px] h-[24px] object-contain" alt="eCommerce icon"> <span>eCommerce</span>
                 </a>
 
-                <a href="/industries#realestate" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#realestate" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v14.webp" class="w-[24px] h-[24px] object-contain" alt="Real Estate icon"> <span>Real Estate</span>
                 </a>
 
-                <a href="/industries#gaming" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#gaming" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v15.webp" class="w-[24px] h-[24px] object-contain" alt="Gaming icon"> <span>Gaming</span>
                 </a>
 
-                <a href="/industries#homeservices" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#homeservices" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v16.webp" class="w-[24px] h-[24px] object-contain" alt="Home Services icon"> <span>Home Services</span>
                 </a>
 
-                <a href="/industries#homewarranty" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#homewarranty" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v17.webp" class="w-[24px] h-[24px] object-contain" alt="Home Warranty icon"> <span>Home Warranty</span>
                 </a>
 
-                <a href="/industries#transportationlogistics" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
+                <a href="/industries/#transportationlogistics" class="line-btn snap-center whitespace-nowrap flex flex-row items-center justify-center gap-2 px-6 md:px-8 py-4 rounded-[8px] text-white text-[16px] bg-[#29292B] hover:bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%,#FE881C_100%)]">
                     <img src="../assets/images/v18.webp" class="w-[24px] h-[24px] object-contain" alt="Transportation icon"> <span>Transportation & Logistics</span>
                 </a>
 
@@ -140,6 +140,11 @@
 
     <section class="industrysection samesectionpadding">
         <div class="container mx-auto px-4">
+            <div class="rounded-[12px] border border-[#272331] bg-[#08080A] p-6 md:p-8 mb-10">
+                <h2 class="text-[28px] leading-[36px] text-white mb-4">Industry-Specific Outsourcing Built Around Real Workflows</h2>
+                <p class="text-[16px] leading-[26px] text-gray-300 mb-4">No two industries handle customer experience the same way. Retail teams need fast seasonal coverage. Healthcare and financial services require secure handling, documentation discipline, and clear escalation paths. Technology, telecom, and utilities often need technical triage, outage communication, and high-volume service continuity.</p>
+                <p class="text-[16px] leading-[26px] text-gray-300">EmpireOneCX designs CX and BPO programs around the operating environment first. We evaluate contact volume, support channels, compliance needs, knowledge base maturity, reporting cadence, hiring timelines, and service-level goals before recommending a team structure. That approach helps clients launch support that is practical, measurable, and aligned with the way their customers actually seek help.</p>
+            </div>
             <div class="mainflextag flex">
                 <div class="leftsideline pt-[45px] relative">
                     <div id="scroll-line" class="w-1 bg-gray-300 h-full rounded relative">
@@ -930,61 +935,4 @@
     </section>
 </main>
 <?php include(__DIR__ . "/../inc/footer.php"); ?>
-<script>
-const progress = document.getElementById('scroll-progress');
-const mainFlex = document.querySelector('.mainflextag');
-
-window.addEventListener('scroll', () => {
-    const rect = mainFlex.getBoundingClientRect();
-    const viewportCenter = window.innerHeight / 2;
-    const distance = viewportCenter - rect.top;
-    const total = rect.height;
-
-    let percent = (distance / total) * 100;
-    percent = Math.max(6, Math.min(100, percent));
-    progress.style.height = percent + '%';
-});
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const industryPages = {
-        retail: ["/industries/retail-bpo", "Explore Retail BPO Services"],
-        automotive: ["/industries/automotive-bpo", "Explore Automotive BPO Services"],
-        travel: ["/industries/travel-hospitality-bpo", "Explore Travel BPO Services"],
-        technical: ["/industries/telecommunications-bpo", "Explore Telecom BPO Services"],
-        energy: ["/industries/energy-bpo", "Explore Energy BPO Services"],
-        utility: ["/industries/utility-bpo", "Explore Utility BPO Services"],
-        technology: ["/industries/technology-bpo", "Explore Technology BPO Services"],
-        government: ["/industries/government-bpo", "Explore Government BPO Services"],
-        legal: ["/industries/legal-process-outsourcing", "Explore Legal Outsourcing Services"],
-        financeservices: ["/industries/financial-services-bpo", "Explore Financial Services BPO"],
-        ecommerce: ["/industries/ecommerce-bpo", "Explore eCommerce BPO Services"],
-        realestate: ["/industries/real-estate-bpo", "Explore Real Estate BPO Services"],
-        gaming: ["/industries/gaming-bpo", "Explore Gaming BPO Services"],
-        homeservices: ["/industries/home-services-bpo", "Explore Home Services BPO"],
-        homewarranty: ["/industries/home-warranty-bpo", "Explore Home Warranty BPO"],
-        transportationlogistics: ["/industries/transportation-logistics-bpo", "Explore Logistics BPO Services"]
-    };
-
-    Object.entries(industryPages).forEach(function ([sectionId, page]) {
-        const section = document.getElementById(sectionId);
-        const offer = section ? section.querySelector(".mytextoffer") : null;
-        if (!offer || offer.querySelector(".industry-explore-btn")) return;
-
-        const wrapper = document.createElement("div");
-        wrapper.className = "mt-6";
-        wrapper.innerHTML = '<a class="industry-explore-btn" href="' + page[0] + '">' +
-            page[1] + ' <i class="fa fa-arrow-right" aria-hidden="true"></i></a>';
-        offer.appendChild(wrapper);
-    });
-});
-</script>
-<script>
-  const buttons = document.querySelectorAll(".line-btn");
-  buttons.forEach(btn => {
-    btn.addEventListener("click", function () {
-      buttons.forEach(b => b.classList.remove("btn-active"));
-      this.classList.add("btn-active");
-    });
-  });
-</script>
+<script defer src="/assets/js/industries-page.js?v=20260821-1"></script>

@@ -5,238 +5,9 @@ $metaKeywords = "quality assurance outsourcing, outsource quality assurance, out
 include(__DIR__ . "/../inc/header.php");
 ?>
 
-<style>
-/* ─── Compact hero form overrides ─── */
-.ecx-compact .ecx-form-wrap .ecx-label                                        { display: none; }
-.ecx-compact .ecx-form-wrap .ecx-input                                        { padding: 8px 12px; font-size: 13px; background: rgba(255,255,255,0.1) !important; border-color: rgba(255,255,255,0.2); color: #fff !important; }
-.ecx-compact .ecx-form-wrap .ecx-input::placeholder                           { color: rgba(255,255,255,0.5) !important; }
-.ecx-compact .ecx-form-wrap .ecx-select                                       { padding: 8px 12px; font-size: 13px; background: rgba(20,20,20,0.95) !important; border-color: rgba(255,255,255,0.2); color: #fff !important; }
-.ecx-compact .ecx-form-wrap .ecx-select option                                { background: #1a1a1a; color: #fff; }
-.ecx-compact .ecx-form-wrap .ecx-phone-wrapper                                { padding: 8px 12px; background: rgba(255,255,255,0.1) !important; border-color: rgba(255,255,255,0.2) !important; }
-.ecx-compact .ecx-form-wrap .ecx-phone-wrapper input[type="tel"]              { color: #fff !important; font-size: 13px; background: transparent !important; }
-.ecx-compact .ecx-form-wrap .ecx-phone-wrapper input[type="tel"]::placeholder { color: rgba(255,255,255,0.5) !important; }
-.ecx-compact .ecx-form-wrap .ecx-country-toggle span.ecx-code                 { color: #fff !important; font-size: 13px; }
-.ecx-compact .ecx-form-wrap .ecx-country-toggle svg                           { color: #fff !important; }
-.ecx-compact .ecx-form-wrap .ecx-divider                                      { color: rgba(255,255,255,0.3) !important; }
-.ecx-compact .ecx-form-wrap .ecx-grid-2                                       { gap: 8px; }
-.ecx-compact .ecx-form-wrap .ecx-mt                                           { margin-top: 8px; }
-.ecx-compact .ecx-form-wrap .ecx-privacy-row                                  { margin-top: 12px; }
-.ecx-compact .ecx-form-wrap .ecx-privacy-row p                                { font-size: 12px; color: rgba(255,255,255,0.8) !important; }
-.ecx-compact .ecx-form-wrap .ecx-submit-btn                                   { margin-top: 14px; padding: 10px 24px; font-size: 14px; }
-.ecx-compact .ecx-country-dropdown                                            { background: #1a1a1a !important; border-color: rgba(255,255,255,0.2) !important; }
-.ecx-compact .ecx-country-item                                                { color: #ddd !important; }
-.ecx-compact .ecx-country-item:hover                                          { background: rgba(122,118,255,0.2) !important; }
+<link rel="stylesheet" href="/assets/css/extracted/solutions-quality-assurance-outsourcing.css?v=20260821-1">
 
-/* ─── Page-scoped overrides ─── */
-.cx-hero-section {
-    padding-top: 18rem;
-    padding-bottom: 180px;
-}
-
-@media (max-width: 1024px) {
-    /* Stack grid, show form, and fix overflow/cut-off on mobile/tablet */
-    .cx-hero-grid { grid-template-columns: 1fr !important; }
-    .cx-hero-form { display: block !important; }
-    .cx-hero-section {
-        padding-top: 10rem !important;
-        padding-bottom: 80px !important;
-        height: auto !important;
-        min-height: 100vh !important;
-    }
-}
-
-.cx-comparison-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    border-radius: 16px;
-    overflow: hidden;
-}
-.cx-comparison-table thead th {
-    padding: 20px 24px;
-    font-size: 15px;
-    font-weight: 600;
-    text-align: left;
-}
-.cx-comparison-table thead th:first-child {
-    background: #1a1a1a;
-    color: #fff;
-}
-.cx-comparison-table thead th:nth-child(2) {
-    background: #2a2a2a;
-    color: #aaa;
-}
-.cx-comparison-table thead th:nth-child(3) {
-    background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);
-    color: #fff;
-}
-.cx-comparison-table tbody tr td {
-    padding: 18px 24px;
-    font-size: 15px;
-    line-height: 24px;
-    border-bottom: 1px solid #f0f0f0;
-    vertical-align: top;
-}
-.cx-comparison-table tbody tr:last-child td {
-    border-bottom: none;
-}
-.cx-comparison-table tbody tr td:first-child {
-    background: #fafafa;
-    color: #000;
-    font-weight: 600;
-}
-.cx-comparison-table tbody tr td:nth-child(2) {
-    background: #fff;
-    color: #555;
-}
-.cx-comparison-table tbody tr td:nth-child(3) {
-    background: #fdf9ff;
-    color: #2a1a40;
-}
-.cx-feature-card {
-    border-radius: 16px;
-    padding: 36px;
-    background: #fff;
-    box-shadow: 0 4px 24px rgba(122,118,255,0.08);
-    border: 1px solid #f0eeff;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.cx-feature-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(122,118,255,0.16);
-}
-.cx-feature-icon {
-    width: 52px;
-    height: 52px;
-    border-radius: 12px;
-    background: linear-gradient(135deg, #7A76FF 0%, #CB46FA 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-.cx-feature-icon svg {
-    width: 26px;
-    height: 26px;
-    fill: none;
-    stroke: #fff;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
-.cx-industry-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 14px 22px;
-    border-radius: 100px;
-    background: #fff;
-    border: 1px solid #e8e4ff;
-    font-size: 15px;
-    color: #2a2a2a;
-    transition: background 0.2s, border-color 0.2s;
-    cursor: default;
-}
-.cx-industry-pill:hover {
-    background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);
-    color: #fff;
-    border-color: transparent;
-}
-.cx-industry-pill span.dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #7A76FF, #FE881C);
-    flex-shrink: 0;
-    transition: background 0.2s;
-}
-.cx-industry-pill:hover span.dot {
-    background: rgba(255,255,255,0.6);
-}
-.cx-faq-item {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-.cx-faq-item:last-child {
-    border-bottom: none;
-}
-.cx-faq-toggle {
-    width: 100%;
-    background: none;
-    border: none;
-    padding: 24px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    cursor: pointer;
-    text-align: left;
-}
-.cx-faq-toggle:focus {
-    outline: none;
-}
-.cx-faq-question {
-    font-size: 17px;
-    font-weight: 600;
-    color: #fff; /* FIXED FAQ COLOR */
-    line-height: 26px;
-}
-.cx-faq-icon {
-    width: 32px;
-    height: 32px;
-    flex-shrink: 0;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #7A76FF 0%, #FE881C 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.25s ease;
-}
-.cx-faq-icon svg {
-    width: 14px;
-    height: 14px;
-    stroke: #fff;
-    stroke-width: 2.5;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    transition: transform 0.25s ease;
-}
-.cx-faq-item.open .cx-faq-icon {
-    transform: rotate(180deg);
-}
-.cx-faq-answer {
-    font-size: 16px;
-    line-height: 26px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.35s ease, padding-bottom 0.25s ease;
-}
-.cx-faq-item.open .cx-faq-answer {
-    max-height: 400px;
-    padding-bottom: 24px;
-}
-.breadcrumb-nav a,
-.breadcrumb-nav span {
-    font-size: 14px;
-    color: #aaa;
-    text-decoration: none;
-}
-.breadcrumb-nav a:hover { color: #CB46FA; }
-.breadcrumb-nav .sep { margin: 0 8px; }
-.breadcrumb-nav .current { color: #fff; }
-
-/* Reveal animations */
-@keyframes revealUp {
-    from { opacity: 0; transform: translateY(28px); }
-    to   { opacity: 1; transform: translateY(0); }
-}
-.animate-reveal { animation: revealUp 0.7s ease forwards; }
-.delay-1 { animation-delay: 0.1s; }
-.delay-2 { animation-delay: 0.25s; }
-.delay-3 { animation-delay: 0.4s; }
-.delay-4 { animation-delay: 0.55s; }
-</style>
-
-<main class="relative">
+<main class="qa-page relative">
 
     <section class="hero-section mainherowork cx-hero-section relative flex flex-col items-center justify-center px-4 sm:px-6 text-center overflow-hidden">
         
@@ -256,7 +27,7 @@ include(__DIR__ . "/../inc/header.php");
                     
                     <!-- Breadcrumb MOVED INSIDE LEFT COLUMN -->
                     <nav class="breadcrumb-nav mb-6 animate-reveal delay-1" aria-label="Breadcrumb">
-                        <a href="/solutions">Solutions</a>
+                        <a href="/solutions/">Solutions</a>
                         <span class="sep">/</span>
                         <span class="current">Quality Assurance Outsourcing</span>
                     </nav>
@@ -279,7 +50,7 @@ include(__DIR__ . "/../inc/header.php");
 
                     <!-- ADDED lg:justify-start TO LEFT-ALIGN BUTTONS ON DESKTOP -->
                     <div class="animate-reveal delay-4 flex flex-wrap items-center justify-center lg:justify-start gap-4">
-                        <button onclick="window.location.href='/solutions'" class="text-white py-4 px-8 text-sm sm:text-base border border-white/30 hover:border-white/60 transition-all duration-300" style="border-radius: 8px !important; background: rgba(255,255,255,0.08);">
+                        <button onclick="window.location.href='/solutions/'" class="text-white py-4 px-8 text-sm sm:text-base border border-white/30 hover:border-white/60 transition-all duration-300" style="border-radius: 8px !important; background: rgba(255,255,255,0.08);">
                             Explore All BPO Solutions
                         </button>
                     </div>
@@ -837,7 +608,7 @@ document.addEventListener('DOMContentLoaded', function () {
     "@type": "ListItem",
     "position": 1,
     "name": "Solutions",
-    "item": "https://empireonecx.com/solutions"
+    "item": "https://empireonecx.com/solutions/"
   },{
     "@type": "ListItem",
     "position": 2,

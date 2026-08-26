@@ -4,11 +4,11 @@ $baseHref = "/";
 $page_title = "Soluciones de CX y BPO | EmpireOneCX";
 $meta_description = "Explore las soluciones de EmpireOneCX para outsourcing de experiencia del cliente, BPO, back office, finanzas, QA, reclutamiento y automatización con IA.";
 $metaKeywords = "soluciones BPO, outsourcing de experiencia del cliente, automatización con IA, soporte back office, finanzas y contabilidad, QA, reclutamiento offshore";
-$languageSwitchHrefEn = "/solutions";
+$languageSwitchHrefEn = "/solutions/";
 $languageAlternates = [
-    "en" => "https://empireonecx.com/solutions",
+    "en" => "https://empireonecx.com/solutions/",
     "es" => "https://empireonecx.com/es/soluciones/",
-    "x-default" => "https://empireonecx.com/solutions",
+    "x-default" => "https://empireonecx.com/solutions/",
 ];
 include(__DIR__ . "/../../inc/header.php");
 ?>
@@ -755,7 +755,7 @@ include(__DIR__ . "/../../inc/header.php");
                                 Porque sus clientes no merecen menos.
                             </p>
                             <div class="future-btn">
-                                <a href="/industries" class="inline-block px-8 md:px-10 py-3 md:py-4 rounded-[8px] text-white text-[14px] md:text-[16px] leading-[20px] md:leading-[24px] font-medium bg-[#7A76FF]">
+                                <a href="/industries/" class="inline-block px-8 md:px-10 py-3 md:py-4 rounded-[8px] text-white text-[14px] md:text-[16px] leading-[20px] md:leading-[24px] font-medium bg-[#7A76FF]">
                                     Descubra nuestras soluciones por industria <i class="fa fa-arrow-right" style="padding-left:10px;"></i>
                                 </a>
                             </div>

@@ -2,6 +2,18 @@
 RewriteEngine On
 RewriteBase /
 
+# Force non-www canonical domain
+RewriteCond %{HTTP_HOST} ^www\.empireonecx\.com$ [NC]
+RewriteRule ^(.*)$ https://empireonecx.com/$1 [R=301,L]
+
+# Redirect retired EmpireOneCX careers page to the dedicated careers site
+RewriteRule ^career/?$ https://careers.empireonecx.com/ [R=301,L]
+
+# Redirect direct .php URLs to clean canonical URLs
+RewriteCond %{REQUEST_METHOD} ^GET$ [NC]
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
+RewriteCond %{REQUEST_URI} !^/send-mail\.php$ [NC]
+RewriteRule ^ %1 [R=301,L]
 # Redirect old location URLs to Global Footprint
 RewriteRule ^locations/?$ /global-footprint [R=301,L]
 RewriteRule ^locations/(.*)$ /global-footprint/$1 [R=301,L]
@@ -18,3 +30,33 @@ DirectoryIndex home.php index.php
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php [L]
+# Performance: compress text assets when supported
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css text/javascript application/javascript application/json application/xml image/svg+xml
+</IfModule>
+
+# Performance: long cache for fingerprinted/static assets
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/avif "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType video/mp4 "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresDefault "access plus 1 month"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(?:avif|webp|jpe?g|png|gif|svg|mp4|woff2|css|js)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(?:html|php)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>

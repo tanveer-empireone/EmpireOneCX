@@ -5,77 +5,20 @@ $metaKeywords = "multilingual customer support, multilingual call center, multil
 include(__DIR__ . "/../inc/header.php");
 ?>
 
-<style>
-.ecx-compact .ecx-form-wrap .ecx-label { display: none; }
-.ecx-compact .ecx-form-wrap .ecx-input { padding: 8px 12px; font-size: 13px; background: rgba(255,255,255,0.1) !important; border-color: rgba(255,255,255,0.2); color: #fff !important; }
-.ecx-compact .ecx-form-wrap .ecx-input::placeholder { color: rgba(255,255,255,0.5) !important; }
-.ecx-compact .ecx-form-wrap .ecx-select { padding: 8px 12px; font-size: 13px; background: rgba(20,20,20,0.95) !important; border-color: rgba(255,255,255,0.2); color: #fff !important; }
-.ecx-compact .ecx-form-wrap .ecx-select option { background: #1a1a1a; color: #fff; }
-.ecx-compact .ecx-form-wrap .ecx-phone-wrapper { padding: 8px 12px; background: rgba(255,255,255,0.1) !important; border-color: rgba(255,255,255,0.2) !important; }
-.ecx-compact .ecx-form-wrap .ecx-phone-wrapper input[type="tel"] { color: #fff !important; font-size: 13px; background: transparent !important; }
-.ecx-compact .ecx-form-wrap .ecx-phone-wrapper input[type="tel"]::placeholder { color: rgba(255,255,255,0.5) !important; }
-.ecx-compact .ecx-form-wrap .ecx-country-toggle span.ecx-code { color: #fff !important; font-size: 13px; }
-.ecx-compact .ecx-form-wrap .ecx-country-toggle svg { color: #fff !important; }
-.ecx-compact .ecx-form-wrap .ecx-divider { color: rgba(255,255,255,0.3) !important; }
-.ecx-compact .ecx-form-wrap .ecx-grid-2 { gap: 8px; }
-.ecx-compact .ecx-form-wrap .ecx-mt { margin-top: 8px; }
-.ecx-compact .ecx-form-wrap .ecx-privacy-row { margin-top: 12px; }
-.ecx-compact .ecx-form-wrap .ecx-privacy-row p { font-size: 12px; color: rgba(255,255,255,0.8) !important; }
-.ecx-compact .ecx-form-wrap .ecx-submit-btn { margin-top: 14px; padding: 10px 24px; font-size: 14px; }
-.ecx-compact .ecx-country-dropdown { background: #1a1a1a !important; border-color: rgba(255,255,255,0.2) !important; }
-.ecx-compact .ecx-country-item { color: #ddd !important; }
-.ecx-compact .ecx-country-item:hover { background: rgba(122,118,255,0.2) !important; }
-.cx-hero-section { padding-top: 18rem; padding-bottom: 180px; }
-@media (max-width: 1024px) { .cx-hero-grid { grid-template-columns: 1fr !important; } .cx-hero-form { display: block !important; } .cx-hero-section { padding-top: 10rem !important; padding-bottom: 80px !important; height: auto !important; min-height: 100vh !important; } }
-.cx-comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; border-radius: 16px; overflow: hidden; }
-.cx-comparison-table thead th { padding: 20px 24px; font-size: 15px; font-weight: 600; text-align: left; }
-.cx-comparison-table thead th:first-child { background: #1a1a1a; color: #fff; }
-.cx-comparison-table thead th:nth-child(2) { background: #2a2a2a; color: #aaa; }
-.cx-comparison-table thead th:nth-child(3) { background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%); color: #fff; }
-.cx-comparison-table tbody td { padding: 18px 24px; font-size: 15px; line-height: 24px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
-.cx-comparison-table tbody tr:last-child td { border-bottom: none; }
-.cx-comparison-table tbody td:first-child { background: #fafafa; color: #000; font-weight: 600; }
-.cx-comparison-table tbody td:nth-child(2) { background: #fff; color: #555; }
-.cx-comparison-table tbody td:nth-child(3) { background: #fdf9ff; color: #2a1a40; }
-.cx-feature-card { border-radius: 16px; padding: 32px; background: #fff; box-shadow: 0 4px 24px rgba(122,118,255,0.08); border: 1px solid #f0eeff; transition: transform 0.2s ease, box-shadow 0.2s ease; }
-.cx-feature-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(122,118,255,0.16); }
-.cx-feature-icon { width: 52px; height: 52px; border-radius: 12px; background: linear-gradient(135deg, #7A76FF 0%, #CB46FA 100%); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: #fff; font-size: 22px; }
-.cx-industry-pill { display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 100px; background: #fff; border: 1px solid #e8e4ff; font-size: 14px; color: #2a2a2a; }
-.cx-industry-pill span.dot { width: 8px; height: 8px; border-radius: 50%; background: linear-gradient(135deg, #7A76FF, #FE881C); flex-shrink: 0; }
-.cx-stat-number { font-size: 48px; font-weight: 700; line-height: 1; background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-.cx-faq-item { border-bottom: 1px solid rgba(255,255,255,0.12); }
-.cx-faq-item:last-child { border-bottom: none; }
-.cx-faq-toggle { width: 100%; background: none; border: none; padding: 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer; text-align: left; }
-.cx-faq-question { font-size: 17px; font-weight: 600; color: #fff; line-height: 26px; }
-.cx-faq-icon { width: 32px; height: 32px; flex-shrink: 0; border-radius: 50%; background: linear-gradient(135deg, #7A76FF 0%, #FE881C 100%); display: flex; align-items: center; justify-content: center; transition: transform 0.25s ease; }
-.cx-faq-icon svg { width: 14px; height: 14px; stroke: #fff; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
-.cx-faq-item.open .cx-faq-icon { transform: rotate(180deg); }
-.cx-faq-answer { font-size: 16px; line-height: 26px; color: #b7b7b7; max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding-bottom 0.25s ease; }
-.cx-faq-item.open .cx-faq-answer { max-height: 420px; padding-bottom: 24px; }
-.breadcrumb-nav a, .breadcrumb-nav span { font-size: 14px; color: #aaa; text-decoration: none; }
-.breadcrumb-nav a:hover { color: #CB46FA; }
-.breadcrumb-nav .sep { margin: 0 8px; }
-.breadcrumb-nav .current { color: #fff; }
-@keyframes revealUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
-.animate-reveal { animation: revealUp 0.7s ease forwards; }
-.delay-1 { animation-delay: 0.1s; }
-.delay-2 { animation-delay: 0.25s; }
-.delay-3 { animation-delay: 0.4s; }
-.delay-4 { animation-delay: 0.55s; }
-</style>
+<link rel="stylesheet" href="/assets/css/extracted/solutions-multilingual-customer-support.css?v=20260821-1">
 
-<main class="relative">
+<main class="multilingual-page relative">
 <section class="hero-section mainherowork cx-hero-section relative flex flex-col items-center justify-center px-4 sm:px-6 text-center overflow-hidden">
     <video class="solutions-bg-videowork absolute" autoplay muted loop playsinline preload="metadata" poster="/assets/images/solutions-herobg-poster.webp"><source src="/assets/images/solutions-herobg.mp4" type="video/mp4" /></video>
     <div class="absolute inset-0 bg-black/75 z-0 pointer-events-none"></div>
     <div class="container mx-auto w-full relative z-10">
         <div class="cx-hero-grid" style="display:grid; grid-template-columns:1fr 440px; gap:48px; align-items:center;">
             <div class="text-center lg:text-left">
-                <nav class="breadcrumb-nav mb-6 animate-reveal delay-1" aria-label="Breadcrumb"><a href="/solutions">Solutions</a><span class="sep">/</span><span class="current">Multilingual Customer Support</span></nav>
+                <nav class="breadcrumb-nav mb-6 animate-reveal delay-1" aria-label="Breadcrumb"><a href="/solutions/">Solutions</a><span class="sep">/</span><span class="current">Multilingual Customer Support</span></nav>
                 <p class="herosubtitle text-[20px] leading-[28px] mb-4 animate-reveal delay-1 bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] bg-clip-text text-transparent"><span class="spanfont bg-gradient-to-r from-[#CB46FA] to-[#FE881C] bg-clip-text text-transparent">Multilingual Customer Support</span></p>
                 <h1 class="solutions-hero-heading herocheck animate-reveal delay-2 text-[48px] font-medium leading-[54px] sm:leading-[1.1] mb-4 text-white mx-auto lg:mx-0" style="max-width:900px;">Multilingual Customer Support Built for Real Conversations</h1>
                 <p class="subpara font-normal animate-reveal delay-3 text-gray-300 text-sm sm:text-base lg:text-lg mb-8 mx-auto lg:mx-0" style="max-width:848px !important;">Every customer expects support in their own language, especially when something goes wrong. We staff fluent-language agents supported by AI accent neutralization technology across 15+ languages, with the same QA, CSAT, and response-time standards in every market.</p>
-                <div class="animate-reveal delay-4 flex flex-wrap items-center justify-center lg:justify-start gap-4"><a href="/solutions" class="text-white py-4 px-8 text-sm sm:text-base border border-white/30 hover:border-white/60 transition-all duration-300" style="border-radius:8px !important; background:rgba(255,255,255,0.08);">Explore All BPO Solutions</a><a href="/contact" class="herobtns inline-flex items-center justify-center bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] text-white py-4 px-8 text-sm sm:text-base shadow-lg hover:shadow-purple-400/20" style="border-radius:8px !important;">Get a Free Consultation</a></div>
+                <div class="animate-reveal delay-4 flex flex-wrap items-center justify-center lg:justify-start gap-4"><a href="/solutions/" class="text-white py-4 px-8 text-sm sm:text-base border border-white/30 hover:border-white/60 transition-all duration-300" style="border-radius:8px !important; background:rgba(255,255,255,0.08);">Explore All BPO Solutions</a><a href="/contact" class="herobtns inline-flex items-center justify-center bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] text-white py-4 px-8 text-sm sm:text-base shadow-lg hover:shadow-purple-400/20" style="border-radius:8px !important;">Get a Free Consultation</a></div>
             </div>
             <div class="cx-hero-form animate-reveal delay-3" style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.14); border-radius:16px; padding:24px;"><p style="color:#fff; font-size:15px; font-weight:600; text-align:center; margin:0 0 16px;">Get a Free Consultation</p><div class="ecx-compact"><?php include(__DIR__ . "/../inc/contact-form.php"); ?></div></div>
         </div>

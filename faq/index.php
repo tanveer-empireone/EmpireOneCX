@@ -8,25 +8,25 @@ $faqTopics = [
         "icon" => "fa-diagram-project",
         "title" => "BPO FAQ",
         "description" => "Business process outsourcing models, services, pricing, implementation, governance, and provider selection.",
-        "url" => "/faq/bpo-faq",
+        "url" => "/faq/bpo-faq/",
     ],
     [
         "icon" => "fa-headset",
         "title" => "CX Outsourcing FAQ",
         "description" => "Customer experience teams, omnichannel support, service quality, scalability, and customer journey management.",
-        "url" => "/faq/cx-outsourcing-faq",
+        "url" => "/faq/cx-outsourcing-faq/",
     ],
     [
         "icon" => "fa-phone-volume",
         "title" => "Call Center FAQ",
         "description" => "Inbound and outbound operations, staffing, coverage, performance metrics, technology, and quality assurance.",
-        "url" => "/faq/call-center-faq",
+        "url" => "/faq/call-center-faq/",
     ],
     [
         "icon" => "fa-robot",
         "title" => "AI Support FAQ",
         "description" => "AI-assisted customer support, automation, human oversight, knowledge systems, security, and responsible deployment.",
-        "url" => "/faq/ai-support-faq",
+        "url" => "/faq/ai-support-faq/",
     ],
 ];
 
@@ -70,8 +70,8 @@ $faqs = [
         "question" => "Which business processes can be outsourced?",
         "answer" => "Commonly outsourced processes include customer service, technical support, data entry, document processing, order management, accounts payable and receivable support, bookkeeping, recruitment coordination, quality monitoring, claims support, and industry-specific administration.",
         "links" => [
-            ["/solutions", "View all outsourcing solutions"],
-            ["/industries", "Browse industry-specific services"],
+            ["/solutions/", "View all outsourcing solutions"],
+            ["/industries/", "Browse industry-specific services"],
         ],
     ],
     [
@@ -111,7 +111,7 @@ $faqs = [
         "question" => "How is data protected in an outsourced operation?",
         "answer" => "A secure outsourcing program uses access controls, encryption, documented procedures, workforce training, monitoring, incident response, and contractual safeguards. Requirements should be aligned with the data involved and frameworks such as SOC 2, ISO 27001, HIPAA, PCI DSS, or GDPR.",
         "links" => [
-            ["/compliance-security", "Review compliance and security controls"],
+            ["/compliance-security/", "Review compliance and security controls"],
         ],
     ],
     [
@@ -120,7 +120,7 @@ $faqs = [
         "answer" => "Onshore outsourcing keeps delivery in the client's country. Nearshore outsourcing uses a nearby country with closer time-zone or cultural alignment. Offshore outsourcing uses a more distant delivery market and can provide broader talent access, extended coverage, and cost advantages.",
         "links" => [
             ["/insights/types-of-bpo", "Compare the main types of BPO"],
-            ["/global-footprint", "Explore delivery locations"],
+            ["/global-footprint/", "Explore delivery locations"],
         ],
     ],
     [
@@ -137,551 +137,7 @@ $faqs = [
 include(__DIR__ . "/../inc/header.php");
 ?>
 
-<style>
-.faq-hub {
-    background: #fff;
-    color: #101014;
-}
-.faq-hub-hero {
-    position: relative;
-    z-index: 2;
-    min-height: 650px;
-    padding: 190px 0 90px;
-    overflow: visible;
-    background: #080810 url("/assets/images/newsinsight.webp") center/cover no-repeat;
-}
-.faq-hub-hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, rgba(5, 6, 12, 0.97) 0%, rgba(8, 9, 18, 0.91) 52%, rgba(8, 9, 18, 0.78) 100%);
-}
-.faq-hub-hero__inner {
-    position: relative;
-    z-index: 1;
-    max-width: 920px;
-    margin: 0 auto;
-    text-align: center;
-}
-.faq-hub-hero__eyebrow {
-    margin: 0 0 14px;
-    color: #CB46FA;
-    font-size: 17px;
-    line-height: 24px;
-    font-weight: 600;
-}
-.faq-hub-kicker,
-.faq-hub-section-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    color: #cb46fa;
-    font-size: 15px;
-    line-height: 22px;
-    font-weight: 700;
-}
-.faq-hub-hero .faq-hub-kicker {
-    justify-content: center;
-}
-.faq-hub-kicker::before,
-.faq-hub-section-label::before {
-    content: "";
-    width: 38px;
-    height: 3px;
-    background: linear-gradient(90deg, #7A76FF, #CB46FA, #FE881C);
-}
-.faq-hub-hero h1 {
-    max-width: 880px;
-    margin: 20px auto;
-    color: #fff;
-    font-size: 58px;
-    line-height: 1.08;
-    font-weight: 500;
-}
-.faq-hub-hero h1 span {
-    background: linear-gradient(90deg, #7A76FF, #CB46FA 55%, #FE881C);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.faq-hub-hero__copy {
-    max-width: 760px;
-    margin: 0 auto 30px;
-    color: rgba(255,255,255,.8);
-    font-size: 19px;
-    line-height: 30px;
-}
-.faq-hub-search-wrap {
-    position: relative;
-    width: min(650px, 100%);
-    margin: 0 auto;
-    text-align: left;
-}
-.faq-hub-search {
-    display: grid;
-    grid-template-columns: 24px 1fr;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-    padding: 0 18px;
-    border: 1px solid rgba(255,255,255,.24);
-    border-radius: 8px;
-    background: rgba(255,255,255,.1);
-    margin: 0 auto;
-}
-@keyframes faqHubRevealUp {
-    from { opacity: 0; transform: translateY(28px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-.faq-hub-hero__reveal {
-    opacity: 0;
-    animation: faqHubRevealUp .7s ease forwards;
-}
-.faq-hub-hero__reveal.is-revealed {
-    opacity: 1;
-    transform: translateY(0);
-    animation: none;
-}
-.faq-hub-hero .delay-1 { animation-delay: .1s; }
-.faq-hub-hero .delay-2 { animation-delay: .25s; }
-.faq-hub-hero .delay-3 { animation-delay: .4s; }
-.faq-hub-hero .delay-4 { animation-delay: .55s; }
-.faq-hub-search i {
-    color: #cb46fa;
-}
-.faq-hub-search input {
-    width: 100%;
-    height: 54px;
-    border: 0;
-    outline: 0;
-    color: #fff;
-    background: transparent;
-    font-size: 15px;
-}
-.faq-hub-search input::placeholder {
-    color: rgba(255,255,255,.58);
-}
-.faq-hub-search-suggestions {
-    position: absolute;
-    top: calc(100% + 8px);
-    right: 0;
-    left: 0;
-    z-index: 5;
-    display: none;
-    max-height: 330px;
-    padding: 8px;
-    border: 1px solid #e4e3ea;
-    border-radius: 8px;
-    background: #fff;
-    box-shadow: 0 20px 45px rgba(5, 6, 12, .28);
-    overflow-y: auto;
-}
-.faq-hub-search-suggestions.is-visible {
-    display: block;
-}
-.faq-hub-search-suggestion {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 14px;
-    align-items: center;
-    width: 100%;
-    padding: 12px 14px;
-    border: 0;
-    border-radius: 6px;
-    color: #15151b;
-    background: transparent;
-    text-align: left;
-    cursor: pointer;
-}
-.faq-hub-search-suggestion:hover,
-.faq-hub-search-suggestion.is-active {
-    background: #f5f1ff;
-}
-.faq-hub-search-suggestion strong {
-    display: block;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 700;
-}
-.faq-hub-search-suggestion small {
-    display: block;
-    margin-top: 3px;
-    color: #7A76FF;
-    font-size: 11px;
-    line-height: 16px;
-    font-weight: 700;
-}
-.faq-hub-search-suggestion i {
-    color: #CB46FA;
-    font-size: 13px;
-}
-.faq-hub-search-suggestions__empty {
-    margin: 0;
-    padding: 14px;
-    color: #62616c;
-    font-size: 13px;
-    line-height: 20px;
-    text-align: center;
-}
-.faq-hub-search-status {
-    min-height: 20px;
-    margin: 10px 0 0;
-    color: rgba(255,255,255,.72);
-    font-size: 13px;
-    line-height: 20px;
-    text-align: center;
-}
-.faq-hub-section {
-    position: relative;
-    z-index: 1;
-    padding: 88px 0;
-}
-.faq-hub-section--soft {
-    background: #f7f7fa;
-}
-.faq-hub-heading {
-    max-width: 760px;
-    margin: 14px 0 18px;
-    color: #101014;
-    font-size: 42px;
-    line-height: 1.16;
-    font-weight: 600;
-}
-.faq-hub-intro {
-    max-width: 760px;
-    color: #54535f;
-    font-size: 17px;
-    line-height: 28px;
-}
-.faq-hub-topics {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 18px;
-    margin-top: 38px;
-}
-.faq-topic {
-    display: flex;
-    flex-direction: column;
-    min-height: 245px;
-    padding: 26px;
-    border: 1px solid #e4e3ea;
-    border-radius: 8px;
-    background: #fff;
-    text-decoration: none;
-    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
-}
-.faq-topic:hover {
-    transform: translateY(-4px);
-    border-color: rgba(203,70,250,.45);
-    box-shadow: 0 18px 40px rgba(20,18,35,.09);
-}
-.faq-topic__top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 12px;
-}
-.faq-topic__icon {
-    display: grid;
-    place-items: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 8px;
-    color: #fff;
-    background: linear-gradient(135deg, #7A76FF, #CB46FA 55%, #FE881C);
-}
-.faq-topic h3 {
-    margin: 22px 0 10px;
-    color: #101014;
-    font-size: 22px;
-    line-height: 29px;
-    font-weight: 700;
-}
-.faq-topic p {
-    margin: 0;
-    color: #62616c;
-    font-size: 14px;
-    line-height: 23px;
-}
-.faq-topic__button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    align-self: flex-start;
-    gap: 9px;
-    min-height: 42px;
-    margin-top: auto;
-    padding: 0 18px;
-    border-radius: 7px;
-    color: #fff;
-    background: linear-gradient(90deg, #7A76FF, #CB46FA 55%, #FE881C);
-    font-size: 13px;
-    font-weight: 700;
-    line-height: 1;
-    transition: transform .2s ease, box-shadow .2s ease;
-}
-.faq-topic p + .faq-topic__button {
-    margin-top: 22px;
-}
-.faq-topic:hover .faq-topic__button {
-    transform: translateX(3px);
-    box-shadow: 0 9px 20px rgba(163, 72, 244, .24);
-}
-.faq-hub-layout {
-    display: grid;
-    grid-template-columns: 280px minmax(0, 1fr);
-    gap: 48px;
-    align-items: start;
-}
-.faq-hub-filter {
-    position: sticky;
-    top: 120px;
-}
-.faq-hub-filter h2 {
-    margin: 14px 0 16px;
-    font-size: 30px;
-    line-height: 38px;
-    font-weight: 600;
-}
-.faq-hub-filter p {
-    color: #666570;
-    font-size: 14px;
-    line-height: 23px;
-}
-.faq-filter-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-    margin-top: 24px;
-}
-.faq-filter-button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 11px 13px;
-    border: 1px solid #e1e0e8;
-    border-radius: 7px;
-    color: #3f3e48;
-    background: #fff;
-    text-align: left;
-    font-size: 13px;
-    font-weight: 700;
-    cursor: pointer;
-}
-.faq-filter-button.is-active {
-    border-color: transparent;
-    color: #fff;
-    background: linear-gradient(90deg, #7A76FF, #CB46FA 58%, #FE881C);
-}
-.faq-hub-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-.faq-hub-item {
-    border: 1px solid #e4e3ea;
-    border-radius: 8px;
-    background: #fff;
-    overflow: hidden;
-}
-.faq-hub-item[hidden] {
-    display: none;
-}
-.faq-hub-question {
-    display: grid;
-    grid-template-columns: 1fr 28px;
-    gap: 20px;
-    align-items: center;
-    width: 100%;
-    padding: 22px 24px;
-    border: 0;
-    color: #15151b;
-    background: #fff;
-    text-align: left;
-    cursor: pointer;
-}
-.faq-hub-question strong {
-    display: block;
-    font-size: 18px;
-    line-height: 27px;
-}
-.faq-hub-question small {
-    display: block;
-    margin-bottom: 6px;
-    color: #7A76FF;
-    font-size: 11px;
-    line-height: 16px;
-    font-weight: 800;
-    text-transform: uppercase;
-}
-.faq-hub-question i {
-    color: #cb46fa;
-    transition: transform .2s ease;
-}
-.faq-hub-item.is-open .faq-hub-question i {
-    transform: rotate(180deg);
-}
-.faq-hub-answer {
-    display: none;
-    padding: 0 24px 24px;
-    color: #4f4e59;
-    font-size: 15px;
-    line-height: 25px;
-}
-.faq-hub-item.is-open .faq-hub-answer {
-    display: block;
-}
-.faq-hub-answer p {
-    margin: 0;
-}
-.faq-hub-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px 18px;
-    margin-top: 16px;
-}
-.faq-hub-links a {
-    color: #725cf4;
-    font-size: 13px;
-    line-height: 20px;
-    font-weight: 700;
-}
-.faq-hub-links a:hover {
-    color: #cb46fa;
-}
-.faq-hub-empty {
-    display: none;
-    padding: 28px;
-    border: 1px dashed #cbc9d5;
-    border-radius: 8px;
-    color: #55545f;
-    text-align: center;
-}
-.faq-hub-empty.is-visible {
-    display: block;
-}
-.faq-hub-cta {
-    position: relative;
-    overflow: hidden;
-    padding: 52px;
-    border-radius: 8px;
-    color: #fff;
-    background: #101014;
-}
-.faq-hub-cta::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 44%;
-    opacity: .28;
-    background: url("/assets/images/cta-bg-image.webp") center/cover no-repeat;
-}
-.faq-hub-cta__content {
-    position: relative;
-    z-index: 1;
-    max-width: 720px;
-}
-.faq-hub-cta h2 {
-    margin: 0 0 14px;
-    font-size: 38px;
-    line-height: 47px;
-    font-weight: 600;
-}
-.faq-hub-cta p {
-    margin: 0 0 26px;
-    color: rgba(255,255,255,.76);
-    font-size: 16px;
-    line-height: 26px;
-}
-.faq-hub-cta__actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-.faq-hub-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
-    min-height: 46px;
-    padding: 0 22px;
-    border: 1px solid rgba(255,255,255,.3);
-    border-radius: 7px;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 700;
-}
-.faq-hub-button--primary {
-    border-color: transparent;
-    background: linear-gradient(90deg, #7A76FF, #CB46FA 55%, #FE881C);
-}
-@media (max-width: 1024px) {
-    .faq-hub-topics {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-    .faq-hub-layout {
-        grid-template-columns: 1fr;
-    }
-    .faq-hub-filter {
-        position: static;
-    }
-    .faq-filter-buttons {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    .faq-filter-button {
-        width: auto;
-    }
-}
-@media (max-width: 640px) {
-    .faq-hub-hero {
-        min-height: 600px;
-        padding: 145px 0 70px;
-    }
-    .faq-hub-hero h1 {
-        font-size: 40px;
-    }
-    .faq-hub-hero__copy {
-        font-size: 16px;
-        line-height: 26px;
-    }
-    .faq-hub-section {
-        padding: 64px 0;
-    }
-    .faq-hub-heading {
-        font-size: 32px;
-    }
-    .faq-hub-topics {
-        grid-template-columns: 1fr;
-    }
-    .faq-topic {
-        min-height: 0;
-    }
-    .faq-hub-question {
-        padding: 18px;
-    }
-    .faq-hub-question strong {
-        font-size: 16px;
-        line-height: 24px;
-    }
-    .faq-hub-answer {
-        padding: 0 18px 20px;
-    }
-    .faq-hub-cta {
-        padding: 34px 24px;
-    }
-    .faq-hub-cta::before {
-        width: 100%;
-        opacity: .14;
-    }
-    .faq-hub-cta h2 {
-        font-size: 30px;
-        line-height: 38px;
-    }
-}
-</style>
+<link rel="stylesheet" href="/assets/css/extracted/faq.css?v=20260821-1">
 
 <main class="faq-hub">
     <section class="faq-hub-hero">
@@ -786,7 +242,7 @@ include(__DIR__ . "/../inc/header.php");
                     <p>Discuss your workflows, service levels, compliance requirements, staffing model, and implementation goals with an EmpireOneCX specialist.</p>
                     <div class="faq-hub-cta__actions">
                         <a class="faq-hub-button faq-hub-button--primary" href="/contact">Ask Our Team <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-                        <a class="faq-hub-button" href="/insights">Browse Insights</a>
+                        <a class="faq-hub-button" href="/insights/">Browse Insights</a>
                     </div>
                 </div>
             </div>
@@ -991,8 +447,8 @@ include(__DIR__ . "/../inc/header.php");
     "@graph" => [
         [
             "@type" => "CollectionPage",
-            "@id" => "https://empireonecx.com/faq#webpage",
-            "url" => "https://empireonecx.com/faq",
+            "@id" => "https://empireonecx.com/faq/#webpage",
+            "url" => "https://empireonecx.com/faq/",
             "name" => "BPO, CX & AI Support FAQ Hub",
             "description" => $metaDescription,
             "isPartOf" => ["@id" => "https://empireonecx.com/#website"],
@@ -1005,7 +461,7 @@ include(__DIR__ . "/../inc/header.php");
         ],
         [
             "@type" => "FAQPage",
-            "@id" => "https://empireonecx.com/faq#faq",
+            "@id" => "https://empireonecx.com/faq/#faq",
             "mainEntity" => array_map(function ($faq) {
                 return [
                     "@type" => "Question",
@@ -1021,8 +477,8 @@ include(__DIR__ . "/../inc/header.php");
             "@type" => "BreadcrumbList",
             "itemListElement" => [
                 ["@type" => "ListItem", "position" => 1, "name" => "Home", "item" => "https://empireonecx.com/"],
-                ["@type" => "ListItem", "position" => 2, "name" => "Resources", "item" => "https://empireonecx.com/insights"],
-                ["@type" => "ListItem", "position" => 3, "name" => "FAQ Hub", "item" => "https://empireonecx.com/faq"],
+                ["@type" => "ListItem", "position" => 2, "name" => "Resources", "item" => "https://empireonecx.com/insights/"],
+                ["@type" => "ListItem", "position" => 3, "name" => "FAQ Hub", "item" => "https://empireonecx.com/faq/"],
             ],
         ],
     ],

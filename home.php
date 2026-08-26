@@ -5,25 +5,12 @@ include("inc/header.php");
 ?>
 <link rel="preload" href="assets/images/herobgdownimage.webp" as="image" fetchpriority="high">
 
-<style>
-@keyframes heroFadeInUp {
-    from { opacity: 0; transform: translateY(40px) scale(0.98); }
-    to { opacity: 1; transform: translateY(0) scale(1); }
-}
-.hero-css-reveal {
-    opacity: 0;
-    animation: heroFadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-.hero-css-reveal.delay-1 { animation-delay: 0.10s; }
-.hero-css-reveal.delay-2 { animation-delay: 0.28s; }
-.hero-css-reveal.delay-3 { animation-delay: 0.46s; }
-.hero-css-reveal.delay-4 { animation-delay: 0.64s; }
-</style>
+<link rel="stylesheet" href="/assets/css/extracted/home.css?v=20260821-1">
 
 <main class="relative">
     <section class="hero-section relative flex flex-col items-center justify-center px-4 sm:px-6 text-center overflow-hidden" style="padding-top: 14rem; padding-bottom: 180px;">
         <video class="absolute" autoplay muted loop playsinline poster="assets/images/herobgdownimage.webp" preload="metadata" aria-hidden="true" style="width:100%;object-fit: cover;" width="1920" height="1080">
-            <source src="./assets/images/hero.mp4" type="video/mp4" />
+            <source src="./assets/images/hero.mp4" type="video/mp4" media="(min-width: 768px)" />
         </video>
 
         <div class="absolute bg-black/50 -z-8" style="width:100%; height:100%;"></div>
@@ -39,7 +26,7 @@ include("inc/header.php");
     
                 <h2 class="heromaintitle hero-css-reveal delay-2 text-[40px] font-medium leading-tight sm:leading-[1.1] mb-4 text-white">
                      AI-Assisted <span class="bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] bg-clip-text text-transparent">Customer Experience</span>
-                    <span class="text-white font-medium">& <span class="bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] bg-clip-text text-transparent">BPO Solutions</span></span>
+                    <span class="text-white font-medium">&nbsp;&amp; <span class="bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] bg-clip-text text-transparent">BPO Solutions</span></span>
                 </h2>
     
                 <div class="hero-subpara font-normal hero-css-reveal delay-3 text-gray-300 text-sm sm:text-base lg:text-lg sm:max-w-3xl mx-auto px-4 mb-8 sm:mb-6">
@@ -227,8 +214,8 @@ include("inc/header.php");
                 </div>
 
                 <div class="animatedvideo empire-slide-right relative block !items-end left-[120px] transition-all duration-700" id="about-right">
-                    <video aria-hidden="true" tabindex="-1" autoplay muted loop playsinline preload="metadata" class="absolute inset-0 w-[519px] h-[582px] object-cover rounded-2xl" width="519" height="582">
-                        <source src="./assets/images/homeabout-bgvideo.mp4" type="video/mp4" />
+                    <video aria-hidden="true" tabindex="-1" autoplay muted loop playsinline preload="none" class="absolute inset-0 w-[519px] h-[582px] object-cover rounded-2xl" width="519" height="582">
+                        <source src="./assets/images/homeabout-bgvideo.mp4" type="video/mp4" media="(min-width: 768px)" />
                     </video>
                     <img src="./assets/images/homeaboutimg.webp" alt="EmpireOneCX innovation showcase" loading="lazy" decoding="async" width="519" height="582" class="about-right-img relative z-10 w-[519px] h-[582px] object-cover" />
                 </div>
@@ -240,13 +227,19 @@ include("inc/header.php");
         </div>
     </section>
 
-    <section class="customer-service pb-[100px]">
+    <section class="customer-service homepage-stats pb-[100px]">
         <div class="container mx-auto w-full px-4">
             <div class="rounded-[16px] p-[2px] bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] opacity-100">
                 <div class="bgcustomer bg-white rounded-[14px] px-10 py-12">
                     <h2 class="customersformat text-center text-[32px] leading-[40px] font-medium text-[#000000]">
                         Operational Excellence, Backed by Numbers
                     </h2>
+                    <p class="text-center text-[16px] leading-[26px] text-[#3C3B47] max-w-[900px] mx-auto mt-5">
+                        These operating indicators reflect how EmpireOneCX plans customer experience and BPO programs: experienced leadership, scalable staffing, flexible seating capacity, retention discipline, measurable satisfaction, AI-assisted operations, enterprise workflow deployment, quality monitoring, and continuous coverage. The numbers help clients understand the size, maturity, and reliability behind the teams that support their customers.
+                    </p>
+                    <p class="text-center text-[16px] leading-[26px] text-[#3C3B47] max-w-[900px] mx-auto mt-3">
+                        Behind each metric is a delivery model built around hiring, onboarding, coaching, reporting, compliance, and process improvement. That structure allows brands to expand support capacity while keeping service quality, customer satisfaction, and operational visibility at the center of the program.
+                    </p>
                     <div class="mytexx grid grid-cols-1 md:grid-cols-5 gap-x-6 gap-y-10 md:gap-x-8 md:gap-y-6 text-center mt-8">
                         <div class="flex flex-col items-center space-y-3">
                             <div class="counter text-[40px] leading-[48px] tracking-[-0.03em] text-center font-medium bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)] bg-clip-text text-transparent" data-target="10">
@@ -390,7 +383,7 @@ include("inc/header.php");
                             <p class="pt-[12px] text-[16px] leading-[24px] text-white/90 max-w-[340px] mb-6">
                                 Outsource customer support with dedicated offshore agents powered by AI. Improve CSAT, reduce costs, and scale support fast.
                             </p>
-                            <a href="solutions#customersupport" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
+                            <a href="/solutions/#customersupport" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
                                 See the Impact
                                 <img src="assets/images/aboutbtnlearmore.webp" class="w-[24px] h-[24px]" loading="lazy" alt="Learn More Button" decoding="async" width="24" height="24" />
                             </a>
@@ -415,7 +408,7 @@ include("inc/header.php");
                             <p class="pt-[12px] text-[16px] leading-[24px] text-white/90 max-w-[340px] mb-6">
                                 Streamline operations with back office support services. Accurate, scalable, and cost-efficient offshore teams for admin work.
                             </p>
-                            <a href="solutions#bookofficesupport" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
+                            <a href="/solutions/#bookofficesupport" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
                                 See the Impact
                                 <img src="assets/images/aboutbtnlearmore.webp" class="w-[24px] h-[24px]" loading="lazy" alt="Learn More Button" decoding="async" width="24" height="24" />
                             </a>
@@ -440,7 +433,7 @@ include("inc/header.php");
                             <p class="pt-[12px] text-[16px] leading-[24px] text-white/90 max-w-[340px] mb-6">
                                 Outsource finance and accounting to reduce costs and improve accuracy. Bookkeeping, AP/AR, payroll, and reporting services.
                             </p>
-                            <a href="solutions#finance" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
+                            <a href="/solutions/#finance" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
                                 See the Impact
                                 <img src="assets/images/aboutbtnlearmore.webp" class="w-[24px] h-[24px]" loading="lazy" alt="Learn More Button" decoding="async" width="24" height="24" />
                             </a>
@@ -465,7 +458,7 @@ include("inc/header.php");
                             <p class="pt-[12px] text-[16px] leading-[24px] text-white/90 max-w-[340px] mb-6">
                                 Improve service quality with QA outsourcing. AI-powered audits, scorecards, coaching insights, and performance tracking.
                             </p>
-                            <a href="solutions#qualityassurance" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
+                            <a href="/solutions/#qualityassurance" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
                                 See the Impact
                                 <img src="assets/images/aboutbtnlearmore.webp" class="w-[24px] h-[24px]" loading="lazy" alt="Learn More Button" decoding="async" width="24" height="24" />
                             </a>
@@ -490,7 +483,7 @@ include("inc/header.php");
                             <p class="pt-[12px] text-[16px] leading-[24px] text-white/90 max-w-[340px] mb-6">
                                 Hire faster with offshore recruitment and workforce support. End-to-end hiring, onboarding, and workforce management.
                             </p>
-                            <a href="solutions#recruitment" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
+                            <a href="/solutions/#recruitment" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
                                 See the Impact
                                 <img src="assets/images/aboutbtnlearmore.webp" class="w-[24px] h-[24px]" loading="lazy" alt="Learn More Button" decoding="async" width="24" height="24" />
                             </a>
@@ -515,7 +508,7 @@ include("inc/header.php");
                             <p class="pt-[12px] text-[16px] leading-[24px] text-white/90 max-w-[340px] mb-6">
                                 Transform operations with AI-Assisted Customer Experience. Automate workflows, QA, documents, and analytics at scale.
                             </p>
-                            <a href="solutions#aienablebpo" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
+                            <a href="/solutions/#aienablebpo" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
                                 See the Impact
                                 <img src="assets/images/aboutbtnlearmore.webp" class="w-[24px] h-[24px]" loading="lazy" alt="Learn More Button" decoding="async" width="24" height="24" />
                             </a>
@@ -1117,7 +1110,7 @@ include("inc/header.php");
 								Smarter AI. Real Human Touch. Measurable Results.
 							</p>
 							<div class="future-btn">
-								<a href="about" class="inline-block px-8 md:px-10 py-3 md:py-4 rounded-[8px] text-white text-[14px] md:text-[16px] leading-[20px] md:leading-[24px] font-medium bg-[#7A76FF]">
+								<a href="about-us" class="inline-block px-8 md:px-10 py-3 md:py-4 rounded-[8px] text-white text-[14px] md:text-[16px] leading-[20px] md:leading-[24px] font-medium bg-[#7A76FF]">
 									Explore Our Story <i class="fa fa-arrow-right" style="padding-left:10px;"></i>
 								</a>
 							</div>

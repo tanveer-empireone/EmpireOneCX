@@ -9,42 +9,8 @@
     ];
 ?>
 <?php include("inc/header.php"); ?>
-<style>
-    .gradient-text {
-        background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    .gradient-border-bar {
-        background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);
-    }
-    .results-gradient-bg {
-        background: linear-gradient(180deg, #7A76FF 0%, #CB46FA 50%, #FE881C 100%);
-    }
-    .icon-gradient-1 {
-        background: linear-gradient(135deg, #7A76FF 0%, #CB46FA 100%);
-    }
-    .icon-gradient-2 {
-        background: linear-gradient(135deg, #CB46FA 0%, #FE881C 100%);
-    }
-    /* Custom border for the bottom bar to match the thin gradient look */
-    .footer-card {
-        position: relative;
-        background: #fff;
-        border-radius: 12px;
-        z-index: 1;
-    }
-    .footer-card::before {
-        content: "";
-        position: absolute;
-        top: -1px; bottom: -1px; left: -1px; right: -1px;
-        background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50%, #FE881C 100%);
-        border-radius: 13px;
-        z-index: -1;
-        opacity: 0.6;
-    }
-</style>
-<main>
+<link rel="stylesheet" href="/assets/css/extracted/case-study.css?v=20260821-1">
+<main class="case-study-page">
     <section class="hero-section mainherowork relative flex flex-col items-center justify-center px-4 sm:px-6 text-center overflow-hidden" style="padding-top: 18rem; padding-bottom: 180px;">
         <video class="solutions-bg-videowork absolute" autoplay muted loop playsinline preload="none">
             <source src="./assets/images/case-study.mp4" type="video/mp4" />
@@ -74,7 +40,7 @@
                         <div class="relative z-10 flex items-center gap-2">
                             <span class="spanfont block w-[24px] h-[4px] rounded" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);"></span> 
                             <h2 class="spanfont text-[20px] leading-[28px] tracking-[-0.03em] m-0">
-                                <a href="/customer-experience-solutions" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Customer Experience (CX) Outsourcing</a>
+                                <a href="/solutions/customer-experience-solutions" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Customer Experience (CX) Outsourcing</a>
                             </h2> 
                         </div>
                     </div>
@@ -162,7 +128,7 @@
                         <div class="relative z-10 flex items-center gap-2">
                             <span class="spanfont block w-[24px] h-[4px] rounded" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);"></span> 
                             <h2 class="spanfont text-[20px] leading-[28px] tracking-[-0.03em] m-0">
-                                <a href="/back-office-outsourcing" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Back-Office BPO Services</a>
+                                <a href="/solutions/back-office-support" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Back-Office BPO Services</a>
                             </h2> 
                         </div>
                     </div>
@@ -250,7 +216,7 @@
                         <div class="relative z-10 flex items-center gap-2">
                             <span class="spanfont block w-[24px] h-[4px] rounded" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);"></span> 
                             <h2 class="spanfont text-[20px] leading-[28px] tracking-[-0.03em] m-0">
-                                <a href="/finance-accounting-outsourcing" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Finance & Accounting Outsourcing</a>
+                                <a href="/solutions/finance-accounting-bpo" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Finance & Accounting Outsourcing</a>
                             </h2> 
                         </div>
                     </div>
@@ -338,7 +304,7 @@
                         <div class="relative z-10 flex items-center gap-2">
                             <span class="spanfont block w-[24px] h-[4px] rounded" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);"></span> 
                             <h2 class="spanfont text-[20px] leading-[28px] tracking-[-0.03em] m-0">
-                                <a href="/quality-assurance-services" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Quality Assurance (QA) Services</a>
+                                <a href="/solutions/quality-assurance-outsourcing" style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Quality Assurance (QA) Services</a>
                             </h2> 
                         </div>
                     </div>
@@ -479,7 +445,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="career" class="mt-10 bg-white text-center py-4 px-4 rounded-xl font-bold text-[15px] shadow-md transition-all hover:scale-[1.02] active:scale-[0.98]">
+                        <a href="https://careers.empireonecx.com/" target="_blank" rel="noopener noreferrer" class="mt-10 bg-white text-center py-4 px-4 rounded-xl font-bold text-[15px] shadow-md transition-all hover:scale-[1.02] active:scale-[0.98]">
                             <span class="gradient-text">Accelerate Your Hiring Now</span>
                         </a>
                     </div>
@@ -650,28 +616,28 @@
       "position": 1,
       "name": "Customer Experience (CX) Outsourcing",
       "description": "E-commerce Brand Reduces Response Time by 62% & Increases CSAT to 4.7/5",
-      "url": "https://empireonecx.com/customer-experience-solutions"
+      "url": "https://empireonecx.com/solutions/customer-experience-solutions"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Back-Office BPO Services",
       "description": "Logistics Company Cuts Processing Time by 55%",
-      "url": "https://empireonecx.com/back-office-outsourcing"
+      "url": "https://empireonecx.com/solutions/back-office-support"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Finance & Accounting Outsourcing",
       "description": "SaaS Company Shortens Month-End Close by 45%",
-      "url": "https://empireonecx.com/finance-accounting-outsourcing"
+      "url": "https://empireonecx.com/solutions/finance-accounting-bpo"
     },
     {
       "@type": "ListItem",
       "position": 4,
       "name": "Quality Assurance (QA) Services",
       "description": "Contact Center Raises QA Score from 78% to 92%",
-      "url": "https://empireonecx.com/quality-assurance-services"
+      "url": "https://empireonecx.com/solutions/quality-assurance-outsourcing"
     }
   ]
 }

@@ -55,7 +55,7 @@
 					<p class="about-para about-story-text">No solo respondemos llamadas. Construimos confianza, fortalecemos relaciones y ayudamos a las marcas a liderar con excelencia de servicio segura y escalable.</p>
 					<div class="about-story-actions">
 						<a href="/contact" class="about-story-btn">Construya su equipo offshore <i class="fas fa-arrow-right"></i></a>
-						<a href="/solutions" class="about-story-link">Explorar soluciones</a>
+						<a href="/solutions/" class="about-story-link">Explorar soluciones</a>
 					</div>
 				</div>
 				<div class="about-story-visual reveal-right">
@@ -260,11 +260,11 @@
 					</h2>
 					<p class="mytopset about-page-para text-white text-[18px] leading-relaxed" style="max-width: 521px;"> Con la confianza de empresas globales en Norteamérica, Asia y mercados emergentes. </p>
 					<ul class="stand-out-font space-y-2 mt-6 text-[18px]">
-						<li class="flex items-start gap-3"> <span class="mt-2 h-2 w-2 rounded-full bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)]"></span> <a href="/solutions" class="text-gray-200 hover:text-white transition-colors">Marcos operativos probados</a> </li>
-						<li class="flex items-start gap-3"> <span class="mt-2 h-2 w-2 rounded-full bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)]"></span> <a href="/solutions" class="text-gray-200 hover:text-white transition-colors">Entrega segura y conforme</a> </li>
-						<li class="flex items-start gap-3"> <span class="mt-2 h-2 w-2 rounded-full bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)]"></span> <a href="/solutions" class="text-gray-200 hover:text-white transition-colors">Equipos offshore dedicados</a> </li>
-						<li class="flex items-start gap-3"> <span class="mt-2 h-2 w-2 rounded-full bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)]"></span> <a href="/solutions" class="text-gray-200 hover:text-white transition-colors">Reportes de desempeño transparentes</a> </li>
-						<li class="flex items-start gap-3"> <span class="mt-2 h-2 w-2 rounded-full bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)]"></span> <a href="/solutions" class="text-gray-200 hover:text-white transition-colors">Eficiencia acelerada por IA</a> </li>
+						<li class="flex items-start gap-3"> <span class="mt-2 h-2 w-2 rounded-full bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)]"></span> <a href="/solutions/" class="text-gray-200 hover:text-white transition-colors">Marcos operativos probados</a> </li>
+						<li class="flex items-start gap-3"> <span class="mt-2 h-2 w-2 rounded-full bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)]"></span> <a href="/solutions/" class="text-gray-200 hover:text-white transition-colors">Entrega segura y conforme</a> </li>
+						<li class="flex items-start gap-3"> <span class="mt-2 h-2 w-2 rounded-full bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)]"></span> <a href="/solutions/" class="text-gray-200 hover:text-white transition-colors">Equipos offshore dedicados</a> </li>
+						<li class="flex items-start gap-3"> <span class="mt-2 h-2 w-2 rounded-full bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)]"></span> <a href="/solutions/" class="text-gray-200 hover:text-white transition-colors">Reportes de desempeño transparentes</a> </li>
+						<li class="flex items-start gap-3"> <span class="mt-2 h-2 w-2 rounded-full bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)]"></span> <a href="/solutions/" class="text-gray-200 hover:text-white transition-colors">Eficiencia acelerada por IA</a> </li>
 					</ul>
 					<p class="mytopset pt-[20px] about-page-para text-white text-[18px] leading-relaxed" style="max-width: 521px;"> No solo proporcionamos personal. Creamos equipos offshore de alto rendimiento alineados con sus objetivos. </p>
 				</div>
@@ -414,7 +414,7 @@
 								Porque sus clientes no merecen menos.
 							</p>
 							<div class="future-btn">
-								<a href="/solutions" class="inline-block px-8 md:px-10 py-3 md:py-4 rounded-[8px] text-white text-[14px] md:text-[16px] leading-[20px] md:leading-[24px] font-medium bg-[#7A76FF]">
+								<a href="/solutions/" class="inline-block px-8 md:px-10 py-3 md:py-4 rounded-[8px] text-white text-[14px] md:text-[16px] leading-[20px] md:leading-[24px] font-medium bg-[#7A76FF]">
 									Explorar nuestras soluciones <i class="fa fa-arrow-right" style="padding-left:10px;"></i>
 								</a>
 							</div>

@@ -400,7 +400,7 @@ resultados predecibles, medibles y escalables.</p>
                             <p class="pt-[12px] text-[16px] leading-[24px] text-white/90 max-w-[340px] mb-6">
                                 Externalice la atención al cliente con agentes offshore dedicados y potenciados por IA. Mejore el CSAT, reduzca costos y escale el soporte con rapidez.
                             </p>
-                            <a href="solutions#customersupport" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
+                            <a href="/solutions/#customersupport" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
                                 Ver el impacto
                                 <img src="assets/images/aboutbtnlearmore.webp" class="w-[24px] h-[24px]" loading="lazy" alt="Learn More Button" decoding="async" width="24" height="24" />
                             </a>
@@ -425,7 +425,7 @@ resultados predecibles, medibles y escalables.</p>
                             <p class="pt-[12px] text-[16px] leading-[24px] text-white/90 max-w-[340px] mb-6">
                                 Optimice sus operaciones con servicios de soporte back office. Equipos offshore precisos, escalables y rentables para tareas administrativas.
                             </p>
-                            <a href="solutions#bookofficesupport" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
+                            <a href="/solutions/#bookofficesupport" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
                                 Ver el impacto
                                 <img src="assets/images/aboutbtnlearmore.webp" class="w-[24px] h-[24px]" loading="lazy" alt="Learn More Button" decoding="async" width="24" height="24" />
                             </a>
@@ -450,7 +450,7 @@ resultados predecibles, medibles y escalables.</p>
                             <p class="pt-[12px] text-[16px] leading-[24px] text-white/90 max-w-[340px] mb-6">
                                 Externalice finanzas y contabilidad para reducir costos y mejorar la precisión. Servicios de contabilidad, cuentas por pagar/cobrar, nómina e informes.
                             </p>
-                            <a href="solutions#finance" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
+                            <a href="/solutions/#finance" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
                                 Ver el impacto
                                 <img src="assets/images/aboutbtnlearmore.webp" class="w-[24px] h-[24px]" loading="lazy" alt="Learn More Button" decoding="async" width="24" height="24" />
                             </a>
@@ -475,7 +475,7 @@ resultados predecibles, medibles y escalables.</p>
                             <p class="pt-[12px] text-[16px] leading-[24px] text-white/90 max-w-[340px] mb-6">
                                 Mejore la calidad del servicio con outsourcing de QA. Auditorías con IA, scorecards, insights de coaching y seguimiento del desempeño.
                             </p>
-                            <a href="solutions#qualityassurance" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
+                            <a href="/solutions/#qualityassurance" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
                                 Ver el impacto
                                 <img src="assets/images/aboutbtnlearmore.webp" class="w-[24px] h-[24px]" loading="lazy" alt="Learn More Button" decoding="async" width="24" height="24" />
                             </a>
@@ -500,7 +500,7 @@ resultados predecibles, medibles y escalables.</p>
                             <p class="pt-[12px] text-[16px] leading-[24px] text-white/90 max-w-[340px] mb-6">
                                 Contrate más rápido con reclutamiento offshore y soporte de fuerza laboral. Contratación, onboarding y gestión de personal 360°.
                             </p>
-                            <a href="solutions#recruitment" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
+                            <a href="/solutions/#recruitment" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
                                 Ver el impacto
                                 <img src="assets/images/aboutbtnlearmore.webp" class="w-[24px] h-[24px]" loading="lazy" alt="Learn More Button" decoding="async" width="24" height="24" />
                             </a>
@@ -525,7 +525,7 @@ resultados predecibles, medibles y escalables.</p>
                             <p class="pt-[12px] text-[16px] leading-[24px] text-white/90 max-w-[340px] mb-6">
                                 Transforme sus operaciones con experiencia del cliente asistida por IA. Automatice flujos de trabajo, QA, documentos y analítica a escala.
                             </p>
-                            <a href="solutions#aienablebpo" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
+                            <a href="/solutions/#aienablebpo" class="about-btn-work text-[16px] leading-[24px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 transition-all text-[#fff] bg-white/10 px-5 py-2 rounded-full backdrop-blur-sm border border-white/20 hover:bg-white/20">
                                 Ver el impacto
                                 <img src="assets/images/aboutbtnlearmore.webp" class="w-[24px] h-[24px]" loading="lazy" alt="Learn More Button" decoding="async" width="24" height="24" />
                             </a>

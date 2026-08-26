@@ -107,11 +107,11 @@
     $page_title = "Recursos de CX y BPO | EmpireOneCX";
     $meta_description = "Lea recursos de EmpireOneCX sobre outsourcing BPO, experiencia del cliente, automatizacion con IA, soporte escalable y estrategias operativas.";
     $metaKeywords = "recursos BPO, articulos BPO, experiencia del cliente, outsourcing en espanol, automatizacion con IA, soporte al cliente, estrategia BPO";
-    $languageSwitchHrefEn = "/insights";
+    $languageSwitchHrefEn = "/insights/";
     $languageAlternates = [
-        "en" => "https://empireonecx.com/insights",
+        "en" => "https://empireonecx.com/insights/",
         "es" => "https://empireonecx.com/es/recursos/",
-        "x-default" => "https://empireonecx.com/insights",
+        "x-default" => "https://empireonecx.com/insights/",
     ];
     include(__DIR__ . "/../../inc/header.php");
 ?>

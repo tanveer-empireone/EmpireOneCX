@@ -1,0 +1,233 @@
+/* Extracted from solutions/index.php to reduce rendered HTML weight. */
+@media (max-width: 767px) {
+    .solutions-page .hero-section.mainherowork {
+        height: auto;
+        min-height: 640px;
+        padding-top: 10rem !important;
+        padding-bottom: 72px !important;
+    }
+
+    .solutions-page .hero-section.mainherowork .container {
+        max-width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .solutions-page .solutions-bg-videowork {
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .solutions-page .hero-section .absolute.bg-black\/50 {
+        inset: 0;
+        width: auto !important;
+        height: auto !important;
+    }
+
+    .solutions-page .solutions-hero-heading {
+        max-width: min(300px, calc(100vw - 40px)) !important;
+        font-size: 30px !important;
+        line-height: 36px !important;
+        margin-left: auto;
+        margin-right: auto;
+        overflow-wrap: normal;
+        text-wrap: balance;
+    }
+
+    .solutions-page .hero-section.mainherowork .herosubtitle {
+        display: block;
+        width: 100%;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-bottom: 14px !important;
+        font-size: 18px !important;
+        line-height: 26px !important;
+        text-align: center;
+    }
+
+    .solutions-page .subpara {
+        max-width: 292px !important;
+        font-size: 14px !important;
+        line-height: 22px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .solutions-page .samesectionpadding {
+        padding-top: 56px !important;
+        padding-bottom: 56px !important;
+    }
+
+    .solutions-page .solgap {
+        gap: 16px !important;
+        margin-bottom: 22px !important;
+    }
+
+    .solutions-page .solgap h2 > span {
+        align-items: flex-start;
+    }
+
+    .solutions-page .solgap h2 .spanfont:last-child {
+        font-size: 17px !important;
+        line-height: 23px !important;
+    }
+
+    .solutions-page .solution-heading,
+    .solutions-page .solution-heading span {
+        max-width: none !important;
+        font-size: 28px !important;
+        line-height: 34px !important;
+    }
+
+    .solutions-page .company-culture-abformate-solutions-neww {
+        font-size: 15px !important;
+        line-height: 23px !important;
+    }
+
+    .solutions-page .solution-side-img1,
+    .solutions-page .solution-side-img2 {
+        display: none;
+    }
+
+    .solutions-page .lasting-impression-soltuionsimg > div {
+        height: auto !important;
+        min-height: 0;
+    }
+
+    .solutions-page .deskstopdisplay {
+        display: none !important;
+    }
+
+    .solutions-page .nomobiledisplay {
+        display: block !important;
+        width: 100%;
+        height: auto;
+        border-radius: 16px;
+    }
+
+    .solutions-page .solheightimg img {
+        height: 240px !important;
+        object-fit: cover;
+    }
+
+    .solutions-page .mainsolthings {
+        display: flex !important;
+        flex-direction: column;
+        align-items: stretch !important;
+        gap: 18px;
+    }
+
+    .solutions-page .leftsidesoldes {
+        width: 100% !important;
+        padding-top: 24px !important;
+        padding-right: 0 !important;
+    }
+
+    .solutions-page .managespacesolution {
+        gap: 14px !important;
+        margin-bottom: 4px !important;
+    }
+
+    .solutions-page .managespacesolution > div {
+        align-items: flex-start;
+    }
+
+    .solutions-page .managespacesolution p {
+        font-size: 15px !important;
+        line-height: 22px !important;
+    }
+
+    .solutions-page .rightsidesoldes {
+        position: static !important;
+        width: 100%;
+        margin: 0 0 6px;
+    }
+
+    .solutions-page .noheightemp {
+        width: 100%;
+    }
+
+    .solutions-page .bosx {
+        padding: 20px !important;
+    }
+
+    .solutions-page .boxesfont h3 {
+        font-size: 21px !important;
+        line-height: 27px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .solutions-page .boxesfont > img {
+        max-width: 100%;
+        margin-bottom: 14px !important;
+    }
+
+    .solutions-page .linesli li {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 14px !important;
+        line-height: 21px !important;
+    }
+
+    .solutions-page .linesli li img {
+        flex: 0 0 auto;
+        margin-top: 4px;
+    }
+
+    .solutions-page .empgaps {
+        gap: 14px !important;
+    }
+
+    .solutions-page .mytextemp {
+        width: auto !important;
+        min-width: 0 !important;
+        font-size: 18px !important;
+        line-height: 24px !important;
+    }
+
+    .solutions-page .empsolbtn {
+        flex-direction: column;
+        align-items: stretch !important;
+        gap: 16px;
+    }
+
+    .solutions-page .empsolbtn p {
+        width: 100% !important;
+        margin-right: 0 !important;
+        font-size: 15px !important;
+        line-height: 23px !important;
+    }
+
+    .solutions-page .empsolbtn a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .solutions-page .future-customer-section {
+        padding-top: 56px !important;
+        padding-bottom: 56px !important;
+    }
+
+    .solutions-page .future-innerwork {
+        padding: 34px 18px !important;
+    }
+
+    .solutions-page .cta-left-sidework {
+        padding-top: 12px !important;
+        padding-bottom: 12px !important;
+    }
+
+    .solutions-page .future-heading,
+    .solutions-page .future-heading span {
+        font-size: 28px !important;
+        line-height: 34px !important;
+    }
+
+    .solutions-page .future-customer-para {
+        font-size: 15px !important;
+        line-height: 23px !important;
+    }
+}

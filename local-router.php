@@ -3,9 +3,9 @@ $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $file = __DIR__ . $path;
 
 $legacyLocationPrefixes = [
-    '/locations' => '/global-footprint',
-    '/global-markets' => '/global-footprint',
-    '/global-footprints' => '/global-footprint',
+    '/locations' => '/global-footprint/',
+    '/global-markets' => '/global-footprint/',
+    '/global-footprints' => '/global-footprint/',
 ];
 
 foreach ($legacyLocationPrefixes as $legacyPrefix => $newPrefix) {
@@ -28,6 +28,11 @@ function render_php_file($target)
 
 if ($path === '/' || $path === '') {
     render_php_file(__DIR__ . '/home.php');
+    return true;
+}
+
+if ($path === '/career' || $path === '/career/') {
+    header('Location: https://careers.empireonecx.com/', true, 301);
     return true;
 }
 

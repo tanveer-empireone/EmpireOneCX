@@ -485,7 +485,9 @@
         }
     }
 
-    document.addEventListener("DOMContentLoaded", function () {
+    function initWidget() {
+        if (document.querySelector(".eocx-ai-chat")) return;
+
         const root = createWidget();
         const input = root.querySelector(".eocx-ai-chat__input");
 
@@ -533,5 +535,11 @@
         addMessage(root, "bot", "What are you looking for today?");
         showInitialOptions(root);
         hideTawkWidget();
-    });
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initWidget, { once: true });
+    } else {
+        initWidget();
+    }
 })();

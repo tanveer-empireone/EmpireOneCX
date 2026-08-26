@@ -11,7 +11,7 @@ return [
     [
         "id" => "services-overview",
         "title" => "Services and solutions",
-        "url" => "/solutions",
+        "url" => "/solutions/",
         "keywords" => ["services", "solutions", "BPO", "CX", "customer support", "back office", "finance", "QA", "recruitment", "AI"],
         "content" => "EmpireOneCX services include customer experience solutions, BPO solutions, back-office support, finance and accounting BPO, quality assurance outsourcing, recruitment and workforce support, and AI-enabled BPO solutions.",
     ],
@@ -60,14 +60,14 @@ return [
     [
         "id" => "compliance-security",
         "title" => "Compliance and security",
-        "url" => "/compliance-security",
+        "url" => "/compliance-security/",
         "keywords" => ["SOC 2", "ISO 27001", "HIPAA", "PCI DSS", "GDPR", "security", "compliance", "BBB"],
         "content" => "EmpireOneCX is positioned as a SOC 2 Type II and ISO/IEC 27001:2022 certified BPO provider. The company supports HIPAA, PCI DSS, and GDPR compliant operations and is a BBB Accredited Business. Compliance controls support healthcare, finance, and European-market operations.",
     ],
     [
         "id" => "secure-onboarding",
         "title" => "Secure onboarding and launch timeline",
-        "url" => "/compliance-security",
+        "url" => "/compliance-security/",
         "keywords" => ["onboarding", "launch", "72 hours", "secure team", "audit", "VRA"],
         "content" => "EmpireOneCX states that compliant dedicated teams can be securely onboarded and launched in as little as 72 hours when requirements fit the existing compliant infrastructure. Its SOC 2 and ISO 27001 environment can help reduce vendor risk assessment timelines.",
     ],

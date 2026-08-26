@@ -50,9 +50,10 @@
 					</h2>
 					<p class="about-para about-story-lead">EmpireOneCX is a next-generation outsourcing partner built to elevate customer experience. We combine advanced digital systems with skilled professionals who understand that every interaction matters.</p>
 					<p class="about-para about-story-text">We do not just answer calls. We build trust, strengthen relationships, and help brands lead with secure, scalable service excellence.</p>
+					<p class="about-para about-story-text">Our work spans customer support, contact center operations, back-office services, finance and accounting support, quality assurance, workforce support, multilingual delivery, and AI-assisted workflow improvement. Each program is shaped around the client’s customer journey, internal tools, compliance expectations, reporting needs, and growth plans.</p>
 					<div class="about-story-actions">
 						<a href="contact" class="about-story-btn">Build Your Offshore Team <i class="fas fa-arrow-right"></i></a>
-						<a href="solutions" class="about-story-link">Explore solutions</a>
+						<a href="/solutions/" class="about-story-link">Explore solutions</a>
 					</div>
 				</div>
 				<div class="about-story-visual reveal-right">
@@ -165,7 +166,7 @@
 				</div>
 				<div class="reveal-right">
 					<p class="company-culture-abformate text-[#3C3B47] text-[16px] leading-[24px] max-w-xl">"Treat Others the Way You Want to Be Treated," we make every decision and approach every strategy with genuine care, fearlessly embracing AI to continuously enhance human connection and allowing technology to serve humanity. </p> 
-					<a href="career" class="about-btn-work 
+					<a href="https://careers.empireonecx.com/" target="_blank" rel="noopener noreferrer" class="about-btn-work
 						text-[18px] 
 						leading-[24px] 
 						font-medium 
@@ -187,8 +188,8 @@
 						decoding="async"
 						role="button"
 						tabindex="0"
-						onclick="window.location.href='career'"
-						onkeypress="if(event.key === 'Enter'){ window.location.href='career'; }"
+						onclick="window.open('https://careers.empireonecx.com/', '_blank', 'noopener,noreferrer')"
+						onkeypress="if(event.key === 'Enter'){ window.open('https://careers.empireonecx.com/', '_blank', 'noopener,noreferrer'); }"
 						/>
 					</a> 
 				</div>
@@ -199,37 +200,37 @@
 			<div id="sliderTrack" class="flex">
 				<div class="slide flex-shrink-0 basis-1/2 md:basis-1/3 lg:basis-1/4 p-2">
 					<div class="overflow-hidden shadow-md rounded-[24px] h-[180px] md:h-[220px] lg:h-[360px]">
-						<img src="assets/images/cultureimg1.webp" class="w-full h-full object-cover" />
+						<img src="assets/images/cultureimg1.webp" class="w-full h-full object-cover" alt="EmpireOneCX team culture and workplace collaboration" loading="lazy" decoding="async" />
 					</div>
 				</div>
 				<div class="slide flex-shrink-0 basis-1/2 md:basis-1/3 lg:basis-1/4 p-2">
 					<div class="overflow-hidden shadow-md rounded-[24px] h-[180px] md:h-[220px] lg:h-[360px]">
-						<img src="assets/images/cultureimg2.webp" class="w-full h-full object-cover" />
+						<img src="assets/images/cultureimg2.webp" class="w-full h-full object-cover" alt="EmpireOneCX team members collaborating in the office" loading="lazy" decoding="async" />
 					</div>
 				</div>
 				<div class="slide flex-shrink-0 basis-1/2 md:basis-1/3 lg:basis-1/4 p-2">
 					<div class="overflow-hidden shadow-md rounded-[24px] h-[180px] md:h-[220px] lg:h-[360px]">
-						<img src="assets/images/cultureimg3.webp" class="w-full h-full object-cover" />
+						<img src="assets/images/cultureimg3.webp" class="w-full h-full object-cover" alt="EmpireOneCX workplace culture and employee engagement" loading="lazy" decoding="async" />
 					</div>
 				</div>
 				<div class="slide flex-shrink-0 basis-1/2 md:basis-1/3 lg:basis-1/4 p-2">
 					<div class="overflow-hidden shadow-md rounded-[24px] h-[180px] md:h-[220px] lg:h-[360px]">
-						<img src="assets/images/cultureimg4.webp" class="w-full h-full object-cover" />
+						<img src="assets/images/cultureimg4.webp" class="w-full h-full object-cover" alt="EmpireOneCX office culture and team environment" loading="lazy" decoding="async" />
 					</div>
 				</div>
 				<div class="slide flex-shrink-0 basis-1/2 md:basis-1/3 lg:basis-1/4 p-2">
 					<div class="overflow-hidden shadow-md rounded-[24px] h-[180px] md:h-[220px] lg:h-[360px]">
-						<img src="assets/images/cultureimg2.webp" class="w-full h-full object-cover" />
+						<img src="assets/images/cultureimg2.webp" class="w-full h-full object-cover" alt="EmpireOneCX team members collaborating in the office" loading="lazy" decoding="async" />
 					</div>
 				</div>
 				<div class="slide flex-shrink-0 basis-1/2 md:basis-1/3 lg:basis-1/4 p-2">
 					<div class="overflow-hidden shadow-md rounded-[24px] h-[180px] md:h-[220px] lg:h-[360px]">
-						<img src="assets/images/cultureimg1.webp" class="w-full h-full object-cover" />
+						<img src="assets/images/cultureimg1.webp" class="w-full h-full object-cover" alt="EmpireOneCX team culture and workplace collaboration" loading="lazy" decoding="async" />
 					</div>
 				</div>
 				<div class="slide flex-shrink-0 basis-1/2 md:basis-1/3 lg:basis-1/4 p-2">
 					<div class="overflow-hidden shadow-md rounded-[24px] h-[180px] md:h-[220px] lg:h-[360px]">
-						<img src="assets/images/cultureimg4.webp" class="w-full h-full object-cover" />
+						<img src="assets/images/cultureimg4.webp" class="w-full h-full object-cover" alt="EmpireOneCX office culture and team environment" loading="lazy" decoding="async" />
 					</div>
 				</div>
 			</div>
@@ -257,11 +258,11 @@
 					</h2>
 					<p class="mytopset about-page-para text-white text-[18px] leading-relaxed" style="max-width: 521px;"> Trusted by global businesses across North America, Asia, and emerging markets. </p>
 					<ul class="stand-out-font space-y-2 mt-6 text-[18px]">
-						<li class="flex items-start gap-3"> <span class="mt-2 h-2 w-2 rounded-full bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)]"></span> <a href="solutions" class="text-gray-200 hover:text-white transition-colors">Proven operational frameworks</a> </li>
-						<li class="flex items-start gap-3"> <span class="mt-2 h-2 w-2 rounded-full bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)]"></span> <a href="solutions" class="text-gray-200 hover:text-white transition-colors">Secure, compliant delivery</a> </li>
-						<li class="flex items-start gap-3"> <span class="mt-2 h-2 w-2 rounded-full bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)]"></span> <a href="solutions" class="text-gray-200 hover:text-white transition-colors">Dedicated offshore teams</a> </li>
-						<li class="flex items-start gap-3"> <span class="mt-2 h-2 w-2 rounded-full bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)]"></span> <a href="solutions" class="text-gray-200 hover:text-white transition-colors">Transparent performance reporting</a> </li>
-						<li class="flex items-start gap-3"> <span class="mt-2 h-2 w-2 rounded-full bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)]"></span> <a href="solutions" class="text-gray-200 hover:text-white transition-colors">AI-accelerated efficiency</a> </li>
+						<li class="flex items-start gap-3"> <span class="mt-2 h-2 w-2 rounded-full bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)]"></span> <a href="/solutions/" class="text-gray-200 hover:text-white transition-colors">Proven operational frameworks</a> </li>
+						<li class="flex items-start gap-3"> <span class="mt-2 h-2 w-2 rounded-full bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)]"></span> <a href="/solutions/" class="text-gray-200 hover:text-white transition-colors">Secure, compliant delivery</a> </li>
+						<li class="flex items-start gap-3"> <span class="mt-2 h-2 w-2 rounded-full bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)]"></span> <a href="/solutions/" class="text-gray-200 hover:text-white transition-colors">Dedicated offshore teams</a> </li>
+						<li class="flex items-start gap-3"> <span class="mt-2 h-2 w-2 rounded-full bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)]"></span> <a href="/solutions/" class="text-gray-200 hover:text-white transition-colors">Transparent performance reporting</a> </li>
+						<li class="flex items-start gap-3"> <span class="mt-2 h-2 w-2 rounded-full bg-[linear-gradient(90deg,#7A76FF_0%,#CB46FA_50.14%)]"></span> <a href="/solutions/" class="text-gray-200 hover:text-white transition-colors">AI-accelerated efficiency</a> </li>
 					</ul>
 					<p class="mytopset pt-[20px] about-page-para text-white text-[18px] leading-relaxed" style="max-width: 521px;"> We don't just provide staff. We build high-performing offshore teams aligned to your goals. </p>
 				</div>
@@ -411,7 +412,7 @@
 								Because your customers deserve nothing less.
 							</p>
 							<div class="future-btn">
-								<a href="solutions" class="inline-block px-8 md:px-10 py-3 md:py-4 rounded-[8px] text-white text-[14px] md:text-[16px] leading-[20px] md:leading-[24px] font-medium bg-[#7A76FF]">
+								<a href="/solutions/" class="inline-block px-8 md:px-10 py-3 md:py-4 rounded-[8px] text-white text-[14px] md:text-[16px] leading-[20px] md:leading-[24px] font-medium bg-[#7A76FF]">
 									Explore Our Solutions <i class="fa fa-arrow-right" style="padding-left:10px;"></i>
 								</a>
 							</div>
@@ -453,83 +454,4 @@
 </script>
 
 <?php include("inc/footer.php"); ?>
-<script>
-const track = document.getElementById("sliderTrack");
-let slides = document.querySelectorAll(".slide");
-let index = 0;
-
-function getSlidesToShow() {
-    if (window.innerWidth >= 1024) return 4;
-    if (window.innerWidth >= 768) return 3;
-    return 2;
-}
-
-function moveSlide() {
-    const slidesToShow = getSlidesToShow();
-    const slideWidth = slides[0].offsetWidth;
-
-    index++;
-
-    if (index > slides.length - slidesToShow) {
-        index = 0;
-    }
-
-    track.style.transform = `translateX(-${index * slideWidth}px)`;
-    track.style.transition = "transform 0.7s ease-in-out";
-}
-
-setInterval(moveSlide, 2500);
-</script>
-<script>
-        const sliderItems = document.querySelectorAll('.slider-item');
-        const dots = document.querySelectorAll('.dot');
-        const container = document.getElementById('slider-container');
-        
-        let currentIndex = 0;
-        let startX = 0;
-        let isDragging = false;
-
-        function setActive(index) {
-            index = (index + sliderItems.length) % sliderItems.length;
-            currentIndex = index;
-            
-            sliderItems.forEach((item, i) => {
-                item.classList.toggle('active', i === index);
-            });
-
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === index);
-            });
-        }
-
-        // Dragging Logic
-        const handleStart = (e) => {
-            startX = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
-            isDragging = true;
-        };
-
-        const handleEnd = (e) => {
-            if (!isDragging) return;
-            const endX = e.type.includes('mouse') ? e.pageX : e.changedTouches[0].clientX;
-            const diff = startX - endX;
-
-            if (Math.abs(diff) > 50) {
-                if (diff > 0) setActive(currentIndex + 1);
-                else setActive(currentIndex - 1);
-            }
-            isDragging = false;
-        };
-
-        dots.forEach(dot => {
-            dot.addEventListener('click', () => {
-                setActive(parseInt(dot.getAttribute('data-index')));
-            });
-        });
-
-        container.addEventListener('touchstart', handleStart, { passive: true });
-        container.addEventListener('touchend', handleEnd, { passive: true });
-        container.addEventListener('mousedown', handleStart);
-        window.addEventListener('mouseup', handleEnd);
-        container.addEventListener('dragstart', (e) => e.preventDefault());
-
-    </script>
+<script defer src="/assets/js/about-page.js?v=20260821-1"></script>

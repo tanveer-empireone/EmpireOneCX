@@ -63,14 +63,14 @@ $assurance = [
 ];
 ?>
 
-<link rel="stylesheet" href="/assets/css/industry-detail.css?v=20260611-1">
+<link rel="stylesheet" href="/assets/css/industry-detail.min.css?v=20260804-1">
 
 <main class="industry-detail-page">
     <section class="industry-detail-hero" style="background-image:url('/assets/images/<?= htmlspecialchars($page["image"], ENT_QUOTES, "UTF-8") ?>')">
         <div class="container mx-auto px-4 industry-detail-hero-grid">
             <div>
                 <nav class="industry-detail-breadcrumb" aria-label="Breadcrumb">
-                    <a href="/industries">Industries</a><span>/</span>
+                    <a href="/industries/">Industries</a><span>/</span>
                     <span><?= htmlspecialchars($page["name"], ENT_QUOTES, "UTF-8") ?> BPO</span>
                 </nav>
                 <p class="industry-detail-eyebrow"><?= htmlspecialchars($page["name"], ENT_QUOTES, "UTF-8") ?> BPO</p>
@@ -195,7 +195,7 @@ $assurance = [
                 <a href="/solutions/bpo-solutions">Explore our full BPO solutions</a>
                 <a href="/solutions/back-office-support">Back-office support services</a>
                 <a href="/solutions/customer-experience-solutions">Customer experience solutions</a>
-                <a href="/industries">View all industries</a>
+                <a href="/industries/">View all industries</a>
             </div>
         </div>
     </section>
@@ -235,22 +235,7 @@ $assurance = [
     </section>
 </main>
 
-<script>
-document.querySelectorAll(".industry-detail-faq-toggle").forEach(function (button) {
-    button.addEventListener("click", function () {
-        var item = button.closest(".industry-detail-faq-item");
-        var wasOpen = item.classList.contains("is-open");
-        document.querySelectorAll(".industry-detail-faq-item").forEach(function (faq) {
-            faq.classList.remove("is-open");
-            faq.querySelector(".industry-detail-faq-toggle").setAttribute("aria-expanded", "false");
-        });
-        if (!wasOpen) {
-            item.classList.add("is-open");
-            button.setAttribute("aria-expanded", "true");
-        }
-    });
-});
-</script>
+<script defer src="/assets/js/industry-detail.js?v=20260821-1"></script>
 
 <script type="application/ld+json">
 <?= json_encode([
@@ -286,7 +271,7 @@ document.querySelectorAll(".industry-detail-faq-toggle").forEach(function (butto
     "@context" => "https://schema.org",
     "@type" => "BreadcrumbList",
     "itemListElement" => [
-        ["@type" => "ListItem", "position" => 1, "name" => "Industries", "item" => "https://empireonecx.com/industries"],
+        ["@type" => "ListItem", "position" => 1, "name" => "Industries", "item" => "https://empireonecx.com/industries/"],
         ["@type" => "ListItem", "position" => 2, "name" => $page["name"] . " BPO", "item" => "https://empireonecx.com/industries/" . $page["slug"]],
     ],
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) ?>

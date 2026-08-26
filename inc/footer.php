@@ -1,3 +1,60 @@
+    <style>
+    @media (max-width: 767px) {
+        footer .footer-contact {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            gap: 10px !important;
+            width: 100% !important;
+            text-align: center !important;
+        }
+
+        footer .footer-contact h3 {
+            margin: 0 !important;
+            font-size: 22px !important;
+            line-height: 28px !important;
+        }
+
+        footer .footer-contact address {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            gap: 10px !important;
+            width: 100% !important;
+            font-size: 14px !important;
+            line-height: 22px !important;
+        }
+
+        footer .footer-contact address p {
+            margin: 0 !important;
+        }
+
+        footer .footericons {
+            justify-content: center !important;
+            width: 100% !important;
+        }
+
+        footer .footericons-wrapper {
+            justify-content: center !important;
+            width: 100% !important;
+        }
+
+        footer .mainherit {
+            align-items: center !important;
+            width: 100% !important;
+            text-align: center !important;
+        }
+
+        footer .footerterms {
+            justify-content: center !important;
+            width: 100% !important;
+        }
+
+        footer .myfooterline {
+            text-align: center !important;
+        }
+    }
+    </style>
 </div>
     <footer class="bg-[rgba(6,19,30,1)] text-white py-12 md:py-20 relative overflow-hidden">
         <div class="footer-side-image absolute right-0 top-[8%]">
@@ -7,8 +64,8 @@
             <div class="flex flex-col lg:flex-row justify-between items-center items-start gap-8 lg:gap-12 mb-12 md:mb-16">
                 <div class="perfectwork w-full">
                     <p class="perfectfonts font-reckless font-normal text-[24px] leading-[32px] tracking-[-0.03em] mb-4">
-                        <span class="text-[#7A76FF]"><?php echo !empty($isSpanishSite) ? 'La alianza' : 'The Perfect'; ?></span>
-                        <span class="bg-gradient-to-r from-[#CB46FA] to-[#FE881C] bg-clip-text text-transparent"> <?php echo !empty($isSpanishSite) ? 'perfecta' : 'Partnership'; ?></span>
+                        <span class="text-[#D8B4FE]"><?php echo !empty($isSpanishSite) ? 'La alianza' : 'The Perfect'; ?></span>
+                        <span class="text-[#FDBA74]"> <?php echo !empty($isSpanishSite) ? 'perfecta' : 'Partnership'; ?></span>
                     </p>
                     <h2 class="text-[30px] md:text-[34px] leading-[38px] md:leading-[42px] tracking-[-0.01em] max-w-[720px]">
                         <?php echo !empty($isSpanishSite) ? 'IA avanzada + inteligencia humana<br class="hidden sm:block"> real = satisfacción del cliente garantizada' : 'Where advanced AI meets real human intelligence,<br class="hidden sm:block"> customer satisfaction follows.'; ?>
@@ -58,8 +115,8 @@
                                 space-y-3 sm:space-y-4 text-gray-300">
                             <li><a href="<?php echo !empty($isSpanishSite) ? '/es/' : '/'; ?>" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Inicio' : 'Home'; ?></a></li>
                             <li><a href="/about-us" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Sobre nosotros' : 'About Us'; ?></a></li>
-                            <li><a href="/solutions" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Soluciones' : 'Solutions'; ?></a></li>
-                            <li><a href="/industries" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Industrias' : 'Industries'; ?></a></li>
+                            <li><a href="/solutions/" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Soluciones' : 'Solutions'; ?></a></li>
+                            <li><a href="/industries/" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Industrias' : 'Industries'; ?></a></li>
                         </ul>
                     </div>
 
@@ -67,26 +124,26 @@
                         <ul class="text-[24px] leading-[35px] tracking-[-0.02em]
                                 space-y-3 sm:space-y-4 text-gray-300">
                             <li><a href="/case-study" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Casos de éxito' : 'Case Studies'; ?></a></li>
-                            <li><a href="/insights" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Recursos' : 'Insights'; ?></a></li>
+                            <li><a href="/insights/" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Recursos' : 'Insights'; ?></a></li>
                             <li><a href="https://careers.empireonecx.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Carreras' : 'Careers'; ?></a></li>
                             <li><a href="/contact" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Contacto' : 'Contact'; ?></a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="flex flex-col gap-6 md:gap-8 lg:items-end">
-                    <div class="flex justify-start lg:justify-end">
+                    <div class="footericons-wrapper flex justify-start lg:justify-end">
                         <div class="footericons flex gap-5 sm:gap-6">
-                            <a href="https://www.facebook.com/profile.php?id=100089467625882" target="_blank" rel="noopener noreferrer" class="text-white hover:text-[#7A76FF] transition-colors duration-300 text-xl sm:text-4xl">
-                                <i class="fab fa-facebook"></i>
+                            <a href="https://www.facebook.com/profile.php?id=100089467625882" target="_blank" rel="noopener noreferrer" aria-label="Visit EmpireOneCX on Facebook" class="text-white hover:text-[#7A76FF] transition-colors duration-300 text-xl sm:text-4xl">
+                                <i class="fab fa-facebook" aria-hidden="true"></i>
                             </a>
-                            <a href="https://www.linkedin.com/company/empireonebposolutions/?viewAsMember=true" target="_blank" rel="noopener noreferrer" class="text-white hover:text-[#CB46FA] transition-colors duration-300 text-xl sm:text-4xl">
-                                <i class="fab fa-linkedin"></i>
+                            <a href="https://www.linkedin.com/company/empireonebposolutions/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="Visit EmpireOneCX on LinkedIn" class="text-white hover:text-[#CB46FA] transition-colors duration-300 text-xl sm:text-4xl">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
                             </a>
-                            <a href="https://www.youtube.com/@empireonebposolutions" target="_blank" rel="noopener noreferrer" class="text-white hover:text-[#FF0000] transition-colors duration-300 text-xl sm:text-4xl">
-                                <i class="fab fa-youtube"></i>
+                            <a href="https://www.youtube.com/@empireonebposolutions" target="_blank" rel="noopener noreferrer" aria-label="Visit EmpireOneCX on YouTube" class="text-white hover:text-[#FF0000] transition-colors duration-300 text-xl sm:text-4xl">
+                                <i class="fab fa-youtube" aria-hidden="true"></i>
                             </a>
-                            <a href="https://www.instagram.com/empireonebposolutions?igsh=NXJzY3dwN3phaHpq" target="_blank" rel="noopener noreferrer" class="text-white hover:text-[#CB46FA] transition-colors duration-300 text-xl sm:text-4xl">
-                                <i class="fab fa-instagram"></i>
+                            <a href="https://www.instagram.com/empireonebposolutions?igsh=NXJzY3dwN3phaHpq" target="_blank" rel="noopener noreferrer" aria-label="Visit EmpireOneCX on Instagram" class="text-white hover:text-[#CB46FA] transition-colors duration-300 text-xl sm:text-4xl">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
@@ -98,19 +155,19 @@
                             <a href="/termsandconditions" class="text-white text-[16px] hover:text-white/70 transition whitespace-nowrap">
                                 <?php echo !empty($isSpanishSite) ? 'Términos y condiciones' : 'Terms and Conditions'; ?>
                             </a>
-                            <span class="text-gray-600 hidden sm:inline">|</span>
+                            <span class="text-white/70 hidden sm:inline">|</span>
                             <a href="/privacy-policy" class="text-white text-[16px] hover:text-white/70 transition whitespace-nowrap nopadright">
                                 <?php echo !empty($isSpanishSite) ? 'Política de privacidad' : 'Privacy policy'; ?>
                             </a>
                             <?php if (!empty($enableCookieConsent)): ?>
-                                <span class="text-gray-600 hidden sm:inline">|</span>
+                                <span class="text-white/70 hidden sm:inline">|</span>
                                 <button type="button" class="eocx-cookie-preferences-link whitespace-nowrap" data-cookie-preferences>
                                     <?php echo !empty($isSpanishSite) ? 'Preferencias de cookies' : 'Cookie Preferences'; ?>
                                 </button>
                             <?php endif; ?>
                         </div>
 
-                        <p class="mycenter myfooterline text-white/70 text-left lg:text-right w-full" style="font-size: 14px;">
+                        <p class="mycenter myfooterline text-white text-left lg:text-right w-full" style="font-size: 14px;">
                             © <?= date('Y'); ?> EmpireOneCX <?php echo !empty($isSpanishSite) ? 'Todos los derechos reservados.' : 'All Rights Reserved.'; ?>
                         </p>
                     </div>
@@ -135,148 +192,15 @@
     </script>
     <script defer src="/assets/js/main.js?v=20260612-2"></script>
     <script defer src="/assets/js/sweetalert.js"></script>
-<script>
-(function () {
-    const links = document.querySelectorAll('.nav-link');
-    const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
-    const currentPage = currentPath.split('/').pop() || 'home';
+<script defer src="/assets/js/footer-runtime.js?v=20260821-1"></script>
 
-    links.forEach(link => {
-    const linkPath = (link.getAttribute('href') || '').replace(/\/$/, '') || '/';
-    const linkPage = linkPath.split('/').pop() || 'home';
 
-    // pehle sab se active hatao
-    link.classList.remove('active');
 
-    // current page se match ho to active lagao
-    if (
-        linkPath === currentPath ||
-        linkPage === currentPage ||
-        (linkPath === '/solutions' && currentPath.startsWith('/solutions/')) ||
-        (linkPath === '/industries' && currentPath.startsWith('/industries/')) ||
-        (linkPath === '/global-footprint' && currentPath.startsWith('/global-footprint/')) ||
-        (link.classList.contains('nav-resources-link') && (
-            currentPath.startsWith('/insights') ||
-            currentPath.startsWith('/case-study') ||
-            currentPath.startsWith('/compliance-security') ||
-            currentPath.startsWith('/faq')
-        ))
-    ) {
-        link.classList.add('active');
-    }
-    });
 
-    document.querySelectorAll('.nav-dropdown-menu a, .mobile-solutions-submenu a, .mobile-industries-submenu a, .mobile-resources-submenu a, .mobile-locations-submenu a').forEach(link => {
-        const linkPath = (link.getAttribute('href') || '').replace(/\/$/, '') || '/';
-        link.classList.toggle('active', linkPath === currentPath);
-    });
 
-    document.querySelectorAll('.mobile-resources-link').forEach(link => {
-        link.classList.toggle('active',
-            currentPath.startsWith('/insights') ||
-            currentPath.startsWith('/case-study') ||
-            currentPath.startsWith('/compliance-security') ||
-            currentPath.startsWith('/faq')
-        );
-    });
-})();
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const selectors = ".fade-zoom-reveal, .solution-card-reveal, .reveal-left, .reveal-right, .empire-slide-left, .empire-slide-right, .about-side-image";
-    const elements = document.querySelectorAll(selectors);
-
-    if (!elements.length) {
-        return;
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("is-active");
-            } else {
-                entry.target.classList.remove("is-active");
-            }
-        });
-    }, {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px"
-    });
-
-    elements.forEach(el => observer.observe(el));
-});
-</script>
-<script>
-function openPopup(el) {
-  document.getElementById('popupTitle').innerText = el.dataset.title;
-  document.getElementById('popupText').innerText = el.dataset.text;
-
-  const modal = document.getElementById('popupModal');
-  const box = document.getElementById('popupBox');
-
-  modal.classList.remove('hidden');
-
-  setTimeout(() => {
-    box.classList.remove('scale-95', 'opacity-0');
-    box.classList.add('scale-100', 'opacity-100');
-  }, 10);
-}
-
-function closePopup() {
-  const modal = document.getElementById('popupModal');
-  const box = document.getElementById('popupBox');
-
-  box.classList.add('scale-95', 'opacity-0');
-
-  setTimeout(() => {
-    modal.classList.add('hidden');
-  }, 200);
-}
-</script>
-<script>
-(function () {
-    const originalTitle = document.title;
-    const titleElement = document.querySelector("title");
-    const chatTitlePattern = /^\(?\d+\)?\s+new messages?/i;
-
-    function restorePageTitle() {
-        if (chatTitlePattern.test(document.title)) {
-            document.title = originalTitle;
-        }
-    }
-
-    if (titleElement && "MutationObserver" in window) {
-        new MutationObserver(restorePageTitle).observe(titleElement, {
-            childList: true,
-            subtree: true
-        });
-    }
-
-    window.addEventListener("focus", restorePageTitle);
-    window.addEventListener("visibilitychange", restorePageTitle);
-    setInterval(restorePageTitle, 1000);
-})();
-</script>
-<script src="/assets/js/ai-chatbot.js?v=20260613-5"></script>
 <?php if (!empty($enableCookieConsent)): ?>
 <script src="/assets/js/cookie-consent.js?v=20260619-1"></script>
 <?php endif; ?>
-<script>
-    function toggleFaq(button) {
-        const currentItem = button.closest('.faq-item');
-        const allItems = document.querySelectorAll('.faq-item');
-        
-        // Close other items
-        allItems.forEach(item => {
-            if (item !== currentItem && item.classList.contains('active')) {
-                item.classList.remove('active');
-            }
-        });
 
-        // Toggle current item
-        currentItem.classList.toggle('active');
-    }
-</script>
 </body>
 </html>

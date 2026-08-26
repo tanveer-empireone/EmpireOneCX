@@ -6,11 +6,11 @@ $pageTitle = "Presencia global | EmpireOneCX";
 $meta_description = "Explore la presencia global de EmpireOneCX en Norteamérica, Europa, Medio Oriente, África, Asia y América Latina. Conozca cómo nuestro modelo global de entrega CX y BPO ayuda a las marcas a crecer.";
 $metaDescription = $meta_description;
 $metaKeywords = "presencia global EmpireOneCX, entrega global BPO, outsourcing CX Canadá, Estados Unidos, Reino Unido, Australia, EAU, Marruecos, Nicaragua, Colombia, Venezuela, Bolivia, Paraguay, Sudáfrica, Pakistán, Filipinas";
-$languageSwitchHrefEn = "/global-footprint";
+$languageSwitchHrefEn = "/global-footprint/";
 $languageAlternates = [
-    "en" => "https://empireonecx.com/global-footprint",
+    "en" => "https://empireonecx.com/global-footprint/",
     "es" => "https://empireonecx.com/es/presencia-global/",
-    "x-default" => "https://empireonecx.com/global-footprint",
+    "x-default" => "https://empireonecx.com/global-footprint/",
 ];
 
 $locations = [
