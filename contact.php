@@ -110,7 +110,7 @@ include("inc/header.php");
                     
                 </div>
 
-                <form id="contactForm" class="contact-form-right md:col-span-7" method="post" action="/send-mail.php">
+                <form id="contactForm" class="contact-form-right md:col-span-7" method="post" action="/send-mail">
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-[16px]">
                         <div class="contact-form-field ">
@@ -1017,4 +1017,4 @@ include("inc/header.php");
 
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<script src="/assets/js/contact-page.js?v=20260827-1"></script>
+<script src="/assets/js/contact-page.js?v=20260827-2"></script>
