@@ -1,5 +1,5 @@
-
- <?php
+<?php
+ob_start();
 
 header('Content-Type: application/json');
 //error_reporting(E_ALL);
@@ -29,34 +29,211 @@ function splitLeadName($fullName)
     return [$parts[0], $parts[1]];
 }
 
-function submitSalesforceLead(array $leadData)
+function loadEmpireOneMailConfig()
 {
-    $endpoint = 'https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8';
-    $body = http_build_query($leadData, '', '&');
+    $config = [];
+    $configPath = dirname(__DIR__) . '/empireonecx-mail-config.php';
 
-    $context = stream_context_create([
-        'http' => [
-            'method' => 'POST',
-            'header' => "Content-Type: application/x-www-form-urlencoded\r\n" .
-                        "Content-Length: " . strlen($body) . "\r\n",
-            'content' => $body,
-            'timeout' => 10,
-            'ignore_errors' => true,
-        ],
-    ]);
-
-    $response = @file_get_contents($endpoint, false, $context);
-    $statusCode = 0;
-    if (isset($http_response_header[0]) && preg_match('/\s(\d{3})\s/', $http_response_header[0], $matches)) {
-        $statusCode = (int) $matches[1];
+    if (is_readable($configPath)) {
+        $loadedConfig = require $configPath;
+        if (is_array($loadedConfig)) {
+            $config = $loadedConfig;
+        }
     }
 
-    if ($response === false || $statusCode < 200 || $statusCode >= 400) {
-        throw new Exception('Salesforce Web-to-Lead submission failed.');
-    }
+    return $config;
 }
 
+function logPipedriveIssue($message, array $context = [])
+{
+    $safeContext = $context;
+    unset($safeContext['api_token'], $safeContext['pipedrive_api_token'], $safeContext['password']);
 
+    error_log('[Pipedrive] ' . $message . (!empty($safeContext) ? ' ' . json_encode($safeContext) : ''));
+}
+
+function sendJsonResponse(array $payload)
+{
+    while (ob_get_level() > 0) {
+        ob_end_clean();
+    }
+
+    header('Content-Type: application/json');
+    echo json_encode($payload);
+}
+
+function pipedriveRequest($method, $path, array $payload, $apiToken, $baseUrl)
+{
+    $separator = strpos($path, '?') === false ? '?' : '&';
+    $url = rtrim($baseUrl, '/') . $path . $separator . 'api_token=' . rawurlencode($apiToken);
+    $body = !empty($payload) ? json_encode($payload) : '';
+
+    if (function_exists('curl_init')) {
+        $ch = curl_init($url);
+
+        curl_setopt_array($ch, [
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_CUSTOMREQUEST => $method,
+            CURLOPT_HTTPHEADER => [
+                'Accept: application/json',
+                'Content-Type: application/json',
+                'x-api-token: ' . $apiToken,
+            ],
+            CURLOPT_PROXY => '',
+            CURLOPT_NOPROXY => '*',
+            CURLOPT_TIMEOUT => 12,
+        ]);
+
+        if ($body !== '') {
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $body);
+        }
+
+        $responseBody = curl_exec($ch);
+        $curlError = curl_error($ch);
+        $httpStatus = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+
+        if ($responseBody === false) {
+            throw new Exception('cURL error: ' . $curlError);
+        }
+    } else {
+        $headers = "Accept: application/json\r\nContent-Type: application/json\r\nx-api-token: {$apiToken}\r\n";
+        if ($body !== '') {
+            $headers .= 'Content-Length: ' . strlen($body) . "\r\n";
+        }
+
+        $context = stream_context_create([
+            'http' => [
+                'method' => $method,
+                'header' => $headers,
+                'content' => $body,
+                'timeout' => 12,
+                'ignore_errors' => true,
+            ],
+        ]);
+
+        $responseBody = @file_get_contents($url, false, $context);
+        $httpStatus = 0;
+        $responseHeaders = function_exists('http_get_last_response_headers') ? http_get_last_response_headers() : ($http_response_header ?? []);
+        if (isset($responseHeaders[0]) && preg_match('/\s(\d{3})\s/', $responseHeaders[0], $matches)) {
+            $httpStatus = (int) $matches[1];
+        }
+
+        if ($responseBody === false) {
+            throw new Exception('HTTP request to Pipedrive failed.');
+        }
+    }
+
+    $decoded = json_decode($responseBody, true);
+    if (!is_array($decoded)) {
+        throw new Exception('Invalid JSON response. HTTP status: ' . $httpStatus);
+    }
+
+    if ($httpStatus < 200 || $httpStatus >= 300 || (isset($decoded['success']) && $decoded['success'] === false)) {
+        $apiMessage = $decoded['error'] ?? $decoded['error_info'] ?? $decoded['message'] ?? 'Unknown Pipedrive API error.';
+        throw new Exception($apiMessage . ' HTTP status: ' . $httpStatus);
+    }
+
+    return $decoded['data'] ?? [];
+}
+
+function createPipedriveOrganization($companyName, $apiToken, $baseUrl)
+{
+    $companyName = trim($companyName);
+
+    if ($companyName === '') {
+        return null;
+    }
+
+    $organization = pipedriveRequest('POST', '/api/v2/organizations', [
+        'name' => $companyName,
+    ], $apiToken, $baseUrl);
+
+    return $organization['id'] ?? null;
+}
+
+function createPipedrivePerson($fullName, $email, $phone, $organizationId, $apiToken, $baseUrl)
+{
+    $payload = [
+        'name' => trim($fullName) ?: 'Website Lead',
+        'emails' => [
+            [
+                'value' => $email,
+                'primary' => true,
+                'label' => 'work',
+            ],
+        ],
+    ];
+
+    if (trim($phone) !== '') {
+        $payload['phones'] = [
+            [
+                'value' => trim($phone),
+                'primary' => true,
+                'label' => 'work',
+            ],
+        ];
+    }
+
+    if ($organizationId) {
+        $payload['org_id'] = (int) $organizationId;
+    }
+
+    $person = pipedriveRequest('POST', '/api/v2/persons', $payload, $apiToken, $baseUrl);
+
+    return $person['id'] ?? null;
+}
+
+function createPipedriveLead($fullName, $companyName, $inquiryType, $personId, $organizationId, $apiToken, $baseUrl)
+{
+    $leadTitleParts = array_filter([
+        trim($companyName),
+        trim($fullName),
+        trim($inquiryType),
+    ]);
+
+    $payload = [
+        'title' => !empty($leadTitleParts) ? implode(' - ', $leadTitleParts) : 'Website Contact Form Lead',
+    ];
+
+    if ($personId) {
+        $payload['person_id'] = (int) $personId;
+    }
+
+    if ($organizationId) {
+        $payload['organization_id'] = (int) $organizationId;
+    }
+
+    pipedriveRequest('POST', '/api/v1/leads', $payload, $apiToken, $baseUrl);
+}
+
+function syncContactFormLeadToPipedrive($fullName, $companyName, $email, $phone, $inquiryType, array $config)
+{
+    $apiToken = $config['pipedrive_api_token'] ?? getenv('PIPEDRIVE_API_TOKEN') ?: '';
+    $companyDomain = $config['pipedrive_company_domain'] ?? getenv('PIPEDRIVE_COMPANY_DOMAIN') ?: 'empireonecx';
+    $baseUrl = $config['pipedrive_base_url'] ?? getenv('PIPEDRIVE_BASE_URL') ?: 'https://' . $companyDomain . '.pipedrive.com';
+
+    if (trim($apiToken) === '') {
+        return;
+    }
+
+    try {
+        $organizationId = createPipedriveOrganization($companyName, $apiToken, $baseUrl);
+        $personId = createPipedrivePerson($fullName, $email, $phone, $organizationId, $apiToken, $baseUrl);
+
+        if (!$personId && !$organizationId) {
+            throw new Exception('Pipedrive person and organization IDs were not returned.');
+        }
+
+        createPipedriveLead($fullName, $companyName, $inquiryType, $personId, $organizationId, $apiToken, $baseUrl);
+    } catch (Throwable $e) {
+        logPipedriveIssue($e->getMessage(), [
+            'email' => $email,
+            'company' => $companyName,
+            'inquiry_type' => $inquiryType,
+        ]);
+    }
+}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -82,7 +259,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty($fullName) || empty($email)) {
 
-        echo json_encode([
+        sendJsonResponse([
 
             "status" => "error",
 
@@ -106,14 +283,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $mail->isSMTP();
 
-        $smtpConfig = [];
-        $smtpConfigPath = dirname(__DIR__) . '/empireonecx-mail-config.php';
-        if (is_readable($smtpConfigPath)) {
-            $smtpConfig = require $smtpConfigPath;
-            if (!is_array($smtpConfig)) {
-                $smtpConfig = [];
-            }
-        }
+        $smtpConfig = loadEmpireOneMailConfig();
 
         $smtpHost = $smtpConfig['host'] ?? getenv('ECX_SMTP_HOST') ?: 'smtp.hostinger.com';
         $smtpPort = $smtpConfig['port'] ?? getenv('ECX_SMTP_PORT') ?: 465;
@@ -322,22 +492,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $mail->send();
 
-        [$firstName, $lastName] = splitLeadName($fullName);
-        $sourceUrl = $_SERVER['HTTP_REFERER'] ?? 'https://empireonecx.com/contact';
-        $description = "Inquiry Type: {$inquiry}\nPhone Country Code: {$countryCode}\nPhone Number: {$phoneNumber}\nSource Page: {$sourceUrl}";
-
-        submitSalesforceLead([
-            'oid' => '00Dau00000BgNWX',
-            'retURL' => 'https://empireonecx.com/contact',
-            'first_name' => $firstName,
-            'last_name' => $lastName,
-            'email' => $email,
-            'company' => $company !== '' ? $company : 'Not Provided',
-            'phone' => $phone,
-            'lead_source' => 'Web',
-            'description' => $description,
-        ]);
-
         /* ===========================
 
         USER THANK YOU EMAIL
@@ -416,7 +570,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-<p>If your inquiry is urgent, please feel free to contact us directly at <a href="tel:+18002330843">+1 800 233 0843</a> or </p>
+        <p>If your inquiry is urgent, please feel free to contact us directly at <a href="tel:+18002330843">+1 800 233 0843</a>.</p>
 
 
         <br>
@@ -426,6 +580,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p>Best Regards,<br>
 
         <strong>EmpireOneCX</strong></p>
+
+        <p style="margin:12px 0 0;">
+            <img src="https://empireonecx.com/assets/images/empireonecx.png" alt="EmpireOneCX" width="160" style="display:block;max-width:160px;height:auto;border:0;">
+        </p>
 
 
 
@@ -471,9 +629,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $mail->send();
 
+        syncContactFormLeadToPipedrive($fullName, $company, $email, $phone, $inquiry, $smtpConfig);
 
 
-        echo json_encode([
+
+        sendJsonResponse([
 
             "status" => "success",
 
@@ -487,7 +647,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-        echo json_encode([
+        sendJsonResponse([
 
             "status" => "error",
 
