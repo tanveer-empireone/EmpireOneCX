@@ -77,7 +77,10 @@ function pipedriveRequest($method, $path, array $payload, $apiToken, $baseUrl)
             CURLOPT_HTTPHEADER => [
                 'Accept: application/json',
                 'Content-Type: application/json',
+                'x-api-token: ' . $apiToken,
             ],
+            CURLOPT_PROXY => '',
+            CURLOPT_NOPROXY => '*',
             CURLOPT_TIMEOUT => 12,
         ]);
 
@@ -94,7 +97,7 @@ function pipedriveRequest($method, $path, array $payload, $apiToken, $baseUrl)
             throw new Exception('cURL error: ' . $curlError);
         }
     } else {
-        $headers = "Accept: application/json\r\nContent-Type: application/json\r\n";
+        $headers = "Accept: application/json\r\nContent-Type: application/json\r\nx-api-token: {$apiToken}\r\n";
         if ($body !== '') {
             $headers .= 'Content-Length: ' . strlen($body) . "\r\n";
         }
@@ -207,7 +210,8 @@ function createPipedriveLead($fullName, $companyName, $inquiryType, $personId, $
 function syncContactFormLeadToPipedrive($fullName, $companyName, $email, $phone, $inquiryType, array $config)
 {
     $apiToken = $config['pipedrive_api_token'] ?? getenv('PIPEDRIVE_API_TOKEN') ?: '';
-    $baseUrl = $config['pipedrive_base_url'] ?? getenv('PIPEDRIVE_BASE_URL') ?: 'https://api.pipedrive.com';
+    $companyDomain = $config['pipedrive_company_domain'] ?? getenv('PIPEDRIVE_COMPANY_DOMAIN') ?: 'empireonecx';
+    $baseUrl = $config['pipedrive_base_url'] ?? getenv('PIPEDRIVE_BASE_URL') ?: 'https://' . $companyDomain . '.pipedrive.com';
 
     if (trim($apiToken) === '') {
         return;
