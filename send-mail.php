@@ -1,47 +1,19 @@
 <?php
+ob_start();
+
+header('Content-Type: application/json');
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
+
 
 use PHPMailer\PHPMailer\PHPMailer;
+
 use PHPMailer\PHPMailer\Exception;
 
-ob_start();
-error_reporting(E_ALL);
-ini_set('display_errors', '0');
-ini_set('display_startup_errors', '0');
 
-function sendJsonResponse($payload, $statusCode = 200)
-{
-    while (ob_get_level() > 0) {
-        ob_end_clean();
-    }
 
-    http_response_code($statusCode);
-    header('Content-Type: application/json');
-    header('X-EmpireOneCX-Mail-Handler: 20260810-1');
-    echo json_encode($payload);
-    exit;
-}
-
-register_shutdown_function(function () {
-    $error = error_get_last();
-    if ($error && in_array($error['type'], [E_ERROR, E_PARSE, E_CORE_ERROR, E_COMPILE_ERROR], true)) {
-        error_log('EmpireOneCX contact form fatal error: ' . $error['message']);
-        sendJsonResponse([
-            'status' => 'error',
-            'message' => 'Server configuration error. Please check the hosting PHP error log.'
-        ], 500);
-    }
-});
-
-$autoloadPath = __DIR__ . '/vendor/autoload.php';
-if (!is_readable($autoloadPath)) {
-    error_log('EmpireOneCX contact form missing Composer autoload file.');
-    sendJsonResponse([
-        'status' => 'error',
-        'message' => 'Server configuration error: mail library is missing.'
-    ], 500);
-}
-
-require $autoloadPath;
+require 'vendor/autoload.php';
 function splitLeadName($fullName)
 {
     $fullName = trim(preg_replace('/\s+/', ' ', $fullName));
@@ -57,23 +29,225 @@ function splitLeadName($fullName)
     return [$parts[0], $parts[1]];
 }
 
+function loadEmpireOneMailConfig()
+{
+    $config = [];
+    $configPath = dirname(__DIR__) . '/empireonecx-mail-config.php';
+
+    if (is_readable($configPath)) {
+        $loadedConfig = require $configPath;
+        if (is_array($loadedConfig)) {
+            $config = $loadedConfig;
+        }
+    }
+
+    return $config;
+}
+
+function logPipedriveIssue($message, array $context = [])
+{
+    $safeContext = $context;
+    unset($safeContext['api_token'], $safeContext['pipedrive_api_token'], $safeContext['password']);
+
+    error_log('[Pipedrive] ' . $message . (!empty($safeContext) ? ' ' . json_encode($safeContext) : ''));
+}
+
+function sendJsonResponse(array $payload)
+{
+    while (ob_get_level() > 0) {
+        ob_end_clean();
+    }
+
+    header('Content-Type: application/json');
+    echo json_encode($payload);
+}
+
+function pipedriveRequest($method, $path, array $payload, $apiToken, $baseUrl)
+{
+    $separator = strpos($path, '?') === false ? '?' : '&';
+    $url = rtrim($baseUrl, '/') . $path . $separator . 'api_token=' . rawurlencode($apiToken);
+    $body = !empty($payload) ? json_encode($payload) : '';
+
+    if (function_exists('curl_init')) {
+        $ch = curl_init($url);
+
+        curl_setopt_array($ch, [
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_CUSTOMREQUEST => $method,
+            CURLOPT_HTTPHEADER => [
+                'Accept: application/json',
+                'Content-Type: application/json',
+            ],
+            CURLOPT_TIMEOUT => 12,
+        ]);
+
+        if ($body !== '') {
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $body);
+        }
+
+        $responseBody = curl_exec($ch);
+        $curlError = curl_error($ch);
+        $httpStatus = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+
+        if ($responseBody === false) {
+            throw new Exception('cURL error: ' . $curlError);
+        }
+    } else {
+        $headers = "Accept: application/json\r\nContent-Type: application/json\r\n";
+        if ($body !== '') {
+            $headers .= 'Content-Length: ' . strlen($body) . "\r\n";
+        }
+
+        $context = stream_context_create([
+            'http' => [
+                'method' => $method,
+                'header' => $headers,
+                'content' => $body,
+                'timeout' => 12,
+                'ignore_errors' => true,
+            ],
+        ]);
+
+        $responseBody = @file_get_contents($url, false, $context);
+        $httpStatus = 0;
+        $responseHeaders = function_exists('http_get_last_response_headers') ? http_get_last_response_headers() : ($http_response_header ?? []);
+        if (isset($responseHeaders[0]) && preg_match('/\s(\d{3})\s/', $responseHeaders[0], $matches)) {
+            $httpStatus = (int) $matches[1];
+        }
+
+        if ($responseBody === false) {
+            throw new Exception('HTTP request to Pipedrive failed.');
+        }
+    }
+
+    $decoded = json_decode($responseBody, true);
+    if (!is_array($decoded)) {
+        throw new Exception('Invalid JSON response. HTTP status: ' . $httpStatus);
+    }
+
+    if ($httpStatus < 200 || $httpStatus >= 300 || (isset($decoded['success']) && $decoded['success'] === false)) {
+        $apiMessage = $decoded['error'] ?? $decoded['error_info'] ?? $decoded['message'] ?? 'Unknown Pipedrive API error.';
+        throw new Exception($apiMessage . ' HTTP status: ' . $httpStatus);
+    }
+
+    return $decoded['data'] ?? [];
+}
+
+function createPipedriveOrganization($companyName, $apiToken, $baseUrl)
+{
+    $companyName = trim($companyName);
+
+    if ($companyName === '') {
+        return null;
+    }
+
+    $organization = pipedriveRequest('POST', '/api/v2/organizations', [
+        'name' => $companyName,
+    ], $apiToken, $baseUrl);
+
+    return $organization['id'] ?? null;
+}
+
+function createPipedrivePerson($fullName, $email, $phone, $organizationId, $apiToken, $baseUrl)
+{
+    $payload = [
+        'name' => trim($fullName) ?: 'Website Lead',
+        'emails' => [
+            [
+                'value' => $email,
+                'primary' => true,
+                'label' => 'work',
+            ],
+        ],
+    ];
+
+    if (trim($phone) !== '') {
+        $payload['phones'] = [
+            [
+                'value' => trim($phone),
+                'primary' => true,
+                'label' => 'work',
+            ],
+        ];
+    }
+
+    if ($organizationId) {
+        $payload['org_id'] = (int) $organizationId;
+    }
+
+    $person = pipedriveRequest('POST', '/api/v2/persons', $payload, $apiToken, $baseUrl);
+
+    return $person['id'] ?? null;
+}
+
+function createPipedriveLead($fullName, $companyName, $inquiryType, $personId, $organizationId, $apiToken, $baseUrl)
+{
+    $leadTitleParts = array_filter([
+        trim($companyName),
+        trim($fullName),
+        trim($inquiryType),
+    ]);
+
+    $payload = [
+        'title' => !empty($leadTitleParts) ? implode(' - ', $leadTitleParts) : 'Website Contact Form Lead',
+    ];
+
+    if ($personId) {
+        $payload['person_id'] = (int) $personId;
+    }
+
+    if ($organizationId) {
+        $payload['organization_id'] = (int) $organizationId;
+    }
+
+    pipedriveRequest('POST', '/api/v1/leads', $payload, $apiToken, $baseUrl);
+}
+
+function syncContactFormLeadToPipedrive($fullName, $companyName, $email, $phone, $inquiryType, array $config)
+{
+    $apiToken = $config['pipedrive_api_token'] ?? getenv('PIPEDRIVE_API_TOKEN') ?: '';
+    $baseUrl = $config['pipedrive_base_url'] ?? getenv('PIPEDRIVE_BASE_URL') ?: 'https://api.pipedrive.com';
+
+    if (trim($apiToken) === '') {
+        return;
+    }
+
+    try {
+        $organizationId = createPipedriveOrganization($companyName, $apiToken, $baseUrl);
+        $personId = createPipedrivePerson($fullName, $email, $phone, $organizationId, $apiToken, $baseUrl);
+
+        if (!$personId && !$organizationId) {
+            throw new Exception('Pipedrive person and organization IDs were not returned.');
+        }
+
+        createPipedriveLead($fullName, $companyName, $inquiryType, $personId, $organizationId, $apiToken, $baseUrl);
+    } catch (Throwable $e) {
+        logPipedriveIssue($e->getMessage(), [
+            'email' => $email,
+            'company' => $companyName,
+            'inquiry_type' => $inquiryType,
+        ]);
+    }
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-    $fullName = htmlspecialchars(isset($_POST['full_name']) ? $_POST['full_name'] : '', ENT_QUOTES, 'UTF-8');
+    $fullName = htmlspecialchars($_POST['full_name']);
 
-    $company  = htmlspecialchars(isset($_POST['company_name']) ? $_POST['company_name'] : '', ENT_QUOTES, 'UTF-8');
+    $company  = htmlspecialchars($_POST['company_name']);
 
-    $email    = filter_var(isset($_POST['email']) ? $_POST['email'] : '', FILTER_SANITIZE_EMAIL);
+    $email    = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
-    $countryCode = htmlspecialchars(isset($_POST['country_code']) ? $_POST['country_code'] : '', ENT_QUOTES, 'UTF-8');
+    $countryCode = htmlspecialchars($_POST['country_code']);
 
-    $phoneNumber = htmlspecialchars(isset($_POST['phone']) ? $_POST['phone'] : '', ENT_QUOTES, 'UTF-8');
+    $phoneNumber = htmlspecialchars($_POST['phone']);
 
     $phone = $countryCode . " " . $phoneNumber;
 
-    $inquiry  = htmlspecialchars(isset($_POST['inquiry_type']) ? $_POST['inquiry_type'] : '', ENT_QUOTES, 'UTF-8');
+    $inquiry  = htmlspecialchars($_POST['inquiry_type']);
 
     // $message  = htmlspecialchars($_POST['message']);
 
@@ -89,6 +263,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         ]);
 
+        exit;
+
     }
 
 
@@ -103,20 +279,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $mail->isSMTP();
 
-        $smtpConfig = [];
-        $smtpConfigPath = dirname(__DIR__) . '/empireonecx-mail-config.php';
-        if (is_readable($smtpConfigPath)) {
-            $smtpConfig = require $smtpConfigPath;
-            if (!is_array($smtpConfig)) {
-                $smtpConfig = [];
-            }
-        }
+        $smtpConfig = loadEmpireOneMailConfig();
 
-        $smtpHost = isset($smtpConfig['host']) ? $smtpConfig['host'] : (getenv('ECX_SMTP_HOST') ?: 'smtp.gmail.com');
-        $smtpPort = isset($smtpConfig['port']) ? $smtpConfig['port'] : (getenv('ECX_SMTP_PORT') ?: 465);
-        $smtpUsername = isset($smtpConfig['username']) ? $smtpConfig['username'] : (getenv('ECX_SMTP_USERNAME') ?: 'info@empireonecx.com');
-        $smtpPassword = isset($smtpConfig['password']) ? $smtpConfig['password'] : (getenv('ECX_SMTP_PASSWORD') ?: '');
-        $smtpEncryption = strtolower(isset($smtpConfig['encryption']) ? $smtpConfig['encryption'] : (getenv('ECX_SMTP_ENCRYPTION') ?: ((int) $smtpPort === 587 ? 'tls' : 'ssl')));
+        $smtpHost = $smtpConfig['host'] ?? getenv('ECX_SMTP_HOST') ?: 'smtp.hostinger.com';
+        $smtpPort = $smtpConfig['port'] ?? getenv('ECX_SMTP_PORT') ?: 465;
+        $smtpUsername = $smtpConfig['username'] ?? getenv('ECX_SMTP_USERNAME') ?: 'info@empireonecx.com';
+        $smtpPassword = $smtpConfig['password'] ?? getenv('ECX_SMTP_PASSWORD') ?: '';
 
         if ($smtpPassword === '') {
             throw new Exception('SMTP password is not configured.');
@@ -130,13 +298,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $mail->Password   = $smtpPassword;
 
-        $mail->SMTPSecure = $smtpEncryption === 'tls'
-            ? PHPMailer::ENCRYPTION_STARTTLS
-            : PHPMailer::ENCRYPTION_SMTPS;
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
 
         $mail->Port       = (int) $smtpPort;
-
-        $mail->Timeout    = 20;
 
 
 
@@ -402,7 +566,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-<p>If your inquiry is urgent, please feel free to contact us directly at <a href="tel:+18002330843">+1 800 233 0843</a> or </p>
+        <p>If your inquiry is urgent, please feel free to contact us directly at <a href="tel:+18002330843">+1 800 233 0843</a>.</p>
 
 
         <br>
@@ -412,6 +576,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p>Best Regards,<br>
 
         <strong>EmpireOneCX</strong></p>
+
+        <p style="margin:12px 0 0;">
+            <img src="https://empireonecx.com/assets/images/empireonecx.png" alt="EmpireOneCX" width="160" style="display:block;max-width:160px;height:auto;border:0;">
+        </p>
 
 
 
@@ -457,6 +625,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $mail->send();
 
+        syncContactFormLeadToPipedrive($fullName, $company, $email, $phone, $inquiry, $smtpConfig);
+
 
 
         sendJsonResponse([
@@ -473,24 +643,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-        error_log('EmpireOneCX contact form mail error: ' . $e->getMessage());
-
-        $mailError = isset($mail) && $mail instanceof PHPMailer ? $mail->ErrorInfo : '';
-
         sendJsonResponse([
 
             "status" => "error",
 
-            "message" => "Mail Error: " . ($mailError ?: $e->getMessage())
+            "message" => "Mail Error: " . ($mail->ErrorInfo ?: $e->getMessage())
 
         ]);
 
     }
 
-}
-
-sendJsonResponse([
-    'status' => 'error',
-    'message' => 'Invalid contact form request method: ' . (isset($_SERVER['REQUEST_METHOD']) ? $_SERVER['REQUEST_METHOD'] : 'unknown')
-], 405);
+} 
 
