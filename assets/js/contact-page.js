@@ -23,7 +23,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
         }
     });
 
-    fetch("send-mail.php", {
+    fetch("/send-mail.php", {
         method: "POST",
         body: formData
     })

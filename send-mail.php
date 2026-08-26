@@ -235,6 +235,15 @@ function syncContactFormLeadToPipedrive($fullName, $companyName, $email, $phone,
     }
 }
 
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+    http_response_code(405);
+    sendJsonResponse([
+        "status" => "error",
+        "message" => "Please submit the contact form using the website form."
+    ]);
+    exit;
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
