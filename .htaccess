@@ -11,6 +11,7 @@ RewriteRule ^career/?$ https://careers.empireonecx.com/ [R=301,L]
 
 # Redirect direct .php URLs to clean canonical URLs
 RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
+RewriteCond %{REQUEST_URI} !^/send-mail\.php$ [NC]
 RewriteRule ^ %1 [R=301,L]
 # Redirect old location URLs to Global Footprint
 RewriteRule ^locations/?$ /global-footprint [R=301,L]
