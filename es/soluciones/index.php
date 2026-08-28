@@ -164,15 +164,15 @@ include(__DIR__ . "/../../inc/header.php");
                         </span>
                     </h2>
                     <h3 class="solution-heading headingspace text-[32px] leading-[40px] tracking-[-0.03em] text-white mb-[20px]" style="max-width: 521px;">
-                        Eliminate Admin Bottlenecks and
+                        Elimine cuellos de botella administrativos y
                         <span class="solutionsitalic-font text-[32px] leading-[40px] tracking-[-0.03em] text-white">
-                            Scale Faster
+                            crezca con mayor agilidad
                         </span>
                     </h3> 
                 </div>
                 <div class="reveal-right">
                     <p class="company-culture-abformate-solutions-neww nomargin text-[#3C3B47] text-[16px] leading-[24px] text-white" style="color: #fff;">
-                        Offload repetitive operational work so your internal teams can focus on growth, strategy, and revenue.
+                        Delegue el trabajo operativo repetitivo para que sus equipos internos se enfoquen en crecimiento, estrategia e ingresos.
                     </p>
                 </div>
             </div>
@@ -230,8 +230,8 @@ include(__DIR__ . "/../../inc/header.php");
                                     <div class="linesli">
                                         <ul>
                                             <li><img src="../assets/images/trianglebox.webp" alt="">Tiempos de entrega más rápidos</li>
-                                            <li><img src="../assets/images/trianglebox.webp" alt="">Higher accuracy rates</li>
-                                            <li><img src="../assets/images/trianglebox.webp" alt="">Reduced operating costs</li>
+                                            <li><img src="../assets/images/trianglebox.webp" alt="">Mayores tasas de precisión</li>
+                                            <li><img src="../assets/images/trianglebox.webp" alt="">Costos operativos reducidos</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -248,9 +248,9 @@ include(__DIR__ . "/../../inc/header.php");
                         <div class="hidden md:block h-[42px] w-px bg-white flex-shrink-0"></div>
                        <div class="empsolbtn flex items-center justify-between" style="width: 100%;">
                             <p class="text-white text-[16px] leading-[24px] w-[665px] mr-[50px]">
-                                Standardized workflows + automation + dedicated teams deliver consistent output at scale.
+                                Flujos estandarizados, automatización y equipos dedicados entregan resultados consistentes a escala.
                             </p>
-                            <a href="/solutions/back-office-support"
+                            <a href="/es/soluciones/soporte-back-office/"
                                 class="py-[10px] px-[24px] bg-white inline-block rounded-[8px]">
                                 <span
                                     style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);
@@ -280,9 +280,9 @@ include(__DIR__ . "/../../inc/header.php");
                         </span>
                     </h2>
                     <h3 class="solution-heading headingspace text-[32px] leading-[40px] tracking-[-0.03em] text-black mb-[20px]" style="max-width: 521px;">
-                        Accurate Books. Faster Close.   
+                        Libros contables precisos. Cierres más rápidos.   
                         <span class="solutionsitalic-font text-[32px] leading-[40px] tracking-[-0.03em] text-black">
-                            Full Visibility.
+                            Visibilidad completa.
                         </span>
                     </h3> 
                 </div>
@@ -345,9 +345,9 @@ include(__DIR__ . "/../../inc/header.php");
                                     <img src="../assets/images/linebot.webp" class="mb-[15px]" alt="">
                                     <div class="linesli">
                                         <ul>
-                                            <li><img src="../assets/images/trianglebox.webp" alt="">Shorter closing cycles</li>
-                                            <li><img src="../assets/images/trianglebox.webp" alt="">Fewer errors & compliance risks</li>
-                                            <li><img src="../assets/images/trianglebox.webp" alt="">Lower cost vs in-house finance teams</li>
+                                            <li><img src="../assets/images/trianglebox.webp" alt="">Ciclos de cierre más cortos</li>
+                                            <li><img src="../assets/images/trianglebox.webp" alt="">Menos errores y riesgos de cumplimiento</li>
+                                            <li><img src="../assets/images/trianglebox.webp" alt="">Menor costo frente a equipos financieros internos</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -454,8 +454,8 @@ include(__DIR__ . "/../../inc/header.php");
                                     <img src="../assets/images/linebot.webp" class="mb-[15px]" alt="">
                                     <div class="linesli">
                                         <ul>
-                                            <li><img src="../assets/images/trianglebox.webp" alt="">Higher CSAT & QA scores</li>
-                                            <li><img src="../assets/images/trianglebox.webp" alt="">Fewer escalations</li>
+                                            <li><img src="../assets/images/trianglebox.webp" alt="">Mejores puntuaciones de CSAT y QA</li>
+                                            <li><img src="../assets/images/trianglebox.webp" alt="">Menos escalaciones</li>
                                             <li><img src="../assets/images/trianglebox.webp" alt="">Mejor desempeño de agentes</li>
                                         </ul>
                                     </div>
@@ -473,9 +473,9 @@ include(__DIR__ . "/../../inc/header.php");
                         <div class="hidden md:block h-[42px] w-px bg-white flex-shrink-0"></div>
                        <div class="empsolbtn flex items-center justify-between" style="width: 100%;">
                             <p class="text-white text-[16px] leading-[24px] w-[665px] mr-[50px]">
-                                Speech analytics, automated scoring, and trend dashboards uncover what's working—and what's not.                            
+                                Analítica de voz, calificación automatizada y paneles de tendencias muestran qué está funcionando y qué necesita mejorar.                            
                             </p>
-                            <a href="/solutions/quality-assurance-outsourcing"
+                            <a href="/es/soluciones/outsourcing-control-calidad/"
                                 class="py-[10px] px-[24px] bg-white inline-block rounded-[8px]">
                                 <span
                                     style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);
@@ -505,15 +505,15 @@ include(__DIR__ . "/../../inc/header.php");
                         </span>
                     </h2>
                     <h3 class="solution-heading headingspace text-[32px] leading-[40px] tracking-[-0.03em] text-black mb-[20px]" style="max-width: 521px;">
-                        Hire Faster. Retain Longer.  
+                        Contrate más rápido. Retenga por más tiempo.  
                         <span class="solutionsitalic-font text-[32px] leading-[40px] tracking-[-0.03em] text-black">
-                            Perform Better.
+                            Opere mejor.
                         </span>
                     </h3> 
                 </div>
                 <div class="reveal-right">
                     <p class="company-culture-abformate-solutions-neww nomargin text-[#3C3B47] text-[16px] leading-[24px]">
-                        We help you build high-performing offshore teams without the complexity of in-house recruiting.
+                        Le ayudamos a construir equipos offshore de alto desempeño sin la complejidad del reclutamiento interno.
                     </p>
                 </div>
             </div>
@@ -571,9 +571,9 @@ include(__DIR__ . "/../../inc/header.php");
                                     <img src="../assets/images/linebot.webp" class="mb-[15px]" alt="">
                                     <div class="linesli">
                                         <ul>
-                                            <li><img src="../assets/images/trianglebox.webp" alt="">Faster time-to-hire</li>
-                                            <li><img src="../assets/images/trianglebox.webp" alt="">Lower attrition</li>
-                                            <li><img src="../assets/images/trianglebox.webp" alt="">Better quality candidates</li>
+                                            <li><img src="../assets/images/trianglebox.webp" alt="">Contratación más rápida</li>
+                                            <li><img src="../assets/images/trianglebox.webp" alt="">Menor rotación</li>
+                                            <li><img src="../assets/images/trianglebox.webp" alt="">Candidatos de mayor calidad</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -592,7 +592,7 @@ include(__DIR__ . "/../../inc/header.php");
                             <p class="text-white text-[16px] leading-[24px] w-[665px] mr-[50px]">
                                 La evaluación de currículums asistida por IA y los marcos de contratación estructurados permiten encontrar mejor talento con mayor rapidez.
                             </p>
-                            <a href="/solutions/recruitment-workforce-support"
+                            <a href="/es/soluciones/reclutamiento-soporte-fuerza-laboral/"
                                 class="py-[10px] px-[24px] bg-white inline-block rounded-[8px]">
                                 <span
                                     style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);
@@ -621,9 +621,9 @@ include(__DIR__ . "/../../inc/header.php");
                         </span>
                     </h2>
                     <h3 class="solution-heading headingspace text-[32px] leading-[40px] tracking-[-0.03em] text-white mb-[20px]" style="max-width: 521px;">
-                        Automate More. Spend Less. 
+                        Automatice más. Gaste menos. 
                         <span class="solutionsitalic-font text-[32px] leading-[40px] tracking-[-0.03em] text-white">
-                            Move Faster.
+                            Avance más rápido.
                         </span>
                     </h3> 
                 </div>
@@ -687,9 +687,9 @@ include(__DIR__ . "/../../inc/header.php");
                                     <img src="../assets/images/linebot.webp" class="mb-[15px]" alt="">
                                     <div class="linesli">
                                         <ul>
-                                            <li><img src="../assets/images/trianglebox.webp" alt="">Higher automation rate</li>
-                                            <li><img src="../assets/images/trianglebox.webp" alt="">Lower cost per transaction</li>
-                                            <li><img src="../assets/images/trianglebox.webp" alt="">Increased productivity</li>
+                                            <li><img src="../assets/images/trianglebox.webp" alt="">Mayor nivel de automatización</li>
+                                            <li><img src="../assets/images/trianglebox.webp" alt="">Menor costo por transacción</li>
+                                            <li><img src="../assets/images/trianglebox.webp" alt="">Productividad mejorada</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -706,15 +706,15 @@ include(__DIR__ . "/../../inc/header.php");
                         <div class="hidden md:block h-[42px] w-px bg-white flex-shrink-0"></div>
                        <div class="empsolbtn flex items-center justify-between" style="width: 100%;">
                             <p class="text-white text-[16px] leading-[24px] w-[665px] mr-[50px]">
-                                We combine AI + human expertise to create practical automation that actually delivers ROI.
+                                Combinamos IA y experiencia humana para crear automatización práctica que genera retorno medible.
                             </p>
-                            <a href="/solutions/bpo-solutions"
+                            <a href="/es/soluciones/bpo-ia-automatizacion/"
                                 class="py-[10px] px-[24px] bg-white inline-block rounded-[8px]">
                                 <span
                                     style="background: linear-gradient(90deg, #7A76FF 0%, #CB46FA 50.14%, #FE881C 100%);
                                         -webkit-background-clip: text;
                                         -webkit-text-fill-color: transparent;">
-                                    Transform Your Operations
+                                    Transforme sus operaciones
                                 </span>
                             </a>
                         </div>
