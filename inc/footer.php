@@ -72,7 +72,7 @@
                     </h2>
                 </div>
                 <div class="flex flex-col lg:items-end gap-6 w-full lg:w-auto">
-                    <button onclick="window.location.href='/contact'" class="footerbtn bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] 
+                    <button onclick="window.location.href='<?php echo !empty($isSpanishSite) ? '/es/contacto/' : '/contact'; ?>'" class="footerbtn bg-gradient-to-r from-[#7A76FF] via-[#CB46FA] to-[#FE881C] 
                         text-white font-bold py-4 px-8 rounded-lg shadow-lg 
                         relative overflow-hidden group tracking-wide 
                         w-full sm:w-auto text-sm sm:text-[14px]
@@ -114,19 +114,19 @@
                         <ul class="text-[24px] leading-[35px] tracking-[-0.02em]
                                 space-y-3 sm:space-y-4 text-gray-300">
                             <li><a href="<?php echo !empty($isSpanishSite) ? '/es/' : '/'; ?>" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Inicio' : 'Home'; ?></a></li>
-                            <li><a href="/about-us" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Sobre nosotros' : 'About Us'; ?></a></li>
-                            <li><a href="/solutions/" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Soluciones' : 'Solutions'; ?></a></li>
-                            <li><a href="/industries/" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Industrias' : 'Industries'; ?></a></li>
+                            <li><a href="<?php echo !empty($isSpanishSite) ? '/es/sobre-nosotros/' : '/about-us'; ?>" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Sobre nosotros' : 'About Us'; ?></a></li>
+                            <li><a href="<?php echo !empty($isSpanishSite) ? '/es/soluciones/' : '/solutions/'; ?>" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Soluciones' : 'Solutions'; ?></a></li>
+                            <li><a href="<?php echo !empty($isSpanishSite) ? '/es/industrias/' : '/industries/'; ?>" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Industrias' : 'Industries'; ?></a></li>
                         </ul>
                     </div>
 
                     <div>
                         <ul class="text-[24px] leading-[35px] tracking-[-0.02em]
                                 space-y-3 sm:space-y-4 text-gray-300">
-                            <li><a href="/case-study" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Casos de éxito' : 'Case Studies'; ?></a></li>
-                            <li><a href="/insights/" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Recursos' : 'Insights'; ?></a></li>
+                            <li><a href="<?php echo !empty($isSpanishSite) ? '/es/casos-de-estudio/' : '/case-study'; ?>" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Casos de éxito' : 'Case Studies'; ?></a></li>
+                            <li><a href="<?php echo !empty($isSpanishSite) ? '/es/recursos/' : '/insights/'; ?>" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Recursos' : 'Insights'; ?></a></li>
                             <li><a href="https://careers.empireonecx.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Carreras' : 'Careers'; ?></a></li>
-                            <li><a href="/contact" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Contacto' : 'Contact'; ?></a></li>
+                            <li><a href="<?php echo !empty($isSpanishSite) ? '/es/contacto/' : '/contact'; ?>" class="hover:text-white transition whitespace-nowrap"><?php echo !empty($isSpanishSite) ? 'Contacto' : 'Contact'; ?></a></li>
                         </ul>
                     </div>
                 </div>
@@ -152,11 +152,11 @@
                                 flex flex-col items-start lg:items-end gap-4">
 
                         <div class="footerterms flex flex-wrap justify-start lg:justify-end gap-3 sm:gap-4 md:gap-6">
-                            <a href="/termsandconditions" class="text-white text-[16px] hover:text-white/70 transition whitespace-nowrap">
+                            <a href="<?php echo !empty($isSpanishSite) ? '/es/terminos-condiciones/' : '/termsandconditions'; ?>" class="text-white text-[16px] hover:text-white/70 transition whitespace-nowrap">
                                 <?php echo !empty($isSpanishSite) ? 'Términos y condiciones' : 'Terms and Conditions'; ?>
                             </a>
                             <span class="text-white/70 hidden sm:inline">|</span>
-                            <a href="/privacy-policy" class="text-white text-[16px] hover:text-white/70 transition whitespace-nowrap nopadright">
+                            <a href="<?php echo !empty($isSpanishSite) ? '/es/politica-privacidad/' : '/privacy-policy'; ?>" class="text-white text-[16px] hover:text-white/70 transition whitespace-nowrap nopadright">
                                 <?php echo !empty($isSpanishSite) ? 'Política de privacidad' : 'Privacy policy'; ?>
                             </a>
                             <?php if (!empty($enableCookieConsent)): ?>

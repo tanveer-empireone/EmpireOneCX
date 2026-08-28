@@ -124,7 +124,7 @@ if (empty($languageAlternates)) {
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
-    <link rel="stylesheet" href="/assets/css/style.min.css?v=20260808-2">
+    <link rel="stylesheet" href="/assets/css/style.min.css?v=20260829-1">
     <link rel="preload" href="/assets/css/ai-chatbot.min.css?v=20260805-1" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/assets/css/ai-chatbot.min.css?v=20260805-1"></noscript>
     <?php if (!empty($enableCookieConsent)): ?>
@@ -187,24 +187,24 @@ if (empty($languageAlternates)) {
                                             <a href="<?php echo $isSpanishSite ? '/es/industrias/' : '/industries/'; ?>" class="nav-mega-menu__all"><?php echo $isSpanishSite ? 'Ver todas las industrias' : 'View All Industries'; ?> <i class="fas fa-arrow-right"></i></a>
                                         </div>
                                         <div class="nav-mega-menu__grid">
-                                            <a href="/industries/retail-bpo"><i class="fas fa-store"></i><span>Retail</span></a>
-                                            <a href="/industries/automotive-bpo"><i class="fas fa-car"></i><span>Automotive</span></a>
-                                            <a href="/industries/travel-hospitality-bpo"><i class="fas fa-plane-departure"></i><span>Travel & Hospitality</span></a>
-                                            <a href="/industries/telecommunications-bpo"><i class="fas fa-tower-cell"></i><span>Telecommunications</span></a>
-                                            <a href="/industries/insurance-bpo"><i class="fas fa-shield-halved"></i><span>Insurance</span></a>
-                                            <a href="/industries/healthcare-bpo"><i class="fas fa-hospital"></i><span>Healthcare</span></a>
-                                            <a href="/industries/energy-bpo"><i class="fas fa-bolt"></i><span>Energy</span></a>
-                                            <a href="/industries/utility-bpo"><i class="fas fa-toolbox"></i><span>Utility</span></a>
-                                            <a href="/industries/technology-bpo"><i class="fas fa-server"></i><span>Technology & SaaS</span></a>
-                                            <a href="/industries/government-bpo"><i class="fas fa-landmark"></i><span>Government</span></a>
-                                            <a href="/industries/legal-process-outsourcing"><i class="fas fa-gavel"></i><span>Legal</span></a>
-                                            <a href="/industries/financial-services-bpo"><i class="fas fa-file-invoice-dollar"></i><span>Financial Services</span></a>
-                                            <a href="/industries/ecommerce-bpo"><i class="fas fa-cart-shopping"></i><span>eCommerce</span></a>
-                                            <a href="/industries/real-estate-bpo"><i class="fas fa-building"></i><span>Real Estate</span></a>
-                                            <a href="/industries/gaming-bpo"><i class="fas fa-gamepad"></i><span>Gaming</span></a>
-                                            <a href="/industries/home-services-bpo"><i class="fas fa-screwdriver-wrench"></i><span>Home Services</span></a>
-                                            <a href="/industries/home-warranty-bpo"><i class="fas fa-house-circle-check"></i><span>Home Warranty</span></a>
-                                            <a href="/industries/transportation-logistics-bpo"><i class="fas fa-truck"></i><span>Transportation & Logistics</span></a>
+                                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-comercio-minorista/' : '/industries/retail-bpo'; ?>"><i class="fas fa-store"></i><span><?php echo $isSpanishSite ? 'Comercio minorista' : 'Retail'; ?></span></a>
+                                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-automotriz/' : '/industries/automotive-bpo'; ?>"><i class="fas fa-car"></i><span><?php echo $isSpanishSite ? 'Automotriz' : 'Automotive'; ?></span></a>
+                                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-viajes-hoteleria/' : '/industries/travel-hospitality-bpo'; ?>"><i class="fas fa-plane-departure"></i><span><?php echo $isSpanishSite ? 'Viajes y hotelería' : 'Travel & Hospitality'; ?></span></a>
+                                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-telecomunicaciones/' : '/industries/telecommunications-bpo'; ?>"><i class="fas fa-tower-cell"></i><span><?php echo $isSpanishSite ? 'Telecomunicaciones' : 'Telecommunications'; ?></span></a>
+                                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-seguros/' : '/industries/insurance-bpo'; ?>"><i class="fas fa-shield-halved"></i><span><?php echo $isSpanishSite ? 'Seguros' : 'Insurance'; ?></span></a>
+                                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-salud/' : '/industries/healthcare-bpo'; ?>"><i class="fas fa-hospital"></i><span><?php echo $isSpanishSite ? 'Salud' : 'Healthcare'; ?></span></a>
+                                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-energia/' : '/industries/energy-bpo'; ?>"><i class="fas fa-bolt"></i><span><?php echo $isSpanishSite ? 'Energía' : 'Energy'; ?></span></a>
+                                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-servicios-publicos/' : '/industries/utility-bpo'; ?>"><i class="fas fa-toolbox"></i><span><?php echo $isSpanishSite ? 'Servicios públicos' : 'Utility'; ?></span></a>
+                                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-tecnologia-saas/' : '/industries/technology-bpo'; ?>"><i class="fas fa-server"></i><span><?php echo $isSpanishSite ? 'Tecnología y SaaS' : 'Technology & SaaS'; ?></span></a>
+                                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-gobierno-sector-publico/' : '/industries/government-bpo'; ?>"><i class="fas fa-landmark"></i><span><?php echo $isSpanishSite ? 'Gobierno' : 'Government'; ?></span></a>
+                                            <a href="<?php echo $isSpanishSite ? '/es/industrias/outsourcing-procesos-legales/' : '/industries/legal-process-outsourcing'; ?>"><i class="fas fa-gavel"></i><span><?php echo $isSpanishSite ? 'Legal' : 'Legal'; ?></span></a>
+                                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-servicios-financieros/' : '/industries/financial-services-bpo'; ?>"><i class="fas fa-file-invoice-dollar"></i><span><?php echo $isSpanishSite ? 'Servicios financieros' : 'Financial Services'; ?></span></a>
+                                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-comercio-electronico/' : '/industries/ecommerce-bpo'; ?>"><i class="fas fa-cart-shopping"></i><span><?php echo $isSpanishSite ? 'Comercio electrónico' : 'eCommerce'; ?></span></a>
+                                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-bienes-raices/' : '/industries/real-estate-bpo'; ?>"><i class="fas fa-building"></i><span><?php echo $isSpanishSite ? 'Bienes raíces' : 'Real Estate'; ?></span></a>
+                                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-videojuegos/' : '/industries/gaming-bpo'; ?>"><i class="fas fa-gamepad"></i><span><?php echo $isSpanishSite ? 'Videojuegos' : 'Gaming'; ?></span></a>
+                                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-servicios-hogar/' : '/industries/home-services-bpo'; ?>"><i class="fas fa-screwdriver-wrench"></i><span><?php echo $isSpanishSite ? 'Servicios para el hogar' : 'Home Services'; ?></span></a>
+                                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-garantia-hogar/' : '/industries/home-warranty-bpo'; ?>"><i class="fas fa-house-circle-check"></i><span><?php echo $isSpanishSite ? 'Garantía del hogar' : 'Home Warranty'; ?></span></a>
+                                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-transporte-logistica/' : '/industries/transportation-logistics-bpo'; ?>"><i class="fas fa-truck"></i><span><?php echo $isSpanishSite ? 'Transporte y logística' : 'Transportation & Logistics'; ?></span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -216,19 +216,19 @@ if (empty($languageAlternates)) {
                                     <div class="nav-dropdown-menu nav-dropdown-menu--resources" aria-label="Resources submenu">
                                         <a href="<?php echo $isSpanishSite ? '/es/recursos/' : '/insights/'; ?>">
                                             <i class="fas fa-newspaper"></i>
-                                            <span><strong><?php echo $isSpanishSite ? 'Articulos' : 'Insights'; ?></strong><small><?php echo $isSpanishSite ? 'Guias, articulos y conocimiento BPO' : 'Articles, guides, and BPO knowledge'; ?></small></span>
+                                            <span><strong><?php echo $isSpanishSite ? 'Artículos' : 'Insights'; ?></strong><small><?php echo $isSpanishSite ? 'Guías, artículos y conocimiento BPO' : 'Articles, guides, and BPO knowledge'; ?></small></span>
                                         </a>
                                         <a href="<?php echo $isSpanishSite ? '/es/casos-de-estudio/' : '/case-study'; ?>">
                                             <i class="fas fa-chart-line"></i>
                                             <span><strong><?php echo $isSpanishSite ? 'Casos de estudio' : 'Case Studies'; ?></strong><small><?php echo $isSpanishSite ? 'Resultados de clientes e historias de exito' : 'Customer results and success stories'; ?></small></span>
                                         </a>
-                                        <a href="/compliance-security/">
+                                        <a href="<?php echo $isSpanishSite ? '/es/cumplimiento-seguridad/' : '/compliance-security/'; ?>">
                                             <i class="fas fa-shield-halved"></i>
-                                            <span><strong>Compliance & Security</strong><small>Certifications, controls, and data protection</small></span>
+                                            <span><strong><?php echo $isSpanishSite ? 'Cumplimiento y seguridad' : 'Compliance & Security'; ?></strong><small><?php echo $isSpanishSite ? 'Certificaciones, controles y protección de datos' : 'Certifications, controls, and data protection'; ?></small></span>
                                         </a>
-                                        <a href="/faq/">
+                                        <a href="<?php echo $isSpanishSite ? '/es/faq/' : '/faq/'; ?>">
                                             <i class="fas fa-circle-question"></i>
-                                            <span><strong>FAQ Hub</strong><small>BPO, CX, call center, and AI support answers</small></span>
+                                            <span><strong><?php echo $isSpanishSite ? 'Centro de FAQ' : 'FAQ Hub'; ?></strong><small><?php echo $isSpanishSite ? 'Respuestas sobre BPO, CX, call center e IA' : 'BPO, CX, call center, and AI support answers'; ?></small></span>
                                         </a>
                                     </div>
                                 </div>
@@ -238,20 +238,20 @@ if (empty($languageAlternates)) {
                                         <i class="fas fa-chevron-down nav-dropdown-icon"></i>
                                     </a>
                                     <div class="nav-dropdown-menu nav-dropdown-menu--locations" aria-label="Global Footprint submenu">
-                                        <a href="/global-footprint/canada/"><img class="nav-location-flag" src="/assets/images/flags/canada.svg" alt="Canada flag" loading="lazy">Canada</a>
-                                        <a href="/global-footprint/united-states/"><img class="nav-location-flag" src="/assets/images/flags/united-states.svg" alt="United States flag" loading="lazy">United States</a>
-                                        <a href="/global-footprint/united-kingdom/"><img class="nav-location-flag" src="/assets/images/flags/united-kingdom.svg" alt="United Kingdom flag" loading="lazy">United Kingdom</a>
-                                        <a href="/global-footprint/australia/"><img class="nav-location-flag" src="/assets/images/flags/australia.svg" alt="Australia flag" loading="lazy">Australia</a>
-                                        <a href="/global-footprint/uae/"><img class="nav-location-flag" src="/assets/images/flags/uae.svg" alt="UAE flag" loading="lazy">UAE</a>
-                                        <a href="/global-footprint/morocco/"><img class="nav-location-flag" src="/assets/images/flags/morocco.svg" alt="Morocco flag" loading="lazy">Morocco</a>
-                                        <a href="/global-footprint/nicaragua/"><img class="nav-location-flag" src="/assets/images/flags/nicaragua.svg" alt="Nicaragua flag" loading="lazy">Nicaragua</a>
-                                        <a href="/global-footprint/colombia/"><img class="nav-location-flag" src="/assets/images/flags/colombia.svg" alt="Colombia flag" loading="lazy">Colombia</a>
-                                        <a href="/global-footprint/venezuela/"><img class="nav-location-flag" src="/assets/images/flags/venezuela.svg" alt="Venezuela flag" loading="lazy">Venezuela</a>
-                                        <a href="/global-footprint/bolivia/"><img class="nav-location-flag" src="/assets/images/flags/bolivia.svg" alt="Bolivia flag" loading="lazy">Bolivia</a>
-                                        <a href="/global-footprint/paraguay/"><img class="nav-location-flag" src="/assets/images/flags/paraguay.svg" alt="Paraguay flag" loading="lazy">Paraguay</a>
-                                        <a href="/global-footprint/south-africa/"><img class="nav-location-flag" src="/assets/images/flags/south-africa.svg" alt="South Africa flag" loading="lazy">South Africa</a>
-                                        <a href="/global-footprint/pakistan/"><img class="nav-location-flag" src="/assets/images/flags/pakistan.svg" alt="Pakistan flag" loading="lazy">Pakistan</a>
-                                        <a href="/global-footprint/philippines/"><img class="nav-location-flag" src="/assets/images/flags/philippines.svg" alt="Philippines flag" loading="lazy">Philippines</a>
+                                        <a href="<?php echo $isSpanishSite ? '/es/presencia-global/canada/' : '/global-footprint/canada/'; ?>"><img class="nav-location-flag" src="/assets/images/flags/canada.svg" alt="Canada flag" loading="lazy"><?php echo $isSpanishSite ? 'Canadá' : 'Canada'; ?></a>
+                                        <a href="<?php echo $isSpanishSite ? '/es/presencia-global/estados-unidos/' : '/global-footprint/united-states/'; ?>"><img class="nav-location-flag" src="/assets/images/flags/united-states.svg" alt="United States flag" loading="lazy"><?php echo $isSpanishSite ? 'Estados Unidos' : 'United States'; ?></a>
+                                        <a href="<?php echo $isSpanishSite ? '/es/presencia-global/reino-unido/' : '/global-footprint/united-kingdom/'; ?>"><img class="nav-location-flag" src="/assets/images/flags/united-kingdom.svg" alt="United Kingdom flag" loading="lazy"><?php echo $isSpanishSite ? 'Reino Unido' : 'United Kingdom'; ?></a>
+                                        <a href="<?php echo $isSpanishSite ? '/es/presencia-global/australia/' : '/global-footprint/australia/'; ?>"><img class="nav-location-flag" src="/assets/images/flags/australia.svg" alt="Australia flag" loading="lazy">Australia</a>
+                                        <a href="<?php echo $isSpanishSite ? '/es/presencia-global/emiratos-arabes-unidos/' : '/global-footprint/uae/'; ?>"><img class="nav-location-flag" src="/assets/images/flags/uae.svg" alt="UAE flag" loading="lazy"><?php echo $isSpanishSite ? 'Emiratos Árabes Unidos' : 'UAE'; ?></a>
+                                        <a href="<?php echo $isSpanishSite ? '/es/presencia-global/marruecos/' : '/global-footprint/morocco/'; ?>"><img class="nav-location-flag" src="/assets/images/flags/morocco.svg" alt="Morocco flag" loading="lazy"><?php echo $isSpanishSite ? 'Marruecos' : 'Morocco'; ?></a>
+                                        <a href="<?php echo $isSpanishSite ? '/es/presencia-global/nicaragua/' : '/global-footprint/nicaragua/'; ?>"><img class="nav-location-flag" src="/assets/images/flags/nicaragua.svg" alt="Nicaragua flag" loading="lazy">Nicaragua</a>
+                                        <a href="<?php echo $isSpanishSite ? '/es/presencia-global/colombia/' : '/global-footprint/colombia/'; ?>"><img class="nav-location-flag" src="/assets/images/flags/colombia.svg" alt="Colombia flag" loading="lazy">Colombia</a>
+                                        <a href="<?php echo $isSpanishSite ? '/es/presencia-global/venezuela/' : '/global-footprint/venezuela/'; ?>"><img class="nav-location-flag" src="/assets/images/flags/venezuela.svg" alt="Venezuela flag" loading="lazy">Venezuela</a>
+                                        <a href="<?php echo $isSpanishSite ? '/es/presencia-global/bolivia/' : '/global-footprint/bolivia/'; ?>"><img class="nav-location-flag" src="/assets/images/flags/bolivia.svg" alt="Bolivia flag" loading="lazy">Bolivia</a>
+                                        <a href="<?php echo $isSpanishSite ? '/es/presencia-global/paraguay/' : '/global-footprint/paraguay/'; ?>"><img class="nav-location-flag" src="/assets/images/flags/paraguay.svg" alt="Paraguay flag" loading="lazy">Paraguay</a>
+                                        <a href="<?php echo $isSpanishSite ? '/es/presencia-global/sudafrica/' : '/global-footprint/south-africa/'; ?>"><img class="nav-location-flag" src="/assets/images/flags/south-africa.svg" alt="South Africa flag" loading="lazy"><?php echo $isSpanishSite ? 'Sudáfrica' : 'South Africa'; ?></a>
+                                        <a href="<?php echo $isSpanishSite ? '/es/presencia-global/pakistan/' : '/global-footprint/pakistan/'; ?>"><img class="nav-location-flag" src="/assets/images/flags/pakistan.svg" alt="Pakistan flag" loading="lazy">Pakistan</a>
+                                        <a href="<?php echo $isSpanishSite ? '/es/presencia-global/filipinas/' : '/global-footprint/philippines/'; ?>"><img class="nav-location-flag" src="/assets/images/flags/philippines.svg" alt="Philippines flag" loading="lazy"><?php echo $isSpanishSite ? 'Filipinas' : 'Philippines'; ?></a>
                                     </div>
                                 </div>
                                 <a href="<?php echo $isSpanishSite ? '/es/contacto/' : '/contact'; ?>" class="nav-link"><?php echo $isSpanishSite ? 'Contacto' : 'Contact Us'; ?></a>
@@ -322,24 +322,24 @@ if (empty($languageAlternates)) {
                             </button>
                         </div>
                         <div id="mobile-industries-submenu" class="mobile-industries-submenu">
-                            <a href="/industries/retail-bpo">Retail</a>
-                            <a href="/industries/automotive-bpo">Automotive</a>
-                            <a href="/industries/travel-hospitality-bpo">Travel & Hospitality</a>
-                            <a href="/industries/telecommunications-bpo">Telecommunications</a>
-                            <a href="/industries/insurance-bpo">Insurance</a>
-                            <a href="/industries/healthcare-bpo">Healthcare</a>
-                            <a href="/industries/energy-bpo">Energy</a>
-                            <a href="/industries/utility-bpo">Utility</a>
-                            <a href="/industries/technology-bpo">Technology & SaaS</a>
-                            <a href="/industries/government-bpo">Government</a>
-                            <a href="/industries/legal-process-outsourcing">Legal</a>
-                            <a href="/industries/financial-services-bpo">Financial Services</a>
-                            <a href="/industries/ecommerce-bpo">eCommerce</a>
-                            <a href="/industries/real-estate-bpo">Real Estate</a>
-                            <a href="/industries/gaming-bpo">Gaming</a>
-                            <a href="/industries/home-services-bpo">Home Services</a>
-                            <a href="/industries/home-warranty-bpo">Home Warranty</a>
-                            <a href="/industries/transportation-logistics-bpo">Transportation & Logistics</a>
+                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-comercio-minorista/' : '/industries/retail-bpo'; ?>"><?php echo $isSpanishSite ? 'Comercio minorista' : 'Retail'; ?></a>
+                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-automotriz/' : '/industries/automotive-bpo'; ?>"><?php echo $isSpanishSite ? 'Automotriz' : 'Automotive'; ?></a>
+                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-viajes-hoteleria/' : '/industries/travel-hospitality-bpo'; ?>"><?php echo $isSpanishSite ? 'Viajes y hotelería' : 'Travel & Hospitality'; ?></a>
+                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-telecomunicaciones/' : '/industries/telecommunications-bpo'; ?>"><?php echo $isSpanishSite ? 'Telecomunicaciones' : 'Telecommunications'; ?></a>
+                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-seguros/' : '/industries/insurance-bpo'; ?>"><?php echo $isSpanishSite ? 'Seguros' : 'Insurance'; ?></a>
+                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-salud/' : '/industries/healthcare-bpo'; ?>"><?php echo $isSpanishSite ? 'Salud' : 'Healthcare'; ?></a>
+                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-energia/' : '/industries/energy-bpo'; ?>"><?php echo $isSpanishSite ? 'Energía' : 'Energy'; ?></a>
+                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-servicios-publicos/' : '/industries/utility-bpo'; ?>"><?php echo $isSpanishSite ? 'Servicios públicos' : 'Utility'; ?></a>
+                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-tecnologia-saas/' : '/industries/technology-bpo'; ?>"><?php echo $isSpanishSite ? 'Tecnología y SaaS' : 'Technology & SaaS'; ?></a>
+                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-gobierno-sector-publico/' : '/industries/government-bpo'; ?>"><?php echo $isSpanishSite ? 'Gobierno' : 'Government'; ?></a>
+                            <a href="<?php echo $isSpanishSite ? '/es/industrias/outsourcing-procesos-legales/' : '/industries/legal-process-outsourcing'; ?>">Legal</a>
+                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-servicios-financieros/' : '/industries/financial-services-bpo'; ?>"><?php echo $isSpanishSite ? 'Servicios financieros' : 'Financial Services'; ?></a>
+                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-comercio-electronico/' : '/industries/ecommerce-bpo'; ?>"><?php echo $isSpanishSite ? 'Comercio electrónico' : 'eCommerce'; ?></a>
+                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-bienes-raices/' : '/industries/real-estate-bpo'; ?>"><?php echo $isSpanishSite ? 'Bienes raíces' : 'Real Estate'; ?></a>
+                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-videojuegos/' : '/industries/gaming-bpo'; ?>"><?php echo $isSpanishSite ? 'Videojuegos' : 'Gaming'; ?></a>
+                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-servicios-hogar/' : '/industries/home-services-bpo'; ?>"><?php echo $isSpanishSite ? 'Servicios para el hogar' : 'Home Services'; ?></a>
+                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-garantia-hogar/' : '/industries/home-warranty-bpo'; ?>"><?php echo $isSpanishSite ? 'Garantía del hogar' : 'Home Warranty'; ?></a>
+                            <a href="<?php echo $isSpanishSite ? '/es/industrias/bpo-transporte-logistica/' : '/industries/transportation-logistics-bpo'; ?>"><?php echo $isSpanishSite ? 'Transporte y logística' : 'Transportation & Logistics'; ?></a>
                         </div>
                     </div>
                     <div class="mobile-resources-group">
@@ -352,10 +352,10 @@ if (empty($languageAlternates)) {
                             </button>
                         </div>
                         <div id="mobile-resources-submenu" class="mobile-resources-submenu">
-                            <a href="<?php echo $isSpanishSite ? '/es/recursos/' : '/insights/'; ?>"><i class="fas fa-newspaper"></i><?php echo $isSpanishSite ? 'Articulos' : 'Insights'; ?></a>
+                            <a href="<?php echo $isSpanishSite ? '/es/recursos/' : '/insights/'; ?>"><i class="fas fa-newspaper"></i><?php echo $isSpanishSite ? 'Artículos' : 'Insights'; ?></a>
                             <a href="<?php echo $isSpanishSite ? '/es/casos-de-estudio/' : '/case-study'; ?>"><i class="fas fa-chart-line"></i><?php echo $isSpanishSite ? 'Casos de estudio' : 'Case Studies'; ?></a>
-                            <a href="/compliance-security/"><i class="fas fa-shield-halved"></i>Compliance & Security</a>
-                            <a href="/faq/"><i class="fas fa-circle-question"></i>FAQ Hub</a>
+                            <a href="<?php echo $isSpanishSite ? '/es/cumplimiento-seguridad/' : '/compliance-security/'; ?>"><i class="fas fa-shield-halved"></i><?php echo $isSpanishSite ? 'Cumplimiento y seguridad' : 'Compliance & Security'; ?></a>
+                            <a href="<?php echo $isSpanishSite ? '/es/faq/' : '/faq/'; ?>"><i class="fas fa-circle-question"></i><?php echo $isSpanishSite ? 'Centro de FAQ' : 'FAQ Hub'; ?></a>
                         </div>
                     </div>
                     <div class="mobile-locations-group">
@@ -368,20 +368,20 @@ if (empty($languageAlternates)) {
                             </button>
                         </div>
                         <div id="mobile-locations-submenu" class="mobile-locations-submenu">
-                            <a href="/global-footprint/canada/"><img class="nav-location-flag" src="/assets/images/flags/canada.svg" alt="Canada flag" loading="lazy">Canada</a>
-                            <a href="/global-footprint/united-states/"><img class="nav-location-flag" src="/assets/images/flags/united-states.svg" alt="United States flag" loading="lazy">United States</a>
-                            <a href="/global-footprint/united-kingdom/"><img class="nav-location-flag" src="/assets/images/flags/united-kingdom.svg" alt="United Kingdom flag" loading="lazy">United Kingdom</a>
-                            <a href="/global-footprint/australia/"><img class="nav-location-flag" src="/assets/images/flags/australia.svg" alt="Australia flag" loading="lazy">Australia</a>
-                            <a href="/global-footprint/uae/"><img class="nav-location-flag" src="/assets/images/flags/uae.svg" alt="UAE flag" loading="lazy">UAE</a>
-                            <a href="/global-footprint/morocco/"><img class="nav-location-flag" src="/assets/images/flags/morocco.svg" alt="Morocco flag" loading="lazy">Morocco</a>
-                            <a href="/global-footprint/nicaragua/"><img class="nav-location-flag" src="/assets/images/flags/nicaragua.svg" alt="Nicaragua flag" loading="lazy">Nicaragua</a>
-                            <a href="/global-footprint/colombia/"><img class="nav-location-flag" src="/assets/images/flags/colombia.svg" alt="Colombia flag" loading="lazy">Colombia</a>
-                            <a href="/global-footprint/venezuela/"><img class="nav-location-flag" src="/assets/images/flags/venezuela.svg" alt="Venezuela flag" loading="lazy">Venezuela</a>
-                            <a href="/global-footprint/bolivia/"><img class="nav-location-flag" src="/assets/images/flags/bolivia.svg" alt="Bolivia flag" loading="lazy">Bolivia</a>
-                            <a href="/global-footprint/paraguay/"><img class="nav-location-flag" src="/assets/images/flags/paraguay.svg" alt="Paraguay flag" loading="lazy">Paraguay</a>
-                            <a href="/global-footprint/south-africa/"><img class="nav-location-flag" src="/assets/images/flags/south-africa.svg" alt="South Africa flag" loading="lazy">South Africa</a>
-                            <a href="/global-footprint/pakistan/"><img class="nav-location-flag" src="/assets/images/flags/pakistan.svg" alt="Pakistan flag" loading="lazy">Pakistan</a>
-                            <a href="/global-footprint/philippines/"><img class="nav-location-flag" src="/assets/images/flags/philippines.svg" alt="Philippines flag" loading="lazy">Philippines</a>
+                            <a href="<?php echo $isSpanishSite ? '/es/presencia-global/canada/' : '/global-footprint/canada/'; ?>"><img class="nav-location-flag" src="/assets/images/flags/canada.svg" alt="Canada flag" loading="lazy"><?php echo $isSpanishSite ? 'Canadá' : 'Canada'; ?></a>
+                            <a href="<?php echo $isSpanishSite ? '/es/presencia-global/estados-unidos/' : '/global-footprint/united-states/'; ?>"><img class="nav-location-flag" src="/assets/images/flags/united-states.svg" alt="United States flag" loading="lazy"><?php echo $isSpanishSite ? 'Estados Unidos' : 'United States'; ?></a>
+                            <a href="<?php echo $isSpanishSite ? '/es/presencia-global/reino-unido/' : '/global-footprint/united-kingdom/'; ?>"><img class="nav-location-flag" src="/assets/images/flags/united-kingdom.svg" alt="United Kingdom flag" loading="lazy"><?php echo $isSpanishSite ? 'Reino Unido' : 'United Kingdom'; ?></a>
+                            <a href="<?php echo $isSpanishSite ? '/es/presencia-global/australia/' : '/global-footprint/australia/'; ?>"><img class="nav-location-flag" src="/assets/images/flags/australia.svg" alt="Australia flag" loading="lazy">Australia</a>
+                            <a href="<?php echo $isSpanishSite ? '/es/presencia-global/emiratos-arabes-unidos/' : '/global-footprint/uae/'; ?>"><img class="nav-location-flag" src="/assets/images/flags/uae.svg" alt="UAE flag" loading="lazy"><?php echo $isSpanishSite ? 'Emiratos Árabes Unidos' : 'UAE'; ?></a>
+                            <a href="<?php echo $isSpanishSite ? '/es/presencia-global/marruecos/' : '/global-footprint/morocco/'; ?>"><img class="nav-location-flag" src="/assets/images/flags/morocco.svg" alt="Morocco flag" loading="lazy"><?php echo $isSpanishSite ? 'Marruecos' : 'Morocco'; ?></a>
+                            <a href="<?php echo $isSpanishSite ? '/es/presencia-global/nicaragua/' : '/global-footprint/nicaragua/'; ?>"><img class="nav-location-flag" src="/assets/images/flags/nicaragua.svg" alt="Nicaragua flag" loading="lazy">Nicaragua</a>
+                            <a href="<?php echo $isSpanishSite ? '/es/presencia-global/colombia/' : '/global-footprint/colombia/'; ?>"><img class="nav-location-flag" src="/assets/images/flags/colombia.svg" alt="Colombia flag" loading="lazy">Colombia</a>
+                            <a href="<?php echo $isSpanishSite ? '/es/presencia-global/venezuela/' : '/global-footprint/venezuela/'; ?>"><img class="nav-location-flag" src="/assets/images/flags/venezuela.svg" alt="Venezuela flag" loading="lazy">Venezuela</a>
+                            <a href="<?php echo $isSpanishSite ? '/es/presencia-global/bolivia/' : '/global-footprint/bolivia/'; ?>"><img class="nav-location-flag" src="/assets/images/flags/bolivia.svg" alt="Bolivia flag" loading="lazy">Bolivia</a>
+                            <a href="<?php echo $isSpanishSite ? '/es/presencia-global/paraguay/' : '/global-footprint/paraguay/'; ?>"><img class="nav-location-flag" src="/assets/images/flags/paraguay.svg" alt="Paraguay flag" loading="lazy">Paraguay</a>
+                            <a href="<?php echo $isSpanishSite ? '/es/presencia-global/sudafrica/' : '/global-footprint/south-africa/'; ?>"><img class="nav-location-flag" src="/assets/images/flags/south-africa.svg" alt="South Africa flag" loading="lazy"><?php echo $isSpanishSite ? 'Sudáfrica' : 'South Africa'; ?></a>
+                            <a href="<?php echo $isSpanishSite ? '/es/presencia-global/pakistan/' : '/global-footprint/pakistan/'; ?>"><img class="nav-location-flag" src="/assets/images/flags/pakistan.svg" alt="Pakistan flag" loading="lazy">Pakistan</a>
+                            <a href="<?php echo $isSpanishSite ? '/es/presencia-global/filipinas/' : '/global-footprint/philippines/'; ?>"><img class="nav-location-flag" src="/assets/images/flags/philippines.svg" alt="Philippines flag" loading="lazy"><?php echo $isSpanishSite ? 'Filipinas' : 'Philippines'; ?></a>
                         </div>
                     </div>
                     <a href="<?php echo $isSpanishSite ? '/es/contacto/' : '/contact'; ?>" class="mobile-nav-link block text-gray-800 text-base font-medium hover:text-purple-600 transition-colors">
