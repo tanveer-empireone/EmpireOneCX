@@ -235,6 +235,84 @@ function syncContactFormLeadToPipedrive($fullName, $companyName, $email, $phone,
     }
 }
 
+function scheduleAppointmentWithGoogleAppsScript(array $appointment, array $config)
+{
+    $webAppUrl = trim((string) ($config['google_apps_script_url'] ?? getenv('GOOGLE_APPS_SCRIPT_URL') ?: ''));
+    $sharedToken = trim((string) ($config['google_apps_script_token'] ?? getenv('GOOGLE_APPS_SCRIPT_TOKEN') ?: ''));
+
+    if ($webAppUrl === '') {
+        throw new Exception('Google Calendar scheduling is not configured. Add google_apps_script_url to the mail config.');
+    }
+
+    if ($sharedToken === '') {
+        throw new Exception('Google Calendar scheduling is not configured. Add google_apps_script_token to the mail config.');
+    }
+
+    $payload = [
+        'token' => $sharedToken,
+        'name' => $appointment['name'],
+        'email' => $appointment['email'],
+        'company_name' => $appointment['company_name'],
+        'inquiry_type' => $appointment['inquiry_type'],
+        'appointment_date' => $appointment['appointment_date'],
+        'appointment_time' => $appointment['appointment_time'],
+        'time_zone' => 'America/New_York',
+        'duration_minutes' => 30,
+    ];
+
+    $body = http_build_query($payload, '', '&', PHP_QUERY_RFC3986);
+
+    if (function_exists('curl_init')) {
+        $ch = curl_init($webAppUrl);
+        curl_setopt_array($ch, [
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_POST => true,
+            CURLOPT_POSTFIELDS => $body,
+            CURLOPT_HTTPHEADER => ['Content-Type: application/x-www-form-urlencoded'],
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_PROXY => '',
+            CURLOPT_NOPROXY => '*',
+            CURLOPT_TIMEOUT => 20,
+        ]);
+        $responseBody = curl_exec($ch);
+        $curlError = curl_error($ch);
+        $httpStatus = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+
+        if ($responseBody === false) {
+            throw new Exception('Google Calendar request failed: ' . $curlError);
+        }
+    } else {
+        $context = stream_context_create([
+            'http' => [
+                'method' => 'POST',
+                'header' => "Content-Type: application/x-www-form-urlencoded\r\n",
+                'content' => $body,
+                'timeout' => 20,
+                'ignore_errors' => true,
+            ],
+        ]);
+        $responseBody = @file_get_contents($webAppUrl, false, $context);
+        $httpStatus = 0;
+        $responseHeaders = $http_response_header ?? [];
+        if (isset($responseHeaders[0]) && preg_match('/\s(\d{3})\s/', $responseHeaders[0], $matches)) {
+            $httpStatus = (int) $matches[1];
+        }
+
+        if ($responseBody === false) {
+            throw new Exception('Google Calendar request failed.');
+        }
+    }
+
+    $result = json_decode($responseBody, true);
+    if (!is_array($result) || $httpStatus < 200 || $httpStatus >= 300 || empty($result['success'])) {
+        $message = is_array($result) ? ($result['message'] ?? 'Unknown Apps Script error.') : 'Invalid Apps Script response.';
+        throw new Exception($message . ' HTTP status: ' . $httpStatus);
+    }
+
+    return $result;
+}
+
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     http_response_code(405);
     sendJsonResponse([
@@ -262,6 +340,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $inquiry  = htmlspecialchars($_POST['inquiry_type']);
 
+    $appointmentDate = htmlspecialchars($_POST['appointment_date'] ?? '');
+    $appointmentTime = htmlspecialchars($_POST['appointment_time'] ?? '');
+    $formType = htmlspecialchars($_POST['form_type'] ?? 'contact');
+
+    if ($formType === 'appointment' && $appointmentDate !== '' && $appointmentTime !== '') {
+        $inquiry .= ' | Strategy call requested: ' . $appointmentDate . ' at ' . $appointmentTime . ' ET';
+    }
+
     // $message  = htmlspecialchars($_POST['message']);
 
 
@@ -278,6 +364,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         exit;
 
+    }
+
+    if ($formType === 'appointment') {
+        if ($appointmentDate === '' || $appointmentTime === '') {
+            sendJsonResponse([
+                "status" => "error",
+                "message" => "Please select an appointment date and time."
+            ]);
+            exit;
+        }
+
+        try {
+            scheduleAppointmentWithGoogleAppsScript([
+                'name' => $fullName,
+                'email' => $email,
+                'company_name' => $company,
+                'inquiry_type' => $inquiry,
+                'appointment_date' => $appointmentDate,
+                'appointment_time' => $appointmentTime,
+            ], loadEmpireOneMailConfig());
+        } catch (Throwable $e) {
+            error_log('[Google Calendar] ' . $e->getMessage());
+            sendJsonResponse([
+                "status" => "error",
+                "message" => "We could not schedule the Google Meet appointment. Please try again or email info@empireonecx.com."
+            ]);
+            exit;
+        }
     }
 
 
@@ -298,6 +412,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $smtpPort = $smtpConfig['port'] ?? getenv('ECX_SMTP_PORT') ?: 465;
         $smtpUsername = $smtpConfig['username'] ?? getenv('ECX_SMTP_USERNAME') ?: 'info@empireonecx.com';
         $smtpPassword = $smtpConfig['password'] ?? getenv('ECX_SMTP_PASSWORD') ?: '';
+        $smtpPassword = preg_replace('/\s+/', '', (string) $smtpPassword);
 
         if ($smtpPassword === '') {
             throw new Exception('SMTP password is not configured.');
@@ -436,6 +551,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <td>'.$inquiry.'</td>
 
         </tr>
+
+        '.($appointmentDate !== '' ? '<tr><td style="font-weight:bold;">Requested Date:</td><td>'.$appointmentDate.'</td></tr>' : '').'
+        '.($appointmentTime !== '' ? '<tr><td style="font-weight:bold;">Requested Time:</td><td>'.$appointmentTime.' ET</td></tr>' : '').'
 
 
 
@@ -667,4 +785,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
 } 
-

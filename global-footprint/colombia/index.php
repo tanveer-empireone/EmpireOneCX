@@ -2,7 +2,7 @@
 $location = [
     "name" => "Colombia",
     "slug" => "colombia",
-    "image" => "/assets/images/colombia-skyline.webp",
+    "image" => "/assets/images/colombia-site.jpeg",
     "title" => "Colombia CX & BPO Outsourcing Support",
     "subtitle" => "Bilingual CX and BPO teams for Latin America and North American service operations.",
     "intro" => "EmpireOneCX helps brands scale bilingual customer experience, sales support, back-office operations, and AI-assisted workflows with Colombia-aligned delivery capacity.",
