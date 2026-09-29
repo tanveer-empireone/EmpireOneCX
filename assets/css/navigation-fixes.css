@@ -1,0 +1,22 @@
+.nav-dropdown::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: -16px;
+  right: -16px;
+  height: 20px;
+  z-index: 1000;
+}
+
+.nav-dropdown-menu,
+.nav-mega-menu,
+header.scrolled .nav-dropdown-menu {
+  top: 100%;
+  margin-top: 0;
+}
+
+.nav-dropdown-menu::before,
+header.scrolled .nav-dropdown-menu::before {
+  top: -16px;
+  height: 16px;
+}
