@@ -106,7 +106,7 @@
                     <address class="not-italic text-gray-300 text-[16px] leading-[28px] space-y-3">
                         <p>250 Consumers Rd suite 810,<br>Toronto, ON M2J 4V6</p>
                         <p><a href="mailto:info@empireonecx.com" class="hover:text-white transition whitespace-nowrap">info@empireonecx.com</a></p>
-                        <p><a href="tel:+18002332843" class="hover:text-white transition whitespace-nowrap">+1 (800) 233 2843</a></p>
+                        <p><a href="tel:+18002330843" class="hover:text-white transition whitespace-nowrap">+1 (800) 233 0843</a></p>
                     </address>
                 </div>
                 <div class="footermenu flex flex-col sm:flex-row justify-center text-left gap-8 sm:gap-16 lg:mx-auto lg:min-w-[360px]">
